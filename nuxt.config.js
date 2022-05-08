@@ -41,6 +41,13 @@ export default {
     baseURL: '/',
   },
 
+  serverMiddleware:[
+    {
+      path: '/dbTest',
+      handler: '~/server/_dbTestServer.js'
+    }
+  ],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
