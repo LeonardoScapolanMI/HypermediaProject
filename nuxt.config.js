@@ -43,8 +43,8 @@ export default {
 
   serverMiddleware:[
     {
-      path: '/dbTest',
-      handler: '~/server/_dbTestServer.js'
+      path: '/api',
+      handler: '~/server/api.js'
     }
   ],
 
