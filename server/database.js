@@ -299,12 +299,18 @@ OpeningHours.belongsTo(Service)
 Service.hasMany(OpeningHours)
 
 async function connect() {
-  console.log(process.env.DATABASE_URL)
   try {
     await database.authenticate()
     console.log('Connection has been established successfully.')
   } catch (error) {
     console.error('Unable to connect to the database:', error)
+    return
+  }
+  try {
+    await database.sync({ alter: true })
+    console.log('Tables syncronized')
+  } catch (error) {
+    console.error('Unable to sync:', error)
   }
 }
 
