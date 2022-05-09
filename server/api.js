@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   })
 
 //Get all POIs
-app.get('/api/poi', async (req, res) => {
+app.get('/poi', async (req, res) => {
   dbData.connect()
   const result = await dbData.PointOfInterest.findAll()
   const filtered = []
@@ -26,7 +26,7 @@ app.get('/api/poi', async (req, res) => {
 })
   
 //Get all Itineraries 
-app.get('/api/itinerary', async (req, res) => {
+app.get('/itinerary', async (req, res) => {
   dbData.connect()
   const result = await dbData.Itinerary.findAll()
   const filtered = []
@@ -41,7 +41,7 @@ app.get('/api/itinerary', async (req, res) => {
 })
 
 //Get all Services
-app.get('/api/service', async (req, res) => {
+app.get('/service', async (req, res) => {
   dbData.connect()
   const result = await dbData.Service.findAll()
   const filtered = []
@@ -58,7 +58,7 @@ app.get('/api/service', async (req, res) => {
 })
 
 //Get all Events
-app.get('/api/service', async (req, res) => {
+app.get('/event', async (req, res) => {
   dbData.connect()
   const result = await dbData.Event.findAll()
   const filtered = []
