@@ -1,6 +1,9 @@
 import express from 'express'
 import dbData from './database.js'
 
+
+
+//NB: MUST SET .env file with env variable DATABASE_URL
 const app = express()
 
 app.get('/', (req, res) => {
@@ -11,7 +14,7 @@ app.get('/', (req, res) => {
 //Get all POIs
 app.get('/poi', async (req, res) => {
   dbData.connect()
-  const result = await dbData.PointOfInterest.findAll()
+  const result = await dbData.PointOfInterest.findAll({include:{model: dbData.Image} })
   const filtered = []
   for (const element of result) {
       filtered.push({
@@ -19,16 +22,17 @@ app.get('/poi', async (req, res) => {
           description: element.description,
           longitute: element.longitude,
           latitude: element.latitude,
+          images: element.Images,
       })
   }
-  console.log(filtered)
+  //console.log(result)
   return res.json(filtered)
 })
   
 //Get all Itineraries 
 app.get('/itinerary', async (req, res) => {
   dbData.connect()
-  const result = await dbData.Itinerary.findAll()
+  const result = await dbData.Itinerary.findAll({include: Image})
   const filtered = []
   for (const element of result) {
       filtered.push({
