@@ -25,22 +25,23 @@ app.get('/poi', async (req, res) => {
           images: element.Images,
       })
   }
-  //console.log(result)
+  console.log(result)
   return res.json(filtered)
 })
   
 //Get all Itineraries 
 app.get('/itinerary', async (req, res) => {
   dbData.connect()
-  const result = await dbData.Itinerary.findAll({include: Image})
+  const result = await dbData.Itinerary.findAll({include:{model: dbData.PointOfInterest} })
   const filtered = []
   for (const element of result) {
       filtered.push({
           name: element.name,
-          overview: element.oveview,
+          overview: element.overview,
+          poi: element.PointOfInteres,
       })
   }
-  console.log(filtered)
+  //console.log(result)
   return res.json(filtered)
 })
 
