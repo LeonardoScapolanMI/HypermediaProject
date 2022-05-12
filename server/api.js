@@ -1,5 +1,5 @@
 import express from 'express'
-import dbData from './database.js'
+import dbData from './model/database.js'
 
 const app = express()
 

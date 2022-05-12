@@ -1,10 +1,10 @@
 import express from 'express'
-import dbData from './database.js'
+import dbData from './model/database.js'
 
 const app = express()
 
 app.get('/', (req, res) => {
-  dbData.connect()
+  dbData()
   res.status(200).send('Hello')
 })
 
