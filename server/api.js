@@ -7,13 +7,12 @@ import dbData from './model/database.js'
 const app = express()
 
 app.get('/', (req, res) => {
-    dbData.connect()
+    dbData()
     res.status(200).send('Hello')
   })
 
 //Get all POIs
 app.get('/poi', async (req, res) => {
-  dbData.connect()
   const result = await dbData.PointOfInterest.findAll({include:{model: dbData.Image} })
   const filtered = []
   for (const element of result) {
@@ -31,7 +30,6 @@ app.get('/poi', async (req, res) => {
   
 //Get all Itineraries 
 app.get('/itinerary', async (req, res) => {
-  dbData.connect()
   const result = await dbData.Itinerary.findAll({include:{model: dbData.PointOfInterest} })
   const filtered = []
   for (const element of result) {
@@ -47,7 +45,6 @@ app.get('/itinerary', async (req, res) => {
 
 //Get all Services
 app.get('/service', async (req, res) => {
-  dbData.connect()
   const result = await dbData.Service.findAll()
   const filtered = []
   for (const element of result) {
@@ -64,7 +61,6 @@ app.get('/service', async (req, res) => {
 
 //Get all Events
 app.get('/event', async (req, res) => {
-  dbData.connect()
   const result = await dbData.Event.findAll()
   const filtered = []
   for (const element of result) {
