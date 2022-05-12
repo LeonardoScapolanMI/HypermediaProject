@@ -340,12 +340,12 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-    try {
+  /*  try {
       await database.sync({ alter: true })
       console.log('Tables syncronized')
     } catch (error) {
       console.error('Unable to sync:', error)
-    }
+    } */
 
   return {
     Image,
@@ -358,7 +358,6 @@ async function initializeDatabase() {
   }
 }
 
-export default function(){
-  const databaseStructure = initializeDatabase()
-  return function() {return databaseStructure}
-}
+const databaseStructure = initializeDatabase()
+
+export default databaseStructure

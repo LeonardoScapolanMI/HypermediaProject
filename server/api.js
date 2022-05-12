@@ -1,81 +1,84 @@
 import express from 'express'
 import dbData from './model/database.js'
 
-
-
-//NB: MUST SET .env file with env variable DATABASE_URL
+// NB: MUST SET .env file with env variable DATABASE_URL
 const app = express()
 
 app.get('/', (req, res) => {
-    dbData()
-    res.status(200).send('Hello')
-  })
+  res.status(200).send('Hello')
+})
 
-//Get all POIs
+// Get all POIs
 app.get('/poi', async (req, res) => {
-  const result = await dbData().PointOfInterest.findAll({include:{model: dbData.Image} })
+  const data = await dbData
+  const result = await data.PointOfInterest.findAll({
+    include: { model: data.Image },
+  })
   const filtered = []
   for (const element of result) {
-      filtered.push({
-          name: element.name,
-          description: element.description,
-          longitute: element.longitude,
-          latitude: element.latitude,
-          images: element.Images,
-      })
+    filtered.push({
+      name: element.name,
+      description: element.description,
+      longitute: element.longitude,
+      latitude: element.latitude,
+      images: element.Images,
+    })
   }
   console.log(result)
   return res.json(filtered)
 })
-  
-//Get all Itineraries 
+
+// Get all Itineraries
 app.get('/itinerary', async (req, res) => {
-  const result = await dbData().Itinerary.findAll({include:{model: dbData.PointOfInterest} })
+  const data = await dbData
+  const result = await data.Itinerary.findAll({
+    include: { model: data.PointOfInterest },
+  })
   const filtered = []
   for (const element of result) {
-      filtered.push({
-          name: element.name,
-          overview: element.overview,
-          poi: element.PointOfInteres,
-      })
+    filtered.push({
+      name: element.name,
+      overview: element.overview,
+      poi: element.PointOfInteres,
+    })
   }
-  //console.log(result)
+  // console.log(result)
   return res.json(filtered)
 })
 
-//Get all Services
+// Get all Services
 app.get('/service', async (req, res) => {
-  const result = await dbData().Service.findAll()
+  const data = await dbData
+  const result = await data.Service.findAll()
   const filtered = []
   for (const element of result) {
-      filtered.push({
-          name: element.name,
-          phone: element.phone,
-          email: element.email,
-          adress: element.address,
-      })
+    filtered.push({
+      name: element.name,
+      phone: element.phone,
+      email: element.email,
+      adress: element.address,
+    })
   }
   console.log(filtered)
   return res.json(filtered)
 })
 
-//Get all Events
+// Get all Events
 app.get('/event', async (req, res) => {
-  const result = await dbData().Event.findAll()
+  const data = await dbData
+  const result = await data.Event.findAll()
   const filtered = []
   for (const element of result) {
-      filtered.push({
-          name: element.name,
-          overvuew: element.overview,
-          startDate: element.startDate,
-          endDate: element.endDate,
-          cost: element.cost,
-      })
+    filtered.push({
+      name: element.name,
+      overvuew: element.overview,
+      startDate: element.startDate,
+      endDate: element.endDate,
+      cost: element.cost,
+    })
   }
   console.log(filtered)
   return res.json(filtered)
 })
-
-
 
 export default app
