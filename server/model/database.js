@@ -225,9 +225,42 @@ async function initializeDatabase() {
     },
     {
       sequelize: database,
+      modelName: 'UserMessage',
+      tableName: 'UsersMessages',
+      timestamps: false,
+    }
+  )
+
+  class UserMessage extends Model {}
+
+  UserMessage.init(
+    {
+      _id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      message: {
+        type: DataTypes.TEXT('long'),
+        allowNull: true,
+      },
+    },
+    {
+      sequelize: database,
       modelName: 'OpeningHours',
       tableName: 'OpeningHours',
-      timestamps: false,
     }
   )
 
