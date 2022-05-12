@@ -10,7 +10,7 @@ async function initializeDatabase() {
     console.log('Connection has been established successfully.')
   } catch (error) {
     console.error('Unable to connect to the database:', error)
-    return
+    throw error
   }
 
   class Image extends Model {}
@@ -340,12 +340,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  /*  try {
-      await database.sync({ alter: true })
-      console.log('Tables syncronized')
-    } catch (error) {
-      console.error('Unable to sync:', error)
-    } */
+  // syncDatabase(database)
 
   return {
     Image,
@@ -355,6 +350,20 @@ async function initializeDatabase() {
     ServiceType,
     Service,
     OpeningHours,
+  }
+}
+
+async function syncDatabase(database, force = false) {
+  try {
+    if (force) {
+      await database.sync({ force: true })
+    } else {
+      await database.sync({ alter: true })
+    }
+    console.log('Tables syncronized')
+  } catch (error) {
+    console.error('Unable to sync:', error)
+    throw error
   }
 }
 
