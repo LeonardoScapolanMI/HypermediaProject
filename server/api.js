@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 //Get all POIs
 app.get('/poi', async (req, res) => {
-  const result = await dbData.PointOfInterest.findAll({include:{model: dbData.Image} })
+  const result = await dbData().PointOfInterest.findAll({include:{model: dbData.Image} })
   const filtered = []
   for (const element of result) {
       filtered.push({
@@ -30,7 +30,7 @@ app.get('/poi', async (req, res) => {
   
 //Get all Itineraries 
 app.get('/itinerary', async (req, res) => {
-  const result = await dbData.Itinerary.findAll({include:{model: dbData.PointOfInterest} })
+  const result = await dbData().Itinerary.findAll({include:{model: dbData.PointOfInterest} })
   const filtered = []
   for (const element of result) {
       filtered.push({
@@ -45,7 +45,7 @@ app.get('/itinerary', async (req, res) => {
 
 //Get all Services
 app.get('/service', async (req, res) => {
-  const result = await dbData.Service.findAll()
+  const result = await dbData().Service.findAll()
   const filtered = []
   for (const element of result) {
       filtered.push({
@@ -61,7 +61,7 @@ app.get('/service', async (req, res) => {
 
 //Get all Events
 app.get('/event', async (req, res) => {
-  const result = await dbData.Event.findAll()
+  const result = await dbData().Event.findAll()
   const filtered = []
   for (const element of result) {
       filtered.push({
