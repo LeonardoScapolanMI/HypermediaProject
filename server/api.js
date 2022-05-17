@@ -165,4 +165,20 @@ app.get('/event:id', async (req, res) => {
   return res.json(filtered)
 })
 
+//POST ACTION for the form
+app.post("/form",(req,res)=>{
+  const data = await dbData
+  const { name } = req.body.name
+  const { lname } = req.body.last_name
+  const { email } = req.body.email
+  const { message } = req.body.messsage
+  //data.UserMessage.create(name,lname,email,message)
+  data.UserMessage.create({
+    firstName : name,
+    lastName : lname,
+    email : email,
+    message : message,
+  })
+})
+
 export default app
