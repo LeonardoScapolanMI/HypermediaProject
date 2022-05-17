@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="img/png" href="../Immagini/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+  <body class="bg-light">
+
+
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top">
+
+        <li><a href="#" id="logo"><img src="../Immagini/firenze.png" alt="HOME" id="icon"/><span class="sr-only">(current)</span></a></li>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a  href="#">EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">POINTS OF INTEREST</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">ITINERARIES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">THE TOWN</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+ 
+<div class=""cont>
+  <!-- BREADCRUMB -->
+<br><br><br>
+
+<div class="cont">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" id="home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page" id="page">Contact Us</li>
+  </ol>
+</div> 
+
+    <div class="container marketing">
+      
+    <div><br><br>
+
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+          <h3 class="mb-3">Richiesta Informazioni</h3><hr>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email<span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="user@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Information Request</label>
+              <textarea class="form-control" id="request" rows="10" placeholder="" required></textarea>
+              <div class="invalid-feedback">
+                Please enter your information request.
+              </div>
+            </div>
+           
+            <hr class="mb-4">
+            <button class="btn btn-lg btn-block" type="submit" id="submit">Contact Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <br><br><br>
+  </div><!-- /.container -->
+
+ <!-- FOOTER -->
+ <footer>
+
+  <nav class="navbar navbar-expand-md">
+
+    <div class="navbar-collapse">
+      <ul>
+        <li>
+          <a href="about-us.html">ABOUT US</a>
+        </li>
+        <li>
+          <a href="contact-us.html">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+</footer> 
+
+
+    <style>
+
+.container {
+  max-width: 960px;
+}
+
+.cont {
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+  padding-top: 3rem;
+  color: #414535;
+  font-family: Georgia;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+input, textarea {
+    padding: 20px;
+    margin: 5px;
+}
+
+#submit {
+    color: white;
+    background-color: #414535;
+}
+
+#submit:hover {
+    background-color: #C19875;
+    transition: 0.2s;
+  }
+
+  /* BREADCRUMB */
+
+  .breadcrumb {
+      background-color: #F2E3BC;
+      color: #414535;
+    }
+
+    #home:hover, #page {
+      color: #414535;
+      text-decoration: none;
+    }
+
+ /* HEADER & FOOTER */
+
+  nav {
+      background-color: #618985;
+    font-family: Georgia;
+    font-weight: bold;
+  }
+
+  footer, header {
+    text-align: center;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+   ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  header li {
+    float: left;
+    padding: 5px 5px;
+    list-style-type: none;
+  }
+
+  footer li {
+    display: inline;
+    padding: 5px 5px;
+  }
+
+  footer a {
+    display: inline-block;
+    padding: 15px 10px;
+  }
+
+  #logo {
+    padding: 5px 0px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(198, 239, 235, 0.4);
+  }
+
+  #icon {
+    border: 0;
+    width: 100px;
+  }
+
+   header a {
+    display: block;
+    padding: 25px 20px;
+  }
+
+  header a:hover, footer a:hover {
+    border-bottom-left-radius: 20px;
+    background-color: rgba(198, 239, 235, 0.4);
+    transition: 0.2s;
+    color: #414535;
+    text-decoration: none;
+  }
+
+  .navbar-toggler {
+    background-color: rgba(198, 239, 235, 0.4);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(65, 69, 53)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+    </style>
+
+     <!-- Bootstrap core JavaScript -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>
