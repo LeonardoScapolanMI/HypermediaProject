@@ -26,7 +26,7 @@ export default {
         },
         {
           name: 'CONTACT US',
-          path: '/contactus',
+          path: '/contactUs',
         },
       ],
     }
