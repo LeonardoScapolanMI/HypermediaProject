@@ -10,11 +10,12 @@
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
             <hr />
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="firstName">First Name</label>
                   <input
+                  name = "firstName"
                     v-model="name"
                     type="text"
                     class="form-control"
@@ -28,6 +29,7 @@
                 <div class="col-md-6 mb-3">
                   <label for="lastName">Last Name</label>
                   <input
+                  name = "lastName"
                     v-model="surname"
                     type="text"
                     class="form-control"
@@ -46,6 +48,7 @@
                   <span class="text-muted">(Optional)</span>
                 </label>
                 <input
+                name = "email"
                   v-model="email"
                   type="email"
                   class="form-control"
@@ -58,8 +61,9 @@
               </div>
 
               <div class="mb-3">
-                <label for="address">Information Request</label>
+                <label for="message">Information Request</label>
                 <textarea
+                name = "message"
                   v-model="text"
                   class="form-control"
                   id="request"
@@ -82,7 +86,9 @@
 </template>
 
 <script>
+const axios= require('axios').default;
 export default {
+
   name: 'ContactUs',
 
   data() {
@@ -93,7 +99,19 @@ export default {
       text: '',
     }
   },
-}
+  methods: {
+
+       submit()
+          { axios.post('/usermessage', {
+            firstName :this.name,
+            lastName : this.surname,
+            email: this.email,
+            message: this.text,
+          }).then().catch()
+
+      }
+
+  } }
 </script>
 
 <style>
