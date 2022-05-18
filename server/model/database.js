@@ -340,7 +340,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  syncDatabase(database)
+  // syncDatabase(database)
 
   return {
     Image,

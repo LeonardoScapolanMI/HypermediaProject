@@ -166,7 +166,7 @@ app.get('/event:id', async (req, res) => {
 })
 
 //POST ACTION for the form
-app.post("/form",(req,res)=>{
+app.post("/usermessage",(req,res)=>{
   const data = await dbData
   const { name } = req.body.name
   const { lname } = req.body.last_name
