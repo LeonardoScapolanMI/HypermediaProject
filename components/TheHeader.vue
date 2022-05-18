@@ -52,7 +52,6 @@ export default {
   },
   head() {
     return {
-      metaInfo: {
         link: [
           {
             rel: 'stylesheet',
@@ -82,8 +81,7 @@ export default {
             crossorigin: 'anonymous',
           },
         ],
-      },
-    }
+      }
   },
 }
 </script>
