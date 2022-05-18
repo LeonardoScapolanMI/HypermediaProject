@@ -225,8 +225,8 @@ async function initializeDatabase() {
     },
     {
       sequelize: database,
-      modelName: 'UserMessage',
-      tableName: 'UsersMessages',
+      modelName: 'OpeningHours',
+      tableName: 'OpeningHours',
       timestamps: false,
     }
   )
@@ -259,8 +259,9 @@ async function initializeDatabase() {
     },
     {
       sequelize: database,
-      modelName: 'OpeningHours',
-      tableName: 'OpeningHours',
+      modelName: 'UserMessage',
+      tableName: 'UserMessages',
+      timestamps: false,
     }
   )
 
