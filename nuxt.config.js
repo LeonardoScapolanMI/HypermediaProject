@@ -45,6 +45,10 @@ export default {
     {
       path: '/api',
       handler: '~/server/api.js'
+    },
+    {
+      path: '/static',
+      handler: '~/server/staticServer.js'
     }
   ],
 
