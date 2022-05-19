@@ -107,7 +107,7 @@ export default {
             lastName : this.surname,
             email: this.email,
             message: this.text,
-          }).then().catch()
+          })
 
       }
 
@@ -145,7 +145,7 @@ textarea {
 }
 
 body {
-  padding-top: 3rem;
+  
   color: #414535;
   font-family: Georgia;
 }

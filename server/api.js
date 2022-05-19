@@ -181,10 +181,10 @@ app.post("/usermessage", async (req,res)=>{
     message: req.body.message,
   }
   data.UserMessage.create(mam)
-  res.send("200")
+  res.send(200)
   }
   catch(e){
-    res.send("500")
+    res.send(500)
   }
 })
 
