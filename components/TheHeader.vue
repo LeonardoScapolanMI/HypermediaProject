@@ -2,13 +2,14 @@
 
 <nav class="navbar navbar-expand-lg">
 
-    <li id="icon"><a id="logo" href="#"><img src="~/static/firenze.png" alt="HOME"/><span class="sr-only">(current)</span></a></li>
+    <li><a href="#" id="logo"><img src="~/static/firenze.png" alt="HOME" id="icon"/><span class="sr-only">(current)</span></a></li>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
+    
       <ul class="navbar-nav mr-auto">
         <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
           <nuxt-link :to="navItem.path" class="nav-link">

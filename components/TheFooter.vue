@@ -26,7 +26,7 @@ export default {
         },
         {
           name: 'CONTACT US',
-          path: '/contactus',
+          path: '/contactUs',
         },
       ],
     }
@@ -68,6 +68,13 @@ export default {
 </script>
 
 <style>
+nav {
+      background-color: #618985;
+    font-family: Georgia;
+    font-weight: bold;
+    
+  }
+
 .footer {
   width: 100%;
   margin: 0;
@@ -84,19 +91,18 @@ ul {
 }
 
 li {
-  display: inline;
+  display: inline-block;
   padding: 5px 5px;
 }
 
 a {
-  display: inline-block;
+  
   padding: 15px 10px;
   color: white;
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   border-bottom-left-radius: 20px;
   background-color: rgba(198, 239, 235, 0.4);
   transition: 0.2s;
