@@ -180,7 +180,7 @@ async function initializeDatabase() {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      email: {
+      website: {
         type: DataTypes.STRING,
         allowNull: true,
       },
@@ -215,11 +215,11 @@ async function initializeDatabase() {
         }
       },
       openingHour: {
-        type: DataTypes.DATE,
+        type: DataTypes.TIME,
         allowNull: false,
       },
       closingHour: {
-        type: DataTypes.DATE,
+        type: DataTypes.TIME,
         allowNull: false,
       },
     },
