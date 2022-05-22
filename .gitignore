@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 # Ignored directory for various temporary files
-.gitignored/
+gitignored/

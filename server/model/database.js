@@ -206,21 +206,21 @@ async function initializeDatabase() {
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING,
+      day: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          min: 0,
+          max: 6,
+        }
+      },
+      openingHour: {
+        type: DataTypes.DATE,
         allowNull: false,
       },
-      phone: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      address: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      closingHour: {
+        type: DataTypes.DATE,
+        allowNull: false,
       },
     },
     {
@@ -341,7 +341,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  // syncDatabase(database)
+  syncDatabase(database)
 
   return {
     Image,
