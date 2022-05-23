@@ -43,6 +43,8 @@
       </nav>
     </header>
       
+    
+
       <div class="container marketing">
 
          <!-- BREADCRUMB -->
@@ -51,8 +53,8 @@
          <div>
            <ol class="breadcrumb">
              <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
-             <li class="breadcrumb-item"><a href="all-itineraries.html" id="old">All Itineraries</a></li>
-             <li class="breadcrumb-item active" aria-current="page" id="page">Itinerary</li>
+             <li class="breadcrumb-item"><a href="all-event-groupings.html" id="old">All Event Groupings</a></li>
+             <li class="breadcrumb-item active" aria-current="page" id="page">Winter Events</li>
            </ol>
          </div>
 
@@ -60,7 +62,7 @@
 
          <div><br>
           <h1 class="text-center">WINTER EVENTS</h1> 
-          <hr>
+          <hr id="title">
           <h4 class="text-center">WINTER EVENTS SECTION</h4> 
          </div><br><br>
 
@@ -136,23 +138,27 @@
       <!-- FOOTER -->
       <footer>
 
-          <nav class="navbar navbar-expand-md">
-    
-            <div class="navbar-collapse">
-              <ul>
-                <li>
-                  <a href="about-us.html">ABOUT US</a>
-                </li>
-                <li>
-                  <a href="contact-us.html">CONTACT US</a>
-                </li>
-              </ul>
-            </div>
-    
-          </nav>
+        <nav>
+          <div>
+          <ul>
+            <li>
+              <a href="about-us.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="contact-us.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
         </footer> 
 
     <style>
+
+#title {
+  margin-left: 300px;
+margin-right: 300px;
+border-top: 2px solid #414535;
+}
 
     /* CARDS */
 
@@ -213,6 +219,10 @@
   footer li {
     display: inline;
     padding: 5px 5px;
+  }
+
+  footer ul {
+      padding: 5px 5px;
   }
 
   footer a {

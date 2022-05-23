@@ -43,8 +43,6 @@
       </nav>
     </header>
       
-    
-
       <div class="container marketing">
 
          <!-- BREADCRUMB -->
@@ -53,17 +51,17 @@
          <div>
            <ol class="breadcrumb">
              <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
-             <li class="breadcrumb-item"><a href="all-event-groupings.html" id="old">All Event Groupings</a></li>
-             <li class="breadcrumb-item active" aria-current="page" id="page">Summer Events</li>
+             <li class="breadcrumb-item"><a href="all-itineraries.html" id="old">All Itineraries</a></li>
+             <li class="breadcrumb-item active" aria-current="page" id="page">Itinerary</li>
            </ol>
          </div>
 
          <!-- TITOLO -->
 
          <div><br>
-          <h1 class="text-center">SUMMER EVENTS</h1> 
-          <hr>
-          <h4 class="text-center">SUMMER EVENTS SECTION</h4> 
+          <h1 class="text-center">ITINERARY NAME</h1> 
+          <hr id="title">
+          <h4 class="text-center">ITINERARY SECTION</h4> 
          </div><br><br>
 
          <!-- IMMAGINE -->
@@ -88,6 +86,8 @@
             <!-- CARDS -->
   
             <hr><br>
+
+            <div class="text-center"><h3>Points of Interest</h3></div><br><br>
             <div class="row">
               <div class="col-lg-4">
                 <div  class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
@@ -138,23 +138,27 @@
       <!-- FOOTER -->
       <footer>
 
-          <nav class="navbar navbar-expand-md">
-    
-            <div class="navbar-collapse">
-              <ul>
-                <li>
-                  <a href="about-us.html">ABOUT US</a>
-                </li>
-                <li>
-                  <a href="contact-us.html">CONTACT US</a>
-                </li>
-              </ul>
-            </div>
-    
-          </nav>
+        <nav>
+          <div>
+          <ul>
+            <li>
+              <a href="about-us.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="contact-us.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
         </footer> 
 
     <style>
+
+#title {
+  margin-left: 300px;
+margin-right: 300px;
+border-top: 2px solid #414535;
+}
 
     /* CARDS */
 
@@ -215,6 +219,10 @@
   footer li {
     display: inline;
     padding: 5px 5px;
+  }
+
+  footer ul {
+      padding: 5px 5px;
   }
 
   footer a {

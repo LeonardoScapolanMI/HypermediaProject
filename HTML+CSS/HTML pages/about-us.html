@@ -61,7 +61,7 @@
 
         <div><br>
           <h1 class="text-center">ABOUT US</h1> 
-          <hr>
+          <hr id="title">
           <h4 class="text-center">ABOUT US SECTION</h4> 
          </div><br><br>
 
@@ -132,23 +132,27 @@
       <!-- FOOTER -->
       <footer>
 
-          <nav class="navbar navbar-expand-md">
-    
-            <div class="navbar-collapse">
-              <ul>
-                <li>
-                  <a href="about-us.html">ABOUT US</a>
-                </li>
-                <li>
-                  <a href="contact-us.html">CONTACT US</a>
-                </li>
-              </ul>
-            </div>
-    
-          </nav>
-        </footer> 
+        <nav>
+          <div>
+          <ul>
+            <li>
+              <a href="about-us.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="contact-us.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer> 
 
     <style>
+
+#title {
+  margin-left: 300px;
+margin-right: 300px;
+border-top: 2px solid #414535;
+}
 
     /* BREADCRUMB */
 
@@ -193,6 +197,10 @@
   footer li {
     display: inline;
     padding: 5px 5px;
+  }
+
+  footer ul {
+      padding: 5px 5px;
   }
 
   footer a {

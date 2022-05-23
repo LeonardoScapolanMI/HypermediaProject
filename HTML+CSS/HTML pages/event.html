@@ -43,7 +43,6 @@
       </nav>
     </header>
       
-    
 
       <div class="container marketing">
 
@@ -52,10 +51,19 @@
         
          <div>
            <ol class="breadcrumb">
-             <li class="breadcrumb-item"><a href="#" id="home">Home</a></li>
-             <li class="breadcrumb-item active" aria-current="page" id="page">Index</li>
+            <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
+            <li class="breadcrumb-item"><a href="all-events.html" id="old">All Events</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="page">Event</li>
            </ol>
          </div>
+
+         <!-- TITOLO -->
+
+         <div><br>
+          <h1 class="text-center">EVENT NAME</h1> 
+          <hr id="title">
+          <h4 class="text-center">EVENT</h4> 
+         </div><br><br>
 
           <!-- CAROUSEL -->
 
@@ -118,75 +126,134 @@
 
 
          <!--MAPBOX-->
+         
          <div class="row">
+          <div class="col-md-1"></div>
           <div class="col-md-6">
-            <p>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT</p>
+            <p id="text">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
           </div> <!-- col -->
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div id="map-container-google-1" class="z-depth-1-half map-container">
               <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" id="map" allowfullscreen></iframe>
            </div>
             <p id="loc">Piazza Leonardo da Vinci, Citt&agrave; Studi, Milano</p>
           </div> <!-- col -->
+          <div class="col-md-1"></div>
         </div> <!-- row -->
-            
 
-     
-      <hr><br>
+       <!-- CAROUSEL OF CARDS-->
 
-      <!-- CAROUSEL OF CARDS-->
-
-    
-
-        <!-- CARDS -->
-        <div class="row">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-3">
-            <a href="#"><img class="" src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
-            <h2>First Event</h2>
-            <p>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT</p>
-            <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
-          </div><!-- /.col -->
-          <div class="col-lg-4">
-            <a href="#"><img class="rounded-circle" src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
-            <h2>Second Event</h2>
-            <p>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT</p>
-            <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
-          </div><!-- /.col -->
-          <div class="col-lg-3">
-            <a href="#"><img class="rounded-circle" src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
-            <h2>Third Event</h2>
-            <p>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT<br>TEXT TEXT TEXT TEXT</p>
-            <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
-          </div><!-- /.col -->
-          <div class="col-lg-1"></div>
-        </div><!-- /.row -->
+       <hr><br>
+       <div class="row">
+        <div class="col-lg-6">
+         <h3>Hosting Points Of Interest</h3><br>
+        </div>
+        <div class="col-lg-6">
+        <p><a class="btn btn-secondary" href="all-points-of-interest.html" role="button" id="poi">All Points Of Interest</a></p>
+      </div>
+      </div><br>
+       <div id="carouselExampleControls" class="carousel slide">
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+             <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-lg-6">
+                 <div  class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
+                   <h2>Event</h2>
+                   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+                   <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p></div>
+               </div><!-- /.col -->
+               <div class="col-lg-3"></div>
+             </div><!-- /.row -->
+           </div>
+           <div class="carousel-item">
+             <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-lg-6">
+                 <div  class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
+                   <h2>Event</h2>
+                   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+                   <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p></div>
+               </div><!-- /.col -->
+               <div class="col-lg-3"></div>
+             </div><!-- /.row -->
+           </div>
+           <div class="carousel-item">
+             <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-lg-6">
+                 <div class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
+                   <h2>Event</h2>
+                   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+                   <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p></div>
+               </div><!-- /.col -->
+               <div class="col-lg-3"></div>
+             </div><!-- /.row -->
+           </div>
+           <div class="carousel-item">
+             <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-lg-6">
+                 <div class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
+                   <h2>Event</h2>
+                   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+                   <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p></div>
+               </div><!-- /.col -->
+               <div class="col-lg-3"></div>
+             </div><!-- /.row -->
+           </div>
+           <div class="carousel-item">
+             <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-lg-6">
+                 <div  class="text-center"><a href="#"><img src="../Immagini/icon.png" id="image" alt="Generic placeholder image"></a>
+                   <h2>Event</h2>
+                   <p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+                   <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p></div>
+               </div><!-- /.col -->
+               <div class="col-lg-3"></div>
+             </div><!-- /.row -->
+           </div>
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+           <span  id="arrow" class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+           <span id="arrow" class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="sr-only">Next</span>
+         </a>
+       </div>
 
 <br><br>
 
-      </div><!-- /.container -->
+   </div><!-- /.container -->
 
 
-      <!-- FOOTER -->
-      <footer>
+   <!-- FOOTER -->
+   <footer>
 
-          <nav class="navbar navbar-expand-md">
-    
-            <div class="navbar-collapse">
-              <ul>
-                <li>
-                  <a href="about-us.html">ABOUT US</a>
-                </li>
-                <li>
-                  <a href="contact-us.html">CONTACT US</a>
-                </li>
-              </ul>
-            </div>
-    
-          </nav>
-        </footer> 
+       <nav>
+           <div>
+           <ul>
+             <li>
+               <a href="about-us.html">ABOUT US</a>
+             </li>
+             <li>
+               <a href="contact-us.html">CONTACT US</a>
+             </li>
+           </ul>
+         </div>
+       </nav>
+     </footer> 
 
     <style>
+
+#title {
+  margin-left: 300px;
+margin-right: 300px;
+border-top: 2px solid #414535;
+}
 
 /*MAP*/
 
@@ -196,6 +263,10 @@
     font-family: Georgia;
     float: right;
     margin-right: 5px;
+    }
+
+    #text {
+      padding: 50px 50px 50px 50px;
     }
 
     
@@ -225,6 +296,19 @@
     transition: 0.2s;
   }
 
+  #poi:hover {
+    color: #414535;
+    transition: 0.2s;
+  }
+
+  #poi {
+    color: white;
+    background-color: #C19875;
+    float: right;
+    padding: 5px 30px 5px 30px;
+    font-size: 20px;
+  }
+
 
 /* CAROUSEL */
 
@@ -232,10 +316,14 @@
       height: 700px;
 }
 
-      #freccia{
+#freccia {
         padding: 20px 20px;
       }
 
+      #arrow {
+        padding: 15px 15px;
+        background-color: #C19875;
+      }
       /* BREADCRUMB */
 
     .breadcrumb {
@@ -243,7 +331,7 @@
       color: #414535;
     }
 
-    #home:hover, #page {
+    #old:hover, #page {
       color: #414535;
       text-decoration: none;
     }
@@ -278,6 +366,10 @@
   footer li {
     display: inline;
     padding: 5px 5px;
+  }
+
+  footer ul {
+      padding: 5px 5px;
   }
 
   footer a {
