@@ -21,16 +21,12 @@ export default {
   components: { TheFooter, TheHeader, Card },
   data() {
     return {
-      imageUrl: "static/icon.png",
+      imageUrl: "~/static/firenze.png",
       imageCaption: "caption",
       title: "TITOLO",
-      description: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      description: "Ciao sono una card"
     }
   },
-  methods: {
-  clickLog () {
-    console.log('click')
-  }
-} 
+  
 }
 </script>

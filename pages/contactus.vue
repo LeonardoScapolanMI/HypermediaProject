@@ -1,6 +1,7 @@
 <template>
   <div>
     <the-header />
+    <div id="contactUs">
     <div class="container marketing">
       <div>
         <br />
@@ -81,6 +82,7 @@
         </div>
       </div>
     </div>
+    </div>
     <the-footer />
   </div>
 </template>
@@ -115,6 +117,9 @@ export default {
 </script>
 
 <style>
+#contactUs {
+    margin:0.5em;
+}
 .container {
   max-width: 960px;
 }

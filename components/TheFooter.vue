@@ -95,14 +95,14 @@ li {
   padding: 5px 5px;
 }
 
-a {
+nav a {
   
   padding: 15px 10px;
   color: white;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
   background-color: rgba(198, 239, 235, 0.4);
   transition: 0.2s;

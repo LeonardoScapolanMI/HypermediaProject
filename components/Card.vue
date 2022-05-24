@@ -1,11 +1,17 @@
 <template>
-  <div class="card" style="width: 18rem" @click="SendClickEvent">
-    <img class="card-img-top" :src="imageUrl" :alt="imageCaption" />
-    <div class="card-body">
-      <h5 class="card-title">{{ title }}</h5>
-      <p class="card-text">{{ description }}</p>
-    </div>
+
+  
+  <div class="row">
+      <div class="col-lg-4">
+          <div><a href="#"><img src="~/static/firenze.png" id="image" alt="imageCaption"></a>
+                  <h2>{{title}}</h2>
+                  <p>{{description}}</p>
+                  <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
+          </div>
+      </div><!-- /.col -->
   </div>
+
+
 </template>
 
 <script>
@@ -57,3 +63,35 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  p a {
+    
+    max-width: 30%;
+    margin:0.2em;
+
+  }
+  h2{
+    margin:0.3em;
+  }
+    #image {
+      width:40%;
+      height: 40%;
+    }
+
+#submit {
+    color: white;
+    background-color: #414535;
+}
+
+#submit:hover {
+    background-color: #C19875;
+    transition: 0.2s;
+  }
+  
+div{
+  text-align: center;
+  margin: 1em;
+  
+}
+</style>
