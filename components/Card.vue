@@ -1,6 +1,4 @@
 <template>
-
-  
   <div class="row">
       <div class="col-lg-4">
           <div><a href="#"><img src="~/static/firenze.png" id="image" alt="imageCaption"></a>

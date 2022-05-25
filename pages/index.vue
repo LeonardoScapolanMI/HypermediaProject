@@ -8,6 +8,8 @@
       :description="description" 
       @click-event="clickLog"
     />
+    <map-box
+    :indirizzo="'https://maps.google.com/maps?q=milano+piazza+leonardo+da+vinci+32&t=&z=13&ie=UTF8&iwloc=&output=embed'" />
     <the-footer />
   </div>
 </template>
