@@ -56,18 +56,14 @@ async function initializeDatabase() {
         type: DataTypes.TEXT('long'),
         allowNull: false,
       },
-      longitude: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
-      },
-      latitude: {
-        type: DataTypes.DOUBLE,
+      mapURL: {
+        type: DataTypes.STRING(2048),
         allowNull: false,
       },
     },
     {
       sequelize: database,
-      modelName: 'PointOfInteres',
+      modelName: 'PointOfInterest',
       tableName: 'PointsOfInterest',
       timestamps: false,
     }
@@ -341,7 +337,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  // syncDatabase(database)
+  // syncDatabase(database, true)
 
   return {
     Image,
