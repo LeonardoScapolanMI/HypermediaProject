@@ -7,30 +7,12 @@
 </template>
 
 <script>
-const axios= require('axios').default;
+import TheFooter from '~/components/TheFooter.vue'
+import TheHeader from '~/components/TheHeader.vue'
+import Card from '~/components/Card.vue'
 export default {
 
-  name: 'ContactUs',
-
-  data() {
-    return {
-      name: '',
-      surname: '',
-      email: '',
-      text: '',
-    }
-  },
-  methods: {
-
-       submit()
-          { axios.post('/usermessage', {
-            firstName :this.name,
-            lastName : this.surname,
-            email: this.email,
-            message: this.text,
-          })
-
-      }
-
-  } }
+  name: 'TypeOfServices',
+  components: { TheFooter, TheHeader, Card },
+}
 </script>
