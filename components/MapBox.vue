@@ -1,25 +1,15 @@
 <template>
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-6">
-      <p
-        id="text"
-      >TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-    </div>
-    <!-- col -->
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <p id="text">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+          </div> <!-- col -->
     <div class="col-md-4">
-      <div id="map-container-google-1" class="z-depth-1-half map-container">
-        <iframe
-          v-bind:src= "indirizzo"
-          id="map"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <p id="loc"></p>
-    </div>
-    <!-- col -->
-    <div class="col-md-1"></div>
-  </div>
+             <div class="text-center">
+        <iframe v-bind:src= "indirizzo" id="map"></iframe>
+      </div> 
+            </div> <!-- col -->
+        </div> <!-- row -->
 </template>
 
 
@@ -71,24 +61,17 @@ export default {
 </script>
 
 <style scoped>
-  #loc {
-      font-size: 13px;
-      color: #414535;
-    font-family: Georgia;
-    float: right;
-    margin-right: 5px;
-    }
 
     #text {
-      padding: 50px 50px 50px 50px;
+      padding-top: 50px;
     }
-    
-#map {
+
+    #map {
     height: 300px;
-	width: 300px;
-	margin-top: 30px;
+	  width: 300px;
+	  margin-top: 30px;
     margin-bottom: 30px;
-    float: right;
     border: 0px;
     }
+
 </style>
