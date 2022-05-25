@@ -6,7 +6,7 @@
           </div> <!-- col -->
     <div class="col-md-4">
              <div class="text-center">
-        <iframe v-bind:src= "indirizzo" id="map"></iframe>
+        <iframe :src= "indirizzo" id="map"></iframe>
       </div> 
             </div> <!-- col -->
         </div> <!-- row -->

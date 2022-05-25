@@ -6,7 +6,7 @@
       :image-caption="imageCaption" 
       :title="title" 
       :description="description" 
-      @click-event="clickLog"
+     
     />
     <map-box
     :indirizzo="'https://maps.google.com/maps?q=milano+piazza+leonardo+da+vinci+32&t=&z=13&ie=UTF8&iwloc=&output=embed'" />
@@ -22,13 +22,14 @@ export default {
   name: 'IndexPage',
   components: { TheFooter, TheHeader, Card },
   data() {
-    return {
+    return { 
       imageUrl: "~/static/firenze.png",
       imageCaption: "caption",
       title: "TITOLO",
-      description: "Ciao sono una card"
-    }
-  },
+      description: "Ciao sono una card"}
+      
+    },
+  }
   
-}
+
 </script>
