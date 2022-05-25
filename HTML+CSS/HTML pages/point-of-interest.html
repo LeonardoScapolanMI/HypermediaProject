@@ -132,27 +132,29 @@
 
 <hr><br>
 
- <!--MAPBOX-->
- 
- <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-6">
-    <p id="text">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-  </div> <!-- col -->
-  <div class="col-md-4">
-    <div id="map-container-google-1" class="z-depth-1-half map-container">
-      <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" id="map" allowfullscreen></iframe>
-   </div>
-    <p id="loc">Piazza Leonardo da Vinci, Citt&agrave; Studi, Milano</p>
-  </div> <!-- col -->
-  <div class="col-md-1"></div>
-</div> <!-- row -->
+    <!-- MAPBOX -->
+         
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <p id="text">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+      </div> <!-- col -->
+      <div class="col-md-4">
+         <div class="text-center">
+           <iframe src="https://maps.google.com/maps?q=milano+piazza+leonardo+da+vinci+32&t=&z=13&ie=UTF8&iwloc=&output=embed" id="map"></iframe>
+          </div> 
+        </div> <!-- col -->
+    </div> <!-- row -->
           
 
       <!-- CAROUSEL OF CARDS-->
 
       <hr><br>
-      <div><h3>Hosted Events</h3></div><br>
+      <div class="col-lg-4">
+        <div class="text-center">
+          <h3>Hosted Events</h3>
+        </div>
+      </div><br>
           <div id="card-carousel-1" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -226,9 +228,13 @@
             </a>
           </div>
 
-<br><br><br>
+          <hr><br>
 
-<div><h3>Involving Itineraries</h3></div><br>
+<div class="col-lg-4">
+  <div class="text-center">
+    <h3>Involving Itineraries</h3>
+  </div>
+</div><br>
     <div id="card-carousel-2" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -301,16 +307,21 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
-<br><br>
+    
+    <hr><br>
 
       <div class="row">
-        <div class="col-lg-6">
-         <h3>Other Points Of Interest</h3><br>
+        <div class="col-lg-4">
+         <div class="text-center">
+           <h3>Other Points Of Interest</h3>
+          </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-3">
+          <div class="text-center">
        <p><a class="btn btn-secondary" href="all-points-of-interest.html" role="button" id="poi">All Points Of Interest</a></p>
-      </div>
+         </div>
+         </div>
       </div><br>
           <div id="card-carousel-3" class="carousel slide">
             <div class="carousel-inner">
@@ -415,26 +426,17 @@ margin-right: 300px;
 border-top: 2px solid #414535;
 }
 
-/*MAP*/
+/* MAPBOX */
 
-  #loc {
-      font-size: 13px;
-      color: #414535;
-    font-family: Georgia;
-    float: right;
-    margin-right: 5px;
+#text {
+      padding-top: 50px;
     }
 
-    #text {
-      padding: 50px 50px 50px 50px;
-    }
-    
-#map {
+    #map {
     height: 300px;
-	width: 300px;
-	margin-top: 30px;
+	  width: 300px;
+	  margin-top: 30px;
     margin-bottom: 30px;
-    float: right;
     border: 0px;
     }
 
@@ -463,7 +465,6 @@ border-top: 2px solid #414535;
   #poi {
     color: white;
     background-color: #C19875;
-    float: right;
     padding: 5px 30px 5px 30px;
     font-size: 20px;
   }
@@ -585,71 +586,7 @@ body {
  span {
   color: #C19875;
 }
-
-
     </style>
-
-     <script>
-      // Map via Mapbox GL
-  
-  $(document).ready(init);
-  
-  function init(jQuery) {
-    CurrentYear();
-    initMap();
-  
-    /*
-    // user clicks some button
-    $('#someButton').on('click', function () {
-        // do something here
-    });
-    */
-  }
-  
-  function CurrentYear() {
-    var thisYear = new Date().getFullYear()
-    $("#currentYear").text(thisYear);
-  }
-  
-  var mapCoordinates = [42.885441,-78.878464];
-  var mapZoom = 11;
-  
-  // the key from the Mapbox examples (not mine)
-  var mapAccessToken = "pk.eyJ1IjoibWV0cmljb24iLCJhIjoiY2l3eTQxMWl3MDBmYTJ6cWg3YmZtdjdsMSJ9.2vDbTw3ysscpy3YWkHo6aA";
-  
-  var map = null;
-  var geocoder = null;
-  
-  function initMap() {
-    map = MapGL();
-  }
-  
-  function MapGL() {
-    mapboxgl.accessToken = mapAccessToken;
-  
-    // initialize map
-    var newMap = new mapboxgl.Map({
-        container: "map", // container id
-        style: "mapbox://styles/mapbox/streets-v9", //stylesheet location
-        center: [9.22628403, 45.47804795], // starting position
-        zoom: 13.5 // starting zoom
-    });
-  
-    // geocoding
-    newMap.addControl(new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken
-    }));
-    
-    // event handlers
-    newMap.on("load", mapLoaded);
-      return newMap;
-  }
-  
-  function mapLoaded() {
-    // do stuff here
-    
-  }
-    </script>
 
   </body>
 </html>
