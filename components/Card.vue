@@ -4,7 +4,8 @@
           <div><a href="#"><img src="~/static/firenze.png" id="image" alt="imageCaption"></a>
                   <h2>{{title}}</h2>
                   <p>{{description}}</p>
-                  <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
+                   <div @click="goToDetails()" class="btn btn-primary btn-orange">See Details</div>
+
           </div>
       </div><!-- /.col -->
   </div>
@@ -55,9 +56,10 @@ export default {
     }
   },
   methods: {
-    SendClickEvent() {
-      this.$emit('click-event')
+     goToDetails() {
+      this.$router.push(`/poi_details/${this.id}`)
     },
+
   },
 }
 </script>
