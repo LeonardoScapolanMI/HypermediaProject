@@ -23,8 +23,7 @@ app.get('/poi', async (req, res) => {
     filtered.push({
       name: element.name,
       description: element.description,
-      longitute: element.longitude,
-      latitude: element.latitude,
+      mapurl : element.mapURL,
       images: element.Images,
     })
   }
@@ -45,8 +44,7 @@ app.get('/poi:id', async (req, res) => {
     filtered.push({
       name: element.name,
       description: element.description,
-      longitute: element.longitude,
-      latitude: element.latitude,
+      mapurl : element.mapUrl,
       images: element.Images,
     })
   }
@@ -67,7 +65,7 @@ app.get('/itinerary', async (req, res) => {
     filtered.push({
       name: element.name,
       overview: element.overview,
-      poi: element.PointOfInteres,
+      poi: element.PointOfInterest,
     })
   }
   // console.log(result)
@@ -87,7 +85,7 @@ app.get('/itinerary:id', async (req, res) => {
     filtered.push({
       name: element.name,
       overview: element.overview,
-      poi: element.PointOfInteres,
+      poi: element.PointOfInterest,
     })
   }
   // console.log(result)
