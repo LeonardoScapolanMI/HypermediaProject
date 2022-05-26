@@ -91,3 +91,5 @@ sw.*
 
 # Ignored directory for various temporary files
 gitignored/
+store/Itinerari.txt
+store/POIs.txt
