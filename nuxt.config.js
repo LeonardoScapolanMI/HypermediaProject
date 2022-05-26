@@ -49,6 +49,10 @@ export default {
     {
       path: '/static',
       handler: '~/server/staticServer.js'
+    },
+    {
+      path: '/dbTest',
+      handler: '~/server/_dbTestServer.js'
     }
   ],
 
