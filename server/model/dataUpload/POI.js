@@ -11,7 +11,7 @@ const pois = [
   },
   {
     basicData: {
-      name: 'Palazzo vecchio',
+      name: 'Palazzo Vecchio',
       description:
         "Questo palazzo storico ha rappresentato il cuore politico di Firenze per circa due secoli, prima di diventare residenza del Duca Cosimo I de' Medici; la sua storia si riflette nella straordinaria decorazione degli ambienti interni e nelle collezioni artistiche. Composto da più nuclei (medievale, rinascimentale e tardo-rinascimentale), spicca soprattutto negli interni progettati da Giorgio Vasari per Cosimo I e sua moglie Eleonora di Toledo, in cui lavorò, tra gli altri, anche Agnolo Bronzino (Cappella di Eleonora). Nel percorso espositivo sono ospitati vari capolavori, come le sculture di Donatello, Andrea del Verrocchio e Michelangelo. Singolare è la possibilità di visitare, in gruppi guidati a scadenze regolari, i passaggi segreti e gli ambienti più difficilmente accessibili come lo Studiolo di Francesco I.",
         mapURL: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5761.930279023414!2d11.248612976967516!3d43.77358246646925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5400e57893f9%3A0xe4e22be754c65787!2sPalazzo%20Vecchio!5e0!3m2!1sit!2sit!4v1653472171205!5m2!1sit!2sit',
