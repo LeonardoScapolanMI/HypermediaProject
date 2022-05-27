@@ -587,15 +587,18 @@ export async function CreatePOIs() {
     const createdItinerary = await DBData.Itinerary.create(itin.basicData)
 
     for (const i of itin.pois) {
-      createdItinerary.addPointOfInterest(createdPOIs[i])
+      await createdItinerary.addPointOfInterest(createdPOIs[i])
     }
+
+    // NEW!!!
+    await createdItinerary.createImage(pois[itin.pois[0]].imagesURL[0])
   }
 
   for (const ev of events) {
     const createdEvent = await DBData.Event.create(ev.basicData)
 
     for (const i of ev.hostingPOIs) {
-      createdEvent.addPointOfInterest(createdPOIs[i])
+      await createdEvent.addPointOfInterest(createdPOIs[i])
     }
   }
 }

@@ -59,6 +59,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Farmacie/Farmacia Camilli/0.jpg',
+            caption: 'Vista frontale della farmacia',
+          },
+        },
       },
       {
         basicData: {
@@ -111,6 +117,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Farmacie/Antica Farmacia del Cinghiale/0.jpg',
+            caption: 'Vista frontale della farmacia',
+          },
+        },
       },
       {
         basicData: {
@@ -170,6 +182,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Farmacie/Farmacia San Lorenzo/0.jpg',
+            caption: 'Vista frontale della farmacia',
+          },
+        },
       },
     ],
   },
@@ -237,6 +255,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante il Paiolo/0.jpg',
+            caption: 'Vista frontale del ristorante',
+          },
+        },
       },
       {
         basicData: {
@@ -296,11 +320,17 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Braceria Auditore/0.jpg',
+            caption: 'Vista frontale del ristorante',
+          },
+        },
       },
       {
         basicData: {
           name: 'Ristorante Pizzeria "Il Clarinetto"',
-          phone: '+393333077211',
+          phone: '+39055',
           website: 'https://ristorante-pizzeria-il-clarinetto.business.site/',
           address: 'V.le Spartaco Lavagnini, 40, 50129 Firenze FI',
         },
@@ -383,6 +413,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Pizzeria Il Clarinetto/0.jpg',
+            caption: 'Interno del ristorante',
+          },
+        },
       },
       {
         basicData: {
@@ -442,6 +478,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Bar San Michele/0.jpg',
+            caption: 'Vista frontale del bar',
+          },
+        },
       },
       {
         basicData: {
@@ -494,6 +536,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Bar Della Corte R. & Tiengo D. (S.N.C.)/0.jpg',
+            caption: 'Bancone del bar',
+          },
+        },
       },
       {
         basicData: {
@@ -539,6 +587,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Bar e Ristoranti/Bar pasticceria Robiglio/0.jpg',
+            caption: 'Vista frontale del ristorante',
+          },
+        },
       },
     ],
   },
@@ -585,6 +639,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Discoteche/Space Club/0.jpg',
+            caption: 'Interno del locale',
+          },
+        },
       },
       {
         basicData: {
@@ -630,6 +690,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Discoteche/YAB  Discoteca Firenze/0.jpg',
+            caption: 'Interno del locale',
+          },
+        },
       },
       {
         basicData: {
@@ -668,6 +734,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Discoteche/Blue Velvet/0.jpg',
+            caption: 'Interno del locale',
+          },
+        },
       },
     ],
   },
@@ -685,6 +757,12 @@ const serviceTypes = [
           address: 'Via dei Conti, 5, 50123 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: "/images/serviceType/Hotel/Palazzo dei Conti Residenza d'Epoca/0.jpg",
+            caption: "Una delle camere dell'hotel",
+          },
+        },
       },
       {
         basicData: {
@@ -695,6 +773,12 @@ const serviceTypes = [
           address: 'Borgo S. Jacopo, 3/R, 50125 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Hotel/Hotel Pitti Palace al Ponte Vecchio/0.jpg',
+            caption: 'Vista dalla terrazza panoramica',
+          },
+        },
       },
       {
         basicData: {
@@ -704,6 +788,12 @@ const serviceTypes = [
           address: 'Via Luigi Alamanni, 3, 50123 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Hotel/Ambasciatori Hotel/0.jpg',
+            caption: "Hall dell'hotel",
+          },
+        },
       },
       {
         basicData: {
@@ -713,6 +803,12 @@ const serviceTypes = [
           address: 'Via dei Calzaiuoli, 13 NERO, 50122 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Hotel/numa  Rodo Rooms & Apartments/0.jpg',
+            caption: 'Una delle camere della struttura',
+          },
+        },
       },
       {
         basicData: {
@@ -722,6 +818,12 @@ const serviceTypes = [
           address: 'Viale Francesco Redi, 19, 50144 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Hotel/YellowSquare Florence/0.jpg',
+            caption: 'Una delle stanze comuni della struttura',
+          },
+        },
       },
     ],
   },
@@ -739,6 +841,12 @@ const serviceTypes = [
           address: 'Largo Giovanni Alessandro Brambilla, 3, 50134 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Ospedali e Cliniche/Azienda Ospedaliero Universitaria Careggi/0.jpg',
+            caption: "Vista frontale dell'ospedale",
+          },
+        },
       },
       {
         basicData: {
@@ -748,6 +856,12 @@ const serviceTypes = [
           address: 'PIAZZA DI SANTA MARIA NUOVA, 1, 50122 Firenze FI',
         },
         openingHours: [],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Ospedali e Cliniche/Ospedale Santa Maria Nuova/0.jpg',
+            caption: "Vista frontale dell'ospedale",
+          },
+        },
       },
       {
         basicData: {
@@ -793,6 +907,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Ospedali e Cliniche/Medlight Istituto Medico/0.jpg',
+            caption: 'Una delle sale operatorie',
+          },
+        },
       },
     ],
   },
@@ -895,6 +1015,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Negozi/Raspini/0.jpg',
+            caption: 'Vetrina del negozio',
+          },
+        },
       },
       {
         basicData: {
@@ -954,6 +1080,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Negozi/Studioteca/0.jpg',
+            caption: 'Interno del negozio',
+          },
+        },
       },
       {
         basicData: {
@@ -1013,6 +1145,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Negozi/NeroGiardini Firenze/0.jpg',
+            caption: 'Interno del negozio',
+          },
+        },
       },
     ],
   },
@@ -1101,12 +1239,19 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Banche/Cassa di Risparmio di Lucca Pisa Livorno/0.jpg',
+            caption: 'Logo dell\'istituto bancario',
+          },
+        },
       },
       {
         basicData: {
           name: 'Banco Desio',
           phone: '+39055263171',
-          website: 'https://trovafiliale.bpspoleto.it/#/filiale/441/firenze-441---mazzini',
+          website:
+            'https://trovafiliale.bpspoleto.it/#/filiale/441/firenze-441---mazzini',
           address: 'Viale Giuseppe Mazzini, 1, 50132 Firenze FI',
         },
         openingHours: [
@@ -1181,6 +1326,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Banche/Banco Desio/0.jpg',
+            caption: 'Logo dell\'istituto bancario',
+          },
+        },
       },
       {
         basicData: {
@@ -1261,6 +1412,12 @@ const serviceTypes = [
             },
           },
         ],
+        image: {
+          basicData: {
+            URL: '/images/serviceType/Banche/Banche Banca Ifigest Spa/0.jpg',
+            caption: 'Logo dell\'istituto bancario',
+          },
+        },
       },
     ],
   },
@@ -1274,6 +1431,8 @@ export async function CreateServices() {
 
     for (const s of st.services) {
       const createdS = await DBData.Service.create(s.basicData)
+
+      await createdS.createImage(s.image.basicData)
 
       for (const oh of s.openingHours) {
         await createdS.createOpeningHour(oh.basicData)
