@@ -1283,13 +1283,3 @@ export async function CreateServices() {
     }
   }
 }
-
-export async function DestroyServices() {
-  const DBData = await DB
-
-  await DBData.OpeningHours.destroy({where: {},})
-
-  await DBData.Service.destroy({where: {},})
-
-  await DBData.ServiceType.destroy({where: {},})
-}

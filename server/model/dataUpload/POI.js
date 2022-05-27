@@ -579,7 +579,7 @@ export async function CreatePOIs() {
     createdPOIs[i] = await DBData.PointOfInterest.create(poi.basicData)
 
     for (const im of poi.imagesURL) {
-      await createdPOIs[i].addImage(im.basicData)
+      await createdPOIs[i].createImage(im.basicData)
     }
   }
 
@@ -598,14 +598,4 @@ export async function CreatePOIs() {
       createdEvent.addPointOfInterest(createdPOIs[i])
     }
   }
-}
-
-export async function DestroyPOIs() {
-  const DBData = await DB
-
-  await DBData.PointOfInterest.destroy({ where: {} })
-
-  await DBData.Itinerary.destroy({ where: {} })
-
-  await DBData.Event.destroy({ where: {} })
 }

@@ -337,7 +337,8 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  // syncDatabase(database, true)
+  console.log(process.env.RESET_DB)
+  if(process.env.RESET_DB) syncDatabase(database, true)
 
   return {
     Image,
