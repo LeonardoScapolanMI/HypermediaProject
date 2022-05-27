@@ -1,7 +1,7 @@
 <template>
   <div class="row">
       <div class="col-lg-4">
-          <div><a href="#"><img src="~/static/firenze.png" id="image" alt="imageCaption"></a>
+          <div><a href="#"><img src="images/firenze.png" id="image" alt="imageCaption"></a>
                   <h2>{{title}}</h2>
                   <p>{{description}}</p>
                    <div @click="goToDetails()" class="btn btn-primary btn-orange">See Details</div>
