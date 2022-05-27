@@ -190,6 +190,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Farmacie/0.jpg',
+        caption: 'Interno di una generica farmacia',
+      },
+    },
   },
   {
     basicData: {
@@ -595,6 +601,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Bar e Ristoranti/0.jpg',
+        caption: 'Tavolo di un generico ristorante',
+      },
+    },
   },
   {
     basicData: {
@@ -742,6 +754,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Discoteche/0.jpg',
+        caption: 'Perosne che ballano in una generica discoteca',
+      },
+    },
   },
   {
     basicData: {
@@ -826,6 +844,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Hotel/0.jpg',
+        caption: 'Targetta con hotel inciso sopra',
+      },
+    },
   },
   {
     basicData: {
@@ -915,6 +939,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Ospedali e Cliniche/0.jpg',
+        caption: 'Generica stanza di ospedale',
+      },
+    },
   },
   {
     basicData: {
@@ -1153,6 +1183,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Negozi/0.jpg',
+        caption: 'Una via dello shopping',
+      },
+    },
   },
   {
     basicData: {
@@ -1420,6 +1456,12 @@ const serviceTypes = [
         },
       },
     ],
+    image: {
+      basicData: {
+        URL: '/images/serviceType/Banche/0.jpg',
+        caption: 'Facciata di una generica banca',
+      },
+    },
   },
 ]
 
@@ -1428,6 +1470,8 @@ export async function CreateServices() {
 
   for (const st of serviceTypes) {
     const createdSt = await DBData.ServiceType.create(st.basicData)
+
+    await createdSt.createImage(st.image.basicData)
 
     for (const s of st.services) {
       const createdS = await DBData.Service.create(s.basicData)
