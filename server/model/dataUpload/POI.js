@@ -441,6 +441,20 @@ const events = [
       cost: '45€',
     },
     hostingPOIs: [5],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Heroes - Il futuro inizia adesso/0.jpg',
+          caption: 'Logo dell\'evento',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Heroes - Il futuro inizia adesso/0.jpg',
+          caption: 'Foto della scorsa edizione',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -453,6 +467,26 @@ const events = [
       cost: '50€',
     },
     hostingPOIs: [6],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/0.jpg',
+          caption: 'Foto del gruppo',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/1.jpg',
+          caption: 'Foto del gruppo mentre si esibisce',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/2.jpg',
+          caption: 'Foto del cantante',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -468,6 +502,20 @@ const events = [
       cost: '15€',
     },
     hostingPOIs: [5],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Concerto di Natale/0.jpg',
+          caption: 'Foto del Gruppo Musica d’insieme Astrolabio',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Concerto di Natale/1.jpg',
+          caption: 'Foto del Coro delle voci bianche del Maggio Musicale Fiorentino',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -483,6 +531,20 @@ const events = [
       cost: 'gratuito',
     },
     hostingPOIs: [4],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/I Giardini di Firenze/0.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/I Giardini di Firenze/1.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -494,6 +556,32 @@ const events = [
       cost: '8€',
     },
     hostingPOIs: [0],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Koen Vanmechelen/0.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Koen Vanmechelen/1.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Koen Vanmechelen/2.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Koen Vanmechelen/3.jpg',
+          caption: 'Parte della mostra',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -510,6 +598,14 @@ const events = [
       cost: '12€',
     },
     hostingPOIs: [2],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/0.jpg',
+          caption: 'L’effigie in bronzo di Daniele da Volterra',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -524,6 +620,20 @@ const events = [
       cost: 'gratuito',
     },
     hostingPOIs: [7],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Mercatino di Natale/0.jpg',
+          caption: 'Mercatino visto dall\'alto',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mercatino di Natale/1.jpg',
+          caption: 'Mercatino visto dal basso',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -537,6 +647,20 @@ const events = [
       cost: 'gratuito',
     },
     hostingPOIs: [5, 6],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Mercato dell\'antiquariato/0.jpg',
+          caption: 'Alcune delle bancarelle',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mercato dell\'antiquariato/1.jpg',
+          caption: 'Un grammofono e altri articoli',
+        },
+      },
+    ],
   },
   {
     basicData: {
@@ -553,10 +677,30 @@ const events = [
       cost: 'gratuito',
     },
     hostingPOIs: [9],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/All Star Game Firenze/0.jpg',
+          caption: 'Logo dell\'evento',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/All Star Game Firenze/1.jpg',
+          caption: 'Partita di basket',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/All Star Game Firenze/2.jpeg',
+          caption: 'Evento dall\'alto',
+        },
+      },
+    ],
   },
   {
     basicData: {
-      name: 'Musart ',
+      name: 'Musart',
       overview:
         'Torna Musart Festival in piazza della Santissima Annunziata, ospiti principali Roberto Bolle, LP, Achille Lauro, Vinicio Capossela, Goran Bregovic, Rock The Opera, Steve Hackett e Dado Moroni. Musica, danza, esposizioni e visite a luoghi d’arte nel cuore del centro di Firenze, a pochi passi dal Duomo.\n' +
         'Saranno Roberto Bolle e il suo straordinario Gala di danza a inaugurare sabato 16 luglio il Musart Festival. Una presenza consolidata quella dell’étoile dei due mondi, che da anni ha inserito piazza Santissima Annunziata tra le mete privilegiate dei suoi tour estivi, insieme alle Terme di Caracalla e all’Arena di Verona. Lunedì 18 luglio la cantautrice americana LP e al suo nuovo album “Churches”, in cui pop, rock, soul e un pizzico di folk si intersecano a testi poetici e particolari. Mercoledì 20 luglio Achille Lauro accompagnato dalla sua band e da un ensemble di 52 elementi, l’Electric Orchestra: uno show tutto nuovo, dagli arrangiamenti ai costumi, evoluzione di tutto ciò che abbiamo visto finora. Giovedì 21 luglio segna il ritorno di Vinicio Capossela: a un anno esatto dal concerto fiorentino ispirato a Dante, il genio e la teatralità di uno dei cantautori più ispirati dell’italica canzone. Con “Form Sarajevo”, venerdì 22 luglio Goran Bregovic trasformerà in musica le molteplici anime della capitale della Bosnia-Erzegovina: ci saranno tre violini solisti, suonati secondo la tradizione classica occidentale, quella klezmer e quella orientale. Non mancheranno la Wedding and Funeral Band, orchestra, ensemble di fiati gitani e coro di voci bulgare. Dai Pink Floyd agli Zeppelin, grandi successi del rock eseguiti in chiave sinfonica per “Rock The Opera vol. 2”, il concerto che sabato 23 luglio vedrà sullo stesso palco l’Orchestra della Toscana e la Prague Philharmonic Orchestra dirette da Friedemann Riehle. A tutti i fan dei Genesis: imperdibile l’appuntamento con Steve Hackett, lunedì 25 luglio sempre sul palco di piazza Santissima Annunziata. Il leggendario chitarrista approderà nell’ambito di “Seconds out + more”, tour che vede in primo piano “Seconds Out”, tra i maggiori successi discografici dei Genesis. Poche ore più tardi, martedì 26 luglio alle 4,45 nel Cortile degli Uomini degli Istituto Degli Innocenti, sarà il concerto all’alba del pianista Dado Moroni a far calare il sipario di Musart Festival.\n' +
@@ -566,6 +710,20 @@ const events = [
       cost: '25€',
     },
     hostingPOIs: [11],
+    imagesURL: [
+      {
+        basicData: {
+          URL: '/images/event/Musart/0.jpg',
+          caption: 'Logo dell\'evento',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Musart/1.jpg',
+          caption: 'Edizione dello scorso anno vista dall\'alto',
+        },
+      },
+    ],
   },
 ]
 
@@ -590,7 +748,6 @@ export async function CreatePOIs() {
       await createdItinerary.addPointOfInterest(createdPOIs[i])
     }
 
-    // NEW!!!
     await createdItinerary.createImage(pois[itin.pois[0]].imagesURL[0])
   }
 
@@ -599,6 +756,10 @@ export async function CreatePOIs() {
 
     for (const i of ev.hostingPOIs) {
       await createdEvent.addPointOfInterest(createdPOIs[i])
+    }
+
+    for (const im of ev.imagesURL) {
+      await createdEvent.createImage(im.basicData)
     }
   }
 }
