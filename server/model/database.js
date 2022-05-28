@@ -2,10 +2,16 @@ import { Sequelize, DataTypes, Model } from 'sequelize'
 
 require('dotenv').config() // IMPORTANTE PER USARE LA URL DEL DB
 
-const database = new Sequelize(process.env.DATABASE_URL)
+const database = new Sequelize(process.env.DATABASE_URL, {
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+})
 
 async function initializeDatabase() {
-
   try {
     await database.authenticate()
     console.log('Connection has been established successfully.')
@@ -209,7 +215,7 @@ async function initializeDatabase() {
         validate: {
           min: 0,
           max: 6,
-        }
+        },
       },
       openingHour: {
         type: DataTypes.TIME,
@@ -349,7 +355,7 @@ async function initializeDatabase() {
     UserMessage,
   }
 
-  if(process.env.RESET_DB) ret.SyncDatabase = syncDatabase
+  if (process.env.RESET_DB) ret.SyncDatabase = syncDatabase
 
   return ret
 }
