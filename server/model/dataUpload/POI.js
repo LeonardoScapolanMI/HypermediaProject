@@ -13,37 +13,37 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/0.jpg',
-          caption: '',
+          caption: 'Chiostro della galleria',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/1.jpg',
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/2.jpg',
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/3.jpg',
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/4.jpg',
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Galleria degli Uffizi/5.jpg',
-          caption: '',
+          caption: 'Esterno della galleria',
         },
       },
     ],
@@ -60,25 +60,25 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Vecchio/0.jpg',
-          caption: '',
+          caption: 'Estreno del palazzo visto dalla piazza',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Vecchio/1.jpg',
-          caption: '',
+          caption: 'Esterno del palazzo visto dall\'alto',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Vecchio/2.jpg',
-          caption: '',
+          caption: 'Interno del palazzo',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Vecchio/3.jpg',
-          caption: '',
+          caption: 'Chiostro del palazzo',
         },
       },
     ],
@@ -95,25 +95,25 @@ const pois = [
       {
         basicData: {
           URL: "/images/pointOfinterest/Galleria dell' Accademia/0.jpg",
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: "/images/pointOfinterest/Galleria dell' Accademia/1.jpg",
-          caption: '',
+          caption: 'David di Michelangelo',
         },
       },
       {
         basicData: {
           URL: "/images/pointOfinterest/Galleria dell' Accademia/2.jpg",
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
           URL: "/images/pointOfinterest/Galleria dell' Accademia/3.jpg",
-          caption: '',
+          caption: 'Una delle sale espositive',
         },
       },
     ],
@@ -130,25 +130,25 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Pitti/0.jpg',
-          caption: '',
+          caption: 'Fontana all\'esterno del palazzo',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Pitti/1.jpg',
-          caption: '',
+          caption: 'Interno del palazzo',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Pitti/2.jpg',
-          caption: '',
+          caption: 'Chiostro del palazzo',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Palazzo Pitti/3.jpg',
-          caption: '',
+          caption: 'Facciata esterna del palazzo',
         },
       },
     ],
@@ -165,25 +165,25 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Giardino di Boboli/0.jpg',
-          caption: '',
+          caption: 'Laghetto all\'interno del parco',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfinterest/Giardino di Boboli/1.jpg',
-          caption: '',
+          URL: '/images/pointOfinterest/Giardino di Boboli/1.JPG',
+          caption: 'Parte del parco',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Giardino di Boboli/2.jpg',
-          caption: '',
+          caption: 'Parte del parco',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfinterest/Giardino di Boboli/3.jpg',
-          caption: '',
+          URL: '/images/pointOfinterest/Giardino di Boboli/3.jpeg',
+          caption: 'Parte del parco',
         },
       },
     ],
@@ -200,7 +200,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazza della Signoria/0.jpg',
-          caption: '',
+          caption: 'Vista della piazza',
         },
       },
     ],
@@ -217,7 +217,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazza del Duomo/0.jpg',
-          caption: '',
+          caption: 'Vista della piazza',
         },
       },
     ],
@@ -234,7 +234,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazza Santa Croce/0.jpg',
-          caption: '',
+          caption: 'Vista della piazza',
         },
       },
     ],
@@ -251,7 +251,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazza Santa Maria Novella/0.jpg',
-          caption: '',
+          caption: 'Vista della piazza',
         },
       },
     ],
@@ -268,7 +268,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazzale Michelangelo/0.jpg',
-          caption: '',
+          caption: 'Vista panoramica dalla piazza',
         },
       },
     ],
@@ -285,7 +285,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Piazza della Santissima Annunziata/0.jpg',
-          caption: '',
+          caption: 'Vista della piazza',
         },
       },
     ],
@@ -302,25 +302,25 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Cattedrale di Santa Maria del Fiore/0.jpg',
-          caption: '',
+          caption: 'Vista laterale della cattedrale',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Cattedrale di Santa Maria del Fiore/1.jpg',
-          caption: '',
+          caption: 'Vista frontale della cattedrale',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfinterest/Cattedrale di Santa Maria del Fiore/2.jpg',
-          caption: '',
+          URL: '/images/pointOfinterest/Cattedrale di Santa Maria del Fiore/2.jpeg',
+          caption: 'Affresco della cupola',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Cattedrale di Santa Maria del Fiore/3.jpg',
-          caption: '',
+          caption: 'Vista laterale della cattedrale',
         },
       },
     ],
@@ -337,7 +337,7 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Battistero di San Giovanni/0.jpg',
-          caption: '',
+          caption: 'Vista frontale del battistero',
         },
       },
     ],
@@ -354,19 +354,19 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Croce/0.jpg',
-          caption: '',
+          caption: 'Vista frontale della basilica',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Croce/1.jpg',
-          caption: '',
+          caption: 'Interno della basilica',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Croce/2.jpg',
-          caption: '',
+          caption: 'Vista frontale della basilica all\'imbrunire',
         },
       },
     ],
@@ -383,19 +383,19 @@ const pois = [
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Maria Novella/0.jpg',
-          caption: '',
+          caption: 'Facciata della basilica',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Maria Novella/1.jpg',
-          caption: '',
+          caption: 'Interno della basilica',
         },
       },
       {
         basicData: {
           URL: '/images/pointOfinterest/Basilica di Santa Maria Novella/2.jpg',
-          caption: '',
+          caption: 'Scorcio della basilica',
         },
       },
     ],
@@ -748,7 +748,7 @@ export async function CreatePOIs() {
       await createdItinerary.addPointOfInterest(createdPOIs[i])
     }
 
-    await createdItinerary.createImage(pois[itin.pois[0]].imagesURL[0])
+    await createdItinerary.createRepresentativeImage(pois[itin.pois[0]].imagesURL[0].basicData)
   }
 
   for (const ev of events) {

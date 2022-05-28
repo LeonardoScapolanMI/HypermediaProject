@@ -2,8 +2,9 @@ import { Sequelize, DataTypes, Model } from 'sequelize'
 
 require('dotenv').config() // IMPORTANTE PER USARE LA URL DEL DB
 
+const database = new Sequelize(process.env.DATABASE_URL)
+
 async function initializeDatabase() {
-  const database = new Sequelize(process.env.DATABASE_URL)
 
   try {
     await database.authenticate()
@@ -337,9 +338,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  if(process.env.RESET_DB) syncDatabase(database, true)
-
-  return {
+  const ret = {
     Image,
     PointOfInterest,
     Itinerary,
@@ -349,9 +348,13 @@ async function initializeDatabase() {
     OpeningHours,
     UserMessage,
   }
+
+  if(process.env.RESET_DB) ret.SyncDatabase = syncDatabase
+
+  return ret
 }
 
-async function syncDatabase(database, force = false) {
+async function syncDatabase(force = false) {
   try {
     if (force) {
       await database.sync({ force: true })

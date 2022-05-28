@@ -4,7 +4,7 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Farmacie',
-      introduction: 'introduction',
+      introduction: 'Introduzione',
     },
     services: [
       {

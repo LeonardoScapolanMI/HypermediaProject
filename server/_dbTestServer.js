@@ -16,6 +16,7 @@ if (process.env.TEST_DB) {
 if (process.env.RESET_DB) {
   app.get('/insert', async (req, res) => {
     try {
+      await (await dbData).SyncDatabase(true)
       await CreatePOIs()
       await CreateServices()
       res.status(200).send('All stuff inserted')
