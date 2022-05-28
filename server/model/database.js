@@ -2,14 +2,16 @@ import { Sequelize, DataTypes, Model } from 'sequelize'
 
 require('dotenv').config() // IMPORTANTE PER USARE LA URL DEL DB
 
-const database = new Sequelize(process.env.DATABASE_URL, {
-  dialectOptions: {
+const dbOptions = {}
+if (process.env.IS_HEROKU)
+  dbOptions.dialectOptions = {
     ssl: {
       require: true,
       rejectUnauthorized: false,
     },
-  }, 
-})
+  }
+
+const database = new Sequelize(process.env.DATABASE_URL, dbOptions)
 
 async function initializeDatabase() {
   try {
