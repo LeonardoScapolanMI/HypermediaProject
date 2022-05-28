@@ -34,7 +34,7 @@ export default {
         },
         {
           name: 'POINT OF INTERESTS',
-          path: '/poi',
+          path: '/allpois',
         },
         {
           name: 'ITINERARIES',
@@ -79,6 +79,12 @@ export default {
             src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
             integrity:
               'sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl',
+            crossorigin: 'anonymous',
+          },
+          {
+            src: 'https://code.jquery.com/jquery-2.2.4.js',
+            integrity:
+              'sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=',
             crossorigin: 'anonymous',
           },
         ],
@@ -140,4 +146,5 @@ export default {
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(65, 69, 53)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
 </style>

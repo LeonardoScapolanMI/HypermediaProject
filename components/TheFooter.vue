@@ -61,6 +61,12 @@ export default {
               'sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl',
             crossorigin: 'anonymous',
           },
+          {
+            src: 'https://code.jquery.com/jquery-2.2.4.js',
+            integrity:
+              'sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=',
+            crossorigin: 'anonymous',
+          },
         ],
       }
     }
@@ -68,21 +74,12 @@ export default {
 </script>
 
 <style>
+
 nav {
-      background-color: #618985;
+    background-color: #618985;
     font-family: Georgia;
     font-weight: bold;
-    
   }
-
-.footer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #618985;
-  font-family: Georgia;
-  font-weight: bold;
-}
 
 ul {
   margin: 0;
@@ -96,7 +93,6 @@ li {
 }
 
 nav a {
-  
   padding: 15px 10px;
   color: white;
   text-decoration: none;
@@ -109,4 +105,5 @@ nav a:hover, nav a:focus {
   color: #414535;
   text-decoration: none;
 }
+
 </style>

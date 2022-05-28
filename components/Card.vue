@@ -1,13 +1,11 @@
 <template>
-  <div class="row">
-      <div class="col-lg-4">
-          <div><a href="#"><img src="images/firenze.png" id="image" alt="imageCaption"></a>
+      <div class="col-md-4">
+          <div class="text-center">
+                  <a href="#"><img src="images/firenze.png" id="image" alt="imageCaption"></a>
                   <h2>{{title}}</h2>
                   <p>{{description}}</p>
-                   <div @click="goToDetails()" class="btn btn-primary btn-orange">See Details</div>
-
+                   <div @click="goToDetails()" class="btn btn-primary btn-orange" id="submit">See Details</div>
           </div>
-      </div><!-- /.col -->
   </div>
 
 
@@ -65,33 +63,29 @@ export default {
 </script>
 
 <style scoped>
+
   p a {
-    
     max-width: 30%;
     margin:0.2em;
-
   }
+  
   h2{
     margin:0.3em;
   }
+
     #image {
       width:40%;
       height: 40%;
     }
 
-#submit {
+  #submit {
     color: white;
     background-color: #414535;
-}
+  }
 
-#submit:hover {
+  #submit:hover {
     background-color: #C19875;
     transition: 0.2s;
   }
-  
-div{
-  text-align: center;
-  margin: 1em;
-  
-}
+
 </style>

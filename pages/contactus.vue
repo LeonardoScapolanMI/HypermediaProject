@@ -119,9 +119,11 @@ export default {
 </script>
 
 <style>
+
 #contactUs {
     margin:0.5em;
 }
+
 .container {
   max-width: 960px;
 }
@@ -131,8 +133,7 @@ h3 {
   text-align: center;
 }
 
-input,
-textarea {
+input, textarea {
   padding: 20px;
   margin: 5px;
 }
@@ -147,36 +148,6 @@ textarea {
   transition: 0.2s;
 }
 
-.container {
-  max-width: 960px;
-}
-
-body {
-  
-  color: #414535;
-  font-family: Georgia;
-}
-
-h3 {
-  font-weight: bold;
-  text-align: center;
-}
-
-input,
-textarea {
-  padding: 20px;
-  margin: 5px;
-}
-
-#submit {
-  color: white;
-  background-color: #414535;
-}
-
-#submit:hover {
-  background-color: #c19875;
-  transition: 0.2s;
-}
 </style>
 
 
