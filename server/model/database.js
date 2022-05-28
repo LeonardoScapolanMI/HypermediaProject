@@ -8,7 +8,7 @@ const database = new Sequelize(process.env.DATABASE_URL, {
       require: true,
       rejectUnauthorized: false,
     },
-  },
+  }, 
 })
 
 async function initializeDatabase() {
