@@ -15,6 +15,7 @@
     <div class="row">
     <div class="col-md-4" v-for= "(poi, poiIndex) of poiList" :key= "`poi-index-${poiIndex}`">
     <card
+      :id = "poi.id"
       :imageUrl="poi.images[0].URL" 
       :imageCaption="poi.images[0].caption"
       :title="poi.name" 

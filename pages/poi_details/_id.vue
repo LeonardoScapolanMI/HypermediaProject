@@ -31,8 +31,8 @@ export default {
     return {
       name: data.name,
       description: data.description,
-      images: data.images,
-      mapurl: data.mapurl,
+      images: data.Images,
+      mapurl: data.mapURL,
     }
   },
   methods: {

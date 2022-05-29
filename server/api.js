@@ -36,21 +36,13 @@ app.get('/poi', async (req, res) => {
 app.get('/poi:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const result = await data.PointOfInterest.findOne({
+  const element = await data.PointOfInterest.findOne({
     where:{ _id },
     include: { model: data.Image },
   })
-  const filtered = []
-  for (const element of result) {
-    filtered.push({
-      name: element.name,
-      description: element.description,
-      mapurl : element.mapUrl,
-      images: element.Images,
-    })
-  }
+  
   //console.log(result)
-  return res.json(filtered)
+  return res.json(element)
 })
 
 

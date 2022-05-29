@@ -20,6 +20,7 @@ export default {
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
+    id:{ type: Number, required: true },
   },
   head() {
     return {
