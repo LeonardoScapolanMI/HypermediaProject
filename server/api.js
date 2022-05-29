@@ -21,6 +21,7 @@ app.get('/poi', async (req, res) => {
   const filtered = []
   for (const element of result) {
     filtered.push({
+      id : element._id,
       name: element.name,
       description: element.description,
       mapurl : element.mapURL,

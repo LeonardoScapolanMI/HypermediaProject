@@ -13,159 +13,15 @@
     
     <div class="content">
     <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
+    <div class="col-md-4" v-for= "(poi, poiIndex) of poiList" :key= "`poi-index-${poiIndex}`">
+    <card
+      :imageUrl="poi.images[0].URL" 
+      :imageCaption="poi.images[0].caption"
+      :title="poi.name" 
+      :description="poi.description" 
     />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div>
-  
-    <div class="content">
-    <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div>
-
-    <div class="content">
-    <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div>
-
-    <div class="content">
-    <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div>
-
-    <div class="content">
-    <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div>
-
-    <div class="content">
-    <div class="row">
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    <card 
-      :image-url="imageUrl" 
-      :image-caption="imageCaption" 
-      :title="title" 
-      :description="description" 
-    />
-
-    </div></div><br>
+    </div></div></div>
+    <br>
 
     <div class="text-center"><button id="load-more">LOAD MORE</button></div><br>
 
@@ -181,12 +37,17 @@ export default {
   name: 'AllPOIs',
   components: { TheFooter, TheHeader, Card },
   data() {
-    return { 
-      imageUrl: "~/static/firenze.png",
-      imageCaption: "caption",
-      title: "CARD",
-      description: "Ciao sono una card"}
+    return {}
     },
+    async asyncData({ $axios }) {
+      // const { data } = await $axios.get('http://localhost:3000/api/cats')
+      const { data } = await $axios.get('http://localhost:3000/api/poi')
+      return {
+        poiList: data,
+      }
+    }
+
+
 
   // methods: {
   // $(document).ready(function(){

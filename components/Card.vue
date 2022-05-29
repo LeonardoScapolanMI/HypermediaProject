@@ -1,11 +1,12 @@
 <template>
-      <div class="col-md-4">
+      <div>
           <div class="text-center">
-                  <a href="#"><img src="images/firenze.png" id="image" alt="imageCaption"></a>
+                  <a href="#"><img :src="imageUrl" id="image" :alt="imageCaption"></a>
                   <h2>{{title}}</h2>
-                  <p>{{description}}</p>
+                  <p style="   overflow: hidden;text-overflow: ellipsis;white-space: nowrap; ">{{description}}</p>
                    <div @click="goToDetails()" class="btn btn-primary btn-orange" id="submit">See Details</div>
           </div>
+          <br>
   </div>
 
 
