@@ -90,12 +90,11 @@
 <script>
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
-import Card from '~/components/Card.vue'
 const axios= require('axios').default;
 export default {
 
   name: 'ContactUs',
-  components: { TheFooter, TheHeader, Card },
+  components: { TheFooter, TheHeader},
   data() {
     return {
       name: '',
@@ -120,9 +119,11 @@ export default {
 </script>
 
 <style>
+
 #contactUs {
     margin:0.5em;
 }
+
 .container {
   max-width: 960px;
 }
@@ -132,8 +133,7 @@ h3 {
   text-align: center;
 }
 
-input,
-textarea {
+input, textarea {
   padding: 20px;
   margin: 5px;
 }
@@ -148,36 +148,6 @@ textarea {
   transition: 0.2s;
 }
 
-.container {
-  max-width: 960px;
-}
-
-body {
-  
-  color: #414535;
-  font-family: Georgia;
-}
-
-h3 {
-  font-weight: bold;
-  text-align: center;
-}
-
-input,
-textarea {
-  padding: 20px;
-  margin: 5px;
-}
-
-#submit {
-  color: white;
-  background-color: #414535;
-}
-
-#submit:hover {
-  background-color: #c19875;
-  transition: 0.2s;
-}
 </style>
 
 

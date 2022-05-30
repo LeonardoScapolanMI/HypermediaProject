@@ -2,9 +2,18 @@ import { Sequelize, DataTypes, Model } from 'sequelize'
 
 require('dotenv').config() // IMPORTANTE PER USARE LA URL DEL DB
 
-async function initializeDatabase() {
-  const database = new Sequelize(process.env.DATABASE_URL)
+const dbOptions = {}
+if (process.env.IS_HEROKU)
+  dbOptions.dialectOptions = {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  }
 
+const database = new Sequelize(process.env.DATABASE_URL, dbOptions)
+
+async function initializeDatabase() {
   try {
     await database.authenticate()
     console.log('Connection has been established successfully.')
@@ -56,18 +65,14 @@ async function initializeDatabase() {
         type: DataTypes.TEXT('long'),
         allowNull: false,
       },
-      longitude: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
-      },
-      latitude: {
-        type: DataTypes.DOUBLE,
+      mapURL: {
+        type: DataTypes.STRING(2048),
         allowNull: false,
       },
     },
     {
       sequelize: database,
-      modelName: 'PointOfInteres',
+      modelName: 'PointOfInterest',
       tableName: 'PointsOfInterest',
       timestamps: false,
     }
@@ -212,7 +217,7 @@ async function initializeDatabase() {
         validate: {
           min: 0,
           max: 6,
-        }
+        },
       },
       openingHour: {
         type: DataTypes.TIME,
@@ -341,9 +346,7 @@ async function initializeDatabase() {
   OpeningHours.belongsTo(Service)
   Service.hasMany(OpeningHours)
 
-  // syncDatabase(database)
-
-  return {
+  const ret = {
     Image,
     PointOfInterest,
     Itinerary,
@@ -353,9 +356,13 @@ async function initializeDatabase() {
     OpeningHours,
     UserMessage,
   }
+
+  if (process.env.RESET_DB) ret.SyncDatabase = syncDatabase
+
+  return ret
 }
 
-async function syncDatabase(database, force = false) {
+async function syncDatabase(force = false) {
   try {
     if (force) {
       await database.sync({ force: true })

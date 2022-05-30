@@ -1,12 +1,12 @@
 <template>
-  <div class="row">
-      <div class="col-lg-4">
-          <div><a href="#"><img src="~/static/firenze.png" id="image" alt="imageCaption"></a>
+      <div>
+          <div class="text-center">
+                  <a href="#"><img :src="imageUrl" id="image" :alt="imageCaption"></a>
                   <h2>{{title}}</h2>
-                  <p>{{description}}</p>
-                  <p><a class="btn btn-secondary" href="#" role="button" id="submit">View details &raquo;</a></p>
+                  <p style="   overflow: hidden;text-overflow: ellipsis;white-space: nowrap; ">{{description}}</p>
+                   <div @click="goToDetails()" class="btn btn-primary btn-orange" id="submit">See Details</div>
           </div>
-      </div><!-- /.col -->
+          <br>
   </div>
 
 
@@ -20,6 +20,7 @@ export default {
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
+    id:{ type: Number, required: true },
   },
   head() {
     return {
@@ -55,41 +56,38 @@ export default {
     }
   },
   methods: {
-    SendClickEvent() {
-      this.$emit('click-event')
+     goToDetails() {
+      this.$router.push(`/poi_details/${this.id}`)
     },
+
   },
 }
 </script>
 
 <style scoped>
+
   p a {
-    
     max-width: 30%;
     margin:0.2em;
-
   }
+  
   h2{
     margin:0.3em;
   }
+
     #image {
       width:40%;
       height: 40%;
     }
 
-#submit {
+  #submit {
     color: white;
     background-color: #414535;
-}
+  }
 
-#submit:hover {
+  #submit:hover {
     background-color: #C19875;
     transition: 0.2s;
   }
-  
-div{
-  text-align: center;
-  margin: 1em;
-  
-}
+
 </style>
