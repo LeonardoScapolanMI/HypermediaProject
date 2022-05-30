@@ -36,7 +36,7 @@
     <br />
 
     <div class="text-center">
-      <button id="load-more" @click="loadMore()">LOAD MORE</button>
+      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
     <br />
 
@@ -50,7 +50,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import Card from '~/components/Card.vue'
 
 const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 4
+const N_ITEMS_LOADED_MORE = 3
 
 export default {
   name: 'AllPOIs',
@@ -70,15 +70,15 @@ export default {
 
     const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
     return {
-      poiList: data,
-      itemShown: data.length
+      poiList: data.data,
+      allLoaded: data.isFinished
     }
   },
   methods: {
     async loadMore(){
       
 
-      const itemShown = this.itemShown
+      const itemShown = this.poiList.length
 
       const reqBody = {
         params: {
@@ -91,10 +91,8 @@ export default {
         'http://localhost:3000/api/poi',
         reqBody
       )
-      this.itemShown += data.length
-      console.log(this.poiList)
-      for(const d of data) this.poiList.push(d)
-      console.log(this.poiList)
+      this.allLoaded = data.isFinished
+      for(const d of data.data) this.poiList.push(d)
     },
   },
 }

@@ -34,10 +34,10 @@
 <script>
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
-import Card from '~/components/Card.vue'
+// import Card from '~/components/Card.vue'
 export default {
   name: 'AllPOIs',
-  components: { TheFooter, TheHeader, Card },
+  components: { TheFooter, TheHeader, /* Card */ },
   data() {
     return {}
     },
