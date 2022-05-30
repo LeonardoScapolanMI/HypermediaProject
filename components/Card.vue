@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     goToDetails() {
-      if (linkedPageRoute) this.$router.push(linkedPageRoute)
+      if (this.linkedPageRoute) this.$router.push(this.linkedPageRoute)
     },
   },
 }
