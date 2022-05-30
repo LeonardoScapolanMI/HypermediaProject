@@ -7,7 +7,7 @@
         {{ description }}
       </p>
       <div
-        @click="goToDetails()"
+        @click="$emit('onSeeDetails')"
         class="btn btn-primary btn-orange"
         id="submit"
       >
@@ -26,7 +26,6 @@ export default {
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-    linkedPageRoute: { type: String, required: true },
   },
   head() {
     return {
@@ -60,11 +59,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    goToDetails() {
-      if (this.linkedPageRoute) this.$router.push(this.linkedPageRoute)
-    },
   },
 }
 </script>

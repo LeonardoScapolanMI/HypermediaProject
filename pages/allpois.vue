@@ -24,7 +24,7 @@
           :key="`poi-index-${poiIndex}`"
         >
           <card
-            :linkedPageRoute="'/poi_details/${poi.id}'"
+            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
             :imageUrl="poi.images[0].URL"
             :imageCaption="poi.images[0].caption"
             :title="poi.name"
@@ -69,6 +69,10 @@ export default {
     }
 
     const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
+
+    console.log(data.data[0].id)
+    console.log(typeof data.data[0].id)
+
     return {
       poiList: data.data,
       allLoaded: data.isFinished
