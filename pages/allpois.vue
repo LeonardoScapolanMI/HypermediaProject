@@ -3,11 +3,11 @@
     <the-header />
 
     <!-- TITLE -->
-    <div><br>
+    <div class="titolo">
           <h1 class="text-center">ALL POINTS OF INTEREST</h1> 
           <hr id="title">
           <h4 class="text-center">ALL POINTS OF INTEREST SECTION</h4> 
-         </div><br><br>
+         </div>
 
     <!-- CARDS -->
     
@@ -22,9 +22,9 @@
       :description="poi.description" 
     />
     </div></div></div>
-    <br>
+    
 
-    <div class="text-center"><button id="load-more">LOAD MORE</button></div><br>
+    <div class="text-center" id="bottone" ><button id="load-more">LOAD MORE</button></div>
 
      <the-footer />
   </div>
@@ -73,6 +73,16 @@ body {
   font-family: Georgia;
 }
 
+.titolo {
+  padding: 2em;
+}
+
+.content{
+  padding: 2em;
+}
+#bottone {
+  padding: 2em;
+}
 #title {
   margin-left: 300px;
   margin-right: 300px;

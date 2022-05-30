@@ -1,15 +1,18 @@
 <template>
-      <div>
-          <div class="text-center">
-                  <a href="#"><img :src="imageUrl" id="image" :alt="imageCaption"></a>
-                  <h2>{{title}}</h2>
-                  <p style="   overflow: hidden;text-overflow: ellipsis;white-space: nowrap; ">{{description}}</p>
-                   <div @click="goToDetails()" class="btn btn-primary btn-orange" id="submit">See Details</div>
-          </div>
-          <br>
+  <div class="Wrapper">
+    <div class="Item">
+      <div class="ImgWrap">
+        <img :src="imageUrl" id="image" :alt="imageCaption" />
+      </div>
+
+      <div class="Description">
+        <h2>{{title}}</h2>
+        <p style="   overflow: hidden;text-overflow: ellipsis;white-space: nowrap; ">{{description}}</p>
+      </div>
+      <div @click="goToDetails()" class="Btn" id="submit">See Details</div>
+    </div>
+    <br />
   </div>
-
-
 </template>
 
 <script>
@@ -20,74 +23,107 @@ export default {
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-    id:{ type: Number, required: true },
+    id: { type: Number, required: true },
   },
   head() {
     return {
-        link: [
-          {
-            rel: 'stylesheet',
-            href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css',
-            integrity:
-              'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm',
-            crossorigin: 'anonymous',
-          },
-        ],
-        script: [
-          {
-            src: 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
-            integrity:
-              'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN',
-            crossorigin: 'anonymous',
-          },
-          {
-            src: 'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js',
-            integrity:
-              'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q',
-            crossorigin: 'anonymous',
-          },
-          {
-            src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
-            integrity:
-              'sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl',
-            crossorigin: 'anonymous',
-          },
-        ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css',
+          integrity:
+            'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm',
+          crossorigin: 'anonymous',
+        },
+      ],
+      script: [
+        {
+          src: 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
+          integrity:
+            'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN',
+          crossorigin: 'anonymous',
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js',
+          integrity:
+            'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q',
+          crossorigin: 'anonymous',
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
+          integrity:
+            'sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl',
+          crossorigin: 'anonymous',
+        },
+      ],
     }
   },
   methods: {
-     goToDetails() {
+    goToDetails() {
       this.$router.push(`/poi_details/${this.id}`)
     },
-
   },
 }
 </script>
 
 <style scoped>
+h2 {
+  margin: 0.3em;
+}
 
-  p a {
-    max-width: 30%;
-    margin:0.2em;
-  }
+#submit {
+  color: white;
+  background-color: #414535;
+}
+
+#submit:hover {
+  background-color: #c19875;
+  transition: 0.2s;
+}
+
+.Btn {
+  background: #20a8d8;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+}
+
+Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Item {
+  background: #f5f5f5;
+  display: flex;
+  flex: 0 1 180px;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.ImgWrap {
+  position: relative;
+  margin: 0.5em;
+  flex: 0 1 180px;
   
-  h2{
-    margin:0.3em;
-  }
+  display: block;
+  overflow: hidden;
+}
 
-    #image {
-      width:40%;
-      height: 40%;
-    }
+.ImgWrap img {
+  height: 100%;
+  max-width: 90%;
+}
 
-  #submit {
-    color: white;
-    background-color: #414535;
-  }
-
-  #submit:hover {
-    background-color: #C19875;
-    transition: 0.2s;
-  }
-
+.Description {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 0.9em;
+  word-wrap: break-word;
+  max-width: 90%;
+}
 </style>
