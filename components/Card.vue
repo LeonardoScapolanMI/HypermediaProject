@@ -1,11 +1,16 @@
 <template>
-  <div>
-    <div class="text-center">
+  <div class="Wrapper">
+    <div class="Item">
+      <div class="ImgWrap">
       <img :src="imageUrl" id="image" :alt="imageCaption" />
+      </div>
+
+      <div class="Description">
       <h2>{{ title }}</h2>
       <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
         {{ description }}
       </p>
+      </div>
       <div
         @click="$emit('onSeeDetails')"
         class="btn btn-primary btn-orange"
@@ -64,18 +69,8 @@ export default {
 </script>
 
 <style scoped>
-p a {
-  max-width: 30%;
-  margin: 0.2em;
-}
-
 h2 {
   margin: 0.3em;
-}
-
-#image {
-  width: 40%;
-  height: 40%;
 }
 
 #submit {
@@ -86,5 +81,51 @@ h2 {
 #submit:hover {
   background-color: #c19875;
   transition: 0.2s;
+}
+
+.Btn {
+  background: #20a8d8;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+}
+
+Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Item {
+  background: #f5f5f5;
+  display: flex;
+  flex: 0 1 180px;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.ImgWrap {
+  position: relative;
+  margin: 0.5em;
+  flex: 0 1 180px;
+  
+  display: block;
+  overflow: hidden;
+}
+
+.ImgWrap img {
+  height: 100%;
+  max-width: 90%;
+}
+
+.Description {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 0.9em;
+  word-wrap: break-word;
+  max-width: 90%;
 }
 </style>

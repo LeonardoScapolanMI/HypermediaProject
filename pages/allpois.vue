@@ -5,14 +5,11 @@
     <the-header />
 
     <!-- TITLE -->
-
-    <div>
-      <br />
-      <h1 class="text-center">ALL POINTS OF INTEREST</h1>
-      <hr id="title" />
-      <h4 class="text-center">ALL POINTS OF INTEREST SECTION</h4>
-    </div>
-    <br /><br />
+    <div class="titolo">
+          <h1 class="text-center">ALL POINTS OF INTEREST</h1> 
+          <hr id="title">
+          <h4 class="text-center">ALL POINTS OF INTEREST SECTION</h4> 
+         </div>
 
     <!-- CARDS -->
 
@@ -33,12 +30,12 @@
         </div>
       </div>
     </div>
-    <br />
+    
 
     <div class="text-center">
       <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
-    <br />
+   
 
     <the-footer />
   </div>
@@ -69,9 +66,6 @@ export default {
     }
 
     const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
-
-    console.log(data.data[0].id)
-    console.log(typeof data.data[0].id)
 
     return {
       poiList: data.data,
@@ -109,11 +103,21 @@ export default {
     font-family: Georgia;
   }
 
-  #title {
-    margin-left: 300px;
-    margin-right: 300px;
-    border-top: 2px solid #414535;
-  }
+.titolo {
+  padding: 2em;
+}
+
+.content{
+  padding: 2em;
+}
+#bottone {
+  padding: 2em;
+}
+#title {
+  margin-left: 300px;
+  margin-right: 300px;
+  border-top: 2px solid #414535;
+}
 
 /* LOAD MORE */
 
