@@ -1,11 +1,11 @@
 <template>
     <div>
-        <the-header />
+        <TheHeader />
         <!-- TITOLO -->
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
           <hr id="title">
-          <h4 class="text-center">POINT OF INTEREST SECTION</h4> 
+          <h4 class="text-center">POINT OF INTEREST</h4> 
         </div><br><br>
         <div class="row">
             <div class="col-md-1"></div>
@@ -18,12 +18,25 @@
                 </div> 
             </div> <!-- col -->
         </div> <!-- row -->
-        <the-footer/>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-6"><SlideShow :images="imagesV"/></div>
+          <div class="col"></div>
+        </div>
+        <TheFooter/>
     </div>
 </template>
 
 <script>
+import TheFooter from '~/components/TheFooter.vue'
+import TheHeader from '~/components/TheHeader.vue'
+import SlideShow from '~/components/Slideshow.vue'
 export default {
+  components:{
+    TheFooter,
+    TheHeader,
+    SlideShow,
+  },
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -31,7 +44,7 @@ export default {
     return {
       name: data.name,
       description: data.description,
-      images: data.Images,
+      imagesV: data.Images,
       mapurl: data.mapURL,
     }
   },
