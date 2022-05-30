@@ -8,6 +8,7 @@ const app = express()
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 
+
 app.get('/', (req, res) => {
   res.status(200).send('Hello')
 })
@@ -15,9 +16,15 @@ app.get('/', (req, res) => {
 // Get all POIs
 app.get('/poi', async (req, res) => {
   const data = await dbData
-  const result = await data.PointOfInterest.findAll({
+
+  const queryOptions = {
     include: { model: data.Image },
-  })
+  }
+
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+
+  const result = await data.PointOfInterest.findAll(queryOptions)
   const filtered = []
   for (const element of result) {
     filtered.push({
