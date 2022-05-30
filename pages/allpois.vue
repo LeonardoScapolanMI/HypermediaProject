@@ -3,6 +3,7 @@
     <the-header />
 
     <!-- TITLE -->
+    
     <div><br>
           <h1 class="text-center">ALL POINTS OF INTEREST</h1> 
           <hr id="title">
@@ -48,8 +49,6 @@ export default {
       }
     }
 
-
-
   // methods: {
   // $(document).ready(function(){
 // $(".content").slice(0, 3).show();
@@ -68,27 +67,27 @@ export default {
 
 <style>
 
-body {
-  color: #414535;
-  font-family: Georgia;
-}
+  body {
+    color: #414535;
+    font-family: Georgia;
+  }
 
-#title {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-top: 2px solid #414535;
-}
+  #title {
+    margin-left: 300px;
+    margin-right: 300px;
+    border-top: 2px solid #414535;
+  }
 
 /* LOAD MORE */
 
-.no-content {
-  color: #414535 !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
-  pointer-events: none;
-}
+  .no-content {
+    color: #414535 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    pointer-events: none;
+  }
 
-#load-more:hover {
+  #load-more:hover {
     color: white;
     transition: 0.2s;
     cursor: pointer;
