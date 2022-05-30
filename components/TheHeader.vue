@@ -30,7 +30,7 @@ export default {
       headerList: [
         {
           name: 'EVENTS',
-          path: '/',
+          path: '/alleventgroupings',
         },
         {
           name: 'POINT OF INTERESTS',
@@ -38,15 +38,15 @@ export default {
         },
         {
           name: 'ITINERARIES',
-          path: '/itineraries',
+          path: '/allitineraries',
         },
         {
           name: 'SERVICES',
-          path: '/services',
+          path: '/allservices',
         },
         {
           name: 'THE TOWN',
-          path: '/the town',
+          path: '/thetown',
         },
       ],
     }

@@ -1,18 +1,18 @@
 <template>
   <div class="row">
-          <div class="col-md-1"></div>
-          
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+      <p id="text">{{description}}</p>
+    </div> <!-- col -->     
     <div class="col-md-4">
-             <div class="text-center">
+      <div class="text-center">
         <iframe :src= "indirizzo" id="map"></iframe>
       </div> 
-            </div> <!-- col -->
-        </div> <!-- row -->
+    </div> <!-- col -->
+  </div> <!-- row -->
 </template>
 
-
 <script> 
-
 
 export default {
   name: 'MapBox',
@@ -52,8 +52,6 @@ export default {
         ],
       }
     },
-
-
 }
     
 </script>
