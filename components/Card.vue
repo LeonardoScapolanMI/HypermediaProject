@@ -2,14 +2,22 @@
   <div class="Wrapper">
     <div class="Item">
       <div class="ImgWrap">
-        <img :src="imageUrl" id="image" :alt="imageCaption" />
+      <img :src="imageUrl" id="image" :alt="imageCaption" />
       </div>
 
       <div class="Description">
-        <h2>{{title}}</h2>
-        <p style="   overflow: hidden;text-overflow: ellipsis;white-space: nowrap; ">{{description}}</p>
+      <h2>{{ title }}</h2>
+      <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
+        {{ description }}
+      </p>
       </div>
-      <div @click="goToDetails()" class="Btn" id="submit">See Details</div>
+      <div
+        @click="$emit('onSeeDetails')"
+        class="btn btn-primary btn-orange"
+        id="submit"
+      >
+        See Details
+      </div>
     </div>
     <br />
   </div>
@@ -23,7 +31,6 @@ export default {
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-    id: { type: Number, required: true },
   },
   head() {
     return {
@@ -57,11 +64,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    goToDetails() {
-      this.$router.push(`/poi_details/${this.id}`)
-    },
   },
 }
 </script>

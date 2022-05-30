@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- Problemi: Usare padding al posto di br, non servono le orientation info in questo genere di pagine-->
+
     <the-header />
 
     <!-- TITLE -->
@@ -10,23 +12,32 @@
          </div>
 
     <!-- CARDS -->
-    
+
     <div class="content">
-    <div class="row">
-    <div class="col-md-4" v-for= "(poi, poiIndex) of poiList" :key= "`poi-index-${poiIndex}`">
-    <card
-      :id = "poi.id"
-      :imageUrl="poi.images[0].URL" 
-      :imageCaption="poi.images[0].caption"
-      :title="poi.name" 
-      :description="poi.description" 
-    />
-    </div></div></div>
+      <div class="row">
+        <div
+          class="col-md-4"
+          v-for="(poi, poiIndex) of poiList"
+          :key="`poi-index-${poiIndex}`"
+        >
+          <card
+            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
+            :imageUrl="poi.images[0].URL"
+            :imageCaption="poi.images[0].caption"
+            :title="poi.name"
+            :description="poi.description"
+          />
+        </div>
+      </div>
+    </div>
     
 
-    <div class="text-center" id="bottone" ><button id="load-more">LOAD MORE</button></div>
+    <div class="text-center">
+      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
+    </div>
+   
 
-     <the-footer />
+    <the-footer />
   </div>
 </template>
 
@@ -34,44 +45,63 @@
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
 import Card from '~/components/Card.vue'
+
+const N_BASE_LOADED_ITEMS = 9
+const N_ITEMS_LOADED_MORE = 3
+
 export default {
   name: 'AllPOIs',
   components: { TheFooter, TheHeader, Card },
   data() {
-    return {}
-    },
-    async asyncData({ $axios }) {
-      // const { data } = await $axios.get('http://localhost:3000/api/cats')
-      const { data } = await $axios.get('http://localhost:3000/api/poi')
-      return {
-        poiList: data,
-      }
+    return {
+    }
+  },
+  async asyncData({ $axios }) {
+    
+
+    const reqBody = {
+      params: {
+        itemCount: N_BASE_LOADED_ITEMS,
+      },
     }
 
+    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
 
+    return {
+      poiList: data.data,
+      allLoaded: data.isFinished
+    }
+  },
+  methods: {
+    async loadMore(){
+      
 
-  // methods: {
-  // $(document).ready(function(){
-// $(".content").slice(0, 3).show();
-// $("#load-more").on("click", function(e){
-// e.preventDefault();
-// $(".content:hidden").slice(0, 1).slideDown();
-// if($(".content:hidden").length == 0) {
- // $("#load-more").text("No More Content").addClass("no-content");
-// }
-// });
-// })
- // }
+      const itemShown = this.poiList.length
+
+      const reqBody = {
+        params: {
+          startingIndex: itemShown,
+          itemCount: N_ITEMS_LOADED_MORE,
+        },
+      }
+
+      const { data } = await this.$axios.get(
+        'http://localhost:3000/api/poi',
+        reqBody
+      )
+      this.allLoaded = data.isFinished
+      for(const d of data.data) this.poiList.push(d)
+    },
+  },
 }
-
 </script>
 
 <style>
 
-body {
-  color: #414535;
-  font-family: Georgia;
-}
+  body {
+    color: #414535;
+    font-family: Georgia;
+  }
 
 .titolo {
   padding: 2em;
@@ -91,14 +121,14 @@ body {
 
 /* LOAD MORE */
 
-.no-content {
-  color: #414535 !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
-  pointer-events: none;
-}
+  .no-content {
+    color: #414535 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    pointer-events: none;
+  }
 
-#load-more:hover {
+  #load-more:hover {
     color: white;
     transition: 0.2s;
     cursor: pointer;
@@ -115,4 +145,14 @@ body {
     margin-left: 20px;
   }
 
+#load-more {
+  color: #414535;
+  background-color: #96bbbb;
+  padding: 5px 10px 5px 10px;
+  font-size: 15px;
+  border: 2px solid #414535;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 </style>

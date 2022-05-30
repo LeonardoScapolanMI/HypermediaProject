@@ -1,4 +1,5 @@
 import express from 'express'
+import { Sequelize } from 'sequelize'
 import dbData from './model/database.js'
 
 // NB: MUST SET .env file with env variable DATABASE_URL
@@ -8,6 +9,7 @@ const app = express()
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 
+
 app.get('/', (req, res) => {
   res.status(200).send('Hello')
 })
@@ -15,12 +17,32 @@ app.get('/', (req, res) => {
 // Get all POIs
 app.get('/poi', async (req, res) => {
   const data = await dbData
-  const result = await data.PointOfInterest.findAll({
+
+  const queryOptions = {
     include: { model: data.Image },
-  })
-  const filtered = []
+  }
+
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+
+  const result = await data.PointOfInterest.findAll(queryOptions)
+  const poiCount = await data.PointOfInterest.count()
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = poiCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = poiCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
   for (const element of result) {
-    filtered.push({
+    ret.data.push({
       id : element._id,
       name: element.name,
       description: element.description,
@@ -29,7 +51,7 @@ app.get('/poi', async (req, res) => {
     })
   }
   //console.log(result)
-  return res.json(filtered)
+  return res.json(ret)
 })
 
 //get poi from id
