@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-6">
-      <p id="text">{{description}}</p>
+      <p id="text"></p>
     </div> <!-- col -->     
     <div class="col-md-4">
       <div class="text-center">

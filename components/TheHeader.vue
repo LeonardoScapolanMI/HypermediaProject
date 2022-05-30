@@ -34,7 +34,7 @@ export default {
         },
         {
           name: 'POINT OF INTERESTS',
-          path: '/allpois',
+          path: '/pages/allpois',
         },
         {
           name: 'ITINERARIES',
