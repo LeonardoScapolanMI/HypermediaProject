@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center">
-      <a href="#"><img :src="imageUrl" id="image" :alt="imageCaption" /></a>
+      <img :src="imageUrl" id="image" :alt="imageCaption" />
       <h2>{{ title }}</h2>
       <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
         {{ description }}
