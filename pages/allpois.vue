@@ -70,9 +70,6 @@ export default {
 
     const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
 
-    console.log(data.data[0].id)
-    console.log(typeof data.data[0].id)
-
     return {
       poiList: data.data,
       allLoaded: data.isFinished
