@@ -17,7 +17,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Image Caption">
+        <div class="col-12"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events">
           <div class="carousel-caption d-md-block">
                 <h5>{{caption}}}</h5><p>{{description}}}</p>
           </div>

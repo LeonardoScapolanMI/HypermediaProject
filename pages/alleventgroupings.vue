@@ -4,7 +4,7 @@
 
     <!-- TITLE -->
     <div><br>
-          <h1 class="text-center">ALL EVENTS  GROUPINGS</h1> 
+          <h1 class="text-center">ALL EVENTS GROUPINGS</h1> 
           <hr id="title">
           <h4 class="text-center">ALL EVENTS GROUPINGS SECTION</h4> 
          </div><br><br>

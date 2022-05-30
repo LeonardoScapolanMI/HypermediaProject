@@ -52,8 +52,6 @@ export default {
       }
     }
 
-
-
   // methods: {
   // $(document).ready(function(){
 // $(".content").slice(0, 3).show();
