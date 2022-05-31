@@ -13,20 +13,18 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div v-for="(img, imgIndex) of images" :key="`img-Index-${imgIndex}`" :id="imgIndex" class="carousel-item" >
-                     <img :src="img.URL" :alt="img.caption">
+                    <img :src="img.URL" :alt="img.caption">
                 </div>
-
             </div>
             
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#slideshow" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slideshow" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
             
-
             </div>
             <script>
                 document.getElementById(0).className = 'carousel-item active';
@@ -79,10 +77,13 @@
 
     }   
 </script>
+
 <style scoped>
+
 img {
     height: 65vh;
     width: 100%;
     object-fit: cover; 
 }
+
 </style>

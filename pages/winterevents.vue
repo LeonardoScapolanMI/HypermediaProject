@@ -3,15 +3,16 @@
     <the-header />
 
     <!-- TITLE -->
-    <div><br>
-          <h1 class="text-center">ALL WINTER EVENTS</h1> 
-          <hr id="title">
-          <h4 class="text-center">WINTER EVENTS SECTION</h4> 
-         </div><br><br>
+
+    <div class="titolo">
+      <h1 class="text-center">ALL WINTER EVENTS</h1> 
+      <hr id="title">
+      <h4 class="text-center">WINTER EVENTS SECTION</h4> 
+    </div>
 
     <!-- OVERVIEW -->
 
-    <div><br><p></p></div><br>
+    <div><p></p></div>
 
     <!-- IMMAGINE -->
 
@@ -19,31 +20,38 @@
       <div class="row">
         <div class="col-12"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events">
           <div class="carousel-caption d-md-block">
-                <h5></h5>
-                <p></p>
+            <h5></h5>
+            <p></p>
           </div>
         </div>
       </div>
-    </div><br>
+    </div>
 
     <!-- CARDS -->
-    
+
     <div class="content">
-    <div class="row">
-    <div class="col-md-4" v-for= "(poi, poiIndex) of poiList" :key= "`poi-index-${poiIndex}`">
-    <card
-      :id = "poi.id"
-      :imageUrl="poi.images[0].URL" 
-      :imageCaption="poi.images[0].caption"
-      :title="poi.name" 
-      :description="poi.description" 
-    />
-    </div></div></div>
-    <br>
-
-    <div class="text-center"><button id="load-more">LOAD MORE</button></div><br>
-
-     <the-footer />
+      <div class="row">
+        <div
+          class="col-md-4"
+          v-for="(poi, poiIndex) of poiList"
+          :key="`poi-index-${poiIndex}`"
+        >
+          <card
+            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
+            :imageUrl="poi.images[0].URL"
+            :imageCaption="poi.images[0].caption"
+            :title="poi.name"
+            :description="poi.description"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
+    </div>
+   
+    <the-footer />
   </div>
 </template>
 
@@ -51,34 +59,55 @@
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
 import Card from '~/components/Card.vue'
+
+const N_BASE_LOADED_ITEMS = 9
+const N_ITEMS_LOADED_MORE = 3
+
 export default {
-  name: 'AllPOIs',
+  name: 'WinterEvents',
   components: { TheFooter, TheHeader, Card },
   data() {
-    return {}
-    },
-    async asyncData({ $axios }) {
-      // const { data } = await $axios.get('http://localhost:3000/api/cats')
-      const { data } = await $axios.get('http://localhost:3000/api/poi')
-      return {
-        poiList: data,
-      }
+    return {
+    }
+  },
+  async asyncData({ $axios }) {
+    
+
+    const reqBody = {
+      params: {
+        itemCount: N_BASE_LOADED_ITEMS,
+      },
     }
 
-  // methods: {
-  // $(document).ready(function(){
-// $(".content").slice(0, 3).show();
-// $("#load-more").on("click", function(e){
-// e.preventDefault();
-// $(".content:hidden").slice(0, 1).slideDown();
-// if($(".content:hidden").length == 0) {
- // $("#load-more").text("No More Content").addClass("no-content");
-// }
-// });
-// })
- // }
-}
+    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
 
+    return {
+      poiList: data.data,
+      allLoaded: data.isFinished
+    }
+  },
+  methods: {
+    async loadMore(){
+      
+
+      const itemShown = this.poiList.length
+
+      const reqBody = {
+        params: {
+          startingIndex: itemShown,
+          itemCount: N_ITEMS_LOADED_MORE,
+        },
+      }
+
+      const { data } = await this.$axios.get(
+        'http://localhost:3000/api/poi',
+        reqBody
+      )
+      this.allLoaded = data.isFinished
+      for(const d of data.data) this.poiList.push(d)
+    },
+  },
+}
 </script>
 
 <style>
@@ -95,6 +124,10 @@ export default {
   }
 
 /* LOAD MORE */
+
+  .content {
+     display: none;
+  }
 
   .no-content {
     color: #414535 !important;
