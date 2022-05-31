@@ -97,14 +97,14 @@ Wrapper {
 }
 
 .Item {
-  background: #f5f5f5;
+  
   display: flex;
   flex: 0 1 180px;
   flex-direction: column;
   text-align: center;
   margin: 10px;
   padding: 5px;
-  border: 1px solid #ddd;
+  border: 1px transparent;
 }
 
 .ImgWrap {
