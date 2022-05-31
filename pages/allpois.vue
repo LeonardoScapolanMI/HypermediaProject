@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- Problemi: Usare padding al posto di br, non servono le orientation info in questo genere di pagine-->
-
     <the-header />
 
     <!-- TITLE -->
+    
     <div class="titolo">
-          <h1 class="text-center">ALL POINTS OF INTEREST</h1> 
-          <hr id="title">
-          <h4 class="text-center">ALL POINTS OF INTEREST SECTION</h4> 
-         </div>
+      <h1 class="text-center">ALL POINTS OF INTEREST</h1> 
+      <hr id="title">
+      <h4 class="text-center">ALL POINTS OF INTEREST SECTION</h4> 
+    </div>
 
     <!-- CARDS -->
 
@@ -31,12 +31,10 @@
       </div>
     </div>
     
-
     <div class="text-center">
       <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
    
-
     <the-footer />
   </div>
 </template>
@@ -103,23 +101,29 @@ export default {
     font-family: Georgia;
   }
 
-.titolo {
-  padding: 2em;
-}
+  .titolo {
+    padding: 2em;
+  }
 
-.content{
-  padding: 2em;
-}
-#bottone {
-  padding: 2em;
-}
-#title {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-top: 2px solid #414535;
-}
+  .content{
+    padding: 2em;
+  }
+
+  #bottone {
+    padding: 2em;
+  }
+
+  #title {
+    margin-left: 300px;
+    margin-right: 300px;
+    border-top: 2px solid #414535;
+  }
 
 /* LOAD MORE */
+
+  .content {
+     display: none;
+  }
 
   .no-content {
     color: #414535 !important;

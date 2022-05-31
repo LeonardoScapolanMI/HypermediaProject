@@ -1,6 +1,17 @@
 <template>
   <div>
     <the-header />
+
+    <!-- TITLE -->
+
+    <div class="titolo">
+      <h1 class="text-center">ALL EVENTS GROUPINGS</h1> 
+      <hr id="title">
+      <h4 class="text-center">ALL EVENTS GROUPINGS SECTION</h4> 
+    </div>
+
+    <!-- FORM -->
+
     <div id="contactUs">
     <div class="container marketing">
       <div>

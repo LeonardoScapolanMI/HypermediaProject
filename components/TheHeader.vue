@@ -108,7 +108,6 @@ export default {
   }
 
   li {
-    float: left;
     padding: 5px 5px;
     list-style-type: none;
   }

@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-md">
-      <div class="navbar-collapse">
+    <nav class="navbar">
+      <div>
         <ul>
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
             <nuxt-link :to="navItem.path" class="nav-link">
@@ -11,7 +10,6 @@
         </ul>
       </div>
     </nav>
-  </div>
 </template>
 
 <script>
@@ -83,17 +81,14 @@ nav {
 
 ul {
   margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
 li {
   display: inline-block;
-  padding: 5px 5px;
 }
 
 nav a {
-  padding: 15px 10px;
   color: white;
   text-decoration: none;
 }

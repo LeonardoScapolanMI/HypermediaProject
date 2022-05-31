@@ -3,11 +3,12 @@
     <the-header />
 
     <!-- TITLE -->
-    <div><br>
-          <h1 class="text-center">ALL EVENTS GROUPINGS</h1> 
-          <hr id="title">
-          <h4 class="text-center">ALL EVENTS GROUPINGS SECTION</h4> 
-         </div><br><br>
+
+    <div class="titolo">
+      <h1 class="text-center">ALL EVENT GROUPINGS</h1> 
+      <hr id="title">
+      <h4 class="text-center">ALL EVENT GROUPINGS SECTION</h4> 
+    </div>
 
     <!-- IMMAGINI -->
 
@@ -18,7 +19,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"><a href="/summerevents"><img class="w-100" src="/images/event/igiardinidifirenze/0.jpg" alt="Summer events"></a>
+              <div class="col-6"><a href="/summerevents"><img class="w-100" src="/images/event/i-giardini-di-firenze/0.jpg" alt="Summer events"></a>
                 <div class="carousel-caption d-md-block"><h3>SUMMER EVENTS</h3></div>
               </div>
               <div class="col-6"><a href="/winterevents"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events"></a>
@@ -34,22 +35,10 @@
 <script>
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
-// import Card from '~/components/Card.vue'
 export default {
-  name: 'AllPOIs',
-  components: { TheFooter, TheHeader, /* Card */ },
-  data() {
-    return {}
-    },
-    async asyncData({ $axios }) {
-      // const { data } = await $axios.get('http://localhost:3000/api/cats')
-      const { data } = await $axios.get('http://localhost:3000/api/poi')
-      return {
-        poiList: data,
-      }
-    }
+  name: 'AllEventGroupings',
+  components: { TheFooter, TheHeader },
 }
-
 </script>
 
 <style>
