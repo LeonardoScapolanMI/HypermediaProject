@@ -5,7 +5,7 @@
       <img :src="imageUrl" id="image" :alt="imageCaption" />
       </div>
 
-      <div class="Description">
+      <div class="text-center" id="Description">
       <h2>{{ title }}</h2>
       <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
         {{ description }}
@@ -88,7 +88,7 @@ h2 {
   border: none;
   border-radius: 3px;
   color: #fff;
-  padding: 10px;
+  padding: 1em;
 }
 
 Wrapper {
@@ -105,6 +105,8 @@ Wrapper {
   margin: 10px;
   padding: 5px;
   border: 1px transparent;
+  max-height: 23em;
+  min-height: 23em;
 }
 
 .ImgWrap {
@@ -116,12 +118,12 @@ Wrapper {
   overflow: hidden;
 }
 
-.ImgWrap img {
-  height: 100%;
-  max-width: 90%;
+img {
+  height: 100% !important;
+  max-width: 90% !important;
 }
 
-.Description {
+#Description {
   flex: 1;
   padding: 10px 0;
   font-size: 0.9em;

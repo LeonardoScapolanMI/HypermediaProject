@@ -31,7 +31,7 @@
       </div>
     </div>
     
-    <div class="text-center">
+    <div class="text-center" id="bottone">
       <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
    
@@ -121,9 +121,7 @@ export default {
 
 /* LOAD MORE */
 
-  .content {
-     display: none;
-  }
+  
 
   .no-content {
     color: #414535 !important;
