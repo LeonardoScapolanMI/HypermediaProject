@@ -79,11 +79,20 @@
 </script>
 
 <style scoped>
+    .carousel {
+        width: 100%;
+        height: 100%;
+    }
 
-img {
-    height: 65vh;
-    width: 100%;
-    object-fit: cover; 
+    .carousel .carousel-inner, .carousel .carousel-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item img {
+    width: 60vw;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
-
 </style>
