@@ -70,21 +70,40 @@ app.get('/poi:id', async (req, res) => {
 
 // Get all Itineraries
 app.get('/itinerary', async (req, res) => {
-  
   const data = await dbData
-  const result = await data.Itinerary.findAll({
-    include: { model: data.PointOfInterest },
-  })
-  const filtered = []
+
+  const queryOptions = {
+    include: { model: data.Image, as: "representativeImage" },
+  }
+
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+
+  const result = await data.Itinerary.findAll(queryOptions)
+  const poiCount = await data.Itinerary.count()
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = poiCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = poiCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
   for (const element of result) {
-    filtered.push({
+    ret.data.push({
       name: element.name,
       overview: element.overview,
-      poi: element.PointOfInterest,
+      image: element.representativeImage,
     })
   }
-  // console.log(result)
-  return res.json(filtered)
+  //console.log(result)
+  return res.json(ret)
 })
 
 // Get  Itinerary from id

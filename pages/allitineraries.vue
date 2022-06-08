@@ -10,38 +10,21 @@
       <h4 class="text-center">ALL ITINERARIES SECTION</h4> 
     </div>
 
-    <!-- OVERVIEW -->
-
-    <div><p></p></div>
-    
-    <!-- IMMAGINE -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12"><img class="w-100" src="/images/event/igiardinidifirenze/0.jpg" alt="Summer events">
-          <div class="carousel-caption d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- CARDS -->
 
     <div class="content">
       <div class="row">
         <div
           class="col-md-4"
-          v-for="(allit, allitIndex) of itList"
-          :key="`poi-index-${allitIndex}`"
-        >
+          v-for="(it, allitIndex) of itList"
+          :key="`it-index-${allitIndex}`"
+          >
           <card
-            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="allit.name"
-            :description="allit.description"
+            @onSeeDetails="$router.push('/itinerary_details/' + it.id)"
+            :imageUrl="it.image.URL"
+            :imageCaption="it.image.caption"
+            :title="it.name"
+            :description="it.overview"
           />
         </div>
       </div>
@@ -79,10 +62,10 @@ export default {
       },
     }
 
-    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
+    const { data } = await $axios.get('http://localhost:3000/api/itinerary', reqBody)
 
     return {
-      poiList: data.data,
+      itList: data.data,
       allLoaded: data.isFinished
     }
   },
@@ -90,7 +73,7 @@ export default {
     async loadMore(){
       
 
-      const itemShown = this.poiList.length
+      const itemShown = this.itList.length
 
       const reqBody = {
         params: {
@@ -100,11 +83,11 @@ export default {
       }
 
       const { data } = await this.$axios.get(
-        'http://localhost:3000/api/poi',
+        'http://localhost:3000/api/itineraries',
         reqBody
       )
       this.allLoaded = data.isFinished
-      for(const d of data.data) this.poiList.push(d)
+      for(const d of data.data) this.itList.push(d)
     },
   },
 }
