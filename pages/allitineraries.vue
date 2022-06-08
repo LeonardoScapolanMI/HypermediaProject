@@ -5,20 +5,20 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL WINTER EVENTS</h1> 
+      <h1 class="text-center">ALL ITINERARIES</h1> 
       <hr id="title">
-      <h4 class="text-center">WINTER EVENTS SECTION</h4> 
+      <h4 class="text-center">ALL ITINERARIES SECTION</h4> 
     </div>
 
     <!-- OVERVIEW -->
 
     <div><p></p></div>
-
+    
     <!-- IMMAGINE -->
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events">
+        <div class="col-12"><img class="w-100" src="/images/event/igiardinidifirenze/0.jpg" alt="Summer events">
           <div class="carousel-caption d-md-block">
             <h5></h5>
             <p></p>
@@ -33,15 +33,15 @@
       <div class="row">
         <div
           class="col-md-4"
-          v-for="(winev, winevIndex) of poiList"
-          :key="`poi-index-${winevIndex}`"
+          v-for="(allit, allitIndex) of itList"
+          :key="`poi-index-${allitIndex}`"
         >
           <card
             @onSeeDetails="$router.push('/poi_details/' + poi.id)"
             :imageUrl="poi.images[0].URL"
             :imageCaption="poi.images[0].caption"
-            :title="winev.name"
-            :description="winev.description"
+            :title="allit.name"
+            :description="allit.description"
           />
         </div>
       </div>
@@ -64,7 +64,7 @@ const N_BASE_LOADED_ITEMS = 9
 const N_ITEMS_LOADED_MORE = 3
 
 export default {
-  name: 'WinterEvents',
+  name: 'AllItineraries',
   components: { TheFooter, TheHeader, Card },
   data() {
     return {

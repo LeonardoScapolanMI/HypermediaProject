@@ -33,15 +33,15 @@
       <div class="row">
         <div
           class="col-md-4"
-          v-for="(poi, poiIndex) of poiList"
-          :key="`poi-index-${poiIndex}`"
+          v-for="(sumev, sumevIndex) of poiList"
+          :key="`poi-index-${sumevIndex}`"
         >
           <card
             @onSeeDetails="$router.push('/poi_details/' + poi.id)"
             :imageUrl="poi.images[0].URL"
             :imageCaption="poi.images[0].caption"
-            :title="poi.name"
-            :description="poi.description"
+            :title="sumev.name"
+            :description="sumev.description"
           />
         </div>
       </div>

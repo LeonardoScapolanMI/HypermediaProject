@@ -24,8 +24,8 @@
         >
           <card
             @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            imageUrl="ciao"
-            imageCaption="poi.images[0].caption"
+            :imageUrl="poi.images[0].URL"
+            :imageCaption="poi.images[0].caption"
             :title="ev.name"
             :description="ev.overview"
           />
