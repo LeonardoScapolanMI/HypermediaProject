@@ -152,7 +152,7 @@ app.get('/event', async (req, res) => {
   for (const element of result) {
     filtered.push({
       name: element.name,
-      overvuew: element.overview,
+      overview: element.overview,
       startDate: element.startDate,
       endDate: element.endDate,
       cost: element.cost,

@@ -19,15 +19,15 @@
       <div class="row">
         <div
           class="col-md-4"
-          v-for="(poi, poiIndex) of poiList"
-          :key="`poi-index-${poiIndex}`"
+          v-for="(ev, evIndex) of evList"
+          :key="`poi-index-${evIndex}`"
         >
           <card
             @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="poi.name"
-            :description="poi.description"
+            imageUrl="ciao"
+            imageCaption="poi.images[0].caption"
+            :title="ev.name"
+            :description="ev.overview"
           />
         </div>
       </div>
@@ -65,10 +65,10 @@ export default {
       },
     }
 
-    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
+    const { data } = await $axios.get('http://localhost:3000/api/event', reqBody)
 
     return {
-      poiList: data.data,
+      evList: data.data,
       allLoaded: data.isFinished
     }
   },
