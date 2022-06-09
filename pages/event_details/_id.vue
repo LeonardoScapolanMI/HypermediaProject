@@ -19,9 +19,10 @@
                 <div class="col-md-6">
                     <p id="text">{{description}}</p><!-- TO FILL -->
             </div> <!-- col -->
+            <!--
             <div class="col-md-4">
                 <MapBox :indirizzo="mapurl"/>
-            </div> <!-- col -->
+            </div>  col -->
         </div> <!-- row -->
         
         <TheFooter/>
