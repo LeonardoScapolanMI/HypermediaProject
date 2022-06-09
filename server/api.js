@@ -112,18 +112,11 @@ app.get('/itinerary:id', async (req, res) => {
   const data = await dbData
   const result = await data.Itinerary.findOne({
     where: { _id },
-    include: { model: data.PointOfInterest },
+    include:[{ model: data.PointOfInterest}, {model: data.Image, as: "representativeImage" }],
   })
-  const filtered = []
-  for (const element of result) {
-    filtered.push({
-      name: element.name,
-      overview: element.overview,
-      poi: element.PointOfInterest,
-    })
-  }
+ 
   // console.log(result)
-  return res.json(filtered)
+  return res.json(result)
 })
 
 // Get all Services
@@ -186,19 +179,10 @@ app.get('/event:id', async (req, res) => {
   const data = await dbData
   const result = await data.Event.findOne({
     where:{ _id},
+    include:[{ model: data.PointOfInterest}]
   })
-  const filtered = []
-  for (const element of result) {
-    filtered.push({
-      name: element.name,
-      overvuew: element.overview,
-      startDate: element.startDate,
-      endDate: element.endDate,
-      cost: element.cost,
-    })
-  }
-  console.log(filtered)
-  return res.json(filtered)
+  console.log(result)
+  return res.json(result)
 })
 
 //POST ACTION for the form

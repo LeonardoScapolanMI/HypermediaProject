@@ -5,8 +5,8 @@
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
           <hr id="title">
-          <h4 class="text-center">PUNTO D'INTERESSE</h4> 
-        </div><br>
+          <h4 class="text-center">EVENTO</h4> 
+        </div><br><br>
 
         <div class="row">
           <div class="col"></div>
@@ -23,7 +23,7 @@
                 <MapBox :indirizzo="mapurl"/>
             </div> <!-- col -->
         </div> <!-- row -->
-       
+        
         <TheFooter/>
     </div>
 </template>
@@ -32,13 +32,11 @@
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
 import SlideShow from '~/components/Slideshow.vue'
-import MapBox from '~/components/MapBox.vue'
 export default {
   components:{
     TheFooter,
     TheHeader,
     SlideShow,
-    MapBox,
   },
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
