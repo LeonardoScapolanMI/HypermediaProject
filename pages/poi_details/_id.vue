@@ -24,6 +24,12 @@
             </div> <!-- col -->
         </div> <!-- row -->
        
+      <!-- Carousel of Cards --> 
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>      
+
+
         <TheFooter/>
     </div>
 </template>

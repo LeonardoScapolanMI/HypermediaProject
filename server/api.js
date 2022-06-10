@@ -97,6 +97,7 @@ app.get('/itinerary', async (req, res) => {
   const ret = {data:[], isFinished}
   for (const element of result) {
     ret.data.push({
+      id : element._id,
       name: element.name,
       overview: element.overview,
       image: element.representativeImage,
@@ -112,7 +113,7 @@ app.get('/itinerary:id', async (req, res) => {
   const data = await dbData
   const result = await data.Itinerary.findOne({
     where: { _id },
-    include:[{ model: data.PointOfInterest}, {model: data.Image, as: "representativeImage" }],
+    include:[{ model: data.PointOfInterest, include:{model: data.Image}}, {model: data.Image, as: "representativeImage" }],
   })
  
   // console.log(result)
@@ -126,6 +127,7 @@ app.get('/service', async (req, res) => {
   const filtered = []
   for (const element of result) {
     filtered.push({
+      id : element._id,
       name: element.name,
       phone: element.phone,
       email: element.email,

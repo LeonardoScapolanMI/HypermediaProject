@@ -42,7 +42,7 @@ export default {
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+    const { data } = await $axios.get('http://localhost:3000/api/event' + id)
     return {
       name: data.name,
       description: data.description,
