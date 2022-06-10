@@ -44,7 +44,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import Card from '~/components/Card.vue'
 
 const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 3
+//const N_ITEMS_LOADED_MORE = 3
 
 export default {
   name: 'Itinerary',
