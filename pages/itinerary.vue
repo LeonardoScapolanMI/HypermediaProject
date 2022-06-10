@@ -100,10 +100,6 @@ export default {
 
 /* LOAD MORE */
 
-  .content {
-     display: none;
-  }
-
   .no-content {
     color: #414535 !important;
     background-color: transparent !important;

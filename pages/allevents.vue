@@ -111,8 +111,6 @@ export default {
 
 /* LOAD MORE */
 
-  
-
   .no-content {
     color: #414535 !important;
     background-color: transparent !important;
