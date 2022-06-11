@@ -68,7 +68,7 @@ h2 {
   margin: 0.3em;
 }
 
-.Wrapper {
+Wrapper {
   display: flex;
   flex-wrap: wrap;
 }
