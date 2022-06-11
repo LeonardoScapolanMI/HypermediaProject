@@ -11,7 +11,7 @@
 
     <!-- OVERVIEW -->
 
-    <div><p></p></div>
+    <div><p id="text">{{description}}</p></div>
 
     <!-- CARDS -->
     <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
@@ -45,32 +45,6 @@ export default {
     margin-left: 300px;
     margin-right: 300px;
     border-top: 2px solid #414535;
-  }
-
-/* LOAD MORE */
-
-  .no-content {
-    color: #414535 !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    pointer-events: none;
-  }
-
-  #load-more:hover {
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-  
-  #load-more {
-    color: #414535;
-    background-color: #96BBBB;
-    padding: 5px 10px 5px 10px;
-    font-size: 15px;
-    border: 2px solid #414535 ;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
   }
 
 </style>
