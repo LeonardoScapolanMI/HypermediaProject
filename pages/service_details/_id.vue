@@ -5,11 +5,11 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">TYPE OF SERVICES</h1> 
-      <hr id="title">
-      <h4 class="text-center">TYPE OF SERVICES SECTION</h4> 
+          <h1 class="text-center">{{name}}</h1> 
+          <hr id="title">
+          <h4 class="text-center">TYPE OF SERVICES SECTION</h4> 
     </div>
-    
+
     <!-- IMMAGINE -->
 
     <div class="container">
@@ -27,7 +27,7 @@
 
     <div><p></p></div>
 
-    <!-- LONG CARDS -->
+         <!-- LONG CARDS -->
 
     <div class="content">
         <div
@@ -47,9 +47,9 @@
     <div class="text-center">
       <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
-   
-    <the-footer />
-  </div>
+        
+        <TheFooter/>
+    </div>
 </template>
 
 <script>
@@ -110,17 +110,6 @@ export default {
 </script>
 
 <style>
-
-  body {
-    color: #414535;
-    font-family: Georgia;
-  }
-
-  #title {
-    margin-left: 300px;
-    margin-right: 300px;
-    border-top: 2px solid #414535;
-  }
 
 /* LOAD MORE */
 
