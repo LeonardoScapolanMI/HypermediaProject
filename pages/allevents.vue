@@ -14,28 +14,7 @@
     <div><p></p></div>
 
     <!-- CARDS -->
-
-    <div class="content">
-      <div class="row">
-        <div
-          class="col-md-4"
-          v-for="(ev, evIndex) of evList"
-          :key="`poi-index-${evIndex}`"
-        >
-          <card
-            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="ev.name"
-            :description="ev.overview"
-          />
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center">
-      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
-    </div>
+    <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
    
     <the-footer />
   </div>
@@ -44,54 +23,13 @@
 <script>
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
-import Card from '~/components/Card.vue'
-
-const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 3
+import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllEvents',
-  components: { TheFooter, TheHeader, Card },
+  components: { TheFooter, TheHeader, CardList },
   data() {
-    return {
-    }
-  },
-  async asyncData({ $axios }) {
-    
-
-    const reqBody = {
-      params: {
-        itemCount: N_BASE_LOADED_ITEMS,
-      },
-    }
-
-    const { data } = await $axios.get('http://localhost:3000/api/event', reqBody)
-
-    return {
-      evList: data.data,
-      allLoaded: data.isFinished
-    }
-  },
-  methods: {
-    async loadMore(){
-      
-
-      const itemShown = this.poiList.length
-
-      const reqBody = {
-        params: {
-          startingIndex: itemShown,
-          itemCount: N_ITEMS_LOADED_MORE,
-        },
-      }
-
-      const { data } = await this.$axios.get(
-        'http://localhost:3000/api/poi',
-        reqBody
-      )
-      this.allLoaded = data.isFinished
-      for(const d of data.data) this.poiList.push(d)
-    },
+    return {}
   },
 }
 </script>
