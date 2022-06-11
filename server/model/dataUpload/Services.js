@@ -4,7 +4,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Farmacie',
-      introduction: 'Introduzione',
+      introduction: 'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
+        'Ecco un elenco delle farmacie disponibili sul terrritorio.',
     },
     services: [
       {
@@ -200,7 +201,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Bar e Ristoranti',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per i servizi di ristoro offerti dalla città di Firenze.\n' +
+        'Ecco un elenco dei migliori bar e ristoranti disponibili sul terrritorio.',
     },
     services: [
       {
@@ -611,7 +613,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Discoteche',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per i servizi di vita notturna offerti dalla città di Firenze.\n' +
+        'Ecco un elenco delle discoteche più moderne e popolari del terrritorio.',
     },
     services: [
       {
@@ -764,7 +767,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Hotel',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per i servizi di alloggio offerti dalla città di Firenze.\n' +
+        'Ecco un elenco dei migliori alberghi disponibili sul terrritorio.',
     },
     services: [
       {
@@ -854,7 +858,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Ospedali e Cliniche',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
+        'Ecco un elenco degli ospedali e delle cliniche disponibili sul terrritorio.',
     },
     services: [
       {
@@ -949,7 +954,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Negozi',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per lo shopping nella città di Firenze.\n' +
+        'Ecco un elenco di negozi disponibili sul terrritorio per ogni ogni tipo di necessità.',
     },
     services: [
       {
@@ -1193,7 +1199,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Banche',
-      introduction: 'introduction',
+      introduction: 'Questa sezione offre una guida per i servizi finanziari offerti dalla città di Firenze.\n' +
+        'Ecco un elenco delle banche disponibili sul terrritorio.',
     },
     services: [
       {
