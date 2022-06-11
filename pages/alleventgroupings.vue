@@ -38,9 +38,9 @@ import TheHeader from '~/components/TheHeader.vue'
 export default {
   name: 'AllEventGroupings',
   components: { TheFooter, TheHeader },
-  props: {
-    imageUrl: { type: String, required: true },
-    imageCaption: { type: String, required: true },
+  data() {
+    return {
+    }
   },
 }
 </script>
