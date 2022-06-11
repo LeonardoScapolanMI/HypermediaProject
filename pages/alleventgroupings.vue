@@ -14,15 +14,15 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-12"><a href="/allevents"><img class="w-100" src="/images/pointofinterest/piazzalemichelangelo/0.jpg" alt="All events"></a>
+              <div class="col-12"><a href="/allevents"><img :src="imageUrl" id="image" :alt="imageCaption" /></a>
                 <div class="carousel-caption d-md-block"><h3>ALL EVENTS</h3></div>
               </div>
             </div>
             <div class="row">
-              <div class="col-6"><a href="/summerevents"><img class="w-100" src="/images/event/i-giardini-di-firenze/0.jpg" alt="Summer events"></a>
+              <div class="col-6"><a href="/summerevents"><img :src="imageUrl" id="image" :alt="imageCaption" /></a>
                 <div class="carousel-caption d-md-block"><h3>SUMMER EVENTS</h3></div>
               </div>
-              <div class="col-6"><a href="/winterevents"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events"></a>
+              <div class="col-6"><a href="/winterevents"><img :src="imageUrl" id="image" :alt="imageCaption" /></a>
                 <div class="carousel-caption d-md-block"><h3>WINTER EVENTS</h3></div>
               </div>
             </div>
@@ -38,6 +38,10 @@ import TheHeader from '~/components/TheHeader.vue'
 export default {
   name: 'AllEventGroupings',
   components: { TheFooter, TheHeader },
+  props: {
+    imageUrl: { type: String, required: true },
+    imageCaption: { type: String, required: true },
+  },
 }
 </script>
 
