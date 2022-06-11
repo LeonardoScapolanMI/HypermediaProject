@@ -15,17 +15,13 @@
     <div class="container">
       <div class="row">
         <div class="col-12"><img :src="imageUrl" id="image" :alt="imageCaption" />
-          <div class="carousel-caption d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
         </div>
       </div>
     </div>
     
     <!-- OVERVIEW -->
 
-    <div><p></p></div>
+    div><p id="text">{{description}}</p></div>
 
     <!-- LONG CARDS -->
 
