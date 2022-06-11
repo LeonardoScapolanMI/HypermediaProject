@@ -19,7 +19,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'AllPOIs',
+  name: 'AllPois',
   components: { TheFooter, TheHeader, CardList },
   data() {
     return {}
