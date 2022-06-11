@@ -91,7 +91,7 @@ h2 {
   padding: 1em;
 }
 
-.Wrapper {
+Wrapper {
   display: flex;
   flex-wrap: wrap;
 }
