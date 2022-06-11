@@ -79,12 +79,12 @@ nav {
     font-weight: bold;
   }
 
-ul {
+nav ul {
   margin: 0;
   list-style-type: none;
 }
 
-li {
+nav li {
   display: inline-block;
 }
 
