@@ -12,13 +12,13 @@
 
     <!-- OVERVIEW -->
 
-    <div><p></p></div>
+    <div><p id="text">{{description}}</p></div> 
 
     <!-- IMMAGINE -->
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events">
+        <div class="col-12"><img :src="imageUrl" id="image" :alt="imageCaption" />
           <div class="carousel-caption d-md-block">
             <h5></h5>
             <p></p>
@@ -70,8 +70,11 @@ export default {
     return {
     }
   },
+  props: {
+    imageUrl: { type: String, required: true },
+    imageCaption: { type: String, required: true },
+  },
   async asyncData({ $axios }) {
-    
 
     const reqBody = {
       params: {
@@ -89,7 +92,6 @@ export default {
   methods: {
     async loadMore(){
       
-
       const itemShown = this.poiList.length
 
       const reqBody = {

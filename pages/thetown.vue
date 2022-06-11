@@ -14,13 +14,13 @@
 
     <div class="row">
         <div class="col"></div>
-        <div class="col-6"><SlideShow :images="img"/></div>
+        <div class="col-6"><SlideShow :images="imagesV"/></div>
         <div class="col"></div>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div><p></p></div>     
+    <div><p id="text">{{description}}</p></div>     
 
      <the-footer />
   </div>

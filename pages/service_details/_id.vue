@@ -27,7 +27,7 @@
 
     <div><p></p></div>
 
-         <!-- LONG CARDS -->
+    <!-- LONG CARDS -->
 
     <div class="content">
         <div
@@ -104,6 +104,21 @@ export default {
       )
       this.allLoaded = data.isFinished
       for(const d of data.data) this.poiList.push(d)
+    },
+  },
+  async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+    return {
+      name: data.name,
+      description: data.description,
+      imagesV: data.Images,
+      mapurl: data.mapURL,
+    }
+  },
+  methods: {
+    backToList() {
+      this.$router.push('/list')
     },
   },
 }
