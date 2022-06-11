@@ -95,6 +95,10 @@ async function initializeDatabase() {
         type: DataTypes.TEXT('long'),
         allowNull: false,
       },
+      mapURL: {
+        type: DataTypes.STRING(2048),
+        allowNull: false,
+      },
     },
     {
       sequelize: database,
@@ -132,6 +136,10 @@ async function initializeDatabase() {
       cost: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      mapURL: {
+        type: DataTypes.STRING(2048),
+        allowNull: true,
       },
     },
     {
@@ -308,16 +316,6 @@ async function initializeDatabase() {
   Image.belongsToMany(PointOfInterest, {
     through: 'PointOfInterestImage',
     timestamps: false,
-  })
-
-  // NAME?!?! relation
-  Image.hasOne(Itinerary, {
-    as: 'compositionImage',
-    foreignKey: 'compositionImageId',
-  })
-  Itinerary.belongsTo(Image, {
-    as: 'compositionImage',
-    foreignKey: 'compositionImageId',
   })
 
   // Itinerary image relation
