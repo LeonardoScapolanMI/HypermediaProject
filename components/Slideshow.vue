@@ -26,9 +26,8 @@
             </a>
             
             </div>
-            <script>
-                document.getElementById(0).className = 'carousel-item active';
-            </script>
+
+        <script>document.getElementById(0).className = 'carousel-item active';</script>
             
     </div>
 

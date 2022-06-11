@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'ItemCard',
+  name: 'ItemLongCard',
   props: {
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
