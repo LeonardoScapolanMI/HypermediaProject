@@ -42,7 +42,7 @@ export default {
         },
         {
           name: 'SERVICES',
-          path: '/allservices',
+          path: '/allservicetypes',
         },
         {
           name: 'THE TOWN',

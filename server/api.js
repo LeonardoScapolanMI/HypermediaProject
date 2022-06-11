@@ -54,7 +54,7 @@ app.get('/poi', async (req, res) => {
   return res.json(ret)
 })
 
-//get poi from id
+// get poi from id
 app.get('/poi:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
@@ -99,8 +99,8 @@ app.get('/itinerary', async (req, res) => {
     ret.data.push({
       id : element._id,
       name: element.name,
-      overview: element.overview,
-      image: element.representativeImage,
+      description: element.overview,
+      images: [element.representativeImage],
     })
   }
   //console.log(result)
@@ -118,6 +118,44 @@ app.get('/itinerary:id', async (req, res) => {
  
   // console.log(result)
   return res.json(result)
+})
+
+// Get all Service types basic informations
+app.get('/serviceType', async (req, res) => {
+  const data = await dbData
+
+  const queryOptions = {
+    include: { model: data.Image},
+  }
+
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+
+  const result = await data.ServiceType.findAll(queryOptions)
+  const serviceTypeCount = await data.ServiceType.count()
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = serviceTypeCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = serviceTypeCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
+  for (const element of result) {
+    ret.data.push({
+      id : element._id,
+      name: element.name,
+      description: element.introduction,
+      images: [element.Image],
+    })
+  }
+  return res.json(ret)
 })
 
 // Get all Services
