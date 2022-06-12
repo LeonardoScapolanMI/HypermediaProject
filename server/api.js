@@ -233,6 +233,75 @@ app.get('/event', async (req, res) => {
   return res.json(ret)
 })
 
+const summer = Object.freeze({
+  begin: {month: 4},
+  end: {month: 9}
+})
+
+// Get all summer Events basic informations
+app.get('/event/summer', async (req, res) => {
+  const data = await dbData
+
+  // TODO add the paramethers
+  const result = await data.Event.FindAllEventsBetweenMonths(summer.begin.month, summer.end.month, req.query.startingIndex, req.query.itemCount)
+  const eventCount = await data.Event.CountAllEventsBetweenMonths(summer.begin.month, summer.end.month)
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = eventCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = eventCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
+  for (const element of result) {
+    ret.data.push({
+      id : element._id,
+      name: element.name,
+      description: element.overview,
+      images: element.Images,
+    })
+  }
+  return res.json(ret)
+})
+
+// Get all winter Events basic informations
+app.get('/event/winter', async (req, res) => {
+  const data = await dbData
+
+  // TODO add the paramethers
+  const result = await data.Event.FindAllEventsBetweenMonths(summer.end.month, summer.begin.month, req.query.startingIndex, req.query.itemCount)
+  const eventCount = await data.Event.CountAllEventsBetweenMonths(summer.end.month, summer.begin.month)
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = eventCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = eventCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
+  for (const element of result) {
+    ret.data.push({
+      id : element._id,
+      name: element.name,
+      description: element.overview,
+      images: element.Images,
+    })
+  }
+  return res.json(ret)
+})
+
 //Get event from id
 app.get('/event:id', async (req, res) => {
   const _id = +req.params.id

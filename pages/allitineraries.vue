@@ -9,7 +9,7 @@
     <!-- CARDS -->
 
     <card-list
-      :endpoint="'http://localhost:3000/api/itinerary'"
+      :endpoint="'/api/itinerary'"
       :details-page-folder="'itinerary_details'"
       :no-items-placeholder="'Al momento non ci sono itinerari'" 
       :error-text="'Impossibile caricare gli itinerari'"

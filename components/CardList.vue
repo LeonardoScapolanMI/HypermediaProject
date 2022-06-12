@@ -98,6 +98,8 @@ export default {
 
       this.itemList = data.data
 
+      console.log(data.data)
+
       this.state = data.isFinished
         ? ListState.LoadedFinished
         : ListState.LoadedNotFinished

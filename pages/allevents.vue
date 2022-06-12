@@ -14,7 +14,7 @@
 
     <!-- CARDS -->
     <card-list
-      :endpoint="'http://localhost:3000/api/event'"
+      :endpoint="'/api/event'"
       :details-page-folder="'event_details'"
       :no-items-placeholder="'Al momento non ci sono eventi'"
       :error-text="'Impossibile caricare gli eventi'"

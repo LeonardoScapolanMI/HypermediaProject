@@ -7,7 +7,7 @@
     </div>
 
     <card-list
-      :endpoint="'http://localhost:3000/api/poi'"
+      :endpoint="'/api/poi'"
       :details-page-folder="'poi_details'"
       :no-items-placeholder="'Al momento non ci sono punti di interesse'"
       :error-text="'Impossibile caricare i punti di interesse'"

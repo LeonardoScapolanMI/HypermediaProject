@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model } from 'sequelize'
+import { Sequelize, DataTypes, Model} from 'sequelize'
 
 require('dotenv').config() // IMPORTANTE PER USARE LA URL DEL DB
 
@@ -108,7 +108,60 @@ async function initializeDatabase() {
     }
   )
 
-  class Event extends Model {}
+  class Event extends Model {
+    static async FindAllEventsBetweenMonths(begin = 1, end = 12, startingIndex = undefined, itemCount = undefined){
+      let b = begin
+      let e = end
+      if(isNaN(b) || isNaN(e)) throw new Error('begin and end must be numbers')
+      if(b<1) b = 1
+      if(e>12) e = 12
+      
+      // TODO add the where clause
+      const queryOptions = {
+        include: { model: Image},
+      }
+    
+      if(e>b){
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") BETWEEN ' + b + ' AND ' + e + ') OR (extract(MONTH FROM "Event"."endDate") BETWEEN ' + b + ' AND ' + e + ')')
+      }
+      else if(e===b){
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") = ' + b + ') OR (extract(MONTH FROM "Event"."endDate") = ' + b + ')')
+      }
+      else{
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") NOT BETWEEN ' + e + ' AND ' + b + ') OR (extract(MONTH FROM "Event"."endDate") NOT BETWEEN ' + e + ' AND ' + b + ')')
+      }
+    
+      if(startingIndex) queryOptions.offset = startingIndex
+      if(itemCount) queryOptions.limit = itemCount
+    
+      return await Event.findAll(queryOptions)
+    }
+
+    static async CountAllEventsBetweenMonths(begin = 1, end = 12){
+      let b = begin
+      let e = end
+      if(isNaN(b) || isNaN(e)) throw new Error('begin and end must be numbers')
+      if(b<1) b = 1
+      if(e>12) e = 12
+      
+      // TODO add the where clause
+      const queryOptions = {
+        include: { model: Image},
+      }
+    
+      if(e>b){
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") BETWEEN ' + b + ' AND ' + e + ') OR (extract(MONTH FROM "Event"."endDate") BETWEEN ' + b + ' AND ' + e + ')')
+      }
+      else if(e===b){
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") = ' + b + ') OR (extract(MONTH FROM "Event"."endDate") = ' + b + ')')
+      }
+      else{
+        queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") NOT BETWEEN ' + e + ' AND ' + b + ') OR (extract(MONTH FROM "Event"."endDate") NOT BETWEEN ' + e + ' AND ' + b + ')')
+      }
+    
+      return await Event.count(queryOptions)
+    }
+  }
 
   Event.init(
     {

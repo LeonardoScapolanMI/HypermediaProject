@@ -3,27 +3,22 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL SUMMER EVENTS</h1> 
-      <hr id="title">
-      <h4 class="text-center">SUMMER EVENTS SECTION</h4> 
+      <h1 class="text-center">EVENTI ESTIVI</h1>
     </div>
-    
-    <!-- IMMAGINE -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12"><img :src="imageUrl" id="image" :alt="imageCaption" />
-        </div>
-      </div>
-    </div>
-    
     <!-- OVERVIEW -->
 
-    <div><p id="text">{{description}}</p></div>
+    <div>
+      <p id="text">{{ description }}</p>
+    </div>
 
     <!-- CARDS -->
-
-    <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
+    <card-list
+      :endpoint="'/api/event/summer'"
+      :details-page-folder="'event_details'"
+      :no-items-placeholder="'Al momento non ci sono eventi estivi'"
+      :error-text="'Impossibile caricare gli eventi'"
+    />
   </div>
 </template>
 
@@ -31,26 +26,21 @@
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'SummerEvents',
+  name: 'AllEvents',
   components: { CardList },
   data() {
-    return {
-    }
+    return {}
   },
 }
 </script>
 
 <style>
+body {
+  color: #414535;
+  font-family: Georgia;
+}
 
-  body {
-    color: #414535;
-    font-family: Georgia;
-  }
-
-  #title {
-    margin-left: 300px;
-    margin-right: 300px;
-    border-top: 2px solid #414535;
-  }
-
+.titolo {
+  padding: 2em;
+}
 </style>

@@ -7,7 +7,7 @@
     </div>
 
     <card-list
-      :endpoint="'http://localhost:3000/api/serviceType'"
+      :endpoint="'/api/serviceType'"
       :details-page-folder="'service_type_details'"
       :no-items-placeholder="'Al momento non ci sono tipi di servizio'"
       :error-text="'Impossibile caricare i tipi di servizio'"
