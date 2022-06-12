@@ -43,7 +43,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
               id="load-more"
               @click="loadMore()"
             >
-              LOAD MORE
+              CARICA ALTRI
             </button>
             <loading-icon
               v-if="state === ListState.MoreLoading"
@@ -76,8 +76,8 @@ export default {
     detailsPageFolder: { type: String, required: true },
     nBaseLoadedItems: { type: Number, default: 9 },
     nItemsLoadedMore: { type: Number, default: 3 },
-    noItemsPlaceholder: { type: String, default: 'There are no items' },
-    errorText: { type: String, default: 'Items could not be loaded' },
+    noItemsPlaceholder: { type: String, default: 'Non ci sono oggetti' },
+    errorText: { type: String, default: 'Impossibile carcicare gli oggetti' },
   },
   data: () => ({
     ListState,

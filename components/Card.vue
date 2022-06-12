@@ -18,7 +18,7 @@
         class="btn btn-primary btn-orange"
         id="submit"
       >
-        See Details
+        Maggiori Informazioni
       </div>
     </div>
     <br />

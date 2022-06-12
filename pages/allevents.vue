@@ -4,16 +4,23 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL EVENTS</h1>
+      <h1 class="text-center">TUTTI GLI EVENTI</h1>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div><p id="text">{{description}}</p></div>
+    <div>
+      <p id="text">{{ description }}</p>
+    </div>
 
     <!-- CARDS -->
-    <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
-   
+    <card-list
+      :endpoint="'http://localhost:3000/api/event'"
+      :details-page-folder="'event_details'"
+      :no-items-placeholder="'Al momento non ci sono eventi'"
+      :error-text="'Impossibile caricare gli eventi'"
+    />
+
     <the-footer />
   </div>
 </template>

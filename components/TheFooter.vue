@@ -19,7 +19,7 @@ export default {
     return {
       footerList: [
         {
-          name: 'CONTACT US',
+          name: 'CONTATTACI',
           path: '/contactUs',
         },
       ],

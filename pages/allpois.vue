@@ -4,10 +4,15 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL POINTS OF INTEREST</h1>
+      <h1 class="text-center">TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
-    <card-list :endpoint="'http://localhost:3000/api/poi'" :details-page-folder="'poi_details'"/>
+    <card-list
+      :endpoint="'http://localhost:3000/api/poi'"
+      :details-page-folder="'poi_details'"
+      :no-items-placeholder="'Al momento non ci sono punti di interesse'"
+      :error-text="'Impossibile caricare i punti di interesse'"
+    />
 
     <the-footer />
   </div>

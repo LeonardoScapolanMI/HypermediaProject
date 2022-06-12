@@ -29,23 +29,23 @@ export default {
     return {
       headerList: [
         {
-          name: 'EVENTS',
+          name: 'EVENTI',
           path: '/alleventgroupings',
         },
         {
-          name: 'POINT OF INTERESTS',
+          name: 'PUNTI DI INTERESSE',
           path: '/allpois',
         },
         {
-          name: 'ITINERARIES',
+          name: 'ITINERARI',
           path: '/allitineraries',
         },
         {
-          name: 'SERVICES',
+          name: 'SERVIZI',
           path: '/allservicetypes',
         },
         {
-          name: 'THE TOWN',
+          name: 'LA CITTÀ',
           path: '/thetown',
         },
       ],
