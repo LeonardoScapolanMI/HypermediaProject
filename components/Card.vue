@@ -2,14 +2,16 @@
   <div class="Wrapper">
     <div class="Item">
       <div class="ImgWrap">
-      <img :src="imageUrl" id="image" :alt="imageCaption" />
+        <img :src="imageUrl" id="image" :alt="imageCaption" />
       </div>
 
       <div class="text-center" id="Description">
-      <h2>{{ title }}</h2>
-      <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
-        {{ description }}
-      </p>
+        <h2>{{ title }}</h2>
+        <p
+          style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap"
+        >
+          {{ description }}
+        </p>
       </div>
       <div
         @click="$emit('onSeeDetails')"
@@ -97,7 +99,6 @@ Wrapper {
 }
 
 .Item {
-  
   display: flex;
   flex: 0 1 180px;
   flex-direction: column;
@@ -113,7 +114,7 @@ Wrapper {
   position: relative;
   margin: 0.5em;
   flex: 0 1 180px;
-  
+
   display: block;
   overflow: hidden;
 }

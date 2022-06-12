@@ -19,10 +19,6 @@ export default {
     return {
       footerList: [
         {
-          name: 'ABOUT US',
-          path: '/aboutus',
-        },
-        {
           name: 'CONTACT US',
           path: '/contactUs',
         },

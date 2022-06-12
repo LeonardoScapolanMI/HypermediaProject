@@ -10,7 +10,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
 
 <template>
   <div>
-    <loading-icon v-if="isLoading" class="loading-icon"/>
+    <loading-icon v-if="state===ListState.InitialLoading" class="loading-icon"/>
     <div v-else>
       <div class="content">
         <div class="row">
@@ -33,9 +33,10 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
       </div>
 
       <div id="bottone" class="text-center">
-        <button v-if="!allLoaded" id="load-more" @click="loadMore()">
+        <button v-if="state===ListState.LoadedNotFinished" id="load-more" @click="loadMore()">
           LOAD MORE
         </button>
+        <loading-icon v-if="state===ListState.MoreLoading" class="loading-icon"/>
       </div>
     </div>
   </div>
@@ -44,6 +45,13 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
 <script>
 import Card from '~/components/Card.vue'
 import LoadingIcon from '~/components/LoadingIcon.vue'
+
+const ListState = Object.freeze({
+  InitialLoading: Symbol('InitialLoading'),
+  LoadedNotFinished: Symbol('LoadedNotFinished'),
+  MoreLoading: Symbol('MoreLoading'),
+  LoadedFinished: Symbol('LoadedFinished'),
+})
 
 const N_BASE_LOADED_ITEMS = 9
 const N_ITEMS_LOADED_MORE = 3
@@ -56,11 +64,13 @@ export default {
     detailsPageFolder: { type: String, required: true },
   },
   data: () => ({
-    isLoading: true,
+    ListState,
     itemList: [],
-    allLoaded: false,
+    state: ListState.InitialLoading
   }),
   async fetch() {
+    this.state = ListState.InitialLoading
+
     const reqBody = {
       params: {
         itemCount: N_BASE_LOADED_ITEMS,
@@ -70,11 +80,14 @@ export default {
     const { data } = await this.$axios.get(this.endpoint, reqBody)
 
     this.itemList = data.data
-    this.allLoaded = data.isFinished
-    this.isLoading = false
+
+    this.state = data.isFinished ? ListState.LoadedFinished : ListState.LoadedNotFinished
   },
+  fetchOnServer: false, // too see if it's a problem for crawlers
   methods: {
     async loadMore() {
+      this.state = ListState.MoreLoading
+
       const itemShown = this.itemList.length
 
       const reqBody = {
@@ -85,8 +98,9 @@ export default {
       }
 
       const { data } = await this.$axios.get(this.endpoint, reqBody)
-      this.allLoaded = data.isFinished
       for (const d of data.data) this.itemList.push(d)
+
+      this.state = data.isFinished ? ListState.LoadedFinished : ListState.LoadedNotFinished
     },
   },
 }
