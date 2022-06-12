@@ -12,7 +12,7 @@
     
       <ul class="navbar-nav mr-auto">
         <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-          <nuxt-link :to="navItem.path" class="nav-link">
+          <nuxt-link :to="navItem.path">
             {{ navItem.name }}
           </nuxt-link>
         </li>
@@ -102,12 +102,12 @@ export default {
     font-weight: bold;
   }
 
-  ul {
+  nav ul {
     margin: 0;
     padding: 0;
   }
 
-  li {
+  nav li {
     padding: 5px 5px;
     list-style-type: none;
   }

@@ -5,11 +5,11 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL WINTER EVENTS</h1> 
+      <h1 class="text-center">ALL SUMMER EVENTS</h1> 
       <hr id="title">
-      <h4 class="text-center">WINTER EVENTS SECTION</h4> 
+      <h4 class="text-center">SUMMER EVENTS SECTION</h4> 
     </div>
-
+    
     <!-- IMMAGINE -->
 
     <div class="container">
@@ -37,7 +37,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'WinterEvents',
+  name: 'SummerEvents',
   components: { TheFooter, TheHeader, CardList },
   data() {
     return {

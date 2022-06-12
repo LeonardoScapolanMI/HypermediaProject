@@ -7,8 +7,13 @@
       <h1 class="text-center">ALL EVENTS</h1>
     </div>
 
-    <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
+    <!-- OVERVIEW -->
 
+    <div><p id="text">{{description}}</p></div>
+
+    <!-- CARDS -->
+    <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
+   
     <the-footer />
   </div>
 </template>
@@ -19,7 +24,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'AllPOIs',
+  name: 'AllEvents',
   components: { TheFooter, TheHeader, CardList },
   data() {
     return {}

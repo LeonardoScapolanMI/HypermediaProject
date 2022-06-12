@@ -12,19 +12,19 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-12"><a href="/allevents"><img class="w-100" src="/images/pointofinterest/piazzalemichelangelo/0.jpg" alt="All events"></a>
-                <div class="carousel-caption d-md-block"><h3>ALL EVENTS</h3></div>
+              <div class="col-12"><a href="/allevents"><img :src="imageUrl" id="image" :alt="imageCaption" />
+                <div class="carousel-caption d-md-block"><h3>ALL EVENTS</h3></div></a>
               </div>
             </div>
             <div class="row">
-              <div class="col-6"><a href="/summerevents"><img class="w-100" src="/images/event/i-giardini-di-firenze/0.jpg" alt="Summer events"></a>
-                <div class="carousel-caption d-md-block"><h3>SUMMER EVENTS</h3></div>
+              <div class="col-6"><a href="/summerevents"><img :src="imageUrl" id="image" :alt="imageCaption" />
+                <div class="carousel-caption d-md-block"><h3>SUMMER EVENTS</h3></div></a>
               </div>
-              <div class="col-6"><a href="/winterevents"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events"></a>
-                <div class="carousel-caption d-md-block"><h3>WINTER EVENTS</h3></div>
+              <div class="col-6"><a href="/winterevents"><img :src="imageUrl" id="image" :alt="imageCaption" />
+                <div class="carousel-caption d-md-block"><h3>WINTER EVENTS</h3></div></a>
               </div>
             </div>
-          </div><br>
+          </div>
 
      <the-footer />
   </div>
@@ -36,12 +36,16 @@ import TheHeader from '~/components/TheHeader.vue'
 export default {
   name: 'AllEventGroupings',
   components: { TheFooter, TheHeader },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <style>
 
-body {
+body, h3 {
   color: #414535;
   font-family: Georgia;
 }
@@ -50,6 +54,10 @@ body {
   margin-left: 300px;
   margin-right: 300px;
   border-top: 2px solid #414535;
+}
+
+.titolo {
+  margin-bottom: 50px;
 }
 
 </style>

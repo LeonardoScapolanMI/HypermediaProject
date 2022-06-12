@@ -20,7 +20,7 @@
 
     <!-- OVERVIEW -->
 
-    <div><p></p></div>     
+    <div><p id="text">{{description}}</p></div>     
 
      <the-footer />
   </div>

@@ -4,7 +4,9 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL SERVICES</h1>
+      <h1 class="text-center">ALL SERVICES</h1> 
+      <hr id="title">
+      <h4 class="text-center">ALL SERVICE TYPES SECTION</h4> 
     </div>
 
     <card-list :endpoint="'http://localhost:3000/api/serviceType'" :details-page-folder="'service_type_details'"/>
@@ -19,7 +21,7 @@ import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'AllPOIs',
+  name: 'AllSerrvices',
   components: { TheFooter, TheHeader, CardList },
   data() {
     return {}

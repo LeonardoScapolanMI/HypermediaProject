@@ -1,5 +1,4 @@
 import express from 'express'
-import { Sequelize } from 'sequelize'
 import dbData from './model/database.js'
 
 // NB: MUST SET .env file with env variable DATABASE_URL
@@ -208,17 +207,17 @@ app.get('/event', async (req, res) => {
   if(req.query.itemCount) queryOptions.limit = req.query.itemCount
 
   const result = await data.Event.findAll(queryOptions)
-  const serviceTypeCount = await data.Event.count()
+  const eventCount = await data.Event.count()
 
   let isFinished = false
   if(!req.query.itemCount) {
     isFinished=true
   }
   else if(!req.query.startingIndex){
-    isFinished = serviceTypeCount <= Number(req.query.itemCount)
+    isFinished = eventCount <= Number(req.query.itemCount)
   }
   else{
-    isFinished = serviceTypeCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+    isFinished = eventCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
   }
 
 
@@ -240,7 +239,7 @@ app.get('/event:id', async (req, res) => {
   const data = await dbData
   const result = await data.Event.findOne({
     where:{ _id},
-    include:[{ model: data.PointOfInterest}]
+    include:[{ model: data.PointOfInterest},{model: data.Image}]
   })
   console.log(result)
   return res.json(result)
