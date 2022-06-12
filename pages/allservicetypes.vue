@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header />
     <!-- TITLE -->
 
     <div class="titolo">
@@ -13,19 +12,15 @@
       :no-items-placeholder="'Al momento non ci sono tipi di servizio'"
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
-
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllSerrvices',
-  components: { TheFooter, TheHeader, CardList },
+  components: { CardList },
   data() {
     return {}
   },

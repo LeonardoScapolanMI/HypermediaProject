@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header />
 
     <!-- TITLE -->
 
@@ -43,22 +42,15 @@
     <div class="text-center">
       <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
     </div>
-        
-        <TheFooter/>
     </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
-import LongCard from '~/components/LongCard.vue'
-
-const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 3
+// import LongCard from '~/components/LongCard.vue'
 
 export default {
   name: 'TypeOfServices',
-  components: { TheFooter, TheHeader, LongCard },
+  // components: { LongCard },
   data() {
     return {
     }
@@ -66,41 +58,6 @@ export default {
   props: {
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
-  },
-  async asyncData({ $axios }) {
-
-    const reqBody = {
-      params: {
-        itemCount: N_BASE_LOADED_ITEMS,
-      },
-    }
-
-    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
-
-    return {
-      poiList: data.data,
-      allLoaded: data.isFinished
-    }
-  },
-  methods: {
-    async loadMore(){
-      
-      const itemShown = this.poiList.length
-
-      const reqBody = {
-        params: {
-          startingIndex: itemShown,
-          itemCount: N_ITEMS_LOADED_MORE,
-        },
-      }
-
-      const { data } = await this.$axios.get(
-        'http://localhost:3000/api/poi',
-        reqBody
-      )
-      this.allLoaded = data.isFinished
-      for(const d of data.data) this.poiList.push(d)
-    },
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params

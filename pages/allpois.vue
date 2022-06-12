@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header />
     <!-- TITLE -->
 
     <div class="titolo">
@@ -13,19 +12,15 @@
       :no-items-placeholder="'Al momento non ci sono punti di interesse'"
       :error-text="'Impossibile caricare i punti di interesse'"
     />
-
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllPois',
-  components: { TheFooter, TheHeader, CardList },
+  components: { CardList },
   data() {
     return {}
   },

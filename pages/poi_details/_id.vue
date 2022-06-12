@@ -1,6 +1,5 @@
 <template>
     <div>
-        <TheHeader />
         <!-- TITOLO -->
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
@@ -28,21 +27,14 @@
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>      
-
-
-        <TheFooter/>
     </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 export default {
   components:{
-    TheFooter,
-    TheHeader,
     SlideShow,
     MapBox,
   },

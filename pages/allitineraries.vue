@@ -1,7 +1,5 @@
 <template>
   <div>
-    <the-header />
-
     <!-- TITLE -->
 
     <div class="titolo">
@@ -16,19 +14,15 @@
       :no-items-placeholder="'Al momento non ci sono itinerari'" 
       :error-text="'Impossibile caricare gli itinerari'"
     />
-
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllItineraries',
-  components: { TheFooter, TheHeader, CardList },
+  components: { CardList },
   data() {
     return {}
   },

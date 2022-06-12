@@ -1,6 +1,5 @@
 <template>
     <div>
-        <TheHeader />
         <!-- TITOLO -->
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
@@ -26,18 +25,13 @@
             </div>  
         </div> <!-- row -->
         
-        <TheFooter/>
     </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import SlideShow from '~/components/Slideshow.vue'
 export default {
   components:{
-    TheFooter,
-    TheHeader,
     SlideShow,
   },
   name: 'punto-interesse',

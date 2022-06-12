@@ -1,7 +1,5 @@
 <template>
   <div>
-    <the-header />
-
     <!-- TITLE -->
 
     <div class="titolo">
@@ -25,17 +23,12 @@
               </div>
             </div>
           </div>
-
-     <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 export default {
   name: 'AllEventGroupings',
-  components: { TheFooter, TheHeader },
   data() {
     return {
     }

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <TheHeader />
         <!-- TITOLO -->
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
@@ -38,19 +37,12 @@
             />
           </div>
         </div>
-
-        <TheFooter/>
     </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
-
 export default {
   components:{
-    TheFooter,
-    TheHeader,
   },
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header />
 
     <!-- TITLE -->
 
@@ -22,19 +21,14 @@
 
     <div><p id="text">{{description}}</p></div>     
 
-     <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import SlideShow from '~/components/Slideshow.vue'
 export default {
   name: 'TheTown',
   components: { 
-    TheFooter, 
-    TheHeader,
     SlideShow,
     },
 }

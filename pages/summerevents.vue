@@ -1,7 +1,5 @@
 <template>
   <div>
-    <the-header />
-
     <!-- TITLE -->
 
     <div class="titolo">
@@ -26,19 +24,15 @@
     <!-- CARDS -->
 
     <card-list :endpoint="'http://localhost:3000/api/event'" :details-page-folder="'event_details'"/>
-   
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'SummerEvents',
-  components: { TheFooter, TheHeader, CardList },
+  components: { CardList },
   data() {
     return {
     }

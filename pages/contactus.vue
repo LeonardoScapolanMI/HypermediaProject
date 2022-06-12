@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-header />
 
     <!-- TITLE -->
 
@@ -94,18 +93,14 @@
       </div>
     </div>
     </div>
-    <the-footer />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 const axios= require('axios').default;
 export default {
 
   name: 'ContactUs',
-  components: { TheFooter, TheHeader},
   data() {
     return {
       name: '',
