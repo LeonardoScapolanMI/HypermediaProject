@@ -10,46 +10,53 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
 
 <template>
   <div>
-    <div class="content">
-      <div class="row">
-        <div
-          v-for="(item, itemIndex) of itemList"
-          :key="`poi-index-${itemIndex}`"
-          class="col-md-4"
-        >
-          <card
-            :image-url="item.images[0].URL"
-            :image-caption="item.images[0].caption"
-            :title="item.name"
-            :description="item.description"
-            @onSeeDetails="$router.push('/'+ detailsPageFolder+ '/' + item.id)"
-          />
+    <loading-icon v-if="isLoading" class="loading-icon"/>
+    <div v-else>
+      <div class="content">
+        <div class="row">
+          <div
+            v-for="(item, itemIndex) of itemList"
+            :key="`poi-index-${itemIndex}`"
+            class="col-md-4"
+          >
+            <card
+              :image-url="item.images[0].URL"
+              :image-caption="item.images[0].caption"
+              :title="item.name"
+              :description="item.description"
+              @onSeeDetails="
+                $router.push('/' + detailsPageFolder + '/' + item.id)
+              "
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="bottone" class="text-center">
-      <button v-if="!allLoaded" id="load-more" @click="loadMore()">
-        LOAD MORE
-      </button>
+      <div id="bottone" class="text-center">
+        <button v-if="!allLoaded" id="load-more" @click="loadMore()">
+          LOAD MORE
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Card from '~/components/Card.vue'
+import LoadingIcon from '~/components/LoadingIcon.vue'
 
 const N_BASE_LOADED_ITEMS = 9
 const N_ITEMS_LOADED_MORE = 3
 
 export default {
   name: 'CardList',
-  components: { Card },
+  components: { Card, LoadingIcon },
   props: {
     endpoint: { type: String, required: true },
     detailsPageFolder: { type: String, required: true },
   },
   data: () => ({
+    isLoading: true,
     itemList: [],
     allLoaded: false,
   }),
@@ -60,13 +67,11 @@ export default {
       },
     }
 
-    const { data } = await this.$axios.get(
-      this.endpoint,
-      reqBody
-    )
+    const { data } = await this.$axios.get(this.endpoint, reqBody)
 
     this.itemList = data.data
     this.allLoaded = data.isFinished
+    this.isLoading = false
   },
   methods: {
     async loadMore() {
@@ -79,10 +84,7 @@ export default {
         },
       }
 
-      const { data } = await this.$axios.get(
-        this.endpoint,
-        reqBody
-      )
+      const { data } = await this.$axios.get(this.endpoint, reqBody)
       this.allLoaded = data.isFinished
       for (const d of data.data) this.itemList.push(d)
     },
@@ -121,5 +123,11 @@ export default {
   border-radius: 10px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.loading-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
