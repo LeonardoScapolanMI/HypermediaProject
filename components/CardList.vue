@@ -10,33 +10,47 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
 
 <template>
   <div>
-    <loading-icon v-if="state===ListState.InitialLoading" class="loading-icon"/>
+    <loading-icon
+      v-if="state === ListState.InitialLoading"
+      class="loading-icon"
+    />
     <div v-else>
       <div class="content">
-        <div class="row">
-          <div
-            v-for="(item, itemIndex) of itemList"
-            :key="`poi-index-${itemIndex}`"
-            class="col-md-4"
-          >
-            <card
-              :image-url="item.images[0].URL"
-              :image-caption="item.images[0].caption"
-              :title="item.name"
-              :description="item.description"
-              @onSeeDetails="
-                $router.push('/' + detailsPageFolder + '/' + item.id)
-              "
+        <div v-if="state === ListState.Error" class="text-center">{{errorText}}</div>
+        <div v-else-if="itemList.length <= 0" class="text-center">{{noItemsPlaceholder}}</div>
+        <div v-else>
+          <div class="row">
+            <div
+              v-for="(item, itemIndex) of itemList"
+              :key="`poi-index-${itemIndex}`"
+              class="col-md-4"
+            >
+              <card
+                :image-url="item.images[0].URL"
+                :image-caption="item.images[0].caption"
+                :title="item.name"
+                :description="item.description"
+                @onSeeDetails="
+                  $router.push('/' + detailsPageFolder + '/' + item.id)
+                "
+              />
+            </div>
+          </div>
+
+          <div id="bottone" class="text-center">
+            <button
+              v-if="state === ListState.LoadedNotFinished"
+              id="load-more"
+              @click="loadMore()"
+            >
+              LOAD MORE
+            </button>
+            <loading-icon
+              v-if="state === ListState.MoreLoading"
+              class="loading-icon"
             />
           </div>
         </div>
-      </div>
-
-      <div id="bottone" class="text-center">
-        <button v-if="state===ListState.LoadedNotFinished" id="load-more" @click="loadMore()">
-          LOAD MORE
-        </button>
-        <loading-icon v-if="state===ListState.MoreLoading" class="loading-icon"/>
       </div>
     </div>
   </div>
@@ -51,10 +65,8 @@ const ListState = Object.freeze({
   LoadedNotFinished: Symbol('LoadedNotFinished'),
   MoreLoading: Symbol('MoreLoading'),
   LoadedFinished: Symbol('LoadedFinished'),
+  Error: Symbol('Error'),
 })
-
-const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 3
 
 export default {
   name: 'CardList',
@@ -62,45 +74,61 @@ export default {
   props: {
     endpoint: { type: String, required: true },
     detailsPageFolder: { type: String, required: true },
+    nBaseLoadedItems: { type: Number, default: 9 },
+    nItemsLoadedMore: { type: Number, default: 3 },
+    noItemsPlaceholder: { type: String, default: 'There are no items' },
+    errorText: { type: String, default: 'Items could not be loaded' },
   },
   data: () => ({
     ListState,
     itemList: [],
-    state: ListState.InitialLoading
+    state: ListState.InitialLoading,
   }),
   async fetch() {
-    this.state = ListState.InitialLoading
-
-    const reqBody = {
-      params: {
-        itemCount: N_BASE_LOADED_ITEMS,
-      },
-    }
-
-    const { data } = await this.$axios.get(this.endpoint, reqBody)
-
-    this.itemList = data.data
-
-    this.state = data.isFinished ? ListState.LoadedFinished : ListState.LoadedNotFinished
-  },
-  fetchOnServer: false, // too see if it's a problem for crawlers
-  methods: {
-    async loadMore() {
-      this.state = ListState.MoreLoading
-
-      const itemShown = this.itemList.length
+    try {
+      this.state = ListState.InitialLoading
 
       const reqBody = {
         params: {
-          startingIndex: itemShown,
-          itemCount: N_ITEMS_LOADED_MORE,
+          itemCount: this.nBaseLoadedItems,
         },
       }
 
       const { data } = await this.$axios.get(this.endpoint, reqBody)
-      for (const d of data.data) this.itemList.push(d)
 
-      this.state = data.isFinished ? ListState.LoadedFinished : ListState.LoadedNotFinished
+      this.itemList = data.data
+
+      this.state = data.isFinished
+        ? ListState.LoadedFinished
+        : ListState.LoadedNotFinished
+    } catch (e) {
+      this.state = ListState.Error
+    }
+  },
+  fetchOnServer: false, // too see if it's a problem for crawlers
+  methods: {
+    async loadMore() {
+      try {
+        this.state = ListState.MoreLoading
+
+        const itemShown = this.itemList.length
+
+        const reqBody = {
+          params: {
+            startingIndex: itemShown,
+            itemCount: this.nItemsLoadedMore,
+          },
+        }
+
+        const { data } = await this.$axios.get(this.endpoint, reqBody)
+        for (const d of data.data) this.itemList.push(d)
+
+        this.state = data.isFinished
+          ? ListState.LoadedFinished
+          : ListState.LoadedNotFinished
+      } catch (e) {
+        this.state = ListState.Error
+      }
     },
   },
 }
