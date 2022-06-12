@@ -6,8 +6,6 @@
 
     <div class="titolo">
       <h1 class="text-center">ALL EVENT GROUPINGS</h1> 
-      <hr id="title">
-      <h4 class="text-center">ALL EVENT GROUPINGS SECTION</h4> 
     </div>
 
     <!-- IMMAGINI -->

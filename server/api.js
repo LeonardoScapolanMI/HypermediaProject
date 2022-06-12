@@ -196,23 +196,44 @@ app.get('/service:id', async (req, res) => {
   return res.json(filtered)
 })
 
-// Get all Events
+// Get all Events basic informations
 app.get('/event', async (req, res) => {
   const data = await dbData
-  const result = await data.Event.findAll()
-  const filtered = []
+
+  const queryOptions = {
+    include: { model: data.Image},
+  }
+
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+
+  const result = await data.Event.findAll(queryOptions)
+  const serviceTypeCount = await data.Event.count()
+
+  let isFinished = false
+  if(!req.query.itemCount) {
+    isFinished=true
+  }
+  else if(!req.query.startingIndex){
+    isFinished = serviceTypeCount <= Number(req.query.itemCount)
+  }
+  else{
+    isFinished = serviceTypeCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
+  }
+
+
+  const ret = {data:[], isFinished}
   for (const element of result) {
-    filtered.push({
+    ret.data.push({
+      id : element._id,
       name: element.name,
-      overview: element.overview,
-      startDate: element.startDate,
-      endDate: element.endDate,
-      cost: element.cost,
+      description: element.overview,
+      images: element.Images,
     })
   }
-  //console.log(filtered)
-  return res.json(filtered)
+  return res.json(ret)
 })
+
 //Get event from id
 app.get('/event:id', async (req, res) => {
   const _id = +req.params.id
