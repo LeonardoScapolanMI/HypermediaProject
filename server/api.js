@@ -267,6 +267,7 @@ app.get('/event/summer', async (req, res) => {
       images: element.Images,
     })
   }
+
   return res.json(ret)
 })
 

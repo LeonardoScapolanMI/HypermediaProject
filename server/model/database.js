@@ -116,7 +116,6 @@ async function initializeDatabase() {
       if(b<1) b = 1
       if(e>12) e = 12
       
-      // TODO add the where clause
       const queryOptions = {
         include: { model: Image},
       }
@@ -144,10 +143,7 @@ async function initializeDatabase() {
       if(b<1) b = 1
       if(e>12) e = 12
       
-      // TODO add the where clause
-      const queryOptions = {
-        include: { model: Image},
-      }
+      const queryOptions = {}
     
       if(e>b){
         queryOptions.where = database.literal('(extract(MONTH FROM "Event"."startDate") BETWEEN ' + b + ' AND ' + e + ') OR (extract(MONTH FROM "Event"."endDate") BETWEEN ' + b + ' AND ' + e + ')')

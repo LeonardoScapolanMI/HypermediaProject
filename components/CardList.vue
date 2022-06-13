@@ -14,11 +14,11 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
       v-if="state === ListState.InitialLoading"
       class="loading-icon"
     />
-    <div v-else>
+    <template v-else>
       <div class="content">
         <div v-if="state === ListState.Error" class="text-center">{{errorText}}</div>
         <div v-else-if="itemList.length <= 0" class="text-center">{{noItemsPlaceholder}}</div>
-        <div v-else>
+        <template v-else>
           <div class="row">
             <div
               v-for="(item, itemIndex) of itemList"
@@ -50,9 +50,9 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
               class="loading-icon"
             />
           </div>
-        </div>
+        </template>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -98,11 +98,10 @@ export default {
 
       this.itemList = data.data
 
-      console.log(data.data)
-
       this.state = data.isFinished
-        ? ListState.LoadedFinished
-        : ListState.LoadedNotFinished
+          ? ListState.LoadedFinished
+          : ListState.LoadedNotFinished
+
     } catch (e) {
       this.state = ListState.Error
     }
@@ -128,6 +127,7 @@ export default {
         this.state = data.isFinished
           ? ListState.LoadedFinished
           : ListState.LoadedNotFinished
+
       } catch (e) {
         this.state = ListState.Error
       }
