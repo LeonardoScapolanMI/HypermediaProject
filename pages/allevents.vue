@@ -30,7 +30,7 @@ export default {
   components: { CardList },
   data() {
     return {
-      description: 'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze'
+      description: 'Vieni a scoprire tutti gli eventi che si svolgono a Firenze, sarà un’avventura senza eguali. Passerai delle incredibili giornate nella nostra grande città, tra sport, musica e arte. Dal mercatino di Natale ai concerti musicali estivi, Firenze ti offre qualsiasi tipo di esperienza tutto l’anno.'
     }
   },
 }

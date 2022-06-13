@@ -6,6 +6,8 @@
       <h1 class="text-center">TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
+    <!-- CARDS -->
+
     <card-list
       :endpoint="'/api/poi'"
       :details-page-folder="'poi_details'"

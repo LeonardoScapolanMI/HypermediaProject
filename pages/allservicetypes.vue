@@ -6,6 +6,14 @@
       <h1 class="text-center">TUTTI I TIPI DI SERVIZIO</h1>
     </div>
 
+    <!-- OVERVIEW -->
+
+    <div>
+      <p id="text">{{ description }}</p>
+    </div>
+
+    <!-- CARDS -->
+
     <card-list
       :endpoint="'/api/serviceType'"
       :details-page-folder="'service_type_details'"
@@ -22,7 +30,9 @@ export default {
   name: 'AllSerrvices',
   components: { CardList },
   data() {
-    return {}
+    return {
+      description: 'Sei venuto a Firenze per una bellissima vacanza ma non sai dove trovare una banca o una farmacia? Ecco a te una lista di tutti i servizi indispensabili che puoi trovare facilmente a Firenze. Clicca sul tipo di servizio di cui hai bisogno e ti offriremo una vasta lista di esercenti del servizio indicato.'
+    }
   },
 }
 </script>
