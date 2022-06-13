@@ -6,6 +6,12 @@
       <h1 class="text-center">EVENTI INVERNALI</h1>
     </div>
 
+    <!-- IMAGE -->
+
+    <div>
+      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="thumbnail-image"/>
+    </div>
+
     <!-- OVERVIEW -->
 
     <div>
@@ -25,18 +31,28 @@
 <script>
 import CardList from '~/components/CardList.vue'
 
+function nextWinterYears(){
+  const now = new Date()
+  let firstYear = now.getFullYear()
+  if(now.getMonth() <= 3) firstYear--
+  return firstYear + '/' + (firstYear+1);
+}
+
 export default {
   name: 'AllEvents',
   components: { CardList },
   data() {
-    return {}
+    return {
+      description: 'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze per vivere al meglio la città anche nei mesi più freddi.\n' +
+        'Ecco un elenco delle eventi offerti dal terrritorio durante l\'inverno ' + nextWinterYears() +'.'
+    }
   },
 }
 </script>
 
 <style>
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 

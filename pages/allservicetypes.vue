@@ -29,7 +29,7 @@ export default {
 
 <style>
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 

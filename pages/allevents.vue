@@ -29,14 +29,16 @@ export default {
   name: 'AllEvents',
   components: { CardList },
   data() {
-    return {}
+    return {
+      description: 'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze'
+    }
   },
 }
 </script>
 
 <style>
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 

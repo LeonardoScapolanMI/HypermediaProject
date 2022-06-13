@@ -146,11 +146,11 @@ input, textarea {
 
 #submit {
   color: white;
-  background-color: #414535;
+  background-color: var(--dark-blue);;
 }
 
 #submit:hover {
-  background-color: #c19875;
+  background-color: var(--brown);;
   transition: 0.2s;
 }
 

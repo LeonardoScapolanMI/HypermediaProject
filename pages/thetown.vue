@@ -37,14 +37,14 @@ export default {
 <style>
 
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 
 #title {
   margin-left: 300px;
   margin-right: 300px;
-  border-top: 2px solid #414535;
+  border-top: 2px solid var(--dark-blue);;
 }
 
 </style>

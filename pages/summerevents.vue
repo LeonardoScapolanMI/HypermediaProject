@@ -6,6 +6,12 @@
       <h1 class="text-center">EVENTI ESTIVI</h1>
     </div>
 
+    <!-- IMAGE -->
+
+    <div>
+      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="thumbnail-image"/>
+    </div>
+
     <!-- OVERVIEW -->
 
     <div>
@@ -25,18 +31,28 @@
 <script>
 import CardList from '~/components/CardList.vue'
 
+function nextSummerYear(){
+  const now = new Date()
+  let ret = now.getFullYear()
+  if(now.getMonth() >= 10) ret++
+  return ret;
+}
+
 export default {
   name: 'AllEvents',
   components: { CardList },
   data() {
-    return {}
+    return {
+      description: 'Questa sezione offre una guida per tutti gli eventi estivi previsti a Firenze per vivere al meglio la città anche nei mesi più caldi.\n' +
+        'Ecco un elenco delle eventi offerti dal terrritorio durante l\'estate ' + nextSummerYear() + '.'
+    }
   },
 }
 </script>
 
 <style>
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 
