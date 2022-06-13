@@ -4,9 +4,9 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">THE TOWN NAME</h1> 
+      <h1 class="text-center">LA CITT&Agrave; DI FIRENZE</h1> 
       <hr id="title">
-      <h4 class="text-center">THE TOWN SECTION</h4> 
+      <h4 class="text-center">SEZIONE "LA CITT&Agrave;"</h4> 
     </div>
 
     <!-- SLIDESHOW -->

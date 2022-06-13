@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="spazio">
 
     <!-- IMMAGINI -->
 
@@ -44,8 +44,8 @@ body, h3 {
   border-top: 2px solid #414535;
 }
 
-.titolo {
-  margin-bottom: 50px;
+.spazio {
+  margin-top: 100px;
 }
 
 </style>

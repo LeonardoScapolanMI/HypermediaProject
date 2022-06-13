@@ -4,9 +4,7 @@
     <!-- TITLE -->
 
     <div class="titolo">
-      <h1 class="text-center">ALL EVENTS GROUPINGS</h1> 
-      <hr id="title">
-      <h4 class="text-center">ALL EVENTS GROUPINGS SECTION</h4> 
+      <h1 class="text-center">CONTATTACI</h1>  
     </div>
 
     <!-- FORM -->
@@ -24,7 +22,7 @@
             <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="firstName">First Name</label>
+                  <label for="firstName">Nome</label>
                   <input
                   name = "firstName"
                     v-model="name"
@@ -35,10 +33,10 @@
                     value
                     required
                   />
-                  <div class="invalid-feedback">Valid first name is required.</div>
+                  <div class="invalid-feedback">Nome non valido.</div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="lastName">Last Name</label>
+                  <label for="lastName">Cognome</label>
                   <input
                   name = "lastName"
                     v-model="surname"
@@ -49,14 +47,14 @@
                     value
                     required
                   />
-                  <div class="invalid-feedback">Valid last name is required.</div>
+                  <div class="invalid-feedback">Cognome non valido.</div>
                 </div>
               </div>
 
               <div class="mb-3">
                 <label for="email">
                   Email
-                  <span class="text-muted">(Optional)</span>
+                  <span class="text-muted">(Facoltativo)</span>
                 </label>
                 <input
                 name = "email"
@@ -68,11 +66,11 @@
                 />
                 <div
                   class="invalid-feedback"
-                >Please enter a valid email address for shipping updates.</div>
+                >Per favore inserire un indirizzo email valido.</div>
               </div>
 
               <div class="mb-3">
-                <label for="message">Information Request</label>
+                <label for="message">Riquiesta di informazioni</label>
                 <textarea
                 name = "message"
                   v-model="text"
@@ -82,18 +80,21 @@
                   placeholder
                   required
                 ></textarea>
-                <div class="invalid-feedback">Please enter your information request.</div>
+                <div class="invalid-feedback">Per favore inserire una riquiesta di informazioni valida.</div>
               </div>
 
               <hr class="mb-4" />
-              <button class="btn btn-lg btn-block" type="submit" id="submit">Contact Us</button>
+              <button class="btn btn-lg btn-block" type="submit" id="submit">Contattaci</button>
             </form>
           </div>
         </div>
       </div>
     </div>
     </div>
+    <br />
+  <br />
   </div>
+  
 </template>
 
 <script>
