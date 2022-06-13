@@ -1,11 +1,11 @@
 <template>
-  <div class="Wrapper">
+  <div class="wrapper">
     <div class="Item">
       <div class="ImgWrap">
-        <img :src="imageUrl" id="image" :alt="imageCaption" />
+        <img id="image" :src="imageUrl" :alt="imageCaption" />
       </div>
 
-      <div class="text-center" id="Description">
+      <div id="Description" class="text-center">
         <h2>{{ title }}</h2>
         <p
           style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap"
@@ -14,9 +14,9 @@
         </p>
       </div>
       <div
-        @click="$emit('onSeeDetails')"
+        id="see-details"
         class="btn btn-primary btn-orange"
-        id="submit"
+        @click="$emit('onSeeDetails')"
       >
         Maggiori Informazioni
       </div>
@@ -75,13 +75,13 @@ h2 {
   margin: 0.3em;
 }
 
-#submit {
+#see-details {
   color: white;
-  background-color: #414535;
+  background-color: var(--dark-blue);
 }
 
-#submit:hover {
-  background-color: #c19875;
+#see-details:hover {
+  background-color: var(--brown);
   transition: 0.2s;
 }
 
@@ -93,9 +93,9 @@ h2 {
   padding: 1em;
 }
 
-Wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.wrapper {
+  border-radius: 25px;
+  border: 2px solid var(--blue);
 }
 
 .Item {
