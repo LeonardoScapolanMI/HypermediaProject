@@ -239,12 +239,28 @@ const summer = Object.freeze({
 })
 
 // Get all summer Events basic informations
-app.get('/event/summer', async (req, res) => {
+app.get('/event/:season', async (req, res) => {
   const data = await dbData
 
+  let begin
+  let end
+  switch(req.params.season) {
+    case 'summer':
+      begin = 4
+      end = 9
+      break;
+    case 'winter':
+      begin = 10
+      end = 3
+      break;
+    default:
+      begin = 1
+      end = 12
+  }
+
   // TODO add the paramethers
-  const result = await data.Event.FindAllEventsBetweenMonths(summer.begin.month, summer.end.month, req.query.startingIndex, req.query.itemCount)
-  const eventCount = await data.Event.CountAllEventsBetweenMonths(summer.begin.month, summer.end.month)
+  const result = await data.Event.FindAllEventsBetweenMonths(begin, end, req.query.startingIndex, req.query.itemCount)
+  const eventCount = await data.Event.CountAllEventsBetweenMonths(begin, end)
 
   let isFinished = false
   if(!req.query.itemCount) {
@@ -268,38 +284,6 @@ app.get('/event/summer', async (req, res) => {
     })
   }
 
-  return res.json(ret)
-})
-
-// Get all winter Events basic informations
-app.get('/event/winter', async (req, res) => {
-  const data = await dbData
-
-  // TODO add the paramethers
-  const result = await data.Event.FindAllEventsBetweenMonths(summer.end.month, summer.begin.month, req.query.startingIndex, req.query.itemCount)
-  const eventCount = await data.Event.CountAllEventsBetweenMonths(summer.end.month, summer.begin.month)
-
-  let isFinished = false
-  if(!req.query.itemCount) {
-    isFinished=true
-  }
-  else if(!req.query.startingIndex){
-    isFinished = eventCount <= Number(req.query.itemCount)
-  }
-  else{
-    isFinished = eventCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
-  }
-
-
-  const ret = {data:[], isFinished}
-  for (const element of result) {
-    ret.data.push({
-      id : element._id,
-      name: element.name,
-      description: element.overview,
-      images: element.Images,
-    })
-  }
   return res.json(ret)
 })
 
