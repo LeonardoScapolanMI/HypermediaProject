@@ -253,7 +253,6 @@ app.get('/event/:season', async (req, res) => {
       end = 12
   }
 
-  // TODO add the paramethers
   const result = await data.Event.FindAllEventsBetweenMonths(begin, end, req.query.startingIndex, req.query.itemCount)
   const eventCount = await data.Event.CountAllEventsBetweenMonths(begin, end)
 
