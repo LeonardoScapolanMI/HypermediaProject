@@ -1,62 +1,64 @@
 <template>
+  <div>
+    <!-- TITOLO -->
     <div>
-        <!-- TITOLO -->
-        <div><br>
-          <h1 class="text-center">{{name}}</h1> 
-          <hr id="title">
-          <h4 class="text-center">ITINERARIO</h4> 
-        </div>
-        <div class="row">
-          <div class="col-md"></div>
-          <div class="col-md">
-            <img :src="image.URL" :alt="image.caption">
-          </div>
-          <div class="col-md"></div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-1"></div>
-                <div class="col-md-6">
-                    <p id="text text-with-line-break ">{{overview}}</p><!-- TO FILL -->
-                 </div> <!-- col -->
-            <div class="col-md-1"></div>
-        </div> <!-- row -->
-       <!-- PRINTING ALL POIS CORRELATED -->
-        <div class="row">
-          <div
-            class="col-md-4"
-            v-for="(poi, poiIndex) of poiList"
-            :key="`poi-index-${poiIndex}`"
-          >
-            <card
-              @onSeeDetails="$router.push('/poi_details/' + poi._id)"
-              :imageUrl="poi.Images[0].URL"
-              :imageCaption="poi.Images[0].caption"
-              :title="poi.name"
-              :description="poi.description"
-            />
-          </div>
-        </div>
+      <br />
+      <h1 class="text-center">{{ name }}</h1>
+      <hr id="title" />
+      <h4 class="text-center">ITINERARIO</h4>
     </div>
+    <div class="row">
+      <div class="col-md"></div>
+      <div class="col-md">
+        <img :src="image.URL" :alt="image.caption" />
+      </div>
+      <div class="col-md"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <p id="text text-with-line-break ">{{ overview }}</p>
+        <!-- TO FILL -->
+      </div>
+      <!-- col -->
+      <div class="col-md-1"></div>
+    </div>
+    <!-- row -->
+    <!-- PRINTING ALL POIS CORRELATED -->
+    <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+  </div>
 </template>
 
 <script>
+import CardCarousel from '~/components/CardCarousel.vue'
+
 export default {
-  components:{
-  },
-  name: 'punto-interesse',
-  async asyncData({ route, $axios }) {
+  name: 'Itinerary',
+  components: { CardCarousel },
+  async asyncData({ route, $axios, $router }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/itinerary' + id)
+    const { data } = await $axios.get(
+      'http://localhost:3000/api/itinerary' + id
+    )
+
+    const poiList = []
+    for (const poi of data.PointOfInterests) {
+      poiList.push({
+        id: poi._id,
+        image: poi.Images[0],
+        name: poi.name,
+        description: poi.description,
+      })
+    }
+
     // console.log(data)
     return {
       name: data.name,
       overview: data.overview,
       image: data.representativeImage,
-      poiList: data.PointOfInterests,
-      
+      poiList,
     }
-    
   },
   methods: {
     backToList() {
@@ -77,5 +79,4 @@ img {
   display: block;
   overflow: hidden;
 }
-
 </style>

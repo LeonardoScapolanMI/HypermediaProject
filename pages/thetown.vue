@@ -8,7 +8,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="slideshow" />
+    <SlideShow :images="imagesV" class="title-image" />
 
     <!-- OVERVIEW -->
 
@@ -221,17 +221,14 @@ export default {
   margin-right: min(100px, 5%);
 }
 
-.slideshow {
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: min(1000px, 86%);
-}
-
 .structural-links {
   max-width: 90% !important;
   margin: auto;
   margin-bottom: 10px;
+}
+
+.structural-link {
+  font-weight: bold;
 }
 
 .selected-structural-link {

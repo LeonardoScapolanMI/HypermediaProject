@@ -1,8 +1,15 @@
+body {
+  color: var(--dark-blue);
+  font-family: Georgia;
+}
+
 .text-with-line-break {
   white-space: pre-wrap;
 }
 
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
+.title-image {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: min(1000px, 86%);
 }

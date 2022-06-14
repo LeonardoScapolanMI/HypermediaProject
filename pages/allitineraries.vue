@@ -9,7 +9,7 @@
     <!-- IMAGE -->
 
     <div>
-      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="thumbnail-image"/>
+      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
     </div>
 
     <!-- OVERVIEW -->
@@ -52,4 +52,5 @@ body {
 .titolo {
   padding: 2em;
 }
+
 </style>

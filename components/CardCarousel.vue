@@ -23,9 +23,9 @@
               >
                 <Card
                 
-                @onSeeDetails="$router.push('/poi_details/' + cards.id)"
-                  :imageUrl="cards.images[0].URL"
-                  :imageCaption="cards.images[0].caption"
+                @onSeeDetails="$emit('onSeeDetails', cards.id)"
+                  :imageUrl="cards.image.URL"
+                  :imageCaption="cards.image.caption"
                   :title="cards.name"
                   :description="cards.description"
                 />
@@ -44,7 +44,7 @@ export default {
 
   props: {
     content: { type: Array, required: true },
-    typeList: {type: String, required:true },
+    typeList: {type: String, default: 'POI' },
   },
 
   data() {
