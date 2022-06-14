@@ -1,8 +1,8 @@
 <template>
-  <div class="Wrapper">
-    <div class="Item">
+  <div class="Wrapper" >
+    <div class="Item" >
       <div class="ImgWrap">
-      <img :src="imageUrl" id="image" :alt="imageCaption" />
+      <img :src="imageUrl" id="image" :alt="imageCaption"  />
       </div>
 
       <div class="text-center" id="Description">
@@ -24,14 +24,19 @@
 </template>
 
 <script>
+
 export default {
   name: 'ItemCard',
   props: {
+    
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
+   
   },
+    
+  
   head() {
     return {
       link: [
