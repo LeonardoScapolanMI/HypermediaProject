@@ -62,7 +62,7 @@
                   type="email"
                   class="form-control"
                   id="email"
-                  placeholder="user@example.com"
+                  placeholder="nome@gmail.com"
                 />
                 <div
                   class="invalid-feedback"
