@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-1"></div>
                 <div class="col-md-6">
-                    <p id="text">{{description}}</p><!-- TO FILL -->
+                    <p id="text text-with-line-break ">{{description}}</p><!-- TO FILL -->
             </div> <!-- col -->
             <div class="col-md-4">
                 <MapBox :indirizzo="mapurl"/>

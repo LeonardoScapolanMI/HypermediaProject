@@ -20,7 +20,7 @@
     
     <!-- OVERVIEW -->
 
-    <div><p id="text">{{description}}</p></div>
+    <div><p id="text text-with-line-break ">{{description}}</p></div>
 
     <!-- LONG CARDS -->
 

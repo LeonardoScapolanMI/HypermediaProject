@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-1"></div>
                 <div class="col-md-6">
-                    <p id="text">{{overview}}</p><!-- TO FILL -->
+                    <p id="text text-with-line-break ">{{overview}}</p><!-- TO FILL -->
                  </div> <!-- col -->
             <div class="col-md-1"></div>
         </div> <!-- row -->
