@@ -4,8 +4,8 @@
         <div><br>
           <h1 class="text-center">{{name}}</h1> 
           <hr id="title">
-          <h4 class="text-center">PUNTO D'INTERESSE</h4> 
-        </div><br>
+          <h4 class="text-center">EVENTO</h4> 
+        </div><br><br>
 
         <div class="row">
           <div class="col"></div>
@@ -16,37 +16,38 @@
         <div class="row">
             <div class="col-md-1"></div>
                 <div class="col-md-6">
-                    <p id="text text-with-line-break ">{{description}}</p><!-- TO FILL -->
+                    <p id="text text-with-line-break">{{overview}}</p><!-- TO FILL -->
             </div> <!-- col -->
+            
             <div class="col-md-4">
-                <MapBox :indirizzo="mapurl"/>
-            </div> <!-- col -->
+                <MapBox v-if="mapurl" :indirizzo="mapurl"/>
+                <MapBox v-else :indirizzo="poiList[0].mapURL"/>
+            </div>  
         </div> <!-- row -->
-       
-      <!-- Carousel of Cards --> 
-      <div class="row"></div>
-      <div class="row"></div>
-      <div class="row"></div>      
+        
     </div>
 </template>
 
 <script>
 import SlideShow from '~/components/Slideshow.vue'
-import MapBox from '~/components/MapBox.vue'
 export default {
   components:{
     SlideShow,
-    MapBox,
   },
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+    const { data } = await $axios.get('http://localhost:3000/api/event' + id)
+    // console.log(data)
     return {
       name: data.name,
-      description: data.description,
       imagesV: data.Images,
-      mapurl: data.mapURL,
+      overview: data.overview,
+      sDate: data.startDate,
+      eDate: data.endDate,
+      cost: data.cost,
+      mapurl: data.mapUrl,
+      poiList: data.PointOfInterests,
     }
   },
   methods: {

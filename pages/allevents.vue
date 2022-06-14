@@ -1,142 +1,48 @@
 <template>
   <div>
-    <the-header />
-
     <!-- TITLE -->
+
     <div class="titolo">
-      <h1 class="text-center">ALL EVENTS</h1> 
-      <hr id="title">
-      <h4 class="text-center">ALL EVENTS SECTION</h4> 
+      <h1 class="text-center">TUTTI GLI EVENTI</h1>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div><p></p></div>
+    <div>
+      <p id="text text-with-line-break ">{{ description }}</p>
+    </div>
 
     <!-- CARDS -->
-
-    <div class="content">
-      <div class="row">
-        <div
-          class="col-md-4"
-          v-for="(poi, poiIndex) of poiList"
-          :key="`poi-index-${poiIndex}`"
-        >
-          <card
-            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="poi.name"
-            :description="poi.description"
-          />
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center">
-      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
-    </div>
-   
-    <the-footer />
+    <card-list
+      :endpoint="'/api/event'"
+      :details-page-folder="'event_details'"
+      :no-items-placeholder="'Al momento non ci sono eventi'"
+      :error-text="'Impossibile caricare gli eventi'"
+    />
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
-import Card from '~/components/Card.vue'
-
-const N_BASE_LOADED_ITEMS = 9
-const N_ITEMS_LOADED_MORE = 3
+import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllEvents',
-  components: { TheFooter, TheHeader, Card },
+  components: { CardList },
   data() {
     return {
+      description: 'Vieni a scoprire tutti gli eventi che si svolgono a Firenze, sarà un’avventura senza eguali. Passerai delle incredibili giornate nella nostra grande città, tra sport, musica e arte. Dal mercatino di Natale ai concerti musicali estivi, Firenze ti offre qualsiasi tipo di esperienza tutto l’anno.'
     }
-  },
-  async asyncData({ $axios }) {
-    
-
-    const reqBody = {
-      params: {
-        itemCount: N_BASE_LOADED_ITEMS,
-      },
-    }
-
-    const { data } = await $axios.get('http://localhost:3000/api/poi', reqBody)
-
-    return {
-      poiList: data.data,
-      allLoaded: data.isFinished
-    }
-  },
-  methods: {
-    async loadMore(){
-      
-
-      const itemShown = this.poiList.length
-
-      const reqBody = {
-        params: {
-          startingIndex: itemShown,
-          itemCount: N_ITEMS_LOADED_MORE,
-        },
-      }
-
-      const { data } = await this.$axios.get(
-        'http://localhost:3000/api/poi',
-        reqBody
-      )
-      this.allLoaded = data.isFinished
-      for(const d of data.data) this.poiList.push(d)
-    },
   },
 }
 </script>
 
 <style>
+body {
+  color: var(--dark-blue);
+  font-family: Georgia;
+}
 
-  body {
-    color: #414535;
-    font-family: Georgia;
-  }
-
-  #title {
-    margin-left: 300px;
-    margin-right: 300px;
-    border-top: 2px solid #414535;
-  }
-
-/* LOAD MORE */
-
-  .content {
-     display: none;
-  }
-
-  .no-content {
-    color: #414535 !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    pointer-events: none;
-  }
-
-  #load-more:hover {
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-  
-  #load-more {
-    color: #414535;
-    background-color: #96BBBB;
-    padding: 5px 10px 5px 10px;
-    font-size: 15px;
-    border: 2px solid #414535 ;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
+.titolo {
+  padding: 2em;
+}
 </style>

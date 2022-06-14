@@ -408,6 +408,7 @@ const itineraries = [
       name: 'Musei Fiorentini',
       overview:
         "Visita la migliore selezione di musei di Firenze. Il percorso ti accompagnerà in una full immersion nella storia artistica Italiana, dal Rinascimento fino all'età moderna.",
+      mapURL: "https://www.google.com/maps/d/u/0/embed?mid=1sIzw4hKd7FPs9wXe8wHLmw1l7XGvIpI&ehbc=2E312F",
     },
     pois: [0, 1, 2, 3, 5],
   },
@@ -416,7 +417,8 @@ const itineraries = [
       name: 'Piazze Fiorentine',
       overview:
         "La bellezza della città sta anche nelle incantevoli e storiche piazze sparse per il capoluogo Toscano. Avrai l'occasione di visitare le più famose e di ammirare tutto il corredo di negozi storici e magnifici monumenti in esse.",
-    },
+      mapURL: "https://www.google.com/maps/d/u/0/embed?mid=1MA0RuuMr4O4EbpgkDy2k3A05KauKNeo&ehbc=2E312F",
+      },
     pois: [4, 5, 6, 7, 8, 9, 10],
   },
   {
@@ -424,6 +426,7 @@ const itineraries = [
       name: 'Chiese Fiorentine',
       overview:
         'Scopri le bellissime chiese della città, dalle famosissime e rinomate Santa Maria novella e Santa maria del fiore, ad altri importantissimi luoghi di culto.',
+      mapURL: "https://www.google.com/maps/d/u/0/embed?mid=1nsomLGcnGWvbdGhsjWnR-owJRYAb9FU&ehbc=2E312F",
     },
     pois: [7, 13, 8, 14, 12, 11],
   },
@@ -645,6 +648,7 @@ const events = [
       startDate: '2022-09-09',
       endDate: '2022-09-10',
       cost: 'gratuito',
+      mapURL: 'https://www.google.com/maps/d/u/0/embed?mid=1v6HSxm-gnZRBICj2ipUgpFEkbqNPPYc&ehbc=2E312F',
     },
     hostingPOIs: [5, 6],
     imagesURL: [

@@ -12,7 +12,7 @@
     
       <ul class="navbar-nav mr-auto">
         <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-          <nuxt-link :to="navItem.path" class="nav-link">
+          <nuxt-link :to="navItem.path">
             {{ navItem.name }}
           </nuxt-link>
         </li>
@@ -29,23 +29,23 @@ export default {
     return {
       headerList: [
         {
-          name: 'EVENTS',
+          name: 'EVENTI',
           path: '/alleventgroupings',
         },
         {
-          name: 'POINT OF INTERESTS',
+          name: 'PUNTI DI INTERESSE',
           path: '/allpois',
         },
         {
-          name: 'ITINERARIES',
+          name: 'ITINERARI',
           path: '/allitineraries',
         },
         {
-          name: 'SERVICES',
-          path: '/allservices',
+          name: 'SERVIZI',
+          path: '/allservicetypes',
         },
         {
-          name: 'THE TOWN',
+          name: 'LA CITTÀ',
           path: '/thetown',
         },
       ],
@@ -102,12 +102,12 @@ export default {
     font-weight: bold;
   }
 
-  ul {
+  nav ul {
     margin: 0;
     padding: 0;
   }
 
-  li {
+  nav li {
     padding: 5px 5px;
     list-style-type: none;
   }

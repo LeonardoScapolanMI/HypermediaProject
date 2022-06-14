@@ -1,24 +1,16 @@
 <template>
-  <div class="wrapper">
+  <div class="Wrapper">
     <div class="Item">
-      <div class="ImgWrap">
-        <img id="image" :src="imageUrl" :alt="imageCaption" />
+      <div class="row">
+      <div class="col-md-4">
+      <div class="ImgWrap"><img :src="imageUrl" id="image" :alt="imageCaption" /></div>
       </div>
-
-      <div id="Description" class="text-center">
-        <h2>{{ title }}</h2>
-        <p
-          style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap"
-        >
-          {{ description }}
-        </p>
+      <div class="col-md-6">
+      <div id="Description">
+      <h2>{{ title }}</h2>
+      <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ description }}</p>
       </div>
-      <div
-        id="see-details"
-        class="btn btn-primary btn-orange"
-        @click="$emit('onSeeDetails')"
-      >
-        Maggiori Informazioni
+      </div>
       </div>
     </div>
     <br />
@@ -26,19 +18,14 @@
 </template>
 
 <script>
-
 export default {
-  name: 'ItemCard',
+  name: 'ItemLongCard',
   props: {
-    
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-   
   },
-    
-  
   head() {
     return {
       link: [
@@ -76,38 +63,20 @@ export default {
 </script>
 
 <style scoped>
+
 h2 {
   margin: 0.3em;
 }
 
-#see-details {
-  color: white;
-  background-color: var(--dark-blue);
-}
-
-#see-details:hover {
-  background-color: var(--brown);
-  transition: 0.2s;
-}
-
-.Btn {
-  background: #20a8d8;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  padding: 1em;
-}
-
-.wrapper {
-  border-radius: 25px;
-  border: 2px solid var(--blue);
+Wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Item {
   display: flex;
   flex: 0 1 180px;
   flex-direction: column;
-  text-align: center;
   margin: 10px;
   padding: 5px;
   border: 1px transparent;
@@ -119,7 +88,6 @@ h2 {
   position: relative;
   margin: 0.5em;
   flex: 0 1 180px;
-
   display: block;
   overflow: hidden;
 }
@@ -136,4 +104,5 @@ img {
   word-wrap: break-word;
   max-width: 90%;
 }
+
 </style>

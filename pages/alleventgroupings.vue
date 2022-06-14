@@ -1,57 +1,51 @@
 <template>
-  <div>
-    <the-header />
-
-    <!-- TITLE -->
-
-    <div class="titolo">
-      <h1 class="text-center">ALL EVENT GROUPINGS</h1> 
-      <hr id="title">
-      <h4 class="text-center">ALL EVENT GROUPINGS SECTION</h4> 
-    </div>
+  <div class="spazio">
 
     <!-- IMMAGINI -->
 
           <div class="container">
             <div class="row">
-              <div class="col-12"><a href="/allevents"><img class="w-100" src="/images/pointofinterest/piazzalemichelangelo/0.jpg" alt="All events"></a>
-                <div class="carousel-caption d-md-block"><h3>ALL EVENTS</h3></div>
+              <div class="col-12"><a href="/allevents"><img id="image" src="/images/event/all.jpg" alt="anteprima di tutti gli eventi" class="thumbnail-image"/>
+                <div class="carousel-caption d-md-block"><h3>TUTTI GLI EVENTI</h3></div></a>
               </div>
             </div>
             <div class="row">
-              <div class="col-6"><a href="/summerevents"><img class="w-100" src="/images/event/i-giardini-di-firenze/0.jpg" alt="Summer events"></a>
-                <div class="carousel-caption d-md-block"><h3>SUMMER EVENTS</h3></div>
+              <div class="col-6"><a href="/summerevents"><img id="image" src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="thumbnail-image"/>
+                <div class="carousel-caption d-md-block"><h3>EVENTI ESTIVI</h3></div></a>
               </div>
-              <div class="col-6"><a href="/winterevents"><img class="w-100" src="/images/event/mercatinodinatale/0.jpg" alt="Winter events"></a>
-                <div class="carousel-caption d-md-block"><h3>WINTER EVENTS</h3></div>
+              <div class="col-6"><a href="/winterevents"><img id="image" src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernali" class="thumbnail-image"/>
+                <div class="carousel-caption d-md-block"><h3>EVENTI INVERNALI</h3></div></a>
               </div>
             </div>
-          </div><br>
-
-     <the-footer />
+          </div>
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
 export default {
   name: 'AllEventGroupings',
-  components: { TheFooter, TheHeader },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <style>
 
 body {
-  color: #414535;
+  color: var(--dark-blue);
   font-family: Georgia;
 }
 
-#title {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-top: 2px solid #414535;
+.thumbnail-image{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
+
+#image:hover { 
+  opacity: 0.9;
+  }	
 
 </style>
