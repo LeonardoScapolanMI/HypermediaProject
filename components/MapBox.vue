@@ -58,10 +58,6 @@ export default {
 
 <style scoped>
 
-    #text {
-      padding-top: 50px;
-    }
-
     #map {
     height: 300px;
 	  width: 300px;

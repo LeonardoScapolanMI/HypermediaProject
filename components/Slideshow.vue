@@ -81,6 +81,7 @@
     .carousel {
         width: 100%;
         height: 100%;
+        margin-bottom: 10px;
     }
 
     .carousel .carousel-inner, .carousel .carousel-item {
@@ -90,7 +91,7 @@
 
     .carousel-item img {
     width: 60vw;
-    height: 70vh;
+    height: 60vh;
     object-fit: cover;
     object-position: 50% 50%;
 }
