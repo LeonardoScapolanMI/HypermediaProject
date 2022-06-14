@@ -16,11 +16,9 @@
 
     <!-- OVERVIEW -->
 
-    <!-- OVERVIEW -->
-
     <hr />
     <br />
-    <div>
+    <div id="contenuto">
       <h3>Storia</h3>
       <br />
       <p class="text-justify text-with-line-break "> {{historyText}} </p>
@@ -29,7 +27,7 @@
 
     <hr />
 
-    <div>
+    <div id="contenuto">
       <br />
       <h3>Come raggiungere la città</h3>
       <br />
@@ -197,9 +195,8 @@ body {
   font-family: Georgia;
 }
 
-#title {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-top: 2px solid var(--dark-blue);
+#contenuto {
+   padding-left: 20px;
+   padding-right: 20px;
 }
 </style>
