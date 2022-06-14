@@ -9,7 +9,7 @@
     <!-- OVERVIEW -->
 
     <div>
-      <p id="text">{{ description }}</p>
+      <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 
     <!-- CARDS -->

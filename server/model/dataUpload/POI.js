@@ -648,7 +648,7 @@ const events = [
       startDate: '2022-09-09',
       endDate: '2022-09-10',
       cost: 'gratuito',
-      mapURL: 'src="https://www.google.com/maps/d/u/0/embed?mid=1v6HSxm-gnZRBICj2ipUgpFEkbqNPPYc&ehbc=2E312F',
+      mapURL: 'https://www.google.com/maps/d/u/0/embed?mid=1v6HSxm-gnZRBICj2ipUgpFEkbqNPPYc&ehbc=2E312F',
     },
     hostingPOIs: [5, 6],
     imagesURL: [
