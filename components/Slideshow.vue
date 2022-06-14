@@ -12,7 +12,7 @@
 
             <!-- The slideshow -->
             <div class="carousel-inner">
-                <div v-for="(img, imgIndex) of images" :key="`img-Index-${imgIndex}`" :id="imgIndex" class="carousel-item" >
+                <div v-for="(img, imgIndex) of images" :key="`img-Index-${imgIndex}`" :id="imgIndex" class="carousel-item img-fluid" >
                     <img :src="img.URL" :alt="img.caption">
                 </div>
             </div>
@@ -84,14 +84,10 @@
         margin-bottom: 10px;
     }
 
-    .carousel .carousel-inner, .carousel .carousel-item {
-        width: 100%;
-        height: 100%;
-    }
-
     .carousel-item img {
-    width: 60vw;
-    height: 60vh;
+    height: 50vh;
+    width: 100%;
+    
     object-fit: cover;
     object-position: 50% 50%;
 }

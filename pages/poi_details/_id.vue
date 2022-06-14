@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
           <div class="col"></div>
-          <div class="col-6"><SlideShow :images="imagesV"/></div>
+          <div class="col-9"><SlideShow :images="imagesV"/></div>
           <div class="col"></div>
         </div>
       </div>
@@ -19,7 +19,7 @@
             <div class="col-md-6">
                 <p id="text text-with-line-break ">{{description}}</p><!-- TO FILL -->
             </div> <!-- col -->
-            <div class="col">
+            <div class="col-md-3">
                 <MapBox :indirizzo="mapurl"/>
             </div> <!-- col -->
         </div> <!-- row -->
