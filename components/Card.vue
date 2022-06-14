@@ -26,14 +26,19 @@
 </template>
 
 <script>
+
 export default {
   name: 'ItemCard',
   props: {
+    
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
+   
   },
+    
+  
   head() {
     return {
       link: [

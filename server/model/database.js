@@ -409,7 +409,8 @@ async function initializeDatabase() {
   return ret
 }
 
-async function syncDatabase(force = false) {
+// async function syncDatabase(force = false) {
+  
   try {
     if (force) {
       await database.sync({ force: true })
