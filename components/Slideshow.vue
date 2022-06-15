@@ -88,7 +88,7 @@ export default {
 
 .carousel-item img {
   width: 100%;
-  height: 30vw;
+  aspect-ratio: 21/9;
   object-fit: cover;
   object-position: 50% 50%;
 }
