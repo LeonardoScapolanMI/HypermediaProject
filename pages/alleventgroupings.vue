@@ -35,8 +35,18 @@ export default {
 
 .thumbnail-image{
   object-fit: cover;
-  height: 100%;
+  height: 92%;
   width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }	
+
+#image {
+  border-radius: 20px;
+}
+
+#image:hover { 
+  opacity: 0.9;
+}
 
 </style>

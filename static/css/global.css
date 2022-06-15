@@ -41,28 +41,16 @@ hr{
   text-align: center;
 }
 
-#image {
-  border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#image:hover { 
-  opacity: 0.9;
-}
-
 .separator {
   max-width: 92%;
   margin: auto;
-  background-color: var(--light-blue);
 }
 
 .subtitle {
   margin-left: 300px;
   margin-right: 300px;
-  border-top: var(--light-blue);
 }
 
 .container{
-  max-width: 80%;
+  max-width: 1000px;
 }

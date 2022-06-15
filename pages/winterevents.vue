@@ -9,7 +9,7 @@
     <!-- IMAGE -->
 
     <div class="text-center">
-      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="title-image"/>
+      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="title-image-container"/>
     </div>
 
     <!-- OVERVIEW -->
