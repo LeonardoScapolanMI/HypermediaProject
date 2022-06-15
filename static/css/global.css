@@ -24,8 +24,15 @@ hr{
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: min(900px, 80%);
-  height: 30vw;
+  aspect-ratio: 16/9;
   width: 100%;
+}
+
+.title-image-container {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: min(1400px, 86%);
 }
 
 .page-title {
