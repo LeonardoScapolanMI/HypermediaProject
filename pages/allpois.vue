@@ -2,7 +2,7 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
+    <div class="title">
       <h1 class="text-center">TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
@@ -28,14 +28,3 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
-</style>

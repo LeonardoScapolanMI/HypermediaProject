@@ -2,13 +2,13 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
+    <div class="title">
       <h1 class="text-center">TUTTI GLI EVENTI</h1>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div>
+    <div class="text-content">
       <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 
@@ -35,14 +35,3 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
-</style>

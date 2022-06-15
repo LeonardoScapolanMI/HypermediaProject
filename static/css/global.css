@@ -7,9 +7,47 @@ body {
   white-space: pre-wrap;
 }
 
+.text-content {
+  display: block;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .title-image {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: min(1000px, 86%);
+  height: 30vw;
+  width: 100%;
+}
+
+.title {
+  margin-top: 30px;
+  margin-left: min(100px, 5%);
+  margin-right: min(100px, 5%);
+}
+
+#image {
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#image:hover { 
+  opacity: 0.9;
+}
+
+.separator {
+  max-width: 92%;
+  margin: auto;
+  background-color: var(--light-blue);
+}
+
+.subtitle {
+  margin-left: 300px;
+  margin-right: 300px;
+  border-top: var(--light-blue);
 }

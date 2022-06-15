@@ -1,44 +1,62 @@
 <template>
-    <div>
-        <!-- TITOLO -->
-        <div><br>
-          <h1 class="text-center">{{name}}</h1> 
-          <hr id="title">
-          <h4 class="text-center">EVENTO</h4> 
-        </div><br><br>
+  <div>
+      <!-- TITOLO -->
 
-        <div class="row">
-          <div class="col"></div>
-          <div class="col-6"><SlideShow :images="imagesV"/></div>
-          <div class="col"></div>
+        <div class="title">
+          <h1 class="text-center">{{name}}</h1> 
+          <hr class="subtitle">
+          <h4 class="text-center">EVENTO</h4> 
         </div>
+
+      <!-- SLIDESHOW -->
+
+      <SlideShow :images="imagesV" class="title-image" />
+
+      <!-- MAPBOX -->
 
         <div class="row">
             <div class="col-md-1"></div>
                 <div class="col-md-6">
-                    <p id="text text-with-line-break">{{overview}}</p><!-- TO FILL -->
+                    <p id="text text-with-line-break">{{overview}}</p>
             </div> <!-- col -->
             
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <MapBox v-else :indirizzo="poiList[0].mapURL"/>
+                <MapBox v-else :indirizzo="evList[0].mapURL"/>
             </div>  
         </div> <!-- row -->
+
+        <!-- CARD CAROUSEL --> 
+      <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div>
         
-    </div>
+  </div>
 </template>
 
 <script>
 import SlideShow from '~/components/Slideshow.vue'
+
 export default {
-  components:{
-    SlideShow,
+  name: 'event',
+  components: { SlideShow },
+  data() {
+    return {
+      overview: 'Ecco dove avverrà l evento. Non perdertelo!'
+    }
   },
-  name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('http://localhost:3000/api/event' + id)
-    // console.log(data)
+
+    const poiList = []
+    for (const poi of data.PointOfInterest) {
+      poiList.push({
+        id: poi._id,
+        image: poi.Images[0],
+        name: poi.name,
+        description: poi.description,
+      })
+    }
+    
     return {
       name: data.name,
       imagesV: data.Images,

@@ -28,7 +28,6 @@
         </div>
       </div>
     </div>
-
     <hr class="separator" />
 
     <div class="text-content">
@@ -215,11 +214,6 @@ export default {
 </script>
 
 <style>
-.title {
-  margin-top: 30px;
-  margin-left: min(100px, 5%);
-  margin-right: min(100px, 5%);
-}
 
 .structural-links {
   max-width: 90% !important;
@@ -234,20 +228,6 @@ export default {
 .selected-structural-link {
   color: var(--blue);
   text-decoration: underline;
-}
-
-.separator {
-  max-width: 92%;
-  margin: auto;
-  background-color: var(--light-blue);
-}
-
-.text-content {
-  display: block;
-  max-width: 90%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .text-content-title {

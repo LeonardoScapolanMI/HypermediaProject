@@ -1,12 +1,13 @@
 <template>
   <div>
     <!-- TITOLO -->
-    <div>
-      <br />
-      <h1 class="text-center">{{ name }}</h1>
-      <hr id="title" />
-      <h4 class="text-center">ITINERARIO</h4>
-    </div>
+
+        <div class="title">
+          <h1 class="text-center">{{name}}</h1> 
+          <hr class="subtitle">
+          <h4 class="text-center">ITINERARIO</h4> 
+        </div>
+
     <div class="row">
       <div class="col-md"></div>
       <div class="col-md">

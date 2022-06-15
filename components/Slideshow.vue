@@ -87,8 +87,8 @@
     .carousel-item img {
     height: 30vw;
     width: 100%;
-    
     object-fit: cover;
     object-position: 50% 50%;
 }
+
 </style>

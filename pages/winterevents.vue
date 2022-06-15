@@ -2,19 +2,19 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
+    <div class="title">
       <h1 class="text-center">EVENTI INVERNALI</h1>
     </div>
 
     <!-- IMAGE -->
 
-    <div>
-      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="thumbnail-image"/>
+    <div class="text-center">
+      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="title-image"/>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div>
+    <div class="text-content" >
       <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 
@@ -49,15 +49,4 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
-</style>
 

@@ -2,13 +2,13 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
+    <div class="title">
       <h1 class="text-center">TUTTI I TIPI DI SERVIZIO</h1>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div>
+    <div class="text-content">
       <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 
@@ -27,7 +27,7 @@
 import CardList from '~/components/CardList.vue'
 
 export default {
-  name: 'AllSerrvices',
+  name: 'AllServices',
   components: { CardList },
   data() {
     return {
@@ -36,14 +36,3 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
-</style>

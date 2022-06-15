@@ -3,28 +3,24 @@
 
     <!-- TITLE -->
 
-    <div class="titolo">
+    <div class="title">
       <h1 class="text-center">CONTATTACI</h1>  
     </div>
 
     <!-- FORM -->
 
-    <div id="contactUs">
+    <div class="form">
     <div class="container marketing">
-      <div>
-        <br />
-        <br />
-
-        <div class="row">
+      <div class="title">
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
-            <hr />
+            <hr class="line" />
             <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="firstName">Nome</label>
                   <input
-                  name = "firstName"
+                    name = "firstName"
                     v-model="name"
                     type="text"
                     class="form-control"
@@ -33,12 +29,12 @@
                     value
                     required
                   />
-                  <div class="invalid-feedback">Nome non valido.</div>
+                  <div class="invalid-feedback">Il nome inserito non &eacute; non valido.</div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="lastName">Cognome</label>
                   <input
-                  name = "lastName"
+                    name = "lastName"
                     v-model="surname"
                     type="text"
                     class="form-control"
@@ -47,7 +43,7 @@
                     value
                     required
                   />
-                  <div class="invalid-feedback">Cognome non valido.</div>
+                  <div class="invalid-feedback">Il cognome inserito non &eacute; non valido.</div>
                 </div>
               </div>
 
@@ -57,12 +53,12 @@
                   <span class="text-muted">(Facoltativo)</span>
                 </label>
                 <input
-                name = "email"
+                  name = "email"
                   v-model="email"
                   type="email"
                   class="form-control"
                   id="email"
-                  placeholder="nome@gmail.com"
+                  placeholder="utente@gmail.com"
                 />
                 <div
                   class="invalid-feedback"
@@ -70,7 +66,7 @@
               </div>
 
               <div class="mb-3">
-                <label for="message">Riquiesta di informazioni</label>
+                <label for="message">Richiesta di informazioni</label>
                 <textarea
                 name = "message"
                   v-model="text"
@@ -80,19 +76,22 @@
                   placeholder
                   required
                 ></textarea>
-                <div class="invalid-feedback">Per favore inserire una riquiesta di informazioni valida.</div>
+                <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div>
-
-              <hr class="mb-4" />
-              <button class="btn btn-lg btn-block" type="submit" id="submit">Contattaci</button>
+              
             </form>
+              
+            <div class="row">
+              <div class="col-md-9"></div>
+              <div class="col-md-3"> 
+              <button class="btn btn-lg btn-block" type="submit" id="submit">Contattaci</button>
+              </div>
+             </div>
+            
           </div>
         </div>
       </div>
     </div>
-    </div>
-    <br />
-  <br />
   </div>
   
 </template>
@@ -127,12 +126,13 @@ export default {
 
 <style>
 
-#contactUs {
-    margin:0.5em;
-}
-
 .container {
   max-width: 960px;
+}
+
+.form {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -145,13 +145,18 @@ input, textarea {
   margin: 5px;
 }
 
+.line {
+  background-color: var(--light-blue);
+}
+
 #submit {
   color: white;
-  background-color: var(--dark-blue);;
+  background-color: var(--dark-blue);
+  float: right;
 }
 
 #submit:hover {
-  background-color: var(--brown);;
+  background-color: var(--brown);
   transition: 0.2s;
 }
 
