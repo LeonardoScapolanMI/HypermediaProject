@@ -104,4 +104,14 @@ img {
   max-width: 90%;
 }
 
+#image {
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#image:hover { 
+  opacity: 0.9;
+}
+
 </style>
