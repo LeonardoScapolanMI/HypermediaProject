@@ -11,7 +11,7 @@
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
     
       <ul class="navbar-nav mr-auto">
-        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
+        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item active">
           <nuxt-link :to="navItem.path">
             {{ navItem.name }}
           </nuxt-link>

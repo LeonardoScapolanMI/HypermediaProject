@@ -67,7 +67,7 @@
               <div class="mb-3">
                 <label for="message">Richiesta di informazioni</label>
                 <textarea
-                name = "message"
+                  name = "message"
                   v-model="text"
                   class="form-control"
                   id="request"
