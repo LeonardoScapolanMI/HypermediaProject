@@ -1,5 +1,5 @@
 <template>
-  <div class="spazio">
+  <div>
 
     <!-- IMMAGINI -->
 

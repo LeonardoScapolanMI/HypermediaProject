@@ -1,6 +1,7 @@
 body {
   color: var(--dark-blue);
   font-family: Georgia;
+  margin-top: 100px;
 }
 
 hr{

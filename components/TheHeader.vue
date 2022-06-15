@@ -1,6 +1,6 @@
 <template>
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg fixed-top">
 
     <li><a href="/" id="logo"><img src="/images/firenze.png" alt="HOME" id="icon"/><span class="sr-only">(current)</span></a></li>
 
