@@ -44,10 +44,5 @@ export default {
 </script>
 
 <style>
-.title-image{
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
+
 </style>

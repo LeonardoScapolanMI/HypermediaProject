@@ -8,7 +8,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <SlideShow :images="imagesV" class="title-image-container" />
 
     <!-- OVERVIEW -->
 

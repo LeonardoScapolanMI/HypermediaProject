@@ -20,19 +20,17 @@ hr{
 }
 
 .title-image {
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: min(900px, 80%);
-  aspect-ratio: 16/9;
   width: 100%;
+  aspect-ratio: 20/9;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .title-image-container {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: min(1400px, 86%);
+  max-width: min(1200px, 86%);
 }
 
 .page-title {
