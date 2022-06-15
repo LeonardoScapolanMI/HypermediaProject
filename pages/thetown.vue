@@ -2,13 +2,13 @@
   <div>
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">LA CITT&Agrave; DI FIRENZE</h1>
+    <div class="page-title">
+      <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <SlideShow :images="imagesV" class="title-image-container" />
 
     <!-- OVERVIEW -->
 
@@ -214,7 +214,10 @@ export default {
 </script>
 
 <style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 381e676168ed03d1443ee2a25997da57e9e06def
 .structural-links {
   max-width: 90% !important;
   margin: auto;
@@ -223,6 +226,8 @@ export default {
 
 .structural-link {
   font-weight: bold;
+  cursor:pointer;
+  user-select: none;
 }
 
 .selected-structural-link {
@@ -233,4 +238,5 @@ export default {
 .text-content-title {
   margin-bottom: 20px;
 }
+
 </style>

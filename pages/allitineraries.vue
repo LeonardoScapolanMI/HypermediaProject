@@ -2,14 +2,24 @@
   <div>
     <!-- TITLE -->
 
+<<<<<<< HEAD
     <div class="title">
       <h1 class="text-center">TUTTI GLI ITINERARI</h1>
+=======
+    <div class="page-title">
+      <h1>TUTTI GLI ITINERARI</h1>
+>>>>>>> 381e676168ed03d1443ee2a25997da57e9e06def
     </div>
 
     <!-- IMAGE -->
 
+<<<<<<< HEAD
     <div class="text-center">
       <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
+=======
+    <div class="title-image-container">
+      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari"/>
+>>>>>>> 381e676168ed03d1443ee2a25997da57e9e06def
     </div>
 
     <!-- OVERVIEW -->
