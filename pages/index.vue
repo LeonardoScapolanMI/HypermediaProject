@@ -23,23 +23,43 @@ export default {
     return {
       imagesV: [
         {
-          URL: '/images/town/0.jpg',
+          URL: '/images/home/0.jpg',
           caption: 'La Primavera di Botticelli',
         },
         {
-          URL: '/images/town/1.jpg',
+          URL: '/images/home/1.jpg',
           caption: 'Ponte Vecchio',
         },
         {
-          URL: '/images/town/2.jpg',
+          URL: '/images/home/2.jpg',
           caption: 'Piazza e Basilica di Santa Croce',
         },
         {
-          URL: '/images/town/3.jpg',
+          URL: '/images/home/3.jpg',
           caption: 'Piazza e Basilica di Santa Maria Novella',
         },
         {
-          URL: '/images/town/4.jpg',
+          URL: '/images/home/4.jpg',
+          caption: 'Cattedrale di Santa Maria del Fiore',
+        },
+        {
+          URL: '/images/home/5.jpg',
+          caption: 'Cattedrale di Santa Maria del Fiore',
+        },
+        {
+          URL: '/images/home/6.jpg',
+          caption: 'Cattedrale di Santa Maria del Fiore',
+        },
+        {
+          URL: '/images/home/7.jpg',
+          caption: 'Cattedrale di Santa Maria del Fiore',
+        },
+        {
+          URL: '/images/home/8.jpg',
+          caption: 'Cattedrale di Santa Maria del Fiore',
+        },
+        {
+          URL: '/images/home/9.jpg',
           caption: 'Cattedrale di Santa Maria del Fiore',
         },
       ],
