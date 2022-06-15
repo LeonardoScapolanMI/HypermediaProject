@@ -45,9 +45,7 @@
 import SlideShow from '~/components/Slideshow.vue'
 export default {
   name: 'TheTown',
-  components: {
-    SlideShow,
-  },
+  components: { SlideShow },
   data() {
     return {
       imagesV: [

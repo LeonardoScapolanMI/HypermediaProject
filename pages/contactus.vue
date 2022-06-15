@@ -77,11 +77,9 @@
                   required
                 ></textarea>
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
-              </div>
-              
-              <div class="col-md-3"> 
-              <button class="btn btn-lg btn-block" type="submit" id="submit">Contattaci</button>
-              </div>
+              </div> 
+
+              <button class="btn" type="submit" id="submit">Invia</button>
             
             </form>
           </div>
@@ -144,6 +142,11 @@ input, textarea {
 #submit {
   color: white;
   background-color: var(--dark-blue);
+  float: right;
+  padding: 5px 50px 5px 50px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  font-size: large;
 }
 
 #submit:hover {
