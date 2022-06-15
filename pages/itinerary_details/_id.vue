@@ -24,7 +24,7 @@
       <!-- col -->
       <div class="col-md-1"></div>
     </div>
-    <!-- row -->
+
     <!-- PRINTING ALL POIS CORRELATED -->
     <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
   </div>
@@ -36,7 +36,7 @@ import CardCarousel from '~/components/CardCarousel.vue'
 export default {
   name: 'Itinerary',
   components: { CardCarousel },
-  async asyncData({ route, $axios, $router }) {
+  async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
       'http://localhost:3000/api/itinerary' + id
