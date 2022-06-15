@@ -7,11 +7,7 @@
 
       <div id="Description" class="text-center">
         <h2>{{ title }}</h2>
-        <p
-          style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap"
-        >
-          {{ description }}
-        </p>
+        <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ description }}</p>
       </div>
       <div
         id="see-details"

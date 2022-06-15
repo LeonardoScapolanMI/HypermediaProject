@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- TITLE -->
 
     <div class="page-title">
@@ -119,10 +118,6 @@ export default {
 </script>
 
 <style>
-
-.container {
-  max-width: 960px;
-}
 
 .form {
   margin-top: 30px;
