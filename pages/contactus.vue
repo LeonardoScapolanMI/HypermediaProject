@@ -14,7 +14,7 @@
       <div class="title">
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
-            <hr class="line" />
+            <hr />
             <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -79,15 +79,11 @@
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div>
               
-            </form>
-              
-            <div class="row">
-              <div class="col-md-9"></div>
               <div class="col-md-3"> 
               <button class="btn btn-lg btn-block" type="submit" id="submit">Contattaci</button>
               </div>
-             </div>
             
+            </form>
           </div>
         </div>
       </div>
@@ -145,14 +141,9 @@ input, textarea {
   margin: 5px;
 }
 
-.line {
-  background-color: var(--light-blue);
-}
-
 #submit {
   color: white;
   background-color: var(--dark-blue);
-  float: right;
 }
 
 #submit:hover {

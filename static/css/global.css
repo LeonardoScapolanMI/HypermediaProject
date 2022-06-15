@@ -23,10 +23,9 @@ hr{
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: min(900px, 86%);
+  max-width: min(900px, 80%);
   height: 30vw;
   width: 100%;
-  text-align: center;
 }
 
 .page-title {
