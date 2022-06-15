@@ -1,27 +1,29 @@
 <template>
     <div>
         <!-- TITOLO -->
-        <div><br>
-          <h1 class="text-center">{{name}}</h1> 
-          <hr id="title">
-          <h4 class="text-center">PUNTO D'INTERESSE</h4> 
-        </div><br>
-      <div class="container">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col-9"><SlideShow :images="imagesV"/></div>
-          <div class="col"></div>
+
+        <div class="page-title">
+          <h1>{{name}}</h1> 
+          <hr class="subtitle">
+          <h4>PUNTO D'INTERESSE</h4> 
         </div>
-      </div>
+
+        <!-- SLIDESHOW -->
+
+    <SlideShow :images="imagesV" class="title-image" />
+
+       <!-- MAPBOX -->
+
         <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-6">
-                <p id="text text-with-line-break ">{{description}}</p><!-- TO FILL -->
+            <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <p id="text text-with-line-break">{{overview}}</p>
             </div> <!-- col -->
-            <div class="col-md-3">
-                <MapBox :indirizzo="mapurl"/>
-            </div> <!-- col -->
+            
+            <div class="col-md-5">
+                <MapBox v-if="mapurl" :indirizzo="mapurl"/>
+                <MapBox v-else :indirizzo="poiList[0].mapURL"/>
+            </div>  
         </div> <!-- row -->
        
       <!-- Carousel of Cards --> 
@@ -77,8 +79,6 @@ export default {
         description: ev.overview,
       })
     }
-
-
     // console.log(poiExtra)
     return {
       name: data.name,

@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style scoped>
+        
 h2 {
   margin: 0.3em;
 }
@@ -97,7 +98,6 @@ h2 {
   color: #fff;
   padding: 1em;
 }
-
 .wrapper {
   border-radius: 25px;
   border: 2px solid var(--blue);
@@ -119,7 +119,6 @@ h2 {
   position: relative;
   margin: 0.5em;
   flex: 0 1 180px;
-
   display: block;
   overflow: hidden;
 }
@@ -136,4 +135,5 @@ img {
   word-wrap: break-word;
   max-width: 90%;
 }
+
 </style>

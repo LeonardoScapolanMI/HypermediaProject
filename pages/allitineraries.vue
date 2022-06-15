@@ -14,7 +14,7 @@
 
     <!-- OVERVIEW -->
 
-    <div>
+    <div class="text-content">
       <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 

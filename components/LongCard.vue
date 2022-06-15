@@ -1,5 +1,5 @@
 <template>
-  <div class="Wrapper">
+  <div class="wrapper">
     <div class="Item">
       <div class="row">
       <div class="col-md-4">
@@ -67,10 +67,9 @@ export default {
 h2 {
   margin: 0.3em;
 }
-
-Wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.wrapper {
+  border-radius: 25px;
+  border: 2px solid var(--blue);
 }
 
 .Item {

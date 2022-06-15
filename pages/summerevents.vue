@@ -2,19 +2,19 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
-      <h1 class="text-center">EVENTI ESTIVI</h1>
+    <div class="page-title">
+      <h1>EVENTI ESTIVI</h1>
     </div>
 
     <!-- IMAGE -->
 
-    <div>
-      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="thumbnail-image"/>
+    <div class="text-center">
+      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
     </div>
 
     <!-- OVERVIEW -->
 
-    <div>
+    <div class="text-content">
       <p id="text text-with-line-break ">{{ description }}</p>
     </div>
 
@@ -49,14 +49,3 @@ export default {
   },
 }
 </script>
-
-<style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
-</style>

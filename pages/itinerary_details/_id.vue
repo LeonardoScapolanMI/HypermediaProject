@@ -1,12 +1,13 @@
 <template>
   <div>
     <!-- TITOLO -->
-    <div>
-      <br />
-      <h1 class="text-center">{{ name }}</h1>
-      <hr id="title" />
-      <h4 class="text-center">ITINERARIO</h4>
-    </div>
+
+        <div class="page-title">
+          <h1>{{name}}</h1> 
+          <hr class="subtitle">
+          <h4>ITINERARIO</h4> 
+        </div>
+
     <div class="row">
       <div class="col-md"></div>
       <div class="col-md">
@@ -19,7 +20,7 @@
       <div class="col-md-1"></div>
       <div class="col-md-6">
         <p id="text text-with-line-break ">{{ overview }}</p>
-        <!-- TO FILL -->
+      
       </div>
       <!-- col -->
       <div class="col-md-1"></div>

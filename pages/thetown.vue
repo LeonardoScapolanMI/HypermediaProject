@@ -8,7 +8,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container" />
+    <SlideShow :images="imagesV" class="title-image" />
 
     <!-- OVERVIEW -->
 
@@ -28,7 +28,6 @@
         </div>
       </div>
     </div>
-
     <hr class="separator" />
 
     <div class="text-content">
@@ -46,9 +45,7 @@
 import SlideShow from '~/components/Slideshow.vue'
 export default {
   name: 'TheTown',
-  components: {
-    SlideShow,
-  },
+  components: { SlideShow },
   data() {
     return {
       imagesV: [
@@ -215,6 +212,7 @@ export default {
 </script>
 
 <style>
+
 .structural-links {
   max-width: 90% !important;
   margin: auto;
@@ -232,20 +230,8 @@ export default {
   text-decoration: underline;
 }
 
-.separator {
-  max-width: 92%;
-  margin: auto;
-}
-
-.text-content {
-  display: block;
-  max-width: 90%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .text-content-title {
   margin-bottom: 20px;
 }
+
 </style>
