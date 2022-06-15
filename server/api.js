@@ -59,7 +59,8 @@ app.get('/poi:id', async (req, res) => {
   const data = await dbData
   const element = await data.PointOfInterest.findOne({
     where:{ _id },
-    include: { model: data.Image },
+    include:[{ model: data.Image },{model: data.Itinerary, include:{model: data.Image, as: "representativeImage"}},{model: data.Event, include:{model: data.Image}}],
+    
   })
   
   //console.log(result)

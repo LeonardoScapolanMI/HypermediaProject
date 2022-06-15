@@ -81,8 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.carousel .carousel-inner,
-.carousel .carousel-item {
+.carousel{
   width: 100%;
   height: 100%;
 }
