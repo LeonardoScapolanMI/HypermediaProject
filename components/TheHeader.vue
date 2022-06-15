@@ -1,6 +1,6 @@
 <template>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-md fixed-top">
 
     <li><a href="/" id="logo"><img src="/images/firenze.png" alt="HOME" id="icon"/><span class="sr-only">(current)</span></a></li>
 
@@ -108,7 +108,6 @@ export default {
   }
 
   nav li {
-    padding: 5px 5px;
     list-style-type: none;
   }
 
@@ -120,12 +119,12 @@ export default {
 
   #icon {
     border: 0;
-    width: 100px;
+    width: 90px;
   }
 
   nav a {
     display: block;
-    padding: 25px 20px;
+    padding: 22px 20px;
     color: white;
     text-decoration: none;
   }

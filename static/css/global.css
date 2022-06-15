@@ -1,7 +1,7 @@
 body {
   color: var(--dark-blue);
   font-family: Georgia;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 hr{
@@ -35,7 +35,7 @@ hr{
 }
 
 .page-title {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;

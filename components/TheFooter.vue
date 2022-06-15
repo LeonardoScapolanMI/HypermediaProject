@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav >
       <div>
         <ul>
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
@@ -76,12 +76,15 @@ nav {
   }
 
 nav ul {
-  margin: 0;
   list-style-type: none;
+  text-align: center;
+  margin: 0;
 }
 
 nav li {
+  padding: 5px;
   display: inline-block;
+
 }
 
 nav a {
