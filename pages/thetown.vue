@@ -59,11 +59,11 @@ export default {
         },
         {
           URL: '/images/town/2.jpg',
-          caption: 'Piazza e Basilica di Santa Croce',
+          caption: 'Piazza della Signoria',
         },
         {
           URL: '/images/town/3.jpg',
-          caption: 'Piazza e Basilica di Santa Maria Novella',
+          caption: 'Basilica di Santa Croce',
         },
         {
           URL: '/images/town/4.jpg',

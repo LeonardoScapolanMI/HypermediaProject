@@ -61,3 +61,7 @@ hr{
   margin-right: 300px;
   border-top: var(--light-blue);
 }
+
+.container{
+  max-width: 80%;
+}

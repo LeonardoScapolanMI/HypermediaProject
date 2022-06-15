@@ -24,46 +24,46 @@ export default {
       imagesV: [
         {
           URL: '/images/home/0.jpg',
-          caption: 'La Primavera di Botticelli',
+          caption: 'Panorama notturno della città',
         },
         {
           URL: '/images/home/1.jpg',
-          caption: 'Ponte Vecchio',
+          caption: 'Statua di Aloy',
         },
         {
           URL: '/images/home/2.jpg',
-          caption: 'Piazza e Basilica di Santa Croce',
+          caption: 'Piazza Santa Maria Novella',
         },
         {
           URL: '/images/home/3.jpg',
-          caption: 'Piazza e Basilica di Santa Maria Novella',
+          caption: 'Galleria della Accademia',
         },
         {
           URL: '/images/home/4.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Lupi di Liu Ruowang',
         },
         {
           URL: '/images/home/5.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Panorama diurno della città',
         },
         {
           URL: '/images/home/6.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Arco di Trionfo',
         },
         {
           URL: '/images/home/7.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Fontana del Nettuno',
         },
         {
           URL: '/images/home/8.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Ponte Vecchio',
         },
         {
           URL: '/images/home/9.jpg',
-          caption: 'Cattedrale di Santa Maria del Fiore',
+          caption: 'Galleria degli Uffizi',
         },
       ],
-      description: 'Benvenuto in questo viaggio alla scoperta di Firenze.'
+      description: 'Benvenuto!!!'
     }
   },
   }
