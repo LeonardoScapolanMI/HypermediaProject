@@ -2,8 +2,8 @@
   <div>
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">TUTTI GLI EVENTI</h1>
+    <div class="page-title">
+      <h1>TUTTI GLI EVENTI</h1>
     </div>
 
     <!-- OVERVIEW -->

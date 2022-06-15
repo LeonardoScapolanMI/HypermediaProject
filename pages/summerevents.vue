@@ -2,8 +2,8 @@
   <div>
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">EVENTI ESTIVI</h1>
+    <div class="page-title">
+      <h1>EVENTI ESTIVI</h1>
     </div>
 
     <!-- IMAGE -->

@@ -3,10 +3,10 @@
 
     <!-- TITLE -->
 
-    <div class="titolo">
-          <h1 class="text-center">{{name}}</h1> 
-          <hr id="title">
-          <h4 class="text-center">TYPE OF SERVICES SECTION</h4> 
+    <div class="page-title">
+          <h1>{{name}}</h1> 
+          <hr class="subtitle">
+          <h4>TYPE OF SERVICES SECTION</h4> 
     </div>
 
     <!-- IMMAGINE -->

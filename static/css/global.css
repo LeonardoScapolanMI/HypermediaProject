@@ -26,6 +26,7 @@ hr{
   max-width: min(1000px, 86%);
   height: 30vw;
   width: 100%;
+  text-align: center;
 }
 
 .page-title {
@@ -33,19 +34,6 @@ hr{
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
-}
-
-.title-image-container {
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: min(1400px, 86%);
-}
-
-.title {
-  margin-top: 30px;
-  margin-left: min(100px, 5%);
-  margin-right: min(100px, 5%);
 }
 
 #image {

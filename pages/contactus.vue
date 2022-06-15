@@ -3,8 +3,8 @@
 
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">CONTATTACI</h1>  
+    <div class="page-title">
+      <h1>CONTATTACI</h1>  
     </div>
 
     <!-- FORM -->

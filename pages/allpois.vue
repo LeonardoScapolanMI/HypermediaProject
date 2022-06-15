@@ -2,8 +2,8 @@
   <div>
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">TUTTI I PUNTI DI INTERESSE</h1>
+    <div class="page-title">
+      <h1>TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
     <!-- CARDS -->

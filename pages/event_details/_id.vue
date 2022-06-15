@@ -2,10 +2,10 @@
   <div>
       <!-- TITOLO -->
 
-        <div class="title">
-          <h1 class="text-center">{{name}}</h1> 
+        <div class="page-title">
+          <h1>{{name}}</h1> 
           <hr class="subtitle">
-          <h4 class="text-center">EVENTO</h4> 
+          <h4>EVENTO</h4> 
         </div>
 
       <!-- SLIDESHOW -->

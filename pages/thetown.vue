@@ -8,7 +8,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container" />
+    <SlideShow :images="imagesV" class="title-image" />
 
     <!-- OVERVIEW -->
 
@@ -214,10 +214,7 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
 
-=======
->>>>>>> 381e676168ed03d1443ee2a25997da57e9e06def
 .structural-links {
   max-width: 90% !important;
   margin: auto;
