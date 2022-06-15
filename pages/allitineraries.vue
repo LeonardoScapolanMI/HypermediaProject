@@ -8,7 +8,7 @@
 
     <!-- IMAGE -->
 
-    <div class="text-center">
+    <div class="title-image-container">
       <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
     </div>
 
@@ -42,3 +42,12 @@ export default {
   },
 }
 </script>
+
+<style>
+.title-image{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+</style>
