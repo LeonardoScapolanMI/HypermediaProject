@@ -2,14 +2,14 @@
   <div>
     <!-- TITLE -->
 
-    <div class="titolo">
-      <h1 class="text-center">TUTTI GLI ITINERARI</h1>
+    <div class="page-title">
+      <h1>TUTTI GLI ITINERARI</h1>
     </div>
 
     <!-- IMAGE -->
 
-    <div>
-      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
+    <div class="title-image-container">
+      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari"/>
     </div>
 
     <!-- OVERVIEW -->
@@ -44,13 +44,5 @@ export default {
 </script>
 
 <style>
-body {
-  color: var(--dark-blue);
-  font-family: Georgia;
-}
-
-.titolo {
-  padding: 2em;
-}
 
 </style>

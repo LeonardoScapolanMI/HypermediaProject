@@ -2,13 +2,13 @@
   <div>
     <!-- TITLE -->
 
-    <div class="title">
-      <h1 class="text-center">LA CITT&Agrave; DI FIRENZE</h1>
+    <div class="page-title">
+      <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <SlideShow :images="imagesV" class="title-image-container" />
 
     <!-- OVERVIEW -->
 
@@ -215,12 +215,6 @@ export default {
 </script>
 
 <style>
-.title {
-  margin-top: 30px;
-  margin-left: min(100px, 5%);
-  margin-right: min(100px, 5%);
-}
-
 .structural-links {
   max-width: 90% !important;
   margin: auto;
