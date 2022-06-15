@@ -229,6 +229,8 @@ export default {
 
 .structural-link {
   font-weight: bold;
+  cursor:pointer;
+  user-select: none;
 }
 
 .selected-structural-link {
@@ -239,7 +241,6 @@ export default {
 .separator {
   max-width: 92%;
   margin: auto;
-  background-color: var(--light-blue);
 }
 
 .text-content {
