@@ -5,7 +5,7 @@
     
     <div class="welcome">
       <div class="title">
-      <h1>Firenze</h1>
+      <h1>FIRENZE</h1>
       <hr class="line" />
       <h4>come mai prima</h4>
       </div>  
