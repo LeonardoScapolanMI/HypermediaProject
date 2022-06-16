@@ -16,8 +16,12 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
     />
     <template v-else>
       <div class="content">
-        <div v-if="state === ListState.Error" class="text-center">{{errorText}}</div>
-        <div v-else-if="itemList.length <= 0" class="text-center">{{noItemsPlaceholder}}</div>
+        <div v-if="state === ListState.Error" class="text-center">
+          {{ errorText }}
+        </div>
+        <div v-else-if="itemList.length <= 0" class="text-center">
+          {{ noItemsPlaceholder }}
+        </div>
         <template v-else>
           <div class="row justify-content-between">
             <div
@@ -35,6 +39,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
                 "
               />
             </div>
+            <div class="col" /> <!-- to ensure that elements on the last line are aligned left if they are less than 3 (or 2 depending on the responsive layout) -->
           </div>
 
           <div id="bottone" class="text-center">
@@ -76,7 +81,7 @@ export default {
     endpoint: { type: String, required: true },
     detailsPageFolder: { type: String, required: true },
     nBaseLoadedItems: { type: Number, default: 12 },
-    nItemsLoadedMore: { type: Number, default: 3 },
+    nItemsLoadedMore: { type: Number, default: 6 },
     noItemsPlaceholder: { type: String, default: 'Non ci sono oggetti' },
     errorText: { type: String, default: 'Impossibile carcicare gli oggetti' },
   },
@@ -100,9 +105,8 @@ export default {
       this.itemList = data.data
 
       this.state = data.isFinished
-          ? ListState.LoadedFinished
-          : ListState.LoadedNotFinished
-
+        ? ListState.LoadedFinished
+        : ListState.LoadedNotFinished
     } catch (e) {
       this.state = ListState.Error
     }
@@ -140,7 +144,7 @@ export default {
         },
       ],
     }
-  }, 
+  },
   methods: {
     async loadMore() {
       try {
@@ -161,7 +165,6 @@ export default {
         this.state = data.isFinished
           ? ListState.LoadedFinished
           : ListState.LoadedNotFinished
-
       } catch (e) {
         this.state = ListState.Error
       }
@@ -186,12 +189,12 @@ export default {
   pointer-events: none;
 }
 
-.content{
+.content {
   margin: auto;
   width: 92% !important;
 }
 
-.card-container{
+.card-container {
   margin: auto;
   margin-bottom: 20px;
 }
@@ -201,7 +204,7 @@ export default {
   margin-left: 20px;
 }
 
-.button-style{
+.button-style {
   color: var(--green);
   background-color: var(--blue);
   border: 2px solid var(--green);
