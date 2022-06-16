@@ -53,6 +53,8 @@ export default {
 <style scoped>
 
     #map {
+    display:flex;
+    justify-content: center;
     height: 300px;
 	  width: 300px;
 	  margin-top: 30px;
