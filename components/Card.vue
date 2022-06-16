@@ -80,6 +80,7 @@ export default {
   max-height: 70vh;
   border-radius: 25px;
   border: 2px solid var(--blue);
+  box-shadow: 5px 5px 10px 3px var(--green);
 }
 
 #image {

@@ -1,40 +1,35 @@
 <template>
-  <section class="pt-5 pb-5" id="myCarousel">
+  <section id="myCarousel" class="pt-5 pb-5">
     <div class="container">
-      
-        <div class="col-6 text-right">
-          <button v-if="content.length>3" @click="prev" >
-            prev
-            
-          </button>
-          <button v-if="content.length>3" @click="next"  >
-            next
-            
-          </button>
+      <div class="col-6 text-right">
+        <div v-if="content.length > 3" id="prev-button" @click="prev">
+          <img src="/icons/angle-left-solid.svg" alt="icona indietro" />
         </div>
-        
-        <div class="col-12" id="myCarousel">
-          
-            <div class="row" id="myCarousel">
-              <div
-                class="col-md-4"
-                v-for="(cards, cardIndex) of content.slice(start,end).concat(content.slice(start1,end1))"
-                :key="`card-index-${cardIndex}`"
-              >
-                <Card
-                
-                @onSeeDetails="$emit('onSeeDetails', cards.id)"
-                  :imageUrl="cards.image.URL"
-                  :imageCaption="cards.image.caption"
-                  :title="cards.name"
-                  :description="cards.description"
-                />
-              </div>
-            </div>
-          
+        <div v-if="content.length > 3" id="next-button" @click="next">
+          <img src="/icons/angle-right-solid.svg" alt="icona avanti" />
         </div>
       </div>
-    
+
+      <div class="col-12" id="myCarousel">
+        <div class="row" id="myCarousel">
+          <div
+            class="col-md-4"
+            v-for="(cards, cardIndex) of content
+              .slice(start, end)
+              .concat(content.slice(start1, end1))"
+            :key="`card-index-${cardIndex}`"
+          >
+            <Card
+              @onSeeDetails="$emit('onSeeDetails', cards.id)"
+              :imageUrl="cards.image.URL"
+              :imageCaption="cards.image.caption"
+              :title="cards.name"
+              :description="cards.description"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -44,7 +39,7 @@ export default {
 
   props: {
     content: { type: Array, required: true },
-    typeList: {type: String, default: 'POI' },
+    typeList: { type: String, default: 'POI' },
   },
 
   data() {
@@ -95,8 +90,6 @@ export default {
       ],
     }
   },
-
-
 
   methods: {
     prev() {
@@ -160,10 +153,14 @@ export default {
         this.end = this.end + 1
       }
     },
-
   },
-
-
 }
 </script>
 
+<style scoped>
+#prev-button,
+#next-button {
+  color: black;
+  width: 50px;
+}
+</style>
