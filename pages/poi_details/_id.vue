@@ -15,12 +15,12 @@
        <!-- MAPBOX -->
 
         <div class="row">
-            <div class="col-md-1"></div>
+            <div class="col-md-2"></div>
                 <div class="col-md-6">
-                    <p id="text text-with-line-break">{{overview}}</p>
+                    <p id="text text-with-line-break">{{description}}</p>
             </div> <!-- col -->
             
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <MapBox v-else :indirizzo="poiList[0].mapURL"/>
             </div>  
@@ -97,3 +97,10 @@ export default {
   },
 }
 </script>
+<style scoped>
+
+  p {
+    padding-top: 1.7em;
+  }
+
+</style>
