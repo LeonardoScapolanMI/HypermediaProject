@@ -1,23 +1,20 @@
 <template>
-  <div class="wrapper">
-    <div class="Item">
-      <div class="ImgWrap">
-        <img id="image" :src="imageUrl" :alt="imageCaption" />
-      </div>
+  <div id="wrapper">
 
-      <div id="Description" class="text-center">
-        <h2>{{ title }}</h2>
-        <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ description }}</p>
-      </div>
-      <div
+      <img id="image" :src="imageUrl" :alt="imageCaption" />
+
+      <h2 id="title">{{ title }}</h2>
+
+      <p id="description">{{ description }}</p>
+
+      <button
         id="see-details"
-        class="btn btn-primary btn-orange"
+        class="button-style"
         @click="$emit('onSeeDetails')"
       >
         Maggiori Informazioni
-      </div>
-    </div>
-    <br />
+      </button>
+
   </div>
 </template>
 
@@ -72,74 +69,68 @@ export default {
 </script>
 
 <style scoped>
-        
-h2 {
-  margin: 0.3em;
-}
 
-#see-details {
-  color: white;
-  background-color: var(--dark-blue);
-}
-
-#see-details:hover {
-  background-color: var(--brown);
-  transition: 0.2s;
-}
-
-.Btn {
-  background: #20a8d8;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  padding: 1em;
-}
-.wrapper {
+#wrapper{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 70vh;
   border-radius: 25px;
   border: 2px solid var(--blue);
 }
 
-.Item {
-  display: flex;
-  flex: 0 1 180px;
-  flex-direction: column;
-  text-align: center;
-  margin: 10px;
-  padding: 5px;
-  border: 1px transparent;
-  max-height: 23em;
-  min-height: 23em;
-}
-
-.ImgWrap {
-  position: relative;
-  margin: 0.5em;
-  flex: 0 1 180px;
-  display: block;
-  overflow: hidden;
-}
-
-img {
-  height: 100% !important;
-  max-width: 90% !important;
-}
-
-#Description {
-  flex: 1;
-  padding: 10px 0;
-  font-size: 0.9em;
-  word-wrap: break-word;
-  max-width: 90%;
-}
-
 #image {
   border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 92%;
+  aspect-ratio: 16/9;
+  display: block;
+  overflow: hidden;
 }
 
 #image:hover { 
   opacity: 0.9;
 }
+
+#title {
+  text-align: center;
+  width: 90%;
+}
+
+#description {
+  flex: 1;
+  width: 90%;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#see-details {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.button-style{
+  color: var(--green);
+  background-color: var(--blue);
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.button-style:hover {
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
 
 </style>
