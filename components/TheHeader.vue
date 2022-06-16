@@ -97,7 +97,7 @@ export default {
 <style scoped>
 
   nav {
-    background-color: #618985;
+    background-color: var(--aqua);
     font-family: Georgia;
     font-weight: bold;
   }
@@ -114,7 +114,7 @@ export default {
   #logo {
     padding: 5px 0px;
     border-bottom-left-radius: 20px;
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
   }
 
   #icon {
@@ -125,20 +125,20 @@ export default {
   nav a {
     display: block;
     padding: 22px 20px;
-    color: white;
+    color: var(--white);
     text-decoration: none;
   }
 
   nav a:hover, nav a:focus{
     border-bottom-left-radius: 20px;
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
     transition: 0.2s;
-    color: #414535;
+    color: var(--green);
     text-decoration: none;
   }
 
 .navbar-toggler {
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
   }
 
   .navbar-toggler-icon {

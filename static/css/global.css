@@ -1,11 +1,8 @@
 body {
-  color: var(--dark-blue);
+  color: var(--green);
   font-family: Georgia;
   margin-top: 90px;
-}
-
-hr{
-  background-color: var(--light-blue);
+  background-color: var(--smoke);
 }
 
 .text-with-line-break {
@@ -43,12 +40,13 @@ hr{
 
 .separator {
   max-width: 92%;
-  margin: auto;
+  margin-bottom: 10px;
+  background-color: var(--blue);
 }
 
 .subtitle {
-  margin-left: 300px;
-  margin-right: 300px;
+  width: 30%;
+  background-color: var(--blue);
 }
 
 .container{

@@ -33,7 +33,7 @@ export default {
 
 .image-link {
   border-radius: 20px;
-   object-fit: cover;
+  object-fit: cover;
   height: 92%;
   width: 100%;
 }
@@ -43,7 +43,7 @@ export default {
 }
 
 .image-link:hover { 
-  opacity: 0.9;
+  box-shadow: 5px 5px 10px 5px var(--green);
 }
 
 </style>

@@ -135,18 +135,20 @@ input, textarea {
 }
 
 #submit {
-  color: white;
-  background-color: var(--dark-blue);
+  color: var(--white);
+  background-color: var(--brown);
   float: right;
   padding: 5px 50px 5px 50px;
   margin-bottom: 30px;
   margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--green);
   font-size: large;
+  font-weight: bold;
 }
 
 #submit:hover {
-  background-color: var(--brown);
-  transition: 0.2s;
+  color: var(--green);
 }
 
 </style>
