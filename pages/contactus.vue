@@ -10,7 +10,7 @@
 
     <div class="form">
     <div class="container marketing">
-      <div class="title">
+      <div>
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
             <hr />
