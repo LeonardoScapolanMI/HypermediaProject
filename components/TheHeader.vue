@@ -1,6 +1,6 @@
 <template>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-md fixed-top">
 
     <li><a href="/" id="logo"><img src="/images/firenze.png" alt="HOME" id="icon"/><span class="sr-only">(current)</span></a></li>
 
@@ -11,7 +11,7 @@
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
     
       <ul class="navbar-nav mr-auto">
-        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
+        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item active">
           <nuxt-link :to="navItem.path">
             {{ navItem.name }}
           </nuxt-link>
@@ -97,7 +97,7 @@ export default {
 <style scoped>
 
   nav {
-    background-color: #618985;
+    background-color: var(--aqua);
     font-family: Georgia;
     font-weight: bold;
   }
@@ -108,38 +108,37 @@ export default {
   }
 
   nav li {
-    padding: 5px 5px;
     list-style-type: none;
   }
 
   #logo {
     padding: 5px 0px;
     border-bottom-left-radius: 20px;
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
   }
 
   #icon {
     border: 0;
-    width: 100px;
+    width: 90px;
   }
 
   nav a {
     display: block;
-    padding: 25px 20px;
-    color: white;
+    padding: 22px 20px;
+    color: var(--white);
     text-decoration: none;
   }
 
   nav a:hover, nav a:focus{
     border-bottom-left-radius: 20px;
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
     transition: 0.2s;
-    color: #414535;
+    color: var(--green);
     text-decoration: none;
   }
 
 .navbar-toggler {
-    background-color: rgba(198, 239, 235, 0.4);
+    background-color: var(--vanish);
   }
 
   .navbar-toggler-icon {

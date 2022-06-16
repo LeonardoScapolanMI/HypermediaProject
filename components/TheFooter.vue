@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav >
       <div>
         <ul>
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
@@ -70,30 +70,33 @@ export default {
 <style>
 
 nav {
-    background-color: #618985;
+    background-color: var(--aqua);
     font-family: Georgia;
     font-weight: bold;
   }
 
 nav ul {
-  margin: 0;
   list-style-type: none;
+  text-align: center;
+  margin: 0;
 }
 
 nav li {
+  padding: 5px;
   display: inline-block;
+
 }
 
 nav a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 
 nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
-  background-color: rgba(198, 239, 235, 0.4);
+  background-color: var(--vanish);
   transition: 0.2s;
-  color: #414535;
+  color: var(--green);
   text-decoration: none;
 }
 

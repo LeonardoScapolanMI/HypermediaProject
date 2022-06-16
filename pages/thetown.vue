@@ -10,7 +10,7 @@
 
     <SlideShow :images="imagesV" class="title-image-container" />
 
-    <!-- OVERVIEW -->
+    <!-- LINK STRUTTURALI -->
 
     <div class="container structural-links">
       <div class="row">
@@ -29,6 +29,8 @@
       </div>
     </div>
     <hr class="separator" />
+
+    <!-- OVERVIEW -->
 
     <div class="text-content">
       <h3 class="text-content-title">

@@ -1,7 +1,11 @@
 :root {
-  --light-blue: #96bbbb;
-  --blue: #618985;
-  --dark-blue: #414535;
+  --blue: #96bbbb;
+  --aqua: #618985;
+  --green: #414535;
   --beige: #f2e3bc;
   --brown: #c19875;
+  --white: #ffffff;
+  --smoke: #f5f5f5;
+  --vanish: #c6efeb66;
+  --dark: #0000004d;
 }

@@ -1,14 +1,66 @@
 <template>
   <div>
 
-    <!-- SLIDESHOW -->
+    <!-- INTRO -->
+    
+    <div class="welcome">
+      <div class="title">
+      <h1>FIRENZE</h1>
+      <hr class="line" />
+      <h4>come mai prima</h4>
+      </div>  
+    </div>
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <hr class="separator" />
 
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <p id="text text-with-line-break ">{{ description }}</p>
+      <h5 class="text-center">{{ introduction }}</h5>
+    </div>
+
+    <!-- SLIDESHOW -->
+
+    <SlideShow :images="imagesV" class="title-image-container" />
+
+    <!-- LINK STRUTTURALI -->
+
+    <div class="container structural-links">
+      <div class="row">
+        <div
+          class="col-sm-auto structural-link selected-structural-link"
+          @click="setContentToDisplay(evContent)"
+        >
+          EVENTI
+        </div>
+        <div
+          class="col-sm-auto structural-link"
+          @click="setContentToDisplay(poiContent)"
+        >
+          PUNTI DI INTERESSE
+        </div>
+        <div
+          class="col-sm-auto structural-link"
+          @click="setContentToDisplay(itContent)"
+        >
+          ITINERARI
+        </div>
+        <div
+          class="col-sm-auto structural-link"
+          @click="setContentToDisplay(serContent)"
+        >
+          SERVIZI
+        </div>
+      </div>
+    </div>
+    <hr class="separator" />
+
+    <!-- OVERVIEW -->
+
+    <div class="text-content">
+      <p class="text-with-line-break">
+        {{ getContentToDisplay().text }}
+      </p>
     </div>
     
   </div>
@@ -63,8 +115,59 @@ export default {
           caption: 'Galleria degli Uffizi',
         },
       ],
-      description: 'Benvenuto!!!'
+      introduction: 'Non perdere l opportunità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
+      evContent: {
+        text: 'Vecchie tradizioni e grandi novità.'
+      },
+      poiContent: {
+        text: 'Dai luoghi più famosi a quelli più segreti.'
+      },
+      itContent: {
+        text: 'Un itinerario della città ricco di sorpese.'
+      },
+      serContent: {
+        text: 'La migliore cucina tradizionale e tutti i servizi necessari.'
+      },
+      toDisplay: undefined,
     }
+  },
+  methods: {
+    getContentToDisplay() {
+      return this.toDisplay ? this.toDisplay : this.evContent
+    },
+    setContentToDisplay(newContent) {
+      this.toDisplay = newContent
+      const elements = document.getElementsByClassName('structural-link')
+      Array.prototype.forEach.call(elements, (element) => {
+        element.classList.remove('selected-structural-link')
+      })
+      event.target.classList.add('selected-structural-link')
+    },
   },
   }
 </script>
+
+<style>
+
+.welcome {
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg")center;
+  background-size: cover;
+  height: 500px;
+}
+
+.title {
+  color: var(--beige);
+  font-weight: bold;
+  padding-top: 170px;
+  padding-left: 70px;
+  text-align: center;
+}
+
+.line {
+  background-color: var(--beige);
+  width: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+</style>

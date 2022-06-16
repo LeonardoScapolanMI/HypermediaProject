@@ -1,11 +1,8 @@
 body {
-  color: var(--dark-blue);
+  color: var(--green);
   font-family: Georgia;
-  margin-top: 100px;
-}
-
-hr{
-  background-color: var(--light-blue);
+  margin-top: 90px;
+  background-color: var(--smoke);
 }
 
 .text-with-line-break {
@@ -41,28 +38,17 @@ hr{
   text-align: center;
 }
 
-#image {
-  border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#image:hover { 
-  opacity: 0.9;
-}
-
 .separator {
   max-width: 92%;
-  margin: auto;
-  background-color: var(--light-blue);
+  margin-bottom: 10px;
+  background-color: var(--blue);
 }
 
 .subtitle {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-top: var(--light-blue);
+  width: 30%;
+  background-color: var(--blue);
 }
 
 .container{
-  max-width: 80%;
+  max-width: 1000px;
 }

@@ -9,7 +9,7 @@
     <!-- IMAGE -->
 
     <div class="text-center">
-      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
+      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image-container"/>
     </div>
 
     <!-- OVERVIEW -->
