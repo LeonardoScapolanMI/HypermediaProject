@@ -9,6 +9,7 @@
 
       <button
         id="see-details"
+        class="button-style"
         @click="$emit('onSeeDetails')"
       >
         Maggiori Informazioni
@@ -70,6 +71,7 @@ export default {
 <style scoped>
 
 #wrapper{
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,8 +113,12 @@ export default {
 #see-details {
   margin-top: 3%;
   margin-bottom: 3%;
-  color: white;
-  background-color: var(--dark-blue);
+}
+
+.button-style{
+  color: var(--green);
+  background-color: var(--blue);
+  border: 2px solid var(--green);
   border-radius: 5px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -120,9 +126,10 @@ export default {
   padding-right: 10px;
 }
 
-#see-details:hover {
-  background-color: var(--brown);
-  transition: 0.2s;
+.button-style:hover {
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 

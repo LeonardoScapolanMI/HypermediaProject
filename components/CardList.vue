@@ -19,11 +19,11 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
         <div v-if="state === ListState.Error" class="text-center">{{errorText}}</div>
         <div v-else-if="itemList.length <= 0" class="text-center">{{noItemsPlaceholder}}</div>
         <template v-else>
-          <div class="row">
+          <div class="row justify-content-between">
             <div
               v-for="(item, itemIndex) of itemList"
               :key="`poi-index-${itemIndex}`"
-              class="col-md-4"
+              class="col col-md-6 col-lg-4 card-container"
             >
               <card
                 :image-url="item.images[0].URL"
@@ -41,6 +41,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
             <button
               v-if="state === ListState.LoadedNotFinished"
               id="load-more"
+              class="button-style"
               @click="loadMore()"
             >
               CARICA ALTRI
@@ -74,7 +75,7 @@ export default {
   props: {
     endpoint: { type: String, required: true },
     detailsPageFolder: { type: String, required: true },
-    nBaseLoadedItems: { type: Number, default: 9 },
+    nBaseLoadedItems: { type: Number, default: 12 },
     nItemsLoadedMore: { type: Number, default: 3 },
     noItemsPlaceholder: { type: String, default: 'Non ci sono oggetti' },
     errorText: { type: String, default: 'Impossibile carcicare gli oggetti' },
@@ -185,21 +186,36 @@ export default {
   pointer-events: none;
 }
 
-#load-more:hover {
-  color: white;
-  transition: 0.2s;
-  cursor: pointer;
+.content{
+  margin: auto;
+  width: 92% !important;
+}
+
+.card-container{
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 #load-more {
-  color: #414535;
-  background-color: #96bbbb;
-  padding: 5px 10px 5px 10px;
-  font-size: 15px;
-  border: 2px solid #414535;
-  border-radius: 10px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.button-style{
+  color: var(--green);
+  background-color: var(--blue);
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.button-style:hover {
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 .loading-icon {
