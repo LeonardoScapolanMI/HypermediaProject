@@ -204,21 +204,18 @@ export default {
   margin-left: 20px;
 }
 
-.button-style {
-  color: var(--green);
-  background-color: var(--blue);
-  border: 2px solid var(--green);
-  border-radius: 5px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
+#load-more {
+  color: var(--white);
+  background-color: var(--brown);
+  border: 1px solid var(--green);
+  padding: 5px 50px 5px 50px;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
 }
 
-.button-style:hover {
-  color: white;
-  transition: 0.25s;
-  cursor: pointer;
+#load-more:hover {
+  color: var(--green);
 }
 
 .loading-icon {
@@ -226,4 +223,5 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
+
 </style>
