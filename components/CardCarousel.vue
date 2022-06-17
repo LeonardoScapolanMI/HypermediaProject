@@ -1,30 +1,44 @@
 <template>
   <div id="wrapper">
+    <img
+      v-if="content.length > 3"
+      id="prev-button"
+      src="/icons/angle-left-solid.svg"
+      alt="icona indietro"
+      @click="prev"
+    />
 
-      <img v-if="content.length > 3"  id="prev-button" src="/icons/angle-left-solid.svg" alt="icona indietro" @click="prev" />
-
-      <div id="cards" class="container">
-        <div class="row">
-          <div
-            v-for="(cards, cardIndex) of content
-              .slice(start, end)
-              .concat(content.slice(start1, end1))"
-            :key="`card-index-${cardIndex}`"
-            class="col-md-4"
-          >
-            <Card
-              :image-url="cards.image.URL"
-              :image-caption="cards.image.caption"
-              :title="cards.name"
-              :description="cards.description"
-              @onSeeDetails="$emit('onSeeDetails', cards.id)"
-            />
-          </div>
+    <div id="cards" class="container">
+      <div class="row justify-content-center">
+        <div
+          v-for="(cards, cardIndex) of getItemsToShow()"
+          :key="`card-index-${cardIndex}`"
+          class="col col-md-6 col-lg-4"
+        >
+          <Card
+            :image-url="cards.image.URL"
+            :image-caption="cards.image.caption"
+            :title="cards.name"
+            :description="cards.description"
+            @onSeeDetails="$emit('onSeeDetails', cards.id)"
+          />
         </div>
       </div>
+    </div>
 
-      <img v-if="content.length > 3" id="next-button" alt="icona avanti" src="/icons/angle-right-solid.svg" @click="next" />
+    <img
+      v-if="content.length > 3"
+      id="next-button"
+      alt="icona avanti"
+      src="/icons/angle-right-solid.svg"
+      @click="next"
+    />
 
+    <div id="device-xs" class="d-block d-sm-none"></div>
+    <div id="device-sm" class="d-none d-sm-block d-md-none"></div>
+    <div id="device-md" class="d-none d-md-block d-lg-none"></div>
+    <div id="device-lg" class="d-none d-lg-block d-xl-none"></div>
+    <div id="device-xl" class="d-none d-xl-block"></div>
   </div>
 </template>
 
@@ -39,10 +53,14 @@ export default {
 
   data() {
     return {
+      /*
       start: 0,
       end: 3,
       start1: '',
       end1: '',
+      */
+      current: 0,
+      nToShow: 0,
     }
   },
   head() {
@@ -85,10 +103,13 @@ export default {
       ],
     }
   },
-
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
   methods: {
     prev() {
-      if (this.start === 0) {
+      /* if (this.start === 0) {
         const x = this.start
         const y = this.end
         this.start = this.content.length - 1
@@ -115,10 +136,11 @@ export default {
         this.end = this.end - 1
         this.end1 = null
         this.start1 = null
-      }
+      } */
+      this.current = (this.current - 1) % this.content.length
     },
-
     next() {
+      /*
       if (
         this.end === this.content.length &&
         this.start === this.content.length - 3
@@ -147,21 +169,55 @@ export default {
         this.start = this.start + 1
         this.end = this.end + 1
       }
+      */
+      this.current = (this.current + 1) % this.content.length
+    },
+    getItemsToShow() {
+      /*
+      return this.content
+        .slice(this.start, this.end)
+        .concat(this.content.slice(this.start1, this.end1))
+      */
+      if (this.current + this.nToShow < this.content.length) {
+        return this.content.slice(this.current, this.current + this.nToShow)
+      } else {
+        return this.content
+          .slice(this.current, this.content.length)
+          .concat(
+            this.content.slice(
+              0,
+              this.current + this.nToShow - this.content.length
+            )
+          )
+      }
+    },
+    onResize() {
+      function isBreakpoint(alias) {
+        return window.getComputedStyle(document.getElementById('device-' + alias)).getPropertyValue("display") !== "none"
+      }
+
+      if (isBreakpoint('sm')) {
+        this.nToShow = 1
+      } else if (isBreakpoint('md')) {
+        this.nToShow = 2
+      } else {
+        this.nToShow = 3
+      }
     },
   },
 }
 </script>
 
 <style scoped>
-#wrapper{
+#wrapper {
   display: flex;
 }
 
-#cards{
+#cards {
   flex: 1 !important;
 }
 
-.container{
+.container {
   max-width: none;
 }
 
