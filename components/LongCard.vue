@@ -1,16 +1,12 @@
 <template>
-  <div class="wrapper">
-    <div class="Item">
+  <div id="wrapper">
       <div class="row">
       <div class="col-md-4">
-      <div class="ImgWrap"><img :src="imageUrl" id="image" :alt="imageCaption" /></div>
+        <img id="#long-img" :src="imageUrl" :alt="imageCaption" />
       </div>
       <div class="col-md-6">
-      <div id="Description">
-      <h2>{{ title }}</h2>
-      <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ description }}</p>
-      </div>
-      </div>
+        <h2 id="title">{{ title }}</h2>
+        <p id="description">{{ description }}</p>
       </div>
     </div>
     <br />
@@ -64,54 +60,55 @@ export default {
 
 <style scoped>
 
-h2 {
-  margin: 0.3em;
-}
-.wrapper {
+#wrapper{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 70vh;
   border-radius: 25px;
   border: 2px solid var(--blue);
-}
-
-.Item {
-  display: flex;
-  flex: 0 1 180px;
-  flex-direction: column;
-  margin: 10px;
-  padding: 5px;
-  border: 1px transparent;
-  max-height: 23em;
-  min-height: 23em;
-}
-
-.ImgWrap {
-  position: relative;
-  margin: 0.5em;
-  flex: 0 1 180px;
-  display: block;
-  overflow: hidden;
-}
-
-img {
-  height: 100% !important;
-  max-width: 90% !important;
-}
-
-#Description {
-  flex: 1;
-  padding: 10px 0;
-  font-size: 0.9em;
-  word-wrap: break-word;
-  max-width: 90%;
+  box-shadow: 5px 5px 10px 3px var(--green);
 }
 
 #image {
   border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 92%;
+  aspect-ratio: 16/9;
+  display: block;
+  overflow: hidden;
 }
 
 #image:hover { 
   opacity: 0.9;
+}
+
+#title {
+  text-align: center;
+  width: 90%;
+}
+
+#description {
+  flex: 1;
+  width: 90%;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+##long-img {
+  border-radius: 20px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 92%;
+  aspect-ratio: 16/9;
+  display: block;
+  overflow: hidden;
 }
 
 </style>

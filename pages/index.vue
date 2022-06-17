@@ -56,11 +56,24 @@
     <hr class="separator" />
 
     <!-- OVERVIEW -->
-
-    <div class="text-content">
-      <p class="text-with-line-break">
-        {{ getContentToDisplay().text }}
-      </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="long-image-container">
+        <img class="long-image" :src="getContentToDisplay().url" :alt="getContentToDisplay().caption" />
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="text-content">
+          <h3 class="text-content-title">
+            {{ getContentToDisplay().title }}
+          </h3>
+          <p class="text-with-line-break">
+             {{ getContentToDisplay().text }}
+          </p>
+         </div>
+        </div>
+      </div>
     </div>
     
   </div>
@@ -75,58 +88,70 @@ export default {
     return {
       imagesV: [
         {
-          URL: '/images/home/0.jpg',
+          URL: '/images/home/slideshow/0.jpg',
           caption: 'Panorama notturno della città',
         },
         {
-          URL: '/images/home/1.jpg',
+          URL: '/images/home/slideshow/1.jpg',
           caption: 'Statua di Aloy',
         },
         {
-          URL: '/images/home/2.jpg',
+          URL: '/images/home/slideshow/2.jpg',
           caption: 'Piazza Santa Maria Novella',
         },
         {
-          URL: '/images/home/3.jpg',
+          URL: '/images/home/slideshow/3.jpg',
           caption: 'Galleria della Accademia',
         },
         {
-          URL: '/images/home/4.jpg',
+          URL: '/images/home/slideshow/4.jpg',
           caption: 'Lupi di Liu Ruowang',
         },
         {
-          URL: '/images/home/5.jpg',
+          URL: '/images/home/slideshow/5.jpg',
           caption: 'Panorama diurno della città',
         },
         {
-          URL: '/images/home/6.jpg',
+          URL: '/images/home/slideshow/6.jpg',
           caption: 'Arco di Trionfo',
         },
         {
-          URL: '/images/home/7.jpg',
+          URL: '/images/home/slideshow/7.jpg',
           caption: 'Fontana del Nettuno',
         },
         {
-          URL: '/images/home/8.jpg',
+          URL: '/images/home/slideshow/8.jpg',
           caption: 'Ponte Vecchio',
         },
         {
-          URL: '/images/home/9.jpg',
+          URL: '/images/home/slideshow/9.jpg',
           caption: 'Galleria degli Uffizi',
         },
       ],
-      introduction: 'Non perdere l opportunità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
+      introduction: 'Non perdere l occasione di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
       evContent: {
-        text: 'Vecchie tradizioni e grandi novità.'
+        url: '/images/home/cards/ev.jpg',
+        caption: 'Cavalcata dei magi',
+        title: 'Vecchie tradizioni e grandi novità.',
+        text: 'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare. Consulta la guida e scopri quale evento fa al caso tuo.'
       },
       poiContent: {
-        text: 'Dai luoghi più famosi a quelli più segreti.'
+        url: '/images/home/cards/poi.jpg',
+        caption: 'Cattedrale di Santa Maria del Fiore',
+        title: 'Dai luoghi più famosi a quelli più segreti.',
+        text: 'Non perdere nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare. Consulta la guida e scopri quale evento fa al caso tuo.'
       },
       itContent: {
-        text: 'Un itinerario della città ricco di sorpese.'
+        url: '/images/home/cards/it.jpg',
+        caption: 'Panorama della città',
+        title: 'Un itinerario della città ricco di sorpese.',
+        text: 'Non perdere nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare. Consulta la guida e scopri quale evento fa al caso tuo.'
       },
       serContent: {
-        text: 'La migliore cucina tradizionale e tutti i servizi necessari.'
+        url: '/images/home/cards/ser.jpg',
+        caption: 'Servizio di ristoro',
+        title: 'Le migliori cucine tradizionali e tutti i servizi necessari.',
+        text: 'Non perdere nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare. Consulta la guida e scopri quale evento fa al caso tuo.'
       },
       toDisplay: undefined,
     }
@@ -168,6 +193,21 @@ export default {
   width: 200px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.long-image-container {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 92%;
+}
+
+.long-image {
+  width: 100%;
+  aspect-ratio: 8/5;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 5px 5px 10px 5px var(--green);
 }
 
 </style>
