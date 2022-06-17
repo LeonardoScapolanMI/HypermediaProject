@@ -137,12 +137,12 @@ input, textarea {
 #submit {
   color: var(--white);
   background-color: var(--brown);
+  border: 1px solid var(--green);
   float: right;
   padding: 5px 50px 5px 50px;
   margin-bottom: 30px;
   margin-right: 10px;
   border-radius: 10px;
-  border: 1px solid var(--green);
   font-size: large;
   font-weight: bold;
 }
