@@ -1,11 +1,9 @@
 <template>
-  <div class="wrapper">
+  <div id="wrapper">
 
-      <span v-if="content.length > 3" id="prev-button" @click="prev">
-        <img src="/icons/angle-left-solid.svg" alt="icona indietro" />
-      </span>
-<span>
-      <div class="container">
+      <img v-if="content.length > 3"  id="prev-button" src="/icons/angle-left-solid.svg" alt="icona indietro" @click="prev" />
+
+      <div id="cards" class="container">
         <div class="row">
           <div
             v-for="(cards, cardIndex) of content
@@ -24,11 +22,8 @@
           </div>
         </div>
       </div>
-      </span>
 
-      <span v-if="content.length > 3" id="next-button" @click="next">
-        <img src="/icons/angle-right-solid.svg" alt="icona avanti" />
-      </span>
+      <img v-if="content.length > 3" id="next-button" alt="icona avanti" src="/icons/angle-right-solid.svg" @click="next" />
 
   </div>
 </template>
@@ -158,9 +153,21 @@ export default {
 </script>
 
 <style scoped>
+#wrapper{
+  display: flex;
+}
+
+#cards{
+  flex: 1 !important;
+}
+
+.container{
+  max-width: none;
+}
+
 #prev-button,
 #next-button {
-  color: red;
-  width: 50px;
+  filter: var(--green-filter);
+  width: 5%;
 }
 </style>
