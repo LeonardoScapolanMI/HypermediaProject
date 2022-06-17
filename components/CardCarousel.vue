@@ -1,36 +1,36 @@
 <template>
-  <section id="myCarousel" class="pt-5 pb-5">
-    <div class="container">
-      <div class="col-6 text-right">
-        <div v-if="content.length > 3" id="prev-button" @click="prev">
-          <img src="/icons/angle-left-solid.svg" alt="icona indietro" />
-        </div>
-        <div v-if="content.length > 3" id="next-button" @click="next">
-          <img src="/icons/angle-right-solid.svg" alt="icona avanti" />
-        </div>
-      </div>
+  <div class="wrapper">
 
-      <div class="col-12" id="myCarousel">
-        <div class="row" id="myCarousel">
+      <span v-if="content.length > 3" id="prev-button" @click="prev">
+        <img src="/icons/angle-left-solid.svg" alt="icona indietro" />
+      </span>
+<span>
+      <div class="container">
+        <div class="row">
           <div
-            class="col-md-4"
             v-for="(cards, cardIndex) of content
               .slice(start, end)
               .concat(content.slice(start1, end1))"
             :key="`card-index-${cardIndex}`"
+            class="col-md-4"
           >
             <Card
-              @onSeeDetails="$emit('onSeeDetails', cards.id)"
-              :imageUrl="cards.image.URL"
-              :imageCaption="cards.image.caption"
+              :image-url="cards.image.URL"
+              :image-caption="cards.image.caption"
               :title="cards.name"
               :description="cards.description"
+              @onSeeDetails="$emit('onSeeDetails', cards.id)"
             />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      </span>
+
+      <span v-if="content.length > 3" id="next-button" @click="next">
+        <img src="/icons/angle-right-solid.svg" alt="icona avanti" />
+      </span>
+
+  </div>
 </template>
 
 <script>
@@ -160,7 +160,7 @@ export default {
 <style scoped>
 #prev-button,
 #next-button {
-  color: black;
+  color: red;
   width: 50px;
 }
 </style>
