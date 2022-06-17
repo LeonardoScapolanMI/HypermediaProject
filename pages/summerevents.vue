@@ -8,8 +8,8 @@
 
     <!-- IMAGE -->
 
-    <div class="text-center">
-      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image-container"/>
+    <div class="title-image-container">
+      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
     </div>
 
     <!-- OVERVIEW -->
