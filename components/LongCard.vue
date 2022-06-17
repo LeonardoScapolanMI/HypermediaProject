@@ -1,10 +1,12 @@
 <template>
   <div id="wrapper">
       <div class="row">
-      <div class="col-md-4">
-        <img id="#long-img" :src="imageUrl" :alt="imageCaption" />
+      <div class="col-md-5">
+        <div class="long-card-container">
+        <img class="long-card" :src="imageUrl" :alt="imageCaption" />
+        </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7">
         <h2 id="title">{{ title }}</h2>
         <p id="description">{{ description }}</p>
       </div>
@@ -69,22 +71,23 @@ export default {
   aspect-ratio: 4/5;
   max-height: 70vh;
   border-radius: 25px;
-  border: 2px solid var(--blue);
-  box-shadow: 5px 5px 10px 3px var(--green);
+}
+.long-card-container {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 92%;
+}
+.long-card {
+  width: 100%;
+  aspect-ratio: 8/5;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 5px 5px 10px 5px var(--green);
 }
 
-#image {
-  border-radius: 20px;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-  width: 92%;
-  aspect-ratio: 16/9;
-  display: block;
-  overflow: hidden;
-}
-
-#image:hover { 
-  opacity: 0.9;
+.long-card:hover {
+  box-shadow: 5px 5px 10px 5px var(--green);
 }
 
 #title {
@@ -99,16 +102,6 @@ export default {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-##long-img {
-  border-radius: 20px;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-  width: 92%;
-  aspect-ratio: 16/9;
-  display: block;
-  overflow: hidden;
 }
 
 </style>

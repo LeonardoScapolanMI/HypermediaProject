@@ -197,7 +197,7 @@ export default {
 
 .long-image-container {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
   max-width: 92%;
 }
