@@ -288,8 +288,11 @@ app.get('/event:id', async (req, res) => {
   const data = await dbData
   const result = await data.Event.findOne({
     where:{ _id},
-    include:[{ model: data.PointOfInterest},{model: data.Image}]
+    include:[{ model: data.PointOfInterest, include:{model: data.Image}},{model: data.Image}]
   })
+  if(!result.mapURL){
+    result.mapURL = result.PointOfInterests[0].mapURL
+  }
   console.log(result)
   return res.json(result)
 })
