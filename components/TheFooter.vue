@@ -1,7 +1,7 @@
 <template>
     <nav >
       <div>
-        <ul>
+        <ul class="footer">
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
             <nuxt-link :to="navItem.path" class="nav-link">
               {{ navItem.name }}
@@ -75,17 +75,17 @@ nav {
     font-weight: bold;
   }
 
-nav ul {
+.footer {
   list-style-type: none;
+  margin: 0;
   float: right;
   padding-right: 10px;
-  margin: 0;
+
 }
 
 nav li {
   padding: 5px;
   display: inline-block;
-
 }
 
 nav a {

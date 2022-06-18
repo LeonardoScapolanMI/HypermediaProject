@@ -3,10 +3,10 @@
 
     <!-- INTRO -->
     
-    <div class="welcome">
+    <div class="welcome" id="init">
       <div class="title">
       <h1>FIRENZE</h1>
-      <hr class="line" />
+      <hr class="line"/>
       <h4>come mai prima</h4>
       </div>  
     </div>
@@ -126,6 +126,14 @@
          </div>
         </div>
       </div>
+    </div>
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#init" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
     </div>
     
   </div>
@@ -256,8 +264,21 @@ export default {
   font-weight: bold;
 }
 
-.home-link:hover, .home-link:focus {
+.home-link:hover {
   color: var(--blue);
+}
+
+#up-button {
+   padding: 5px 10px;
+   margin: 15px;
+   background-color: var(--blue);
+   float: right;
+   color: var(--aqua);
+   border-radius: 10px;
+}
+
+#up-button:hover {
+   color: var(--white);
 }
 
 #ev {
