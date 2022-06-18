@@ -62,7 +62,7 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <a href="/allevents" id="poi" class="home-button">Scopri di più</a>
-         </div>
+        </div>
       </div>
     </div>
   </div>
