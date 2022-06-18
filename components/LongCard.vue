@@ -1,17 +1,16 @@
 <template>
-  <div id="wrapper">
+  <div class="container">
       <div class="row">
       <div class="col-md-5">
         <div class="long-card-container">
-        <img class="long-card" :src="imageUrl" :alt="imageCaption" />
+            <img class="long-card" :src="imageUrl" :alt="imageCaption" />
         </div>
       </div>
       <div class="col-md-7">
-        <h2 id="title">{{ title }}</h2>
-        <p id="description">{{ description }}</p>
+        <h2 class="text-content-title">{{ title }}</h2>
+        <p class="text-with-line-break">{{ description }}</p>
       </div>
     </div>
-    <br />
   </div>
 </template>
 
@@ -61,17 +60,6 @@ export default {
 </script>
 
 <style scoped>
-
-#wrapper{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  aspect-ratio: 4/5;
-  max-height: 70vh;
-  border-radius: 25px;
-}
 .long-card-container {
   margin: auto;
   margin-top: 30px;

@@ -215,15 +215,9 @@ export default {
 
 <style>
 
-.structural-links {
-  max-width: 90% !important;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
 .structural-link {
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
   user-select: none;
 }
 

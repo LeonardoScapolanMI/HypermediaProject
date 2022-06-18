@@ -44,7 +44,7 @@ hr {
 
 .separator {
   max-width: 92%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -53,4 +53,10 @@ hr {
 
 .container{
   max-width: 1000px;
+}
+
+.structural-links {
+  max-width: 90% !important;
+  margin: auto;
+  margin-bottom: 10px;
 }

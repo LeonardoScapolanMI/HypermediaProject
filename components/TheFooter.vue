@@ -77,7 +77,8 @@ nav {
 
 nav ul {
   list-style-type: none;
-  text-align: center;
+  float: right;
+  padding-right: 10px;
   margin: 0;
 }
 
