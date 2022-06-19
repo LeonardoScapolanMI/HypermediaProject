@@ -4,7 +4,7 @@
     <!-- TITLE -->
 
     <div class="page-title">
-          <h1>{{name}}</h1> 
+          <h1>BLA BLA</h1> 
           <hr class="subtitle">
           <h4>TYPE OF SERVICES SECTION</h4> 
     </div>
@@ -13,14 +13,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img :src="imageUrl" id="image" :alt="imageCaption" />
+        <div class="col-12"><img :src="image.URL" id="image" :alt="image.caption" />
         </div>
       </div>
     </div>
     
     <!-- OVERVIEW -->
 
-    <div><p id="text text-with-line-break ">{{description}}</p></div>
+    
 
     <!-- LONG CARDS -->
 
@@ -30,8 +30,8 @@
           :key="`ser-index-${serIndex}`"
         >
           <long-card
-            :imageUrl="service.images[0].URL"
-            :imageCaption="service.images[0].caption"
+            :image-url="service.image.URL"
+            :image-caption="service.image.caption"
             :title="service.name"
             :phone="service.phone"
             :website="service.website"
@@ -41,7 +41,7 @@
     </div>
     
     <div class="text-center">
-      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
+      <button id="load-more" @click="loadMore()">LOAD MORE</button>
     </div>
     </div>
 </template>
@@ -58,18 +58,22 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('http://localhost:3000/api/service' + id)
+   
     return {
       name: data.name,
       phone: data.phone,
       email: data.email,
       address: data.address,
-      imageURL: data.imageURL,
+      image: data.Image,
+
       servList: data.data,
     }
+    
   },
 
   data() {
     return {
+
     }
   },
   
@@ -80,6 +84,7 @@ export default {
     },
   },
 }
+console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
 </script>
 
 <style>
