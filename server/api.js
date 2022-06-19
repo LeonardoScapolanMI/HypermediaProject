@@ -184,18 +184,10 @@ app.get('/service:id', async (req, res) => {
     where: {ServiceTypeId : _id},
     include: [{ model: data.Image},{ model: data.ServiceType}],
   })
-  const filtered = []
-  for (const element of result) {
-    filtered.push({
-      name: element.name,
-      phone: element.phone,
-      email: element.email,
-      address: element.address,
-      images: element.Images,
-    })
-  }
+  
+  
   //console.log(filtered)
-  return res.json(filtered)
+  return res.json(result)
 })
 
 // Get all Events basic informations
