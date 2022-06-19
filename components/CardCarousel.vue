@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <img
-      v-if="content.length > 3"
+      v-if="content.length > 3 "
       id="prev-button"
       src="/icons/angle-left-solid.svg"
       alt="icona indietro"
@@ -137,7 +137,13 @@ export default {
         this.end1 = null
         this.start1 = null
       } */
+      
+      if(this.current>0) {
       this.current = (this.current - 1) % this.content.length
+      } else {
+        this.current= this.content.length - 1
+      }
+      
     },
     next() {
       /*
