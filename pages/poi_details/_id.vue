@@ -10,7 +10,7 @@
 
         <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
 
        <!-- MAPBOX -->
 
@@ -27,8 +27,8 @@
         </div> <!-- row -->
        
       <!-- Carousel of Cards --> 
-      <div v-if="itList.length > 0" class="row"><CardCarousel :content="itList"/></div>
-      <div v-if="evList.length > 0" class="row"><CardCarousel :content="evList"/></div>
+      <div v-if="itList.length > 0" class="card-car"><CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/></div>
+      <div v-if="evList.length > 0" class="card-car"><CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
       <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
     </div>
 </template>
@@ -102,5 +102,11 @@ export default {
   p {
     padding-top: 1.7em;
   }
+  .card-car{
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
 
 </style>
