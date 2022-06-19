@@ -26,15 +26,16 @@
 
     <div class="content">
         <div
-          v-for="(typeser, typeserIndex) of poiList"
-          :key="`poi-index-${typeserIndex}`"
+          v-for="(service, serIndex) of servList"
+          :key="`ser-index-${serIndex}`"
         >
-          <longcard
-            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="typeser.name"
-            :description="typeser.description"
+          <long-card
+            :imageUrl="service.images[0].URL"
+            :imageCaption="service.images[0].caption"
+            :title="service.name"
+            :phone="service.phone"
+            :website="service.website"
+            :address="service.address"
           />
       </div>
     </div>
@@ -46,29 +47,33 @@
 </template>
 
 <script>
-// import LongCard from '~/components/LongCard.vue'
+import LongCard from '~/components/LongCard.vue'
 
 export default {
   name: 'TypeOfServices',
-  // components: { LongCard },
+  components: { LongCard },
+
+    
+
+  async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('http://localhost:3000/api/service' + id)
+    return {
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      address: data.address,
+      imageURL: data.imageURL,
+      servList: data.data,
+    }
+  },
+
   data() {
     return {
     }
   },
-  props: {
-    imageUrl: { type: String, required: true },
-    imageCaption: { type: String, required: true },
-  },
-  async asyncData({ route, $axios }) {
-    const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
-    return {
-      name: data.name,
-      description: data.description,
-      imagesV: data.Images,
-      mapurl: data.mapURL,
-    }
-  },
+  
+
   methods: {
     backToList() {
       this.$router.push('/list')

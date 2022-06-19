@@ -8,7 +8,9 @@
       </div>
       <div class="col-md-7">
         <h2 class="text-content-title">{{ title }}</h2>
-        <p class="text-with-line-break">{{ description }}</p>
+         <p id="phone"> {{number}}</p>
+        <p id="website"> {{website}} </p>
+        <p id="address"> {{address}} </p>
       </div>
     </div>
   </div>
@@ -18,10 +20,12 @@
 export default {
   name: 'ItemLongCard',
   props: {
-    imageUrl: { type: String, required: true },
+   imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
-    description: { type: String, required: true },
+    phone: {type: String, required: true},
+    website: {type: String, required: true},
+    address: {type: String, required: true},
   },
   head() {
     return {
