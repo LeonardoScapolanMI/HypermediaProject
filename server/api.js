@@ -191,6 +191,7 @@ app.get('/service:id', async (req, res) => {
       phone: element.phone,
       email: element.email,
       address: element.address,
+      images: element.Images,
     })
   }
   //console.log(filtered)
