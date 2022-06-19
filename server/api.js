@@ -180,7 +180,7 @@ app.get('/service', async (req, res) => {
 app.get('/service:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const result = await data.Service.findOne({
+  const result = await data.Service.findAll({
     where: {ServiceTypeId : _id},
     include: [{ model: data.Image},{ model: data.ServiceType}],
   })
