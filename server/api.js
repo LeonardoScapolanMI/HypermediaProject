@@ -181,7 +181,7 @@ app.get('/service:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
   const result = await data.Service.findOne({
-    where: {_id},
+    where: {serviceType : _id},
   })
   const filtered = []
   for (const element of result) {
@@ -189,7 +189,7 @@ app.get('/service:id', async (req, res) => {
       name: element.name,
       phone: element.phone,
       email: element.email,
-      adress: element.address,
+      address: element.address,
     })
   }
   //console.log(filtered)
