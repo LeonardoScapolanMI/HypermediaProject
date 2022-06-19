@@ -17,6 +17,7 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
+        <!-- PRINTING the overview of the itinerary -->
         <p id="text text-with-line-break ">{{ overview }}</p>
       
       </div>
@@ -40,7 +41,7 @@ export default {
     const { data } = await $axios.get(
       'http://localhost:3000/api/itinerary' + id
     )
-
+    // Fetching the pois of the itinerary and preparing them
     const poiList = []
     for (const poi of data.PointOfInterests) {
       poiList.push({

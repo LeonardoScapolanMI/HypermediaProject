@@ -26,7 +26,7 @@
             </div>  
         </div> <!-- row -->
        </div>
-      <!-- Carousel of Cards --> 
+      <!-- Carousels of Cards --> 
       <div v-if="itList.length > 0" class="card-car">
         <h3>Compare nei seguenti itinerari</h3>
         <br>
@@ -54,7 +54,7 @@ export default {
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+    const { data } = await $axios.get('http://localhost:3000/api/poi' + id) // NB: Cambiare indirizzo nel deploy!
     // const { poiExtra } = await $axios.get('http://localhost:3000/api/poi')
 
     const itList = []
