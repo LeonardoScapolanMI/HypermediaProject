@@ -8,13 +8,11 @@
           <h4>ITINERARIO</h4> 
         </div>
 
-    <div class="row">
-      <div class="col-md"></div>
-      <div class="col-md">
-        <img :src="image.URL" :alt="image.caption" />
+    
+      <div class="title-image-container">
+        <img :src="image.URL" :alt="image.caption" class="title-image"/>
       </div>
-      <div class="col-md"></div>
-    </div>
+  
 
     <div class="row">
       <div class="col-md-2"></div>
@@ -70,14 +68,5 @@ export default {
 </script>
 
 <style scoped>
-img {
-  height: 100% !important;
-  max-width: 90% !important;
-  position: relative;
-  margin: 0.5em;
-  flex: 0 1 180px;
-  padding-bottom: 2em;
-  display: block;
-  overflow: hidden;
-}
+
 </style>
