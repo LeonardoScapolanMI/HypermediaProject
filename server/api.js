@@ -182,7 +182,7 @@ app.get('/service:id', async (req, res) => {
   const data = await dbData
   const result = await data.Service.findOne({
     where: {ServiceType : _id},
-    include: { model: data.Image},
+    include: [{ model: data.Image},{ model: data.ServiceType}],
   })
   const filtered = []
   for (const element of result) {
