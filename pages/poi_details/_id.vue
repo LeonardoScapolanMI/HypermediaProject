@@ -105,6 +105,7 @@ export default {
   .card-car{
     margin: auto;
     width: 100%;
+    margin-bottom: 1.5em;
   }
 
 

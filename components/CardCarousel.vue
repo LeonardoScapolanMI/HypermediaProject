@@ -178,7 +178,7 @@ export default {
         .slice(this.start, this.end)
         .concat(this.content.slice(this.start1, this.end1))
       */
-      if (this.current + this.nToShow < this.content.length) {
+      if (this.current + this.nToShow < this.content.length || this.content.length < 3) {
         return this.content.slice(this.current, this.current + this.nToShow)
       } else {
         return this.content
