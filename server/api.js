@@ -180,20 +180,25 @@ app.get('/service', async (req, res) => {
 app.get('/service:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const result = await data.Service.findOne({
-    where: {_id},
+  const result = await data.Service.findAll({
+    where: {ServiceTypeId : _id},
+    include: [{ model: data.Image}],
   })
-  const filtered = []
+  const filtered =[]
   for (const element of result) {
     filtered.push({
+      id : element._id,
       name: element.name,
       phone: element.phone,
       email: element.email,
       adress: element.address,
+      image: element.Image,
+      
     })
   }
   //console.log(filtered)
   return res.json(filtered)
+  
 })
 
 // Get all Events basic informations

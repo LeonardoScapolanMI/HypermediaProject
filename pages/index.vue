@@ -3,15 +3,13 @@
 
     <!-- INTRO -->
     
-    <div class="welcome">
+    <div class="welcome" id="init">
       <div class="title">
       <h1>FIRENZE</h1>
-      <hr class="line" />
+      <hr class="line"/>
       <h4>come mai prima</h4>
       </div>  
     </div>
-
-    <hr class="separator" />
 
     <!-- OVERVIEW -->
 
@@ -127,6 +125,14 @@
         </div>
       </div>
     </div>
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#init" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
     
   </div>
 </template>
@@ -212,6 +218,7 @@ export default {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
   height: 500px;
+  margin-bottom: 70px;
 }
 
 .title {
@@ -245,6 +252,10 @@ export default {
   box-shadow: 5px 5px 10px 5px var(--green);
 }
 
+.long-image:hover {
+  cursor: pointer;
+}
+
 .home-links {
   margin-bottom: 10px;
   max-width: 90% !important;
@@ -256,8 +267,21 @@ export default {
   font-weight: bold;
 }
 
-.home-link:hover, .home-link:focus {
+.home-link:hover {
   color: var(--blue);
+}
+
+#up-button {
+   padding: 5px 10px 5px 7px;
+   margin: 20px;
+   background-color: var(--blue);
+   float: right;
+   color: var(--aqua);
+   border-radius: 10px;
+}
+
+#up-button:hover {
+   color: var(--white);
 }
 
 #ev {

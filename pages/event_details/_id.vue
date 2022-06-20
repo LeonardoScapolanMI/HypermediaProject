@@ -11,44 +11,63 @@
       <!-- SLIDESHOW -->
 
       <SlideShow :images="imagesV" class="title-image" />
+      
 
       <!-- MAPBOX -->
 
         <div class="row">
-            <div class="col-md-1"></div>
-                <div class="col-md-6">
+            <div class="col-md-2"></div>
+                <div class="col-md-6" >
                     <p id="text text-with-line-break">{{overview}}</p>
+                    <p> L'evento inizierà il:{{sDate}} </p>
+                    <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
+                    <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
+                    
             </div> <!-- col -->
-            
-            <div class="col-md-5">
-                <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <MapBox v-else :indirizzo="evList[0].mapURL"/>
-            </div>  
-        </div> <!-- row -->
+           
+             
+                <div class="col-md-4" >
+                  <center>
+                <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
+                  </center>
+            </div>         
+            </div> <!-- row -->
 
         <!-- CARD CAROUSEL --> 
-      <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div>
+        
+          
+        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+          
+
         
   </div>
 </template>
 
 <script>
+
 import SlideShow from '~/components/Slideshow.vue'
+import MapBox from '~/components/MapBox.vue'
+import CardCarousel from '~/components/CardCarousel.vue'
+
+
 
 export default {
-  name: 'event',
-  components: { SlideShow },
-  data() {
-    return {
-      overview: 'Ecco dove avverrà l evento. Non perdertelo!'
-    }
-  },
-  async asyncData({ route, $axios }) {
+  
+  name: 'Event',
+  components: { SlideShow, MapBox, CardCarousel},
+  filters: {
+    
+   },
+  
+  
+   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/event' + id)
+    const { data } = await $axios.get(
+      'http://localhost:3000/api/event' + id
+    )
 
     const poiList = []
-    for (const poi of data.PointOfInterest) {
+    for (const poi of data.PointOfInterests) {
       poiList.push({
         id: poi._id,
         image: poi.Images[0],
@@ -56,22 +75,52 @@ export default {
         description: poi.description,
       })
     }
+
+  
     
     return {
       name: data.name,
       imagesV: data.Images,
       overview: data.overview,
+      mapurl: data.mapURL,
       sDate: data.startDate,
       eDate: data.endDate,
       cost: data.cost,
-      mapurl: data.mapUrl,
-      poiList: data.PointOfInterests,
+      poiList,
+      
     }
   },
+
+  computed: {
+    
+  },
+  
+  
   methods: {
+    
+
     backToList() {
       this.$router.push('/list')
     },
   },
+   
 }
 </script>
+
+<style scoped>
+p {
+  display: inline;
+}
+
+.page-title {
+  margin: 2em;
+}
+
+.col-md-6 {
+  padding:2em;
+
+}
+ 
+
+
+</style>

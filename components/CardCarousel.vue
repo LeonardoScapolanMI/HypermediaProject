@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <img
-      v-if="content.length > 3"
+      v-if="content.length > 3 "
       id="prev-button"
       src="/icons/angle-left-solid.svg"
       alt="icona indietro"
@@ -132,7 +132,13 @@ export default {
         this.end1 = null
         this.start1 = null
       } */
+      
+      if(this.current>0) {
       this.current = (this.current - 1) % this.content.length
+      } else {
+        this.current= this.content.length - 1
+      }
+      
     },
     next() {
       /*
@@ -173,7 +179,7 @@ export default {
         .slice(this.start, this.end)
         .concat(this.content.slice(this.start1, this.end1))
       */
-      if (this.current + this.nToShow < this.content.length) {
+      if (this.current + this.nToShow < this.content.length || this.content.length < 3) {
         return this.content.slice(this.current, this.current + this.nToShow)
       } else {
         return this.content

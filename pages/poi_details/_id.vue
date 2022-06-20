@@ -10,25 +10,33 @@
 
         <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image" />
+    <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
 
        <!-- MAPBOX -->
-
+        <div class="container">
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
                 <div class="col-md-6">
                     <p id="text text-with-line-break">{{description}}</p>
             </div> <!-- col -->
             
             <div class="col-md-4">
                 <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <MapBox v-else :indirizzo="poiList[0].mapURL"/>
+                <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
             </div>  
         </div> <!-- row -->
-       
-      <!-- Carousel of Cards --> 
-      <div v-if="itList.length > 0" class="row"><CardCarousel :content="itList"/></div>
-      <div v-if="evList.length > 0" class="row"><CardCarousel :content="evList"/></div>
+       </div>
+      <!-- Carousels of Cards --> 
+      <div v-if="itList.length > 0" class="card-car">
+        <h3>Compare nei seguenti itinerari</h3>
+        <br>
+        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
+
+        </div>
+      <div v-if="evList.length > 0" class="card-car">
+        <h3>Luogo dei seguenti eventi</h3>
+        <br>
+        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
       <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
     </div>
 </template>
@@ -46,7 +54,7 @@ export default {
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+    const { data } = await $axios.get('http://localhost:3000/api/poi' + id) // NB: Cambiare indirizzo nel deploy!
     // const { poiExtra } = await $axios.get('http://localhost:3000/api/poi')
 
     const itList = []
@@ -102,5 +110,11 @@ export default {
   p {
     padding-top: 1.7em;
   }
+  .card-car{
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
 
 </style>

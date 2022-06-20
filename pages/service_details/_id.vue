@@ -4,7 +4,7 @@
     <!-- TITLE -->
 
     <div class="page-title">
-          <h1>{{name}}</h1> 
+          <h1>BLA BLA</h1> 
           <hr class="subtitle">
           <h4>TYPE OF SERVICES SECTION</h4> 
     </div>
@@ -13,68 +13,74 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img :src="imageUrl" id="image" :alt="imageCaption" />
+        <div class="col-12"><img src="image.URL" id="image" alt="image.caption" />
         </div>
       </div>
     </div>
     
     <!-- OVERVIEW -->
 
-    <div><p id="text text-with-line-break ">{{description}}</p></div>
+    
 
     <!-- LONG CARDS -->
 
     <div class="content">
         <div
-          v-for="(typeser, typeserIndex) of poiList"
-          :key="`poi-index-${typeserIndex}`"
+          v-for="(service, serIndex) of servList"
+          :key="`ser-index-${serIndex}`"
         >
-          <longcard
-            @onSeeDetails="$router.push('/poi_details/' + poi.id)"
-            :imageUrl="poi.images[0].URL"
-            :imageCaption="poi.images[0].caption"
-            :title="typeser.name"
-            :description="typeser.description"
+          <long-card
+            image-url="service.image[0].URL"
+            image-caption="service.image.caption"
+            :title="service.name"
+            :phone="service.phone"
+            :website="service.website"
+            :address="service.address"
           />
       </div>
     </div>
-    
-    <div class="text-center">
-      <button id="load-more" @click="loadMore()" v-if="!allLoaded">LOAD MORE</button>
-    </div>
+  
     </div>
 </template>
 
 <script>
-// import LongCard from '~/components/LongCard.vue'
+import LongCard from '~/components/LongCard.vue'
 
 export default {
   name: 'TypeOfServices',
-  // components: { LongCard },
-  data() {
-    return {
-    }
-  },
-  props: {
-    imageUrl: { type: String, required: true },
-    imageCaption: { type: String, required: true },
-  },
+  components: { LongCard },
+
+    
+
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id)
+
+    const { data } = await $axios.get('http://localhost:3000/api/service' + id)
     return {
       name: data.name,
-      description: data.description,
-      imagesV: data.Images,
-      mapurl: data.mapURL,
+      phone: data.phone,
+      email: data.email,
+      address: data.address,
+      image: data.Image,
+      servList:data.data,
+    }
+    
+  },
+
+  data() {
+    return {
+
     }
   },
+  
+
   methods: {
     backToList() {
       this.$router.push('/list')
     },
   },
 }
+// console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
 </script>
 
 <style>
