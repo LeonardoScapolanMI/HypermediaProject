@@ -7,6 +7,12 @@ body {
 
 .text-with-line-break {
   white-space: pre-wrap;
+  cursor: default;
+}
+
+.text-content-title {
+  margin-bottom: 20px;
+  cursor: default;
 }
 
 .text-content {
