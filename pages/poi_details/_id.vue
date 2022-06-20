@@ -54,7 +54,7 @@ export default {
   name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/poi' + id) // NB: Cambiare indirizzo nel deploy!
+    const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
     // const { poiExtra } = await $axios.get('http://localhost:3000/api/poi')
 
     const itList = []

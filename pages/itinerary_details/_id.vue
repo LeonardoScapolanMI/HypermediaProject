@@ -13,17 +13,23 @@
         <img :src="image.URL" :alt="image.caption" class="title-image"/>
       </div>
   
-
+    <div class="container">
     <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
         <!-- PRINTING the overview of the itinerary -->
         <p id="text text-with-line-break ">{{ overview }}</p>
       
       </div>
       <!-- col -->
-      <div class="col-md-2"></div>
+      <div class="col-md-4">
+          <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+
+      </div>
     </div>
+    </div>
+
+
 
     <!-- PRINTING ALL POIS CORRELATED -->
     <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
@@ -32,14 +38,15 @@
 
 <script>
 import CardCarousel from '~/components/CardCarousel.vue'
+import MapBox from '~/components/MapBox.vue'
 
 export default {
   name: 'Itinerary',
-  components: { CardCarousel },
+  components: { CardCarousel,MapBox },
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
-      'http://localhost:3000/api/itinerary' + id
+      'api/itinerary' + id
     )
     // Fetching the pois of the itinerary and preparing them
     const poiList = []
@@ -57,6 +64,7 @@ export default {
       name: data.name,
       overview: data.overview,
       image: data.representativeImage,
+      mapURL: data.mapURL,
       poiList,
     }
   },
