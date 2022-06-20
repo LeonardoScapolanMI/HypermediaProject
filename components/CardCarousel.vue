@@ -33,12 +33,7 @@
       src="/icons/angle-right-solid.svg"
       @click="next"
     />
-
-    <div id="device-xs" class="d-block d-sm-none"></div>
-    <div id="device-sm" class="d-none d-sm-block d-md-none"></div>
-    <div id="device-md" class="d-none d-md-block d-lg-none"></div>
-    <div id="device-lg" class="d-none d-lg-block d-xl-none"></div>
-    <div id="device-xl" class="d-none d-xl-block"></div>
+    
   </div>
 </template>
 
@@ -192,13 +187,13 @@ export default {
       }
     },
     onResize() {
-      function isBreakpoint(alias) {
-        return window.getComputedStyle(document.getElementById('device-' + alias)).getPropertyValue("display") !== "none"
-      }
 
-      if (isBreakpoint('sm')) {
+      const componentWidth = document.getElementById('wrapper').clientWidth
+      const computedStyle = window.getComputedStyle(document.documentElement)
+
+      if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {
         this.nToShow = 1
-      } else if (isBreakpoint('md')) {
+      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
         this.nToShow = 2
       } else {
         this.nToShow = 3
