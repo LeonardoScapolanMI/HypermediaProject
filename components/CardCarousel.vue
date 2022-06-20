@@ -13,7 +13,7 @@
         <div
           v-for="(cards, cardIndex) of getItemsToShow()"
           :key="`card-index-${cardIndex}`"
-          class="col col-md-6 col-lg-4"
+          :class="'col' + colSize"
         >
           <Card
             :image-url="cards.image.URL"
@@ -56,6 +56,7 @@ export default {
       */
       current: 0,
       nToShow: 0,
+      colSize: '',
     }
   },
   head() {
@@ -199,10 +200,13 @@ export default {
 
       if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {
         this.nToShow = 1
+        this.colSize = ''
       } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
         this.nToShow = 2
+        this.colSize = '-6'
       } else {
         this.nToShow = 3
+        this.colSize = '-4'
       }
     },
   },
