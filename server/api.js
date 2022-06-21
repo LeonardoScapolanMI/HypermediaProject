@@ -177,7 +177,7 @@ app.get('/service', async (req, res) => {
 })
 
 // Get  Service from id
-app.get('/service:id', async (req, res) => {
+app.get('/serviceType:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
   const result = await data.Service.findAll({
