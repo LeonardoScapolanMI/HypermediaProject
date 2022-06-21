@@ -63,7 +63,7 @@ export default {
    async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
-      'http://localhost:3000/api/event' + id
+      'api/event' + id
     )
 
     const poiList = []

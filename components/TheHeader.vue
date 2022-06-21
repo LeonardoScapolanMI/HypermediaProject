@@ -143,6 +143,7 @@ export default {
 
 .navbar-toggler {
     background-color: var(--vanish);
+    margin-right: 10px;
   }
 
   .navbar-toggler-icon {

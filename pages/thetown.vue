@@ -226,8 +226,4 @@ export default {
   text-decoration: underline;
 }
 
-.text-content-title {
-  margin-bottom: 20px;
-}
-
 </style>

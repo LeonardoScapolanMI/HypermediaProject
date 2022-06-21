@@ -13,7 +13,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img :src="image.URL" id="image" :alt="image.caption" />
+        <div class="col-12"><img src="image.URL" id="image" alt="image.caption" />
         </div>
       </div>
     </div>
@@ -30,8 +30,8 @@
           :key="`ser-index-${serIndex}`"
         >
           <long-card
-            :image-url="service.image.URL"
-            :image-caption="service.image.caption"
+            image-url="service.image[0].URL"
+            image-caption="service.image.caption"
             :title="service.name"
             :phone="service.phone"
             :website="service.website"
@@ -39,10 +39,7 @@
           />
       </div>
     </div>
-    
-    <div class="text-center">
-      <button id="load-more" @click="loadMore()">LOAD MORE</button>
-    </div>
+  
     </div>
 </template>
 
@@ -57,16 +54,15 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('http://localhost:3000/api/service' + id)
-   
+
+    const { data } = await $axios.get('/api/service' + id)
     return {
       name: data.name,
       phone: data.phone,
       email: data.email,
       address: data.address,
       image: data.Image,
-
-      servList: data.data,
+      servList:data.data,
     }
     
   },
@@ -84,7 +80,7 @@ export default {
     },
   },
 }
-console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
+// console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
 </script>
 
 <style>

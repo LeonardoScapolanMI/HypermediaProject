@@ -11,8 +11,6 @@
       </div>  
     </div>
 
-    <hr class="separator" />
-
     <!-- OVERVIEW -->
 
     <div class="text-content">
@@ -220,6 +218,7 @@ export default {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
   height: 500px;
+  margin-bottom: 70px;
 }
 
 .title {
@@ -253,6 +252,10 @@ export default {
   box-shadow: 5px 5px 10px 5px var(--green);
 }
 
+.long-image:hover {
+  cursor: pointer;
+}
+
 .home-links {
   margin-bottom: 10px;
   max-width: 90% !important;
@@ -269,8 +272,8 @@ export default {
 }
 
 #up-button {
-   padding: 5px 10px;
-   margin: 15px;
+   padding: 5px 10px 5px 7px;
+   margin: 20px;
    background-color: var(--blue);
    float: right;
    color: var(--aqua);
