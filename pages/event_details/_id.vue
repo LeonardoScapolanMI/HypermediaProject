@@ -10,7 +10,7 @@
 
       <!-- SLIDESHOW -->
 
-      <SlideShow :images="imagesV" class="title-image" />
+      <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
       
 
       <!-- MAPBOX -->
@@ -22,7 +22,7 @@
                     <p> L'evento inizierà il:{{sDate}} </p>
                     <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
                     <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
-                    
+                     
             </div> <!-- col -->
            
              
@@ -36,7 +36,7 @@
         <!-- CARD CAROUSEL --> 
         
           
-        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
           
 
         
@@ -113,14 +113,24 @@ p {
 }
 
 .page-title {
-  margin: 2em;
+  margin: 30px;
 }
 
 .col-md-6 {
-  padding:2em;
+  padding:30px;
 
 }
  
+ .col-md-4 {
+  padding-top: 30px;
+ }
+
+  .card-car{
+    margin: auto;
+    width: 100%;
+    margin-top: 50px;
+   margin-bottom: 50px;
+  }
 
 
 </style>
