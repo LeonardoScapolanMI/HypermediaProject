@@ -55,7 +55,7 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
 
-    const { data } = await $axios.get('http://localhost:3000/api/service' + id)
+    const { data } = await $axios.get('/api/service' + id)
     return {
       name: data.name,
       phone: data.phone,
