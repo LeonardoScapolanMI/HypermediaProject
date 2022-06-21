@@ -50,8 +50,6 @@ export default {
   name: 'TypeOfServices',
   components: { LongCard },
 
-    
-
   async asyncData({ route, $axios }) {
     const { id } = route.params
 
@@ -83,32 +81,3 @@ export default {
 // console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
 </script>
 
-<style>
-
-/* LOAD MORE */
-
-  .no-content {
-    color: #414535 !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    pointer-events: none;
-  }
-
-  #load-more:hover {
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-  
-  #load-more {
-    color: #414535;
-    background-color: #96BBBB;
-    padding: 5px 10px 5px 10px;
-    font-size: 15px;
-    border: 2px solid #414535 ;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
-</style>

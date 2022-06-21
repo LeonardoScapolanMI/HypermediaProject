@@ -14,7 +14,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <h5 class="text-center">{{ introduction }}</h5>
+      <h5 class="text-with-line-break">{{ introduction }}</h5>
     </div>
 
     <!-- SLIDESHOW -->
@@ -271,19 +271,6 @@ export default {
   color: var(--blue);
 }
 
-#up-button {
-   padding: 5px 10px 5px 7px;
-   margin: 20px;
-   background-color: var(--blue);
-   float: right;
-   color: var(--aqua);
-   border-radius: 10px;
-}
-
-#up-button:hover {
-   color: var(--white);
-}
-
 #ev {
   margin-bottom: 90px;
 }
@@ -307,6 +294,5 @@ export default {
   color: var(--green);
   text-decoration: none;
 }
-
 
 </style>
