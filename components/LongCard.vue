@@ -21,8 +21,8 @@ export default {
   name: 'ItemLongCard',
   props: {
    imageUrl: { type: String, required: true },
-    imageCaption: { type: String, required: true },
-    title: { type: String, required: true },
+    imageCaption: { type: String, required: true},
+    title: { type: String, required: true},
     phone: {type: String, required: true},
     website: {type: String, required: true},
     address: {type: String, required: true},

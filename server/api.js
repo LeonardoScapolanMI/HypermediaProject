@@ -159,7 +159,7 @@ app.get('/serviceType', async (req, res) => {
 })
 
 // Get all Services
-app.get('/service', async (req, res) => {
+/* app.get('/service', async (req, res) => {
   const data = await dbData
   const result = await data.Service.findAll()
   const filtered = []
@@ -174,30 +174,41 @@ app.get('/service', async (req, res) => {
   }
   //console.log(filtered)
   return res.json(filtered)
-})
+}) */
 
 // Get  Service from id
-app.get('/service:id', async (req, res) => {
+app.get('/serviceType:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const result = await data.Service.findAll({
-    where: {ServiceTypeId : _id},
+  const serviceTypeRaw = await data.ServiceType.findAll({
+    where: {_id},
     include: [{ model: data.Image}],
   })
-  const filtered =[]
-  for (const element of result) {
-    filtered.push({
+  const servicesRaw = await data.Service.findAll({
+    where: {ServiceTypeId : _id},
+    include: [{ model: data.Image}, {model: data.OpeningHours}],
+  })
+
+  const ret = {
+    id : serviceTypeRaw[0]._id,
+      name: serviceTypeRaw[0].name,
+      description: serviceTypeRaw[0].introduction,
+      images: [serviceTypeRaw[0].Image],
+      services: [],
+  }
+  for (const element of servicesRaw) {
+    ret.services.push({
       id : element._id,
       name: element.name,
       phone: element.phone,
       email: element.email,
       adress: element.address,
       image: element.Image,
-      
+      OpeningHours: element.OpeningHours,
     })
   }
   //console.log(filtered)
-  return res.json(filtered)
+  return res.json(ret)
   
 })
 
