@@ -49,13 +49,14 @@ body {
 }
 
 .title-correlated {
-  float: left;
-  margin-left: 20px;
+  text-align: left;
+  margin-left: 30px;
 }
 
 .line-correlated {
-  max-width: 86%;
+  max-width: 92%;
   margin-bottom: 70px;
+  float: right;
 }
 
 hr {
