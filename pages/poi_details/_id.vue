@@ -37,7 +37,7 @@
       </div>
       
       <div class="correlated">
-        <h3>Eventi correlati</h3>
+        <h3 class="title-correlated">Eventi correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
