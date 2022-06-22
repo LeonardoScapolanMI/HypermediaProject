@@ -15,21 +15,16 @@
   
     <div class="container">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-6">
+      <div class="col-md-7">
         <!-- PRINTING the overview of the itinerary -->
         <p id="text text-with-line-break ">{{ overview }}</p>
-      
       </div>
       <!-- col -->
-      <div class="col-md-4">
+      <div class="col-md-5">
           <MapBox v-if="mapURL" :indirizzo="mapURL"/>
-
       </div>
     </div>
     </div>
-
-
 
     <!-- PRINTING ALL POIS CORRELATED -->
     <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
@@ -75,7 +70,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>
