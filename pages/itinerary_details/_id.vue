@@ -19,7 +19,9 @@
         <!-- PRINTING the overview of the itinerary -->
         <p class="text-with-line-break ">{{ overview }}</p>
       </div>
-      <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+      <div class="col-md-5">
+          <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+      </div>
     </div>
     </div>
 

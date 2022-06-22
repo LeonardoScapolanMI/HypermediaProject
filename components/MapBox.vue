@@ -60,10 +60,7 @@ export default {
     #map {
     display:flex;
     justify-content: center;
-    height: 300px;
-	  width: 300px;
 	  margin:auto;
-    margin-bottom: 30px;
     border: 0px;
     }
 

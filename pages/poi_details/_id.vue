@@ -21,7 +21,7 @@
           <div class="col-md-7">
             <p class="text-with-line-break">{{description}}</p>
           </div>
-          <div>
+          <div class="col-md-5">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
@@ -30,7 +30,7 @@
 
       <!-- Carousels of Cards --> 
       
-      <div class="cpage-title">
+      <div class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
@@ -99,7 +99,7 @@ export default {
       })
     }
     // Get other pois
-    for (const poi of data.PointOfInterest) {
+    for (const poi of data.PointsOfInterest) {
       poiList.push({
         id: poi._id,
         image: poi.Images[0],
