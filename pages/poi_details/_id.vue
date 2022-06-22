@@ -19,9 +19,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <p id="text text-with-line-break">{{description}}</p>
+            <p class="text-with-line-break">{{description}}</p>
           </div>
-          <div class="col-md-5">
+          <div>
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  

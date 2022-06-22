@@ -230,9 +230,9 @@ export default {
 }
 
 #arrow {
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 15px 15px;
   background-color: var(--brown);
-  width: 20px;
+  width: 15px;
 }
 </style>

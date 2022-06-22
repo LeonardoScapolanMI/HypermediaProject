@@ -12,13 +12,23 @@
     </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-          <nuxt-link :to="navItem.path">
-            {{ navItem.name }}
-          </nuxt-link>
-        </li>
-      </ul>
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a href="/alleventgroupings">EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allpois">POINTS OF INTEREST</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allitineraries">ITINERARIES</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allservicetypes">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a href="/thetown">THE TOWN</a>
+            </li>
+          </ul>
     </div>
 </nav>
 </template>
