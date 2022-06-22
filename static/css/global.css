@@ -50,6 +50,12 @@ body {
 
 .title-correlated {
   float: left;
+  margin-left: 20px;
+}
+
+.line-correlated {
+  max-width: 86%;
+  margin-bottom: 70px;
 }
 
 hr {
