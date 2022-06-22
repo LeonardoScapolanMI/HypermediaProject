@@ -99,7 +99,7 @@ export default {
       })
     }
     // Get other pois
-    for (const poi of data.Pois) {
+    for (const poi of data.PointOfInterest) {
       poiList.push({
         id: poi._id,
         image: poi.Images[0],

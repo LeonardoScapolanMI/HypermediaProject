@@ -228,7 +228,8 @@ export default {
 
 #prev-button,
 #next-button {
-  width: 5%;
+  padding: 15px 15px;
   background-color: var(--brown);
+  color: var(--white);
 }
 </style>
