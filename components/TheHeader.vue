@@ -36,9 +36,6 @@
 <script>
 export default {
   name: 'TheHeader',
-  data() {
-    
-  },
   head() {
     return {
         link: [
@@ -75,12 +72,6 @@ export default {
               'sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=',
             crossorigin: 'anonymous',
           },
-          {
-            src: 'smoothscroll.js',
-          },
-          {
-            src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-          },
         ],
       }
   },
@@ -90,14 +81,11 @@ export default {
 
 <style scoped>
 
-html {
-  scroll-behavior: smooth;
-}
-
   nav {
     background-color: var(--aqua);
     font-family: Georgia;
     font-weight: bold;
+    scroll-behavior: smooth;
   }
 
   nav ul {
