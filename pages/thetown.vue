@@ -1,10 +1,10 @@
 <template>
-  <div id="init">
+  <div>
 
     <!-- TITLE -->
 
     <div class="page-title">
-      <h1>LA CITT&Agrave; DI FIRENZE</h1>
+      <h1 id="init">LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- SLIDESHOW -->

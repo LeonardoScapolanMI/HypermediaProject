@@ -44,6 +44,10 @@ body {
   text-align: center;
 }
 
+.correlated {
+  margin-top: 50px;
+}
+
 hr {
   background-color: var(--blue);
 }

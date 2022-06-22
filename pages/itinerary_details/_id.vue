@@ -28,9 +28,9 @@
 
     <!-- PRINTING ALL POIS CORRELATED -->
 
-      <div class="page-title">
+      <div class="correlated">
         <h3>Putni di interesse correlati</h3>
-        <hr class="subtitle" />
+        <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
   </div>
