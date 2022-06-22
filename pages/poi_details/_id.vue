@@ -57,12 +57,12 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 export default {
+  name: 'PuntoDiInteresse',
   components:{
     SlideShow,
     MapBox,
     CardCarousel,
   },
-  name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!

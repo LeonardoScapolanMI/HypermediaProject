@@ -233,7 +233,7 @@ export default {
   margin-top: 180px;
   padding: 15px 15px;
   background-color: var(--brown);
-  width: 15px;
+  width: 50px;
 }
 
 </style>
