@@ -29,17 +29,21 @@
        </div>
 
       <!-- Carousels of Cards --> 
-
-      <h3 class="text-center">Itinerari correlati</h3>
-      <hr class="separator" />
-      <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
-
-      <h3 class="text-center">Eventi correlati</h3>
-      <hr class="separator" />
-      <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
+      
+      <div class="page-title">
+        <h3>Itinerari correlati</h3>
+        <hr class="subtitle" />
+        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
+      </div>
+      
+      <div class="page-title">
+        <h3>Eventi correlati</h3>
+        <hr class="subtitle" />
+        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
+      </div>
       
       <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
-    
+    </div>
 </template>
 
 <script>
