@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="init">
 
     <!-- INTRO -->
     
-    <div class="welcome" id="init">
+    <div class="welcome">
       <div class="title">
       <h1>FIRENZE</h1>
       <hr class="line"/>

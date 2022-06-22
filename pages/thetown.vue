@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="init">
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -40,6 +41,15 @@
         {{ getContentToDisplay().text }}
       </p>
     </div>
+
+     <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#init" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
   </div>
 </template>
 
