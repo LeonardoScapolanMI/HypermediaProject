@@ -1,35 +1,37 @@
 <template>
 
-<nav class="navbar sticky-top navbar-expand-lg">
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
     
     <a id="logo" class="navbar-brand" href="/">
       <img id="icon" src="/images/firenze.png" alt="HOME"/>
-      <span class="sr-only">(current)</span>
+      <span class="sr-only"></span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a href="/alleventgroupings">EVENTI</a>
+      <div id="navbarToggleContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/alleventgroupings">EVENTI</a>
             </li>
             <li class="nav-item">
-              <a href="/allpois">PUNTI DI INTERESSE</a>
+              <a class="nav-link" href="/allpois">PUNTI DI INTERESSE</a>
             </li>
             <li class="nav-item">
-              <a href="/allitineraries">ITINERARI</a>
+              <a class="nav-link" href="/allitineraries">ITINERARI</a>
             </li>
             <li class="nav-item">
-              <a href="/allservicetypes">SERVIZI</a>
+              <a class="nav-link" href="/allservicetypes">SERVIZI</a>
             </li>
             <li class="nav-item">
-              <a href="/thetown">LA CITT&agrave;;</a>
+              <a class="nav-link" href="/thetown">LA CITT&Agrave;</a>
             </li>
           </ul>
-    </div>
+          </div>
+  </div>
 </nav>
 </template>
 
