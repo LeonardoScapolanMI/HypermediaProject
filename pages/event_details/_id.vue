@@ -3,43 +3,38 @@
       <!-- TITOLO -->
 
         <div class="page-title">
-          <h1>{{name}}</h1> 
+          <h1>{{ name }}</h1> 
           <hr class="subtitle">
           <h4>EVENTO</h4> 
         </div>
 
       <!-- SLIDESHOW -->
 
-      <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
-      
+      <div class="title-image-container">
+        <SlideShow :images="imagesV" class="title-image" />
+      </div>
 
       <!-- MAPBOX -->
 
         <div class="row">
-            <div class="col-md-2"></div>
-                <div class="col-md-6" >
-                    <p id="text text-with-line-break">{{overview}}</p>
-                    <p> L'evento inizierà il:{{sDate}} </p>
-                    <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
-                    <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
-                     
-            </div> <!-- col -->
+          <div class="col-md-7" >
+            <p id="text text-with-line-break">{{overview}}</p>
+            <p> L'evento inizierà il:{{sDate}} </p>
+            <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
+            <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
+          </div>
            
-             
-                <div class="col-md-4" >
-                  <center>
-                <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
-                  </center>
-            </div>         
-            </div> <!-- row -->
+          <div class="col-md-5" >
+            <center>
+              <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
+            </center>
+          </div>         
+        </div> <!-- row -->
 
         <!-- CARD CAROUSEL --> 
         
-          
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
           
-
-        
   </div>
 </template>
 
@@ -49,8 +44,6 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 
-
-
 export default {
   
   name: 'Event',
@@ -58,8 +51,7 @@ export default {
   filters: {
     
    },
-  
-  
+
    async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
@@ -75,8 +67,6 @@ export default {
         description: poi.description,
       })
     }
-
-  
     
     return {
       name: data.name,
@@ -108,20 +98,12 @@ export default {
 </script>
 
 <style scoped>
-p {
-  display: inline;
-}
-
-.page-title {
-  margin: 30px;
-}
-
-.col-md-6 {
+.col-md-7 {
   padding:30px;
 
 }
  
- .col-md-4 {
+ .col-md-5 {
   padding-top: 30px;
  }
 
@@ -131,6 +113,5 @@ p {
     margin-top: 50px;
    margin-bottom: 50px;
   }
-
 
 </style>

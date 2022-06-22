@@ -4,7 +4,7 @@
     <!-- TITLE -->
 
     <div class="page-title">
-          <h1>BLA BLA</h1> 
+          <h1>{{ name }}</h1> 
           <hr class="subtitle">
           <h4>TYPE OF SERVICES SECTION</h4> 
     </div>
@@ -13,14 +13,9 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img src="image.URL" id="image" alt="image.caption" />
-        </div>
+        <div><img src="image.URL" id="image" alt="image.caption" /></div>
       </div>
     </div>
-    
-    <!-- OVERVIEW -->
-
-    
 
     <!-- LONG CARDS -->
 
