@@ -49,6 +49,9 @@ body {
   text-align: left;
   margin-left: min(20px, 5%);
   margin-right: min(20px, 5%);
+}
+
+.title-correlated {
   float: left;
 }
 
