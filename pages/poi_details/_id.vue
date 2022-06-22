@@ -8,24 +8,26 @@
           <h4>PUNTO D'INTERESSE</h4> 
         </div>
 
-        <!-- SLIDESHOW -->
+    <!-- SLIDESHOW -->
 
-    <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
+    <div class="title-image-container">
+      <SlideShow :images="imagesV" class="title-image" />
+    </div>
 
-       <!-- MAPBOX -->
-        <div class="container">
+      <!-- MAPBOX -->
+
+      <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
-                <div class="col-md-6">
-                    <p id="text text-with-line-break">{{description}}</p>
-            </div> <!-- col -->
-            
-            <div class="col-md-4">
-                <MapBox v-if="mapurl" :indirizzo="mapurl"/>
+          <div class="col-md-7">
+            <p id="text text-with-line-break">{{description}}</p>
+          </div>
+          <div class="col-md-5">
+            <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
-            </div>  
+          </div>  
         </div> <!-- row -->
        </div>
+
       <!-- Carousels of Cards --> 
       <div v-if="itList.length > 0" class="card-car">
         <h3>Compare nei seguenti itinerari</h3>
@@ -105,16 +107,12 @@ export default {
   },
 }
 </script>
-<style scoped>
 
-  p {
-    padding-top: 1.7em;
-  }
+<style scoped>
   .card-car{
     margin: auto;
     width: 100%;
     margin-bottom: 1.5em;
   }
-
 
 </style>
