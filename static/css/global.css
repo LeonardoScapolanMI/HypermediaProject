@@ -47,6 +47,8 @@ body {
 .correlated {
   margin-top: 50px;
   text-align: left;
+  margin-left: min(20px, 5%);
+  margin-right: min(20px, 5%);
 }
 
 hr {
