@@ -11,22 +11,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a href="/alleventgroupings">EVENTS</a>
+              <a href="/alleventgroupings">EVENTI</a>
             </li>
             <li class="nav-item">
-              <a href="/allpois">POINTS OF INTEREST</a>
+              <a href="/allpois">PUNTI DI INTERESSE</a>
             </li>
             <li class="nav-item">
-              <a href="/allitineraries">ITINERARIES</a>
+              <a href="/allitineraries">ITINERARI</a>
             </li>
             <li class="nav-item">
-              <a href="/allservicetypes">SERVICES</a>
+              <a href="/allservicetypes">SERVIZI</a>
             </li>
             <li class="nav-item">
-              <a href="/thetown">THE TOWN</a>
+              <a href="/thetown">LA CITT&agrave;;</a>
             </li>
           </ul>
     </div>
