@@ -33,10 +33,8 @@
       <!-- CARD CAROUSEL --> 
 
       <div class="correlated">
-        <h3>Putni di interesse correlati</h3>
-        <div class="poi-button-container">
-          <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
-        </div>
+        <h3 class="title-correlated">Punti di interesse correlati</h3>
+        <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
         <hr class="separtor" />
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
@@ -104,10 +102,6 @@ export default {
 </script>
 
 <style scoped>
-.poi-button-container {
-  margin: 10px;
-  float: right;
-}
  .poi-button {
   color: var(--white);
   background-color: var(--brown);
@@ -115,6 +109,7 @@ export default {
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
   font-weight: bold;
+  text-align: right;
 }
 .poi-button:hover {
   color: var(--green);
