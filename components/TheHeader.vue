@@ -88,6 +88,9 @@ export default {
               'sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=',
             crossorigin: 'anonymous',
           },
+          {
+            src: 'smoothscroll.js',
+          },
         ],
       }
   },

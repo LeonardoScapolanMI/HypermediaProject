@@ -30,15 +30,15 @@
 
       <!-- Carousels of Cards --> 
       
-      <div class="correlated">
-        <h3 class="title-correlated">Itinerari correlati</h3>
-        <hr class="separator" />
+      <div class="cpage-title">
+        <h3>Itinerari correlati</h3>
+        <hr class="line-correlated" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
-      <div class="correlated">
-        <h3 class="title-correlated">Eventi correlati</h3>
-        <hr class="separator" />
+      <div class="page-title">
+        <h3>Eventi correlati</h3>
+        <hr class="line-correlated" />
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
       
