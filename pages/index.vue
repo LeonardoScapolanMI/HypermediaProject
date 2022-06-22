@@ -46,81 +46,91 @@
 
   <hr class="separator" />
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-7">
         <div class="long-image-container">
           <a href="/allevents">
             <img class="long-image" :src="evURL" :alt="evCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-5">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
-          <a href="/allevents" id="poi" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allevents" class="home-button">Scopri di più</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" />
+  <hr class="separator" id="poi"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
       <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ poiTitle }}</h3>
+          <p class="text-with-line-break">{{ poiText }}</p>
+          <div class="button-container">
+            <a href="/allpois" class="home-button">Scopri di più</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
         <div class="long-image-container">
           <a href="/allpois">
             <img class="long-image" :src="poiURL" :alt="poiCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
-        <div class="home-button-container">
-          <h3 class="text-content-title">{{ poiTitle }}</h3>
-          <p class="text-with-line-break">{{ poiText }}</p>
-          <a href="/allpois" id="it" class="home-button">Scopri di più</a>
-        </div>
-      </div>
     </div>
   </div>
   
-  <hr class="separator" />
+  <hr class="separator" id="it"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-7">
         <div class="long-image-container"> 
           <a href="/allitineraries">
             <img class="long-image" :src="itURL" :alt="itCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-5">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
-          <a href="/allitineraries" id="ser" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allitineraries" class="home-button">Scopri di più</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" />
+  <hr class="separator" id="ser"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
       <div class="col-md-5">
-        <div class="long-image-container">
-        <img class="long-image" :src="serURL" :alt="serCaption" />
-        </div>
-      </div>
-      <div class="col-md-7">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
-          <a href="/allservicetypes" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allservicetypes" class="home-button">Scopri di più</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="long-image-container">
+          <a href="/allservicetypes">
+            <img class="long-image" :src="serURL" :alt="serCaption" />
+          </a>
          </div>
         </div>
       </div>
@@ -237,16 +247,20 @@ export default {
   width: 0px;
 }
 
-.long-image-container {
+.home-container {
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: 92%;
+  max-width: 86%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.long-image-container {
+  margin: 20px 5px 20px 5px;
 }
 
 .long-image {
   width: 100%;
-  aspect-ratio: 8/5;
+  aspect-ratio: 21/14;
   object-fit: cover;
   object-position: 50% 50%;
   box-shadow: 5px 5px 10px 5px var(--green);
@@ -276,9 +290,15 @@ export default {
 }
 
 .home-button-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.button-container {
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .home-button {
