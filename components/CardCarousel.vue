@@ -29,6 +29,7 @@
     <img
       v-if="content.length > 3"
       id="next-button"
+      class="carousel-control-next-icon"
       alt="icona avanti"
       src="/icons/angle-right-solid.svg"
       @click="next"
@@ -230,6 +231,6 @@ export default {
 #next-button {
   padding: 15px 15px;
   background-color: var(--brown);
-  color: var(--white);
+  width: 10px;
 }
 </style>
