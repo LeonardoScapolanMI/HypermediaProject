@@ -44,8 +44,11 @@ body {
   text-align: center;
 }
 
-.title-correlated {
+.correlated {
   margin-top: 50px;
+}
+
+.title-correlated {
   float: left;
 }
 

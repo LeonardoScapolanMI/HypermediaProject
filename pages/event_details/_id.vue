@@ -32,13 +32,13 @@
 
       <!-- CARD CAROUSEL --> 
 
-    
+      <div class="correlated">
         <h3 class="title-correlated">Punti di interesse correlati</h3>
         <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
       
         <hr class="separtor" />
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-     
+      </div>
       
           
   </div>
