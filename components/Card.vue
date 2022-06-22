@@ -1,7 +1,11 @@
 <template>
   <div id="wrapper">
 
-      <img id="image" :src="imageUrl" :alt="imageCaption" />
+      <img 
+        id="image" 
+        :alt="imageCaption" 
+        @click="$emit('onSeeDetails')"
+        />
 
       <h2 id="title">{{ title }}</h2>
 

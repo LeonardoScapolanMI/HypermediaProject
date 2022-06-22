@@ -63,7 +63,7 @@ export default {
 	  margin: auto;
     border: 0px;
     width: 100%;
-    height: 100px;
+    height: 300px;
     }
 
 </style>
