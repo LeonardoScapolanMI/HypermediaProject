@@ -228,7 +228,7 @@ export default {
 
 #prev-button,
 #next-button {
-  filter: var(--green-filter);
   width: 5%;
+  background-color: var(--brown);
 }
 </style>

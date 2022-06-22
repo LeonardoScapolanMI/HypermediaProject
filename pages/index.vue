@@ -197,12 +197,12 @@ export default {
       introduction: 'Non perdere l occasione di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
-      evtitle: 'Vecchie tradizioni e grandi novità.',
+      evtitle: 'Ogni tipo di evento, dalle vecchie tradizioni alle grandi novità.',
       evText: 'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare.\n'
               + 'Consulta la guida e scopri quale evento fa al caso tuo.',
       poiURL: '/images/home/cards/poi.jpg',
       poiCaption: 'Cattedrale di Santa Maria del Fiore',
-      poiTitle: 'Dai luoghi più famosi a quelli più segreti.',
+      poiTitle: 'Dai luoghi di interesse più famosi a quelli più segreti.',
       poiText: 'Lasciati ispirare e travolgere dai punti di interesse che caratterizzano la città. Durante la tua permanenza goditi le meraviglie di Firenze da quelle più rinomate a quelle più innovative.\n'
                 + 'Consulta la guida e segli cosa vedere prima.',
       itURL: '/images/home/cards/it.jpg',
