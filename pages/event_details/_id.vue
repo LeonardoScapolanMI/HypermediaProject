@@ -15,7 +15,8 @@
       </div>
 
       <!-- MAPBOX -->
-
+      
+      <div class="container">
         <div class="row">
           <div class="col-md-7" >
             <p id="text text-with-line-break">{{overview}}</p>
@@ -23,13 +24,13 @@
             <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
             <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
           </div>
-           
           <div class="col-md-5" >
             <center>
               <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
             </center>
           </div>         
         </div> <!-- row -->
+        </div>
 
         <!-- CARD CAROUSEL --> 
         
