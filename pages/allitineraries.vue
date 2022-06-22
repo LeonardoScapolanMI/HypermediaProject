@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <!-- TITLE -->
 
     <div class="page-title">
@@ -26,6 +27,13 @@
       :no-items-placeholder="'Al momento non ci sono itinerari'" 
       :error-text="'Impossibile caricare gli itinerari'"
     />
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+    
   </div>
 </template>
 

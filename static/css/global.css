@@ -8,6 +8,10 @@ body {
   background-color: var(--smoke);
 }
 
+.container {
+  max-width: min(1000px, 92%);
+}
+
 .text-with-line-break {
   white-space: pre-wrap;
   cursor: default;
@@ -60,10 +64,6 @@ hr {
 
 .subtitle {
   width: 50%;
-}
-
-.container {
-  max-width: 1000px;
 }
 
 .structural-links {

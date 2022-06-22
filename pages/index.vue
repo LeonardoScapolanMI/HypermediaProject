@@ -1,5 +1,5 @@
 <template>
-  <div id="init">
+  <div>
 
     <!-- INTRO -->
     
@@ -23,7 +23,7 @@
 
     <!-- LINK STRUTTURALI -->
 
-    <div class="container home-links">
+    <div class="home-links">
       <div class="row">
         <div class="col-sm-auto">
           <a href="#ev" class="home-link">EVENTI</a> 
@@ -137,7 +137,7 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#init" id="up-button" class="dropdown-toggle">
+      <a href="#" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>

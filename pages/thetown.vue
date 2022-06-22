@@ -1,5 +1,5 @@
 <template>
-  <div  id="init">
+  <div>
 
     <!-- TITLE -->
 
@@ -7,13 +7,13 @@
       <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
-    <!-- SLIDESHOW -->
+    <!-- SLIDESHOW -->  
 
     <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- LINK STRUTTURALI -->
 
-    <div class="container structural-links">
+    <div class="structural-links">
       <div class="row">
         <div
           class="col-sm-auto structural-link selected-structural-link"
@@ -45,7 +45,7 @@
      <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#init" id="up-button" class="dropdown-toggle">
+      <a href="#" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>

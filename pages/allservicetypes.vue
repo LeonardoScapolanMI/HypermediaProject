@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <!-- TITLE -->
 
     <div class="page-title">
@@ -21,6 +22,13 @@
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
   </div>
+
+  <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+    
 </template>
 
 <script>

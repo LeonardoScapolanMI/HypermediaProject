@@ -28,15 +28,11 @@
 export default {
   name: 'ItemCard',
   props: {
-    
     imageUrl: { type: String, required: true },
     imageCaption: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
-   
   },
-    
-  
   head() {
     return {
       link: [
@@ -100,6 +96,7 @@ export default {
 
 #image:hover { 
   opacity: 0.9;
+  cursor: pointer;
 }
 
 #title {
