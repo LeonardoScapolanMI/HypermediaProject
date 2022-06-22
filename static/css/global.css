@@ -51,10 +51,6 @@ body {
   margin-right: min(20px, 5%);
 }
 
-.title-correlated {
-  float: left;
-}
-
 hr {
   background-color: var(--blue);
 }

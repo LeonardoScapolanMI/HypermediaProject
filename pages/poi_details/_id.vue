@@ -31,7 +31,7 @@
       <!-- Carousels of Cards --> 
       
       <div class="correlated">
-        <h3>Itinerari correlati</h3>
+        <h3 class="title-correlated">Itinerari correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
