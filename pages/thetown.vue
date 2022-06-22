@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  id="init">
 
     <!-- TITLE -->
 
@@ -9,7 +9,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container" id="init" />
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- LINK STRUTTURALI -->
 

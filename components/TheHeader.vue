@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg sticky-top">
   
     
-    <a id="logo" class="navbar-brand" href="/">
+    <a id="logo" href="/">
       <img id="icon" src="/images/firenze.png" alt="HOME"/>
     </a>
 
@@ -13,21 +13,11 @@
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/alleventgroupings">EVENTI</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/allpois">PUNTI DI INTERESSE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/allitineraries">ITINERARI</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/allservicetypes">SERVIZI</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/thetown">LA CITT&Agrave;</a>
-            </li>
+            <li><a href="/alleventgroupings">EVENTI</a></li>
+            <li><a href="/allpois">PUNTI DI INTERESSE</a></li>
+            <li><a href="/allitineraries">ITINERARI</a></li>
+            <li><a href="/allservicetypes">SERVIZI</a></li>
+            <li><a href="/thetown">LA CITT&Agrave;</a></li>
           </ul>
     </div>
 </nav>
@@ -99,6 +89,8 @@ export default {
 
   #logo {
     padding: 5px 0px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-bottom-left-radius: 20px;
     background-color: var(--vanish);
   }
@@ -110,7 +102,7 @@ export default {
 
   nav a {
     display: block;
-    padding: 22px 20px;
+    padding: 22px 10px;
     color: var(--white);
     text-decoration: none;
   }
