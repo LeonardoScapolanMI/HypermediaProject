@@ -25,16 +25,16 @@
             <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
           </div>
           <div class="col-md-5" >
-            <center>
               <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
-            </center>
           </div>         
         </div> <!-- row -->
         </div>
 
-        <!-- CARD CAROUSEL --> 
-        
-        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+      <!-- CARD CAROUSEL --> 
+
+      <h3 class="text-center">Punti di interesse correlati</h3>
+      <hr class="separator" />
+      <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
           
   </div>
 </template>

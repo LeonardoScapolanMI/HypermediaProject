@@ -29,18 +29,17 @@
        </div>
 
       <!-- Carousels of Cards --> 
-      <div v-if="itList.length > 0" class="card-car">
-        <h3>Compare nei seguenti itinerari</h3>
-        <br>
-        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
 
-        </div>
-      <div v-if="evList.length > 0" class="card-car">
-        <h3>Luogo dei seguenti eventi</h3>
-        <br>
-        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
+      <h3 class="text-center">Itinerari correlati</h3>
+      <hr class="separator" />
+      <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
+
+      <h3 class="text-center">Eventi correlati</h3>
+      <hr class="separator" />
+      <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
+      
       <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
-    </div>
+    
 </template>
 
 <script>
