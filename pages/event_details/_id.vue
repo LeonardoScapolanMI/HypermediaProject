@@ -110,8 +110,8 @@ export default {
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
   font-weight: bold;
-  float: right;
-  margin-right: 20px;
+  text-align: right;
+  margin-right: 30px;
 }
 .poi-button:hover {
   color: var(--green);
