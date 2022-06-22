@@ -30,7 +30,7 @@
 
       <div class="page-title">
         <h3>Punti di interesse correlati</h3>
-        <hr class="line-correlated" />
+        <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
   </div>

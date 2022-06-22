@@ -4,12 +4,12 @@
     <!-- TITLE -->
 
     <div class="page-title">
-      <h1 id="init">LA CITT&Agrave; DI FIRENZE</h1>
+      <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container" />
+    <SlideShow :images="imagesV" class="title-image-container" id="init"/>
 
     <!-- LINK STRUTTURALI -->
 

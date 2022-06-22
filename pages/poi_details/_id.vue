@@ -32,14 +32,20 @@
       
       <div class="cpage-title">
         <h3>Itinerari correlati</h3>
-        <hr class="line-correlated" />
+        <hr class="separator" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div class="page-title">
         <h3>Eventi correlati</h3>
-        <hr class="line-correlated" />
+        <hr class="separator" />
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
+      </div>
+
+      <div class="page-title">
+        <h3>Altri punti di interesse</h3>
+        <hr class="separator" />
+        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
       
       <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
@@ -92,6 +98,15 @@ export default {
         description: ev.overview,
       })
     }
+    // Get other pois
+    for (const poi of data.Pois) {
+      poiList.push({
+        id: poi._id,
+        image: poi.Images[0],
+        name: poi.name,
+        description: poi.overview,
+      })
+    }
     // console.log(poiExtra)
     return {
       name: data.name,
@@ -100,7 +115,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      // poiList,
+      poiList,
     }
   },
   methods: {
