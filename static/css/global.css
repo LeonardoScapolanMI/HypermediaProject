@@ -45,7 +45,8 @@ body {
 }
 
 .line-correlated {
-  max-width: 86%;
+  max-width: 80%;
+  margin-bottom: 20px;
 }
 
 hr {

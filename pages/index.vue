@@ -23,8 +23,6 @@
 
     <!-- LINK STRUTTURALI -->
 
-  <div id="ev" ></div>
-
     <div class="container home-links">
       <div class="row">
         <div class="col-sm-auto">
@@ -44,7 +42,7 @@
 
   <!-- LONG CARDS -->
 
-  <hr class="separator" />
+  <hr class="separator" id="ev"/>
 
   <div class="home-container">
     <div class="row">
