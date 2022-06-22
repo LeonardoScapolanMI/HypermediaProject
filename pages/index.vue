@@ -1,5 +1,5 @@
 <template>
-  <div id="init">
+  <div>
 
     <!-- INTRO -->
     
@@ -137,7 +137,7 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#init" id="up-button" class="dropdown-toggle">
+      <a href="/" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>

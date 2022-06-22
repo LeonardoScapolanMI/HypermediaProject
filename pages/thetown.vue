@@ -9,7 +9,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container" id="init"/>
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- LINK STRUTTURALI -->
 
@@ -45,7 +45,7 @@
      <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#init" id="up-button" class="dropdown-toggle">
+      <a href="/" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>

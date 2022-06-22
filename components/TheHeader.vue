@@ -1,21 +1,20 @@
 <template>
 
 <nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid">
+  
     
     <a id="logo" class="navbar-brand" href="/">
       <img id="icon" src="/images/firenze.png" alt="HOME"/>
-      <span class="sr-only"></span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     
-      <div id="navbarToggleContent" class="collapse navbar-collapse">
+      <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/alleventgroupings">EVENTI</a>
+              <a class="nav-link" href="/alleventgroupings">EVENTI</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/allpois">PUNTI DI INTERESSE</a>
@@ -30,8 +29,7 @@
               <a class="nav-link" href="/thetown">LA CITT&Agrave;</a>
             </li>
           </ul>
-          </div>
-  </div>
+    </div>
 </nav>
 </template>
 
