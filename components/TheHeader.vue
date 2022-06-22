@@ -37,30 +37,7 @@
 export default {
   name: 'TheHeader',
   data() {
-    return {
-      headerList: [
-        {
-          name: 'EVENTI',
-          path: '/alleventgroupings',
-        },
-        {
-          name: 'PUNTI DI INTERESSE',
-          path: '/allpois',
-        },
-        {
-          name: 'ITINERARI',
-          path: '/allitineraries',
-        },
-        {
-          name: 'SERVIZI',
-          path: '/allservicetypes',
-        },
-        {
-          name: 'LA CITTÀ',
-          path: '/thetown',
-        },
-      ],
-    }
+    
   },
   head() {
     return {
@@ -101,6 +78,9 @@ export default {
           {
             src: 'smoothscroll.js',
           },
+          {
+            src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+          },
         ],
       }
   },
@@ -109,6 +89,10 @@ export default {
 
 
 <style scoped>
+
+html {
+  scroll-behavior: smooth;
+}
 
   nav {
     background-color: var(--aqua);
