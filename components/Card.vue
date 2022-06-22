@@ -3,6 +3,7 @@
 
       <img 
         id="image" 
+        :src="imageUrl" 
         :alt="imageCaption" 
         @click="$emit('onSeeDetails')"
         />
