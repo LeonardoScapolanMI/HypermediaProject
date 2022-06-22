@@ -62,6 +62,7 @@ export default {
     justify-content: center;
 	  margin:auto;
     border: 0px;
+    aspect-ratio: 10/7;
     }
 
 </style>

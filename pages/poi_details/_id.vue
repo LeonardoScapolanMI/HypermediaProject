@@ -30,19 +30,19 @@
 
       <!-- Carousels of Cards --> 
       
-      <div class="page-title">
+      <div v-if="itList.length > 0" class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
-      <div class="page-title">
+      <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-      <div class="page-title">
+      <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
@@ -70,7 +70,7 @@ export default {
 
     const itList = []
     const evList = []
-   /* const poiList = []
+    const poiList = []
     // Get some pois
    for (const poi of data.PointOfInterest) {
       poiList.push({
@@ -79,7 +79,7 @@ export default {
         name: poi.name,
         description: poi.description,
       })
-    } */
+    } 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -96,15 +96,6 @@ export default {
         image: ev.Images[0],
         name: ev.name,
         description: ev.overview,
-      })
-    }
-    // Get other pois
-    for (const poi of data.PointsOfInterest) {
-      poiList.push({
-        id: poi._id,
-        image: poi.Images[0],
-        name: poi.name,
-        description: poi.overview,
       })
     }
     // console.log(poiExtra)
