@@ -17,12 +17,9 @@
     <div class="row">
       <div class="col-md-7">
         <!-- PRINTING the overview of the itinerary -->
-        <p id="text text-with-line-break ">{{ overview }}</p>
+        <p class="text-with-line-break ">{{ overview }}</p>
       </div>
-      <!-- col -->
-      <div class="col-md-5">
-          <MapBox v-if="mapURL" :indirizzo="mapURL"/>
-      </div>
+      <MapBox v-if="mapURL" :indirizzo="mapURL"/>
     </div>
     </div>
 
