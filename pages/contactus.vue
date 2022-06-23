@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="height">
     <!-- TITLE -->
 
     <div class="page-title">

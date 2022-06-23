@@ -13,23 +13,12 @@
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="/alleventgroupings" class="nav-link">EVENTI</a>
-            </li>
-            <li class="nav-item">
-              <a href="/allpois" class="nav-link">PUNTI DI INTERESSE</a>
-            </li>
-            <li class="nav-item">
-              <a href="/allitineraries" class="nav-link">ITINERARI</a>
-            </li>
-            <li class="nav-item">
-              <a href="/allservicetypes" class="nav-link">SERVIZI</a>
-            </li>
-            <li class="nav-item">
-              <a href="/thetown" class="nav-link">LA CITT&Agrave;</a>
-            </li>
+            <li><a href="/alleventgroupings">EVENTI</a></li>
+            <li><a href="/allpois">PUNTI DI INTERESSE</a></li>
+            <li><a href="/allitineraries">ITINERARI</a></li>
+            <li><a href="/allservicetypes">SERVIZI</a></li>
+            <li><a href="/thetown">LA CITT&Agrave;</a></li>
           </ul>
-          
     </div>
 </nav>
 </template>
@@ -86,7 +75,6 @@ export default {
     background-color: var(--aqua);
     font-family: Georgia;
     font-weight: bold;
-    scroll-behavior: smooth;
   }
 
   nav ul {

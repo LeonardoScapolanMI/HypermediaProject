@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="height">
     
     <!-- TITLE -->
 
@@ -10,7 +10,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <p id="text text-with-line-break ">{{ description }}</p>
+      <p class="text-with-line-break ">{{ description }}</p>
     </div>
 
     <!-- CARDS -->
@@ -21,14 +21,16 @@
       :no-items-placeholder="'Al momento non ci sono tipi di servizio'"
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
-  </div>
 
-  <div class="dropup">
+  <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
       <a href="#" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>
-    
+
+    </div>
 </template>
 
 <script>

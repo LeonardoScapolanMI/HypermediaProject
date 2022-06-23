@@ -1,18 +1,19 @@
 html {
   scroll-behavior: smooth;
-  width: 100%;
+}
+
+.height {
+  min-height: 465px;
 }
 
 body {
   color: var(--green);
   font-family: Georgia;
   background-color: var(--smoke);
-  width: 100%;
 }
 
 .container {
   max-width: min(1000px, 92%);
-  min-height: 100%;
 }
 
 .text-with-line-break {
@@ -49,8 +50,8 @@ body {
 }
 
 .page-title {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;

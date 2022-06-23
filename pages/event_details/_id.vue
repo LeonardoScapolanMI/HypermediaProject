@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="height">
       <!-- TITOLO -->
 
         <div class="page-title">
@@ -32,6 +32,7 @@
 
       <!-- CARD CAROUSEL --> 
 
+      <!-- v-if="poiList.length > 0" --> 
       <div class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />

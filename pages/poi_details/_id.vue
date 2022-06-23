@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="height">
         <!-- TITOLO -->
 
         <div class="page-title">
@@ -30,19 +30,20 @@
 
       <!-- Carousels of Cards --> 
       
-      <div v-if="itList.length > 0" class="page-title">
+      <!--  v-if="itList.length > 0" --> 
+      <div class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
-      
-      <div v-if="evList.length > 0" class="page-title">
+      <!--  v-if="evList.length > 0" --> 
+      <div class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
-
-      <div v-if="poiList.length > 0" class="page-title">
+      <!-- v-if="poiList.length > 0" --> 
+      <div class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
@@ -64,7 +65,7 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 export default {
-  name: 'punto-interesse',
+  name: 'PointOfInterest',
   components:{
     SlideShow,
     MapBox,
