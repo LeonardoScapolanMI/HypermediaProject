@@ -1,5 +1,6 @@
 <template>
   <div class="height">
+    
       <!-- TITOLO -->
 
         <div class="page-title">
@@ -32,8 +33,7 @@
 
       <!-- CARD CAROUSEL --> 
 
-      <!-- v-if="poiList.length > 0" --> 
-      <div class="page-title">
+      <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
         <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>

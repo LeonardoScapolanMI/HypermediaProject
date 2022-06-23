@@ -1,5 +1,6 @@
 <template>
   <div class="height">
+
     <!-- TITOLO -->
 
         <div class="page-title">
@@ -27,8 +28,7 @@
 
     <!-- PRINTING ALL POIS CORRELATED -->
 
-      <!-- v-if="poiList.length > 0" --> 
-      <div class="page-title">
+      <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
@@ -41,7 +41,6 @@
         <span class="sr-only"></span>
       </a>
     </div>
-
   </div>
 </template>
 

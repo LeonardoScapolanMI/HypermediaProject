@@ -14,7 +14,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <h4 class="text-with-line-break">{{ introduction }}</h4>
+      <h5 class="text-with-line-break">{{ introduction }}</h5>
     </div>
 
     <!-- SLIDESHOW -->
