@@ -14,7 +14,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <h5 class="text-with-line-break">{{ introduction }}</h5>
+      <h5 class="text-center">{{ introduction }}</h5>
     </div>
 
     <!-- SLIDESHOW -->
@@ -23,7 +23,7 @@
 
     <!-- LINK STRUTTURALI -->
 
-    <div class="home-links">
+    <div class="structural-links ">
       <div class="row">
         <div class="col-sm-auto">
           <a href="#ev" class="home-link">EVENTI</a> 
@@ -194,7 +194,7 @@ export default {
           caption: 'Galleria degli Uffizi',
         },
       ],
-      introduction: 'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non è mai stata vista prima.',
+      introduction: 'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire luoghi la città come non l hai mai vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
       evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
@@ -266,12 +266,6 @@ export default {
 
 .long-image:hover {
   cursor: pointer;
-}
-
-.home-links {
-  margin-bottom: 10px;
-  max-width: 90% !important;
-  margin: auto;
 }
 
 .home-link {
