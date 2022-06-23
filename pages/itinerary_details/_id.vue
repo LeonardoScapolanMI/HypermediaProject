@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="height">
+
     <!-- TITOLO -->
 
         <div class="page-title">
@@ -15,24 +16,31 @@
   
     <div class="container">
     <div class="row">
-      <div class="col-md-1"></div>
       <div class="col-md-6">
         <!-- PRINTING the overview of the itinerary -->
-        <p id="text text-with-line-break ">{{ overview }}</p>
-      
+        <p class="text-with-line-break ">{{ overview }}</p>
       </div>
-      <!-- col -->
-      <div class="col-md-4">
+      <div class="col-md-6">
           <MapBox v-if="mapURL" :indirizzo="mapURL"/>
-
       </div>
     </div>
     </div>
-
-
 
     <!-- PRINTING ALL POIS CORRELATED -->
-    <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+
+      <div v-if="poiList.length > 0" class="page-title">
+        <h3>Punti di interesse correlati</h3>
+        <hr class="separator" />
+        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+      </div>
+
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -76,7 +84,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -1,18 +1,19 @@
 <template>
-  <div>
+  <div class="height">
+
     <!-- TITLE -->
 
     <div class="page-title">
       <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
-    <!-- SLIDESHOW -->
+    <!-- SLIDESHOW -->  
 
-    <SlideShow :images="imagesV" class="title-image-container" />
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- LINK STRUTTURALI -->
 
-    <div class="container structural-links">
+    <div class="structural-links">
       <div class="row">
         <div
           class="col-sm-auto structural-link selected-structural-link"
@@ -40,6 +41,15 @@
         {{ getContentToDisplay().text }}
       </p>
     </div>
+
+     <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
   </div>
 </template>
 

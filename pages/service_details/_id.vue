@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="height">
 
     <!-- TITLE -->
 
     <div class="page-title">
-          <h1>BLA BLA</h1> 
+          <h1>{{ name }}</h1> 
           <hr class="subtitle">
           <h4>TYPE OF SERVICES SECTION</h4> 
     </div>
@@ -13,14 +13,9 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12"><img src="image.URL" id="image" alt="image.caption" />
-        </div>
+        <div><img src="image.URL" id="image" alt="image.caption" /></div>
       </div>
     </div>
-    
-    <!-- OVERVIEW -->
-
-    
 
     <!-- LONG CARDS -->
 
@@ -39,6 +34,14 @@
           />
       </div>
     </div>
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
   
     </div>
 </template>
@@ -49,8 +52,6 @@ import LongCard from '~/components/LongCard.vue'
 export default {
   name: 'TypeOfServices',
   components: { LongCard },
-
-    
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -83,32 +84,3 @@ export default {
 // console.log(this.servList + 'CIAOOOOOOOOOOOOOOOOOOO')
 </script>
 
-<style>
-
-/* LOAD MORE */
-
-  .no-content {
-    color: #414535 !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    pointer-events: none;
-  }
-
-  #load-more:hover {
-    color: white;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-  
-  #load-more {
-    color: #414535;
-    background-color: #96BBBB;
-    padding: 5px 10px 5px 10px;
-    font-size: 15px;
-    border: 2px solid #414535 ;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
-</style>

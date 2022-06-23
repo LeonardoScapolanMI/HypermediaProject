@@ -1,7 +1,7 @@
 <template>
   <div class="mapbox">
       
-        <iframe :src= "indirizzo" id="map"></iframe>
+        <iframe id="map" :src= "indirizzo"></iframe>
     
   </div> <!-- row -->
 </template>
@@ -53,18 +53,17 @@ export default {
 <style scoped>
 
   .mapbox{
-    width:100%;
-    margin:auto;
+    width: 100%;
+    margin: auto;
   }
 
     #map {
-    display:flex;
+    display: flex;
     justify-content: center;
-    height: 300px;
-	  width: 300px;
-	  margin:auto;
-    margin-bottom: 30px;
+	  margin: auto;
     border: 0px;
+    width: 100%;
+    height: 300px;
     }
 
 </style>

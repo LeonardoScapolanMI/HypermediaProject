@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="height">
 
     <!-- INTRO -->
     
-    <div class="welcome" id="init">
+    <div class="welcome">
       <div class="title">
       <h1>FIRENZE</h1>
       <hr class="line"/>
@@ -23,9 +23,7 @@
 
     <!-- LINK STRUTTURALI -->
 
-  <div id="ev" ></div>
-
-    <div class="container home-links">
+    <div class="structural-links ">
       <div class="row">
         <div class="col-sm-auto">
           <a href="#ev" class="home-link">EVENTI</a> 
@@ -44,83 +42,93 @@
 
   <!-- LONG CARDS -->
 
-  <hr class="separator" />
+  <hr class="separator" id="ev"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-7">
         <div class="long-image-container">
           <a href="/allevents">
             <img class="long-image" :src="evURL" :alt="evCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-5">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
-          <a href="/allevents" id="poi" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allevents" class="home-button">Tutti gli eventi</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" />
+  <hr class="separator" id="poi"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
       <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ poiTitle }}</h3>
+          <p class="text-with-line-break">{{ poiText }}</p>
+          <div class="button-container">
+            <a href="/allpois" class="home-button">Tutti i punti di interesse</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
         <div class="long-image-container">
           <a href="/allpois">
             <img class="long-image" :src="poiURL" :alt="poiCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
-        <div class="home-button-container">
-          <h3 class="text-content-title">{{ poiTitle }}</h3>
-          <p class="text-with-line-break">{{ poiText }}</p>
-          <a href="/allpois" id="it" class="home-button">Scopri di più</a>
-        </div>
-      </div>
     </div>
   </div>
   
-  <hr class="separator" />
+  <hr class="separator" id="it"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-7">
         <div class="long-image-container"> 
           <a href="/allitineraries">
             <img class="long-image" :src="itURL" :alt="itCaption" />
           </a>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-5">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
-          <a href="/allitineraries" id="ser" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allitineraries" class="home-button">Tutti gli itinerari</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" />
+  <hr class="separator" id="ser"/>
 
-  <div class="container">
+  <div class="home-container">
     <div class="row">
       <div class="col-md-5">
-        <div class="long-image-container">
-        <img class="long-image" :src="serURL" :alt="serCaption" />
-        </div>
-      </div>
-      <div class="col-md-7">
         <div class="home-button-container">
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
-          <a href="/allservicetypes" class="home-button">Scopri di più</a>
+          <div class="button-container">
+            <a href="/allservicetypes" class="home-button">Tutti i tipi di servizio</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="long-image-container">
+          <a href="/allservicetypes">
+            <img class="long-image" :src="serURL" :alt="serCaption" />
+          </a>
          </div>
         </div>
       </div>
@@ -129,7 +137,7 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#init" id="up-button" class="dropdown-toggle">
+      <a href="#" id="up-button" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>
@@ -186,10 +194,10 @@ export default {
           caption: 'Galleria degli Uffizi',
         },
       ],
-      introduction: 'Non perdere l occasione di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
+      introduction: 'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
-      evtitle: 'Vecchie tradizioni e grandi novità.',
+      evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
       evText: 'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare.\n'
               + 'Consulta la guida e scopri quale evento fa al caso tuo.',
       poiURL: '/images/home/cards/poi.jpg',
@@ -199,12 +207,12 @@ export default {
                 + 'Consulta la guida e segli cosa vedere prima.',
       itURL: '/images/home/cards/it.jpg',
       itCaption: 'Panorama della città',
-      itTitle: 'Un itinerario della città ricco di sorpese.',
+      itTitle: 'Un tour della città ricco di sorpese.',
       itText: 'Grazie ai migliori itinerari della città avrai la possibilità di vedere tutti i luoghi di tuo interesse e di partecipare a tutti gli eventi che ti coinvolgono maggiormente senza perdere tempo.\n'
               + 'Consulta la guida e scopri quale sarà il tuo itinerario.',
       serURL: '/images/home/cards/ser.jpg',
       serCaption: 'Servizio di ristoro',
-      serTitle: 'Le migliori cucine tradizionali e tutti i servizi necessari.',
+      serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText: 'Approfitta della grande offerta si servizi di ogni tipo disponibili in città tra cui ospedali, cliniche e farmacie, ma anche bar, ristoranti e locali notturni. \n'
                 + 'Consulta la guida per trovare il servizio di cui necessiti.'
     }
@@ -237,16 +245,20 @@ export default {
   width: 0px;
 }
 
-.long-image-container {
+.home-container {
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: 92%;
+  max-width: 86%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.long-image-container {
+  margin: 20px 5px 20px 5px;
 }
 
 .long-image {
   width: 100%;
-  aspect-ratio: 8/5;
+  aspect-ratio: 21/14;
   object-fit: cover;
   object-position: 50% 50%;
   box-shadow: 5px 5px 10px 5px var(--green);
@@ -254,12 +266,6 @@ export default {
 
 .long-image:hover {
   cursor: pointer;
-}
-
-.home-links {
-  margin-bottom: 10px;
-  max-width: 90% !important;
-  margin: auto;
 }
 
 .home-link {
@@ -271,27 +277,20 @@ export default {
   color: var(--blue);
 }
 
-#up-button {
-   padding: 5px 10px 5px 7px;
-   margin: 20px;
-   background-color: var(--blue);
-   float: right;
-   color: var(--aqua);
-   border-radius: 10px;
-}
-
-#up-button:hover {
-   color: var(--white);
-}
-
 #ev {
   margin-bottom: 90px;
 }
 
 .home-button-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.button-container {
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .home-button {
@@ -307,6 +306,5 @@ export default {
   color: var(--green);
   text-decoration: none;
 }
-
 
 </style>

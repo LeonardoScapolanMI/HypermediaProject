@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="height">
+      
         <!-- TITOLO -->
 
         <div class="page-title">
@@ -8,36 +9,54 @@
           <h4>PUNTO D'INTERESSE</h4> 
         </div>
 
-        <!-- SLIDESHOW -->
+    <!-- SLIDESHOW -->
 
-    <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
+    <div class="title-image-container">
+      <SlideShow :images="imagesV" class="title-image" />
+    </div>
 
-       <!-- MAPBOX -->
-        <div class="container">
+      <!-- MAPBOX -->
+
+      <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
-                <div class="col-md-6">
-                    <p id="text text-with-line-break">{{description}}</p>
-            </div> <!-- col -->
-            
-            <div class="col-md-4">
-                <MapBox v-if="mapurl" :indirizzo="mapurl"/>
+          <div class="col-md-6">
+            <p class="text-with-line-break">{{description}}</p>
+          </div>
+          <div class="col-md-6">
+            <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
-            </div>  
+          </div>  
         </div> <!-- row -->
        </div>
-      <!-- Carousels of Cards --> 
-      <div v-if="itList.length > 0" class="card-car">
-        <h3>Compare nei seguenti itinerari</h3>
-        <br>
-        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
 
-        </div>
-      <div v-if="evList.length > 0" class="card-car">
-        <h3>Luogo dei seguenti eventi</h3>
-        <br>
-        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/></div>
-      <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
+      <!-- Carousels of Cards --> 
+      
+      <div v-if="itList.length > 0" class="page-title">
+        <h3>Itinerari correlati</h3>
+        <hr class="separator" />
+        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/' + id)"/>
+      </div>
+      
+      <div v-if="evList.length > 0" class="page-title">
+        <h3>Eventi correlati</h3>
+        <hr class="separator" />
+        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/' + id)"/>
+      </div>
+
+     <div v-if="poiList.length > 0" class="page-title">
+        <h3>Altri punti di interesse</h3>
+        <hr class="separator" />
+        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/' + id)"/>
+      </div>
+      
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
     </div>
 </template>
 
@@ -46,29 +65,29 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 export default {
+  name: 'POI',
   components:{
     SlideShow,
     MapBox,
     CardCarousel,
   },
-  name: 'punto-interesse',
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
-    // const { poiExtra } = await $axios.get('http://localhost:3000/api/poi')
+    // const { poiExtra } = await $axios.get('http://api/poi')
 
     const itList = []
     const evList = []
-   /* const poiList = []
+    const poiList = []
     // Get some pois
-   for (const poi of data.PointOfInterest) {
+    for (const poi of data.PointsOfInterest) {
       poiList.push({
-        id: poi._id,
-        image: poi.Images[0],
-        name: poi.name,
-        description: poi.description,
+      id: poi._id,
+      image: poi.Images[0],
+      name: poi.name,
+      description: poi.description,
       })
-    } */
+    } 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -95,7 +114,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      // poiList,
+      poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
@@ -106,16 +125,12 @@ export default {
   },
 }
 </script>
-<style scoped>
 
-  p {
-    padding-top: 1.7em;
-  }
+<style scoped>
   .card-car{
     margin: auto;
     width: 100%;
     margin-bottom: 1.5em;
   }
-
 
 </style>
