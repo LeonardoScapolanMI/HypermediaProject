@@ -18,13 +18,13 @@
       
       <div class="container">
         <div class="row">
-          <div class="col-md-7" >
+          <div class="col-md-6" >
             <p id="text text-with-line-break">{{overview}}</p>
             <p> L'evento inizierà il:{{sDate}} </p>
             <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
             <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
           </div>
-          <div class="col-md-5" >
+          <div class="col-md-6" >
               <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
           </div>         
         </div> <!-- row -->
@@ -38,8 +38,15 @@
         <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
+
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
       
-          
   </div>
 </template>
 

@@ -13,7 +13,7 @@
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li><a href="/alleventgroupings">EVENTI</a></li>
+            <li class="nav-item"><a href="/alleventgroupings">EVENTI</a></li>
             <li><a href="/allpois">PUNTI DI INTERESSE</a></li>
             <li><a href="/allitineraries">ITINERARI</a></li>
             <li><a href="/allservicetypes">SERVIZI</a></li>

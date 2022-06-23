@@ -14,7 +14,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <h5 class="text-with-line-break">{{ introduction }}</h5>
+      <h4 class="text-with-line-break">{{ introduction }}</h4>
     </div>
 
     <!-- SLIDESHOW -->
@@ -58,7 +58,7 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <div class="button-container">
-            <a href="/allevents" class="home-button">Scopri di più</a>
+            <a href="/allevents" class="home-button">Tutti gli eventi</a>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
           <h3 class="text-content-title">{{ poiTitle }}</h3>
           <p class="text-with-line-break">{{ poiText }}</p>
           <div class="button-container">
-            <a href="/allpois" class="home-button">Scopri di più</a>
+            <a href="/allpois" class="home-button">Tutti i punti di interesse</a>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
           <div class="button-container">
-            <a href="/allitineraries" class="home-button">Scopri di più</a>
+            <a href="/allitineraries" class="home-button">Tutti gli itinerari</a>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
           <div class="button-container">
-            <a href="/allservicetypes" class="home-button">Scopri di più</a>
+            <a href="/allservicetypes" class="home-button">Tutti i tipi di servizio</a>
           </div>
         </div>
       </div>
@@ -194,25 +194,25 @@ export default {
           caption: 'Galleria degli Uffizi',
         },
       ],
-      introduction: 'Non perdere l occasione di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
+      introduction: 'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non è mai stata vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
-      evtitle: 'Ogni tipo di evento, dalle vecchie tradizioni alle grandi novità.',
+      evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
       evText: 'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare.\n'
               + 'Consulta la guida e scopri quale evento fa al caso tuo.',
       poiURL: '/images/home/cards/poi.jpg',
       poiCaption: 'Cattedrale di Santa Maria del Fiore',
-      poiTitle: 'Dai luoghi di interesse più famosi a quelli più segreti.',
+      poiTitle: 'Dai luoghi più famosi a quelli più segreti.',
       poiText: 'Lasciati ispirare e travolgere dai punti di interesse che caratterizzano la città. Durante la tua permanenza goditi le meraviglie di Firenze da quelle più rinomate a quelle più innovative.\n'
                 + 'Consulta la guida e segli cosa vedere prima.',
       itURL: '/images/home/cards/it.jpg',
       itCaption: 'Panorama della città',
-      itTitle: 'Un itinerario della città ricco di sorpese.',
+      itTitle: 'Un tour della città ricco di sorpese.',
       itText: 'Grazie ai migliori itinerari della città avrai la possibilità di vedere tutti i luoghi di tuo interesse e di partecipare a tutti gli eventi che ti coinvolgono maggiormente senza perdere tempo.\n'
               + 'Consulta la guida e scopri quale sarà il tuo itinerario.',
       serURL: '/images/home/cards/ser.jpg',
       serCaption: 'Servizio di ristoro',
-      serTitle: 'Le migliori cucine tradizionali e tutti i servizi necessari.',
+      serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText: 'Approfitta della grande offerta si servizi di ogni tipo disponibili in città tra cui ospedali, cliniche e farmacie, ma anche bar, ristoranti e locali notturni. \n'
                 + 'Consulta la guida per trovare il servizio di cui necessiti.'
     }

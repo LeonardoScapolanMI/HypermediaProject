@@ -18,10 +18,10 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="text-with-line-break">{{description}}</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
                 <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
@@ -48,7 +48,14 @@
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
       
-      <!-- <div v-if="poiList.length > 0" class="row"><CardCarousel :content="poiList"/></div> -->
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
     </div>
 </template>
 
@@ -57,7 +64,7 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 export default {
-  name: 'PuntoDiInteresse',
+  name: 'punto-interesse',
   components:{
     SlideShow,
     MapBox,
