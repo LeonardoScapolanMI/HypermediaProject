@@ -76,6 +76,7 @@ export default {
       poiList,
     }
   },
+  fetchOnServer: false, // too see if it's a problem for crawlers
   methods: {
     backToList() {
       this.$router.push('/list')
