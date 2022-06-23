@@ -43,11 +43,11 @@
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-      <div v-if="poiList.length > 0" class="page-title">
+      <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-      </div>
+      </div> -->
       
       <!-- BACK UP BUTTON -->
 
@@ -78,16 +78,16 @@ export default {
 
     const itList = []
     const evList = []
-    const poiList = []
+    //  const poiList = []
     // Get some pois
-   for (const poi of data.PointOfInterest) {
-      poiList.push({
-        id: poi._id,
-        image: poi.Images[0],
-        name: poi.name,
-        description: poi.description,
-      })
-    } 
+   // for (const poi of data.PointOfInterest) {
+    //  poiList.push({
+    //    id: poi._id,
+     //   image: poi.Images[0],
+    //    name: poi.name,
+    //    description: poi.description,
+     // })
+    //} 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -114,7 +114,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      poiList,
+      //poiList,
     }
   },
   methods: {
