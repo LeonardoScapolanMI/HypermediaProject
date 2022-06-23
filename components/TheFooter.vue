@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed-bottom">
+    <nav>
       <div>
         <ul class="footer">
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">

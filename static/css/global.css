@@ -1,15 +1,18 @@
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
   color: var(--green);
   font-family: Georgia;
   background-color: var(--smoke);
+  width: 100%;
 }
 
 .container {
   max-width: min(1000px, 92%);
+  min-height: 100%;
 }
 
 .text-with-line-break {
