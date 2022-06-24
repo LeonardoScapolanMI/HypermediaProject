@@ -486,7 +486,7 @@ const events = [
       {
         basicData: {
           URL: '/images/event/Negramaro Unplugged European Tour 2022/2.jpg',
-          caption: 'Foto del cantante',
+          caption: 'Foto del gruppo',
         },
       },
     ],
@@ -544,7 +544,13 @@ const events = [
       {
         basicData: {
           URL: '/images/event/I Giardini di Firenze/1.jpg',
-          caption: 'Parte della mostra',
+          caption: 'Luogo dell\'evento',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/I Giardini di Firenze/2.jpg',
+          caption: 'Luogo dell\'evento',
         },
       },
     ],
@@ -575,12 +581,6 @@ const events = [
       {
         basicData: {
           URL: '/images/event/Mostra su Koen Vanmechelen/2.jpg',
-          caption: 'Parte della mostra',
-        },
-      },
-      {
-        basicData: {
-          URL: '/images/event/Mostra su Koen Vanmechelen/3.jpg',
           caption: 'Parte della mostra',
         },
       },
