@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+
       <!-- TITOLO -->
 
         <div class="page-title">
@@ -18,24 +19,17 @@
       
       <div class="container">
         <div class="row">
-            <div class="col-md-2"></div>
-                <div class="col-md-6" >
-                    <p id="text text-with-line-break">{{overview}}</p>
-                    <p> L'evento inizierà il:{{sDate}} </p>
-                    <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
-
-                    <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
-                    <p v-else> a libera entrata. </p>
-                     
-            </div> <!-- col -->
-           
-             
-                
-                  
-                <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
-                  
-                     
-            </div> <!-- row -->
+          <div class="col-md-2"></div>
+          <div class="col-md-6" >
+            <p id="text text-with-line-break">{{overview}}</p>
+            <p> L'evento inizierà il:{{sDate}} </p>     
+            <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
+            <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
+            <p v-else> a libera entrata. </p>        
+          </div> 
+          <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
+        </div> <!-- row -->
+      </div>
 
       <!-- CARD CAROUSEL --> 
 
@@ -100,12 +94,8 @@ export default {
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
-
-
   
   methods: {
-    
-
     backToList() {
       this.$router.push('/list')
     },
@@ -131,10 +121,7 @@ export default {
     margin: auto;
     width: 100%;
     margin-top: 50px;
-   margin-bottom: 50px;
+    margin-bottom: 50px;
   }
-
-
-
 
 </style>
