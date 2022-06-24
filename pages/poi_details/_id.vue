@@ -81,7 +81,7 @@ export default {
 
     const itList = []
     const evList = []
-    /*const poiList = []
+    /* const poiList = []
     // Get some pois
     for (const poi of data.data.PointOfInterest) {
       poiList.push({
