@@ -11,12 +11,13 @@
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-          <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-             <nuxt-link :to="navItem.path">{{ navItem.name }}</nuxt-link>
-          </li>
-        </ul>    
-      </div>
-
+    <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
+        <nuxt-link :to="navItem.path" class="nav-link">
+            {{ navItem.name }}
+        </nuxt-link>
+    </li>
+</ul>
+    </div>
 </nav>
 </template>
 

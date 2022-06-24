@@ -114,9 +114,15 @@ hr {
 .breadcrumb {
   background-color: #F2E3BC;
   color: #414535;
+  margin: 20px;
 }
 
 #old:hover, #page {
   color: #414535;
+  text-decoration: none;
+}
+
+a{
+  color: white;
   text-decoration: none;
 }
