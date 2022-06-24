@@ -47,17 +47,9 @@
       <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
-        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
+        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
-
-      <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
       
   </div>
 </template>

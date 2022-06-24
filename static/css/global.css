@@ -99,6 +99,7 @@ hr {
   border-radius: 5px;
   font-weight: bold;
 }
+
 .all-button:hover {
   color: var(--green);
   text-decoration: none;
