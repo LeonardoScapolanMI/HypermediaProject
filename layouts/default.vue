@@ -1,6 +1,7 @@
 <template>
   <div class="flex-wrapper">
     <TheHeader />
+    <BreadCrumbs/>
     <Nuxt />
     <TheFooter class="footer" />
   </div>
