@@ -112,17 +112,17 @@ hr {
 }
 
 .breadcrumb {
-  background-color: #F2E3BC;
-  color: #414535;
+  background-color: var(--beige);
+  color: var(--green);
   margin: 20px;
 }
 
 #old:hover, #page {
-  color: #414535;
+  color: var(--green);
   text-decoration: none;
 }
 
-a{
-  color: white;
+a {
+  color: var(--white);
   text-decoration: none;
 }
