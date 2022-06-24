@@ -110,3 +110,13 @@ hr {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.breadcrumb {
+  background-color: #F2E3BC;
+  color: #414535;
+}
+
+#old:hover, #page {
+  color: #414535;
+  text-decoration: none;
+}
