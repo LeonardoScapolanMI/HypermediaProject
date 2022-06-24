@@ -90,3 +90,16 @@ hr {
 #up-button:hover {
   color: var(--white);
 }
+
+.all-button {
+  color: var(--white);
+  background-color: var(--brown);
+  border: 1px solid var(--green);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.all-button:hover {
+  color: var(--green);
+  text-decoration: none;
+}

@@ -9,10 +9,14 @@
       <h4>ITINERARIO</h4> 
     </div>
 
+    <!-- IMAGE -->
+
     <div class="title-image-container">
       <img :src="image.URL" :alt="image.caption" class="title-image"/>
     </div>
   
+    <!-- MAPBOX -->
+
     <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -20,7 +24,7 @@
         <p class="text-with-line-break ">{{ overview }}</p>
       </div>
       <div class="col-md-6">
-          <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+        <MapBox v-if="mapURL" :indirizzo="mapURL"/>
       </div>
     </div>
     </div>
@@ -30,6 +34,7 @@
       <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
+        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
 

@@ -1,5 +1,6 @@
 <template>
   <div class="height">
+  <div class="container">
 
     <!-- TITLE -->
 
@@ -22,7 +23,7 @@
     </div>
 
     <!-- LONG CARDS -->
-  <div class="container">
+  
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
         <long-card
@@ -42,6 +43,7 @@
     <button
       v-if="nItems<services.length"
       id="load-more"
+      class="text-center"
       @click="loadMore"
     >
     CARICA ALTRO

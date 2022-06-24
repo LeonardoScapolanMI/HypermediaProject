@@ -24,7 +24,7 @@
           </div>
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
+            <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
         </div> <!-- row -->
        </div>
@@ -34,18 +34,21 @@
       <div v-if="itList.length > 0" class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
+        <a href="/allitineraries" class="all-button">Tutti gli itinerari</a>
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
+        <a href="/allevents" class="all-button">Tutti gli eventi</a>
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
       <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
+        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div> -->
       

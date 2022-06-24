@@ -42,11 +42,10 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
             <div class="col" /> <!-- to ensure that elements on the last line are aligned left if they are less than 3 (or 2 depending on the responsive layout) -->
           </div>
 
-          <div id="bottone" class="text-center">
+          <div class="text-center">
             <button
               v-if="state === ListState.LoadedNotFinished"
               id="load-more"
-              class="button-style"
               @click="loadMore()"
             >
               CARICA ALTRO
@@ -174,10 +173,6 @@ export default {
 </script>
 
 <style>
-
-#bottone {
-  padding: 2em;
-}
 
 .no-content {
   color: #414535 !important;

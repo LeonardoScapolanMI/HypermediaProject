@@ -19,15 +19,16 @@
       
       <div class="container">
         <div class="row">
-          <div class="col-md-2"></div>
           <div class="col-md-6" >
-            <p id="text text-with-line-break">{{overview}}</p>
+            <p class="text-with-line-break">{{overview}}</p>
             <p> L'evento inizierà il:{{sDate}} </p>     
             <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
             <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
             <p v-else> a libera entrata. </p>        
           </div> 
-          <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
+          <div class="col-md-6">
+            <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+          </div>
         </div> <!-- row -->
       </div>
 
@@ -36,7 +37,7 @@
       <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
-        <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
+        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
 
@@ -105,18 +106,6 @@ export default {
 </script>
 
 <style scoped>
-  .poi-button {
-    color: var(--white);
-    background-color: var(--brown);
-    border: 1px solid var(--green);
-    padding: 10px 20px 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .poi-button:hover {
-    color: var(--green);
-    text-decoration: none;
-  }
   .card-car{
     margin: auto;
     width: 100%;
