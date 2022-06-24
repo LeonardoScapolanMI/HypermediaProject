@@ -50,6 +50,10 @@
     </div>
       
   </div>
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 40590555267f5c716e00aec0d006733d2fcb0087
 </template>
 
 <script>
