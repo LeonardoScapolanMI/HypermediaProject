@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="height">
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -11,18 +12,17 @@
     <!-- IMMAGINE -->
 
     <div class="title-image-container">
-      
-        <img :src="images[0].URL" id="imageserv" :alt="images[0].caption" />
-      
+      <img :src="images[0].URL" id="imageserv" :alt="images[0].caption" />
     </div>
 
     <!-- OVERVIEW -->
-    <div class="text-center">
-      <p id="text text-with-line-break">{{ description }}</p>
+
+    <div class="text-content">
+      <p class="text-with-line-break">{{ description }}</p>
     </div>
 
     <!-- LONG CARDS -->
-
+  
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
         <long-card
@@ -35,8 +35,27 @@
         />
       </div>
     </div>
-    <button @click="loadMore" v-if="nItems<services.length">
-      Load More </button>
+
+    <!-- LOAD MORE -->
+    
+    <div class="text-center">
+      <button
+        v-if="nItems<services.length"
+        id="load-more"
+        @click="loadMore"
+      >
+      CARICA ALTRO
+      </button>
+    </div>
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
   </div>
 </template>
 
@@ -85,7 +104,15 @@ mounted() {
 </script>
 
 <style>
-/* LOAD MORE */
+
+#imageserv {
+  width:100%;
+  aspect-ratio: 9/4;
+}
+.content{
+  margin: auto;
+  width: 92% !important;
+}
 
 .no-content {
   color: #414535 !important;
@@ -94,30 +121,20 @@ mounted() {
   pointer-events: none;
 }
 
-#load-more:hover {
-  color: white;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
 #load-more {
-  color: #414535;
-  background-color: #96bbbb;
-  padding: 5px 10px 5px 10px;
-  font-size: 15px;
-  border: 2px solid #414535;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--aqua);
+  padding: 5px 50px 5px 50px;
   border-radius: 10px;
-  margin-right: 20px;
-  margin-left: 20px;
+  font-size: large;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
 }
 
-
-
-#imageserv {
-  width:100%;
-  aspect-ratio: 9/4;
+#load-more:hover {
+  color: var(--aqua);
 }
-.content{
-  margin:30px;
-}
+
 </style>

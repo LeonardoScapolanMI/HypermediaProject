@@ -1,13 +1,13 @@
 <template>
     <div class="height">
       
-        <!-- TITOLO -->
+    <!-- TITOLO -->
 
-        <div class="page-title">
-          <h1>{{name}}</h1> 
-          <hr class="subtitle">
-          <h4>PUNTO D'INTERESSE</h4> 
-        </div>
+    <div class="page-title">
+      <h1>{{ name }}</h1> 
+      <hr class="subtitle">
+      <h4>PUNTO D'INTERESSE</h4> 
+    </div>
 
     <!-- SLIDESHOW -->
 
@@ -20,11 +20,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p class="text-with-line-break">{{description}}</p>
+            <p class="text-with-line-break">{{ description }}</p>
           </div>
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
+            <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
         </div> <!-- row -->
        </div>
@@ -34,18 +34,21 @@
       <div v-if="itList.length > 0" class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
+        <a href="/allitineraries" class="all-button">Tutti gli itinerari</a>
         <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
+        <a href="/allevents" class="all-button">Tutti gli eventi</a>
         <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
       <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
+        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div> -->
       
@@ -87,7 +90,7 @@ export default {
     //    name: poi.name,
     //    description: poi.description,
      // })
-    //} 
+    // } 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -114,7 +117,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      //poiList,
+      // poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
