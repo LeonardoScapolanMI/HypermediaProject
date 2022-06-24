@@ -81,7 +81,7 @@ export default {
 
     const itList = []
     const evList = []
-    const poiList = []
+    /*const poiList = []
     // Get some pois
     for (const poi of data.data.PointOfInterest) {
       poiList.push({
@@ -90,7 +90,7 @@ export default {
         name: poi.name,
        description: poi.description,
       })
-    } 
+    } */
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
