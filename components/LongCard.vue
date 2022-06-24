@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id='wrapper' class="container">
     <div class="row">
       <div class="col-md-5">
         <div class="long-card-container">
@@ -12,7 +12,7 @@
 
         <p id="address">{{address}}</p>
 
-        <div>
+        <div v-if="horizontal">
           <table class="table table-bordered">
             <tbody>
               <tr>
@@ -21,11 +21,22 @@
                 </td>
               </tr>
               <tr v-for="j in maxOpHours" :key="'row-' + j">
-                <td v-for="opH in formattedOpHours" :key="'col-' + opH.index">{{opH[j-1]}}</td>
+                <td v-for="(opH, opHIndex) in formattedOpHours" :key="'col-' + opHIndex">{{opH[j-1]}}</td>
               </tr>
             </tbody>
           </table>
-          <p v-if="opHours.length===0">Aperto 24 ore su 24</p>
+        </div>
+        <div v-else>
+          <table class="table table-bordered">
+            <tbody>
+              <tr v-for="(opHRow, opHRowIndex) in formattedOpHours" :key="'row-' + opHRowIndex">
+                <td>
+                  {{ weekDays[opHRowIndex] }}
+                </td>
+                <td v-for="(opH, opHIndex) in opHRow" :key="'col-' + opHIndex">{{opH}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -79,7 +90,8 @@ export default {
     return{
       formattedOpHours,
       weekDays,
-      maxOpHours
+      maxOpHours,
+      horizontal: true,
     }
 
   },
@@ -116,12 +128,28 @@ export default {
       ],
     }
   },
+mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  methods: {
+    onResize() {
+      const componentWidth = document.getElementById('wrapper').clientWidth
+      // const computedStyle = window.getComputedStyle(document.documentElement)
 
+      this.horizontal = componentWidth > 1180
+    },
+  },
  
 }
 </script>
 
 <style scoped>
+
+#wrapper{
+width: 100% !important;
+max-width: 100% !important;
+}
 
 .long-card-container {
   margin: auto;
