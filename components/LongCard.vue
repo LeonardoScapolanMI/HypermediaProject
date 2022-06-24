@@ -16,12 +16,12 @@
           <table class="table table-bordered">
             <tbody>
               <tr>
-                <td v-for="day of  weekDays" :key="day.index">
-                  <p>{{ day }}</p>
+                <td v-for="day in  weekDays" :key="'day-' + day.index">
+                  {{ day }}
                 </td>
               </tr>
-              <tr>
-                <td v-for="opH of formattedOpHours" :key="opH.index">{{opH}}</td>
+              <tr v-for="j in maxOpHours" :key="'row-' + j">
+                <td v-for="opH in formattedOpHours" :key="'col-' + opH.index">{{opH[j-1]}}</td>
               </tr>
             </tbody>
           </table>
@@ -50,18 +50,21 @@ export default {
 
     const formattedOpHours = [];
     for(let i=0; i<7; i++){
-      formattedOpHours[i] = closedString
+      formattedOpHours[i] = [closedString]
     }
 
     for(const oh of this.opHours){
       const i = oh.day
-      if(formattedOpHours[i] === closedString){
-        formattedOpHours[i] = oh.openingHour + '-' + oh.closingHour
+      const data = oh.openingHour + '-' + oh.closingHour
+      if(formattedOpHours[i][0] === closedString){
+        formattedOpHours[i][0] = data
       }
       else{
-        formattedOpHours[i] += ' ' + oh.openingHour + '-' + oh.closingHour
+        formattedOpHours[i][formattedOpHours[i].length] = data
       }
     }
+
+    const maxOpHours = Math.max(...formattedOpHours.map(x => x.length))
 
     const weekDays = [
       'Domenica',
@@ -76,6 +79,7 @@ export default {
     return{
       formattedOpHours,
       weekDays,
+      maxOpHours
     }
 
   },
