@@ -105,13 +105,3 @@ export default {
    
 }
 </script>
-
-<style scoped>
-  .card-car{
-    margin: auto;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
-</style>
