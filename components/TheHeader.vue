@@ -1,60 +1,29 @@
 <template>
 
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar navbar-expand-lg sticky-top">
+    <a id="logo" href="/">
+      <img id="icon" src="/images/firenze.png" alt="HOME"/>
+    </a>
 
-    <li>
-      <a href="/" id="logo"><img src="/images/firenze.png" alt="HOME" id="icon"/>
-        <span class="sr-only">(current)</span>
-      </a>
-    </li>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
     
-      <ul class="navbar-nav mr-auto">
-        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item active">
-          <nuxt-link :to="navItem.path">
-            {{ navItem.name }}
-          </nuxt-link>
-        </li>
-      </ul>
+      <div id="collapsibleNavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li><a href="/alleventgroupings">EVENTI</a></li>
+            <li><a href="/allpois">PUNTI DI INTERESSE</a></li>
+            <li><a href="/allitineraries">ITINERARI</a></li>
+            <li><a href="/allservicetypes">SERVIZI</a></li>
+            <li><a href="/thetown">LA CITT&Agrave;</a></li>
+          </ul>
     </div>
-
 </nav>
 </template>
 
 <script>
 export default {
   name: 'TheHeader',
-  data() {
-    return {
-      headerList: [
-        {
-          name: 'EVENTI',
-          path: '/alleventgroupings',
-        },
-        {
-          name: 'PUNTI DI INTERESSE',
-          path: '/allpois',
-        },
-        {
-          name: 'ITINERARI',
-          path: '/allitineraries',
-        },
-        {
-          name: 'SERVIZI',
-          path: '/allservicetypes',
-        },
-        {
-          name: 'LA CITTÀ',
-          path: '/thetown',
-        },
-      ],
-    }
-  },
   head() {
     return {
         link: [
@@ -117,6 +86,8 @@ export default {
 
   #logo {
     padding: 5px 0px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-bottom-left-radius: 20px;
     background-color: var(--vanish);
   }
@@ -128,7 +99,7 @@ export default {
 
   nav a {
     display: block;
-    padding: 22px 20px;
+    padding: 22px 10px;
     color: var(--white);
     text-decoration: none;
   }

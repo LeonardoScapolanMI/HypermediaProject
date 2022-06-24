@@ -174,9 +174,6 @@ export default {
 </script>
 
 <style>
-.content {
-  padding: 2em;
-}
 
 #bottone {
   padding: 2em;
@@ -200,14 +197,13 @@ export default {
 }
 
 #load-more {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 20px;
 }
 
 #load-more {
-  color: var(--white);
-  background-color: var(--brown);
-  border: 1px solid var(--green);
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--aqua);
   padding: 5px 50px 5px 50px;
   border-radius: 10px;
   font-size: large;
@@ -215,7 +211,7 @@ export default {
 }
 
 #load-more:hover {
-  color: var(--green);
+  color: var(--aqua);
 }
 
 .loading-icon {

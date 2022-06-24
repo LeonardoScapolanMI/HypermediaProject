@@ -2,7 +2,8 @@
   <div id="wrapper">
     <img
       v-if="content.length > 3 "
-      id="prev-button"
+      id="arrow"
+      class="carousel-control-prev-icon"
       src="/icons/angle-left-solid.svg"
       alt="icona indietro"
       @click="prev"
@@ -28,7 +29,8 @@
 
     <img
       v-if="content.length > 3"
-      id="next-button"
+      id="arrow"
+      class="carousel-control-next-icon"
       alt="icona avanti"
       src="/icons/angle-right-solid.svg"
       @click="next"
@@ -214,6 +216,7 @@ export default {
 </script>
 
 <style scoped>
+
 #wrapper {
   display: flex;
 }
@@ -226,9 +229,11 @@ export default {
   max-width: none;
 }
 
-#prev-button,
-#next-button {
-  filter: var(--green-filter);
-  width: 5%;
+#arrow {
+  margin-top: 180px;
+  padding: 15px 15px;
+  background-color: var(--brown);
+  width: 30px;
 }
+
 </style>

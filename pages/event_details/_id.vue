@@ -3,18 +3,20 @@
       <!-- TITOLO -->
 
         <div class="page-title">
-          <h1>{{name}}</h1> 
+          <h1>{{ name }}</h1> 
           <hr class="subtitle">
           <h4>EVENTO</h4> 
         </div>
 
       <!-- SLIDESHOW -->
 
-      <div class="title-image-container"><SlideShow :images="imagesV" class="title-image" /></div>
-      
+      <div class="title-image-container">
+        <SlideShow :images="imagesV" class="title-image" />
+      </div>
 
       <!-- MAPBOX -->
-
+      
+      <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
                 <div class="col-md-6" >
@@ -35,13 +37,23 @@
                      
             </div> <!-- row -->
 
-        <!-- CARD CAROUSEL --> 
-        
-          
-        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-          
+      <!-- CARD CAROUSEL --> 
 
-        
+      <div v-if="poiList.length > 0" class="page-title">
+        <h3>Punti di interesse correlati</h3>
+        <hr class="separator" />
+        <a href="/allpois" class="poi-button">Tutti i punti di interesse</a>
+        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+      </div>
+
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+      
   </div>
 </template>
 
@@ -51,8 +63,6 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 
-
-
 export default {
   
   name: 'Event',
@@ -60,8 +70,7 @@ export default {
   filters: {
     
    },
-  
-  
+
    async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
@@ -77,8 +86,6 @@ export default {
         description: poi.description,
       })
     }
-
-  
     
     return {
       name: data.name,
@@ -92,6 +99,7 @@ export default {
       
     }
   },
+  fetchOnServer: false, // too see if it's a problem for crawlers
 
 
   
@@ -107,23 +115,18 @@ export default {
 </script>
 
 <style scoped>
-p {
-  display: inline;
+ .poi-button {
+  color: var(--white);
+  background-color: var(--brown);
+  border: 1px solid var(--green);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
 }
-
-.page-title {
-  margin: 30px;
+.poi-button:hover {
+  color: var(--green);
+  text-decoration: none;
 }
-
-.col-md-6 {
-  padding:30px;
-
-}
- 
- .col-md-4 {
-  padding-top: 30px;
- }
-
   .card-car{
     margin: auto;
     width: 100%;

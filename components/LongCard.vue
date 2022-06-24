@@ -93,6 +93,7 @@ export default {
 </script>
 
 <style scoped>
+
 .long-card-container {
   margin: auto;
   margin-top: 30px;
@@ -106,7 +107,6 @@ export default {
   object-position: 50% 50%;
   box-shadow: 5px 5px 10px 5px var(--green);
 }
-
 .long-card:hover {
   box-shadow: 5px 5px 10px 5px var(--green);
 }

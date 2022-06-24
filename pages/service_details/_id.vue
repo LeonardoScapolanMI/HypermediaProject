@@ -60,7 +60,7 @@ export default {
       
     }
   },
-
+  fetchOnServer: false, // too see if it's a problem for crawlers
   data() {
     return {
       nItems:3,

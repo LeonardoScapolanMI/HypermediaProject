@@ -186,7 +186,7 @@ app.get('/serviceType:id', async (req, res) => {
   })
   const servicesRaw = await data.Service.findAll({
     where: {ServiceTypeId : _id},
-    include: [{ model: data.Image}],
+    include: [{ model: data.Image}, {model: data.OpeningHours}],
   })
 
   const ret = {
@@ -204,7 +204,7 @@ app.get('/serviceType:id', async (req, res) => {
       email: element.email,
       adress: element.address,
       image: element.Image,
-      
+      OpeningHours: element.OpeningHours,
     })
   }
   //console.log(filtered)
