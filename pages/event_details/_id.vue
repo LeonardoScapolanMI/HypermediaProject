@@ -27,7 +27,7 @@
             <p v-else> a libera entrata. </p>        
           </div> 
           <div class="col-md-6">
-            <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+            <MapBox v-if="mapurl" :indirizzo="mapurl"/>
           </div>
         </div> <!-- row -->
       </div>

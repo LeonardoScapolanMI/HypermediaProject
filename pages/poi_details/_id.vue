@@ -45,12 +45,12 @@
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-       <div v-if="poiList.length > 0" class="page-title">
+      <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
         <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-      </div> 
+      </div> -->
       
       <!-- BACK UP BUTTON -->
 
@@ -77,11 +77,11 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
-     // const { poiExtra } = await $axios.get('http://api/poi')
+    // const { poiExtra } = await $axios.get('http://api/poi')
 
     const itList = []
     const evList = []
-     const poiList = []
+    /* const poiList = []
     // Get some pois
     for (const poi of data.data.PointOfInterest) {
       poiList.push({
@@ -90,7 +90,7 @@ export default {
         name: poi.name,
        description: poi.description,
       })
-    } 
+    } */
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -117,7 +117,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-       poiList,
+      // poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
