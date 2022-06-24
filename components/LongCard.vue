@@ -1,16 +1,41 @@
 <template>
   <div class="container">
-      <div class="row">
+    <div class="row">
       <div class="col-md-5">
         <div class="long-card-container">
-            <img class="long-card" :src="imageUrl" :alt="imageCaption" />
+          <img class="long-card" :src="imageUrl" :alt="imageCaption" />
         </div>
       </div>
       <div class="col-md-7">
         <h2 class="text-content-title">{{ title }}</h2>
-         <p id="phone"> {{number}}</p>
-        <p id="website"> {{website}} </p>
-        <p id="address"> {{address}} </p>
+        <p id="phone">{{phone}}</p>
+
+        <p id="address">{{address}}</p>
+
+        <div>
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td v-for="opH in  opHours" :key="opH.index">
+                  <p v-if="opH.day===0">Domenica</p>
+                  <p v-if="opH.day===1">Lunedì</p>
+                  <p v-if="opH.day===2">Martedì</p>
+                  <p v-if="opH.day===3">Mercoledì</p>
+                  <p v-if="opH.day===4">Giovedì</p>
+                  <p v-if="opH.day===5">Venerdì</p>
+                  <p v-if="opH.day===6">Sabato</p>
+                </td>
+              </tr>
+              <tr>
+                <td v-for="opH in  opHours" :key="opH.index">{{opH.openingHour}}</td>
+              </tr>
+              <tr>
+                <td v-for="opH in  opHours" :key="opH.index">{{opH.closingHour}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p v-if="opHours.length===0">Aperto 24 ore su 24</p>
+        </div>
       </div>
     </div>
   </div>
@@ -19,13 +44,15 @@
 <script>
 export default {
   name: 'ItemLongCard',
+  
   props: {
-   imageUrl: { type: String, required: true },
-    imageCaption: { type: String, required: true},
-    title: { type: String, required: true},
-    phone: {type: String, required: true},
-    website: {type: String, required: true},
-    address: {type: String, required: true},
+    imageUrl: { type: String, required: true },
+    imageCaption: { type: String, required: true },
+    title: { type: String, required: true },
+    phone: { type: String, required: true },
+    
+    address: { type: String, required: true },
+    opHours: { type: Array, required: true },
   },
   head() {
     return {
@@ -60,6 +87,8 @@ export default {
       ],
     }
   },
+
+ 
 }
 </script>
 
@@ -96,4 +125,7 @@ export default {
   text-overflow: ellipsis;
 }
 
+.col-md-7 {
+  margin-bottom: 70px;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
       <!-- TITOLO -->
 
         <div class="page-title">
@@ -21,16 +21,18 @@
                     <p id="text text-with-line-break">{{overview}}</p>
                     <p> L'evento inizierà il:{{sDate}} </p>
                     <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
+
                     <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
+                    <p v-else> a libera entrata. </p>
                      
             </div> <!-- col -->
            
              
-                <div class="col-md-4" >
-                  <center>
+                
+                  
                 <MapBox v-if="mapurl" :indirizzo="mapurl" class="map"/>
-                  </center>
-            </div>         
+                  
+                     
             </div> <!-- row -->
 
         <!-- CARD CAROUSEL --> 
@@ -91,10 +93,7 @@ export default {
     }
   },
 
-  computed: {
-    
-  },
-  
+
   
   methods: {
     
@@ -131,6 +130,8 @@ p {
     margin-top: 50px;
    margin-bottom: 50px;
   }
+
+
 
 
 </style>
