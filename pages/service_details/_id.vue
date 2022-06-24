@@ -1,6 +1,6 @@
 <template>
   <div class="height">
-    
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -17,7 +17,7 @@
 
     <!-- OVERVIEW -->
 
-    <div class="text-content">
+    <div class="text-center">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
 
@@ -41,7 +41,6 @@
     <button
       v-if="nItems<services.length"
       id="load-more"
-      class="button-style"
       @click="loadMore"
     >
     CARICA ALTRO
@@ -129,6 +128,7 @@ mounted() {
   font-size: large;
   font-weight: bold;
   margin: 20px;
+  text-align: center;
 }
 
 #load-more:hover {

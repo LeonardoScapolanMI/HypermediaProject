@@ -4,7 +4,7 @@
     <!-- TITOLO -->
 
     <div class="page-title">
-      <h1>{{name}}</h1> 
+      <h1>{{ name }}</h1> 
       <hr class="subtitle">
       <h4>PUNTO D'INTERESSE</h4> 
     </div>
@@ -20,7 +20,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p class="text-with-line-break">{{description}}</p>
+            <p class="text-with-line-break">{{ description }}</p>
           </div>
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
@@ -87,7 +87,7 @@ export default {
     //    name: poi.name,
     //    description: poi.description,
      // })
-    //} 
+    // } 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -114,7 +114,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      //poiList,
+      // poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
