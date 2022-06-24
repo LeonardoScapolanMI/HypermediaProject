@@ -103,3 +103,10 @@ hr {
   color: var(--green);
   text-decoration: none;
 }
+
+.card-car{
+  margin: auto;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
