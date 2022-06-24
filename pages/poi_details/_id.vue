@@ -16,7 +16,7 @@
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
-      <h4>PUNTO D'INTERESSE</h4> 
+      <h4>PUNTO DI INTERESSE</h4> 
     </div>
 
     <!-- SLIDESHOW -->
