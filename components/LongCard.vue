@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id='wrapper' class="container">
     <div class="row">
       <div class="col-md-5">
         <div class="long-card-container">
@@ -12,29 +12,31 @@
 
         <p id="address">{{address}}</p>
 
-        <div>
+        <div v-if="horizontal">
           <table class="table table-bordered">
             <tbody>
               <tr>
-                <td v-for="opH in  opHours" :key="opH.index">
-                  <p v-if="opH.day===0">Domenica</p>
-                  <p v-if="opH.day===1">Lunedì</p>
-                  <p v-if="opH.day===2">Martedì</p>
-                  <p v-if="opH.day===3">Mercoledì</p>
-                  <p v-if="opH.day===4">Giovedì</p>
-                  <p v-if="opH.day===5">Venerdì</p>
-                  <p v-if="opH.day===6">Sabato</p>
+                <td v-for="day in  weekDays" :key="'day-' + day.index">
+                  {{ day }}
                 </td>
               </tr>
-              <tr>
-                <td v-for="opH in  opHours" :key="opH.index">{{opH.openingHour}}</td>
-              </tr>
-              <tr>
-                <td v-for="opH in  opHours" :key="opH.index">{{opH.closingHour}}</td>
+              <tr v-for="j in maxOpHours" :key="'row-' + j">
+                <td v-for="(opH, opHIndex) in formattedOpHours" :key="'col-' + opHIndex">{{opH[j-1]}}</td>
               </tr>
             </tbody>
           </table>
-          <p v-if="opHours.length===0">Aperto 24 ore su 24</p>
+        </div>
+        <div v-else>
+          <table class="table table-bordered">
+            <tbody>
+              <tr v-for="(opHRow, opHRowIndex) in formattedOpHours" :key="'row-' + opHRowIndex">
+                <td>
+                  {{ weekDays[opHRowIndex] }}
+                </td>
+                <td v-for="(opH, opHIndex) in opHRow" :key="'col-' + opHIndex">{{opH}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -53,6 +55,45 @@ export default {
     
     address: { type: String, required: true },
     opHours: { type: Array, required: true },
+  },
+  data(){
+    const closedString = 'chiuso'
+
+    const formattedOpHours = [];
+    for(let i=0; i<7; i++){
+      formattedOpHours[i] = [closedString]
+    }
+
+    for(const oh of this.opHours){
+      const i = oh.day
+      const data = oh.openingHour + '-' + oh.closingHour
+      if(formattedOpHours[i][0] === closedString){
+        formattedOpHours[i][0] = data
+      }
+      else{
+        formattedOpHours[i][formattedOpHours[i].length] = data
+      }
+    }
+
+    const maxOpHours = Math.max(...formattedOpHours.map(x => x.length))
+
+    const weekDays = [
+      'Domenica',
+      'Lunedì',
+      'Martedì',
+      'Mercoledì',
+      'Giovedì',
+      'Venerdì',
+      'Sabato',
+    ]
+
+    return{
+      formattedOpHours,
+      weekDays,
+      maxOpHours,
+      horizontal: true,
+    }
+
   },
   head() {
     return {
@@ -87,12 +128,28 @@ export default {
       ],
     }
   },
+mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  methods: {
+    onResize() {
+      const componentWidth = document.getElementById('wrapper').clientWidth
+      // const computedStyle = window.getComputedStyle(document.documentElement)
 
+      this.horizontal = componentWidth > 1180
+    },
+  },
  
 }
 </script>
 
 <style scoped>
+
+#wrapper{
+width: 100% !important;
+max-width: 100% !important;
+}
 
 .long-card-container {
   margin: auto;

@@ -1,12 +1,22 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
+        <li class="breadcrumb-item"><a href="/allservicetypes" id="old">Tutti i tipi di servizio</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="page">{{ name }}</li>
+      </ol>
+    </div>
+
     <!-- TITLE -->
 
     <div class="page-title">
-      <h1>{{name}}</h1>
+      <h1>{{ name }}</h1>
       <hr class="subtitle" />
-      <h4>TYPE OF SERVICES SECTION</h4>
+      <h4>TIPO DI SERVIZIO</h4>
     </div>
 
     <!-- IMMAGINE -->
@@ -46,14 +56,6 @@
       >
       CARICA ALTRO
       </button>
-    </div>
-
-    <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
     </div>
 
   </div>

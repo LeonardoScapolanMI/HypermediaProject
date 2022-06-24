@@ -1,6 +1,16 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
+        <li class="breadcrumb-item"><a href="/allitineraries" id="old">Tutti gli itinerari</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="page">{{ name }}</li>
+      </ol>
+    </div>
+
     <!-- TITOLO -->
 
     <div class="page-title">
@@ -34,17 +44,10 @@
       <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
-        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
+        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
-
-      <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+      
   </div>
 </template>
 

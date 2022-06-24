@@ -1,5 +1,16 @@
 <template>
   <div class="height">
+
+    <!-- BREADCRUMB -->
+        
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">Home</a></li>
+        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="page">Tutti gli eventi</li>
+      </ol>
+    </div>
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -19,14 +30,6 @@
       :no-items-placeholder="'Al momento non ci sono eventi'"
       :error-text="'Impossibile caricare gli eventi'"
     />
-
-     <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
     
   </div>
 </template>

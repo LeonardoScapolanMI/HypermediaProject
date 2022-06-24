@@ -1,12 +1,22 @@
 <template>
     <div class="height">
+
+      <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
+        <li class="breadcrumb-item"><a href="/allpois" id="old">Tutti i punti di interesse</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="page">{{ name }}</li>
+      </ol>
+    </div>
       
     <!-- TITOLO -->
 
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
-      <h4>PUNTO D'INTERESSE</h4> 
+      <h4>PUNTO DI INTERESSE</h4> 
     </div>
 
     <!-- SLIDESHOW -->
@@ -34,31 +44,23 @@
       <div v-if="itList.length > 0" class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
-        <a href="/allitineraries" class="all-button">Tutti gli itinerari</a>
+        <nuxt-link to="/allitineraries" class="all-button">Tutti gli itinerari</nuxt-link>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
-        <a href="/allevents" class="all-button">Tutti gli eventi</a>
+        <nuxt-link to="/allevents" class="all-button">Tutti gli eventi</nuxt-link>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
       <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
-        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
+        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div> -->
-      
-      <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
 
     </div>
 </template>
