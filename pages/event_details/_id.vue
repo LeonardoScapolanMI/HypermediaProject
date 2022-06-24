@@ -22,7 +22,8 @@
       <!-- SLIDESHOW -->
 
       <div class="title-image-container">
-        <SlideShow :images="imagesV" class="title-image" />
+        <img v-if="images.lenght===1" :images="imagesV" class="title-image" />
+        <SlideShow v-if="images.lenght>1" :images="imagesV" class="title-image" />
       </div>
 
       <!-- MAPBOX -->
