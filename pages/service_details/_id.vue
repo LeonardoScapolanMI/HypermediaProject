@@ -39,6 +39,13 @@
     <!-- LOAD MORE -->
     <button @click="loadMore" v-if="nItems<services.length">Load More </button>
 
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a href="#" id="up-button" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
 
   </div>
 </template>
