@@ -1,10 +1,20 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
+        <li class="breadcrumb-item"><a href="/allservicetypes" id="old">Tutti i tipi di servizi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="page">{{ name }}</li>
+      </ol>
+    </div>
+
     <!-- TITLE -->
 
     <div class="page-title">
-      <h1>{{name}}</h1>
+      <h1>{{ name }}</h1>
       <hr class="subtitle" />
       <h4>TYPE OF SERVICES SECTION</h4>
     </div>
