@@ -1,6 +1,5 @@
 <template>
   <div class="height">
-  <div class="container">
 
     <!-- TITLE -->
 
@@ -18,7 +17,7 @@
 
     <!-- OVERVIEW -->
 
-    <div class="text-center">
+    <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
 
@@ -36,18 +35,18 @@
         />
       </div>
     </div>
-  </div>
 
     <!-- LOAD MORE -->
-
-    <button
-      v-if="nItems<services.length"
-      id="load-more"
-      class="text-center"
-      @click="loadMore"
-    >
-    CARICA ALTRO
-    </button>
+    
+    <div class="text-center">
+      <button
+        v-if="nItems<services.length"
+        id="load-more"
+        @click="loadMore"
+      >
+      CARICA ALTRO
+      </button>
+    </div>
 
     <!-- BACK UP BUTTON -->
 

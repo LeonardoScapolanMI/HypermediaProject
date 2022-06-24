@@ -95,7 +95,7 @@ hr {
   color: var(--white);
   background-color: var(--brown);
   border: 1px solid var(--green);
-  padding: 10px 20px 10px 20px;
+  padding: 10px 50px 10px 50px;
   border-radius: 5px;
   font-weight: bold;
 }
