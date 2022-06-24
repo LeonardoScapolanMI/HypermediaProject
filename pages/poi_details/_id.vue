@@ -35,22 +35,22 @@
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
         <a href="/allitineraries" class="all-button">Tutti gli itinerari</a>
-        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
+        <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
         <a href="/allevents" class="all-button">Tutti gli eventi</a>
-        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
+        <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-      <!-- <div v-if="poiList.length > 0" class="page-title">
+       <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
         <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
-        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-      </div> -->
+        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+      </div> 
       
       <!-- BACK UP BUTTON -->
 
@@ -77,11 +77,11 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
-    // const { poiExtra } = await $axios.get('http://api/poi')
+     // const { poiExtra } = await $axios.get('http://api/poi')
 
     const itList = []
     const evList = []
-    /* const poiList = []
+     const poiList = []
     // Get some pois
     for (const poi of data.data.PointOfInterest) {
       poiList.push({
@@ -90,7 +90,7 @@ export default {
         name: poi.name,
        description: poi.description,
       })
-    } */
+    } 
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -117,7 +117,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      // poiList,
+       poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

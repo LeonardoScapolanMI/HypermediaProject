@@ -35,7 +35,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
                 :title="item.name"
                 :description="item.description"
                 @onSeeDetails="
-                  $router.push('/' + detailsPageFolder + item.id)
+                  $router.push('/' + detailsPageFolder + '/' + item.id)
                 "
               />
             </div>
