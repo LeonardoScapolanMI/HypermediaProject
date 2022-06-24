@@ -4,7 +4,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Farmacie',
-      introduction: 'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
         'Ecco un elenco delle farmacie disponibili sul terrritorio.',
     },
     services: [
@@ -201,7 +202,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Bar e Ristoranti',
-      introduction: 'Questa sezione offre una guida per i servizi di ristoro offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi di ristoro offerti dalla città di Firenze.\n' +
         'Ecco un elenco dei migliori bar e ristoranti disponibili sul terrritorio.',
     },
     services: [
@@ -613,7 +615,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Discoteche',
-      introduction: 'Questa sezione offre una guida per i servizi di vita notturna offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi di vita notturna offerti dalla città di Firenze.\n' +
         'Ecco un elenco delle discoteche più moderne e popolari del terrritorio.',
     },
     services: [
@@ -767,7 +770,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Hotel',
-      introduction: 'Questa sezione offre una guida per i servizi di alloggio offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi di alloggio offerti dalla città di Firenze.\n' +
         'Ecco un elenco dei migliori alberghi disponibili sul terrritorio.',
     },
     services: [
@@ -778,7 +782,57 @@ const serviceTypes = [
           website: 'https://www.palazzodeiconti.com/',
           address: 'Via dei Conti, 5, 50123 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: "/images/serviceType/Hotel/Palazzo dei Conti Residenza d'Epoca/0.jpg",
@@ -794,7 +848,57 @@ const serviceTypes = [
             'https://www.hotel-bb.com/it/hotel/firenze-pitti-palace-al-ponte-vecchio?utm_source=googlemaps&utm_medium=fichehotel&utm_campaign=Firenze_Pitti',
           address: 'Borgo S. Jacopo, 3/R, 50125 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Hotel/Hotel Pitti Palace al Ponte Vecchio/0.jpg',
@@ -809,7 +913,57 @@ const serviceTypes = [
           website: 'https://www.hotelambasciatori.net/it/index.html',
           address: 'Via Luigi Alamanni, 3, 50123 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Hotel/Ambasciatori Hotel/0.jpg',
@@ -824,7 +978,57 @@ const serviceTypes = [
           website: 'https://numastays.com/locations/rodo',
           address: 'Via dei Calzaiuoli, 13 NERO, 50122 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Hotel/numa  Rodo Rooms & Apartments/0.jpg',
@@ -839,7 +1043,57 @@ const serviceTypes = [
           website: 'https://yellowsquare.it/florence/',
           address: 'Viale Francesco Redi, 19, 50144 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Hotel/YellowSquare Florence/0.jpg',
@@ -858,7 +1112,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Ospedali e Cliniche',
-      introduction: 'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi sanitari offerti dalla città di Firenze.\n' +
         'Ecco un elenco degli ospedali e delle cliniche disponibili sul terrritorio.',
     },
     services: [
@@ -869,7 +1124,57 @@ const serviceTypes = [
           website: 'https://www.aou-careggi.toscana.it/',
           address: 'Largo Giovanni Alessandro Brambilla, 3, 50134 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Ospedali e Cliniche/Azienda Ospedaliero Universitaria Careggi/0.jpg',
@@ -884,7 +1189,57 @@ const serviceTypes = [
           website: 'http://www.uslcentro.toscana.it/',
           address: 'PIAZZA DI SANTA MARIA NUOVA, 1, 50122 Firenze FI',
         },
-        openingHours: [],
+        openingHours: [
+          {
+            basicData: {
+              day: 0,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 1,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 2,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 3,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 4,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 5,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+          {
+            basicData: {
+              day: 6,
+              openingHour: '00:00',
+              closingHour: '24:00',
+            },
+          },
+        ],
         image: {
           basicData: {
             URL: '/images/serviceType/Ospedali e Cliniche/Ospedale Santa Maria Nuova/0.jpg',
@@ -954,7 +1309,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Negozi',
-      introduction: 'Questa sezione offre una guida per lo shopping nella città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per lo shopping nella città di Firenze.\n' +
         'Ecco un elenco di negozi disponibili sul terrritorio per ogni ogni tipo di necessità.',
     },
     services: [
@@ -1199,7 +1555,8 @@ const serviceTypes = [
   {
     basicData: {
       name: 'Banche',
-      introduction: 'Questa sezione offre una guida per i servizi finanziari offerti dalla città di Firenze.\n' +
+      introduction:
+        'Questa sezione offre una guida per i servizi finanziari offerti dalla città di Firenze.\n' +
         'Ecco un elenco delle banche disponibili sul terrritorio.',
     },
     services: [
@@ -1285,7 +1642,7 @@ const serviceTypes = [
         image: {
           basicData: {
             URL: '/images/serviceType/Banche/Cassa di Risparmio di Lucca Pisa Livorno/0.jpg',
-            caption: 'Logo dell\'istituto bancario',
+            caption: "Logo dell'istituto bancario",
           },
         },
       },
@@ -1372,7 +1729,7 @@ const serviceTypes = [
         image: {
           basicData: {
             URL: '/images/serviceType/Banche/Banco Desio/0.jpg',
-            caption: 'Logo dell\'istituto bancario',
+            caption: "Logo dell'istituto bancario",
           },
         },
       },
@@ -1458,7 +1815,7 @@ const serviceTypes = [
         image: {
           basicData: {
             URL: '/images/serviceType/Banche/Banche Banca Ifigest Spa/0.jpg',
-            caption: 'Logo dell\'istituto bancario',
+            caption: "Logo dell'istituto bancario",
           },
         },
       },
