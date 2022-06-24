@@ -42,7 +42,7 @@
       <button
         v-if="nItems<services.length"
         id="load-more"
-        @click="loadMore"
+        @click="loadMore()"
       >
       CARICA ALTRO
       </button>

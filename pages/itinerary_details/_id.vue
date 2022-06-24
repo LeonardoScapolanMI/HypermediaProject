@@ -35,7 +35,7 @@
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
         <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
-        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details'+id)"/>
       </div>
 
       <!-- BACK UP BUTTON -->
