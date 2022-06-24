@@ -16,21 +16,12 @@
           <table class="table table-bordered">
             <tbody>
               <tr>
-                <td v-for="opH in  opHours" :key="opH.index">
-                  <p v-if="opH.day===0">Domenica</p>
-                  <p v-if="opH.day===1">Lunedì</p>
-                  <p v-if="opH.day===2">Martedì</p>
-                  <p v-if="opH.day===3">Mercoledì</p>
-                  <p v-if="opH.day===4">Giovedì</p>
-                  <p v-if="opH.day===5">Venerdì</p>
-                  <p v-if="opH.day===6">Sabato</p>
+                <td v-for="day of  weekDays" :key="day.index">
+                  <p>{{ day }}</p>
                 </td>
               </tr>
               <tr>
-                <td v-for="opH in  opHours" :key="opH.index">{{opH.openingHour}}</td>
-              </tr>
-              <tr>
-                <td v-for="opH in  opHours" :key="opH.index">{{opH.closingHour}}</td>
+                <td v-for="opH of formattedOpHours" :key="opH.index">{{opH}}</td>
               </tr>
             </tbody>
           </table>
@@ -53,6 +44,40 @@ export default {
     
     address: { type: String, required: true },
     opHours: { type: Array, required: true },
+  },
+  data(){
+    const closedString = 'chiuso'
+
+    const formattedOpHours = [];
+    for(let i=0; i<7; i++){
+      formattedOpHours[i] = closedString
+    }
+
+    for(const oh of this.opHours){
+      const i = oh.day
+      if(formattedOpHours[i] === closedString){
+        formattedOpHours[i] = oh.openingHour + '-' + oh.closingHour
+      }
+      else{
+        formattedOpHours[i] += ' ' + oh.openingHour + '-' + oh.closingHour
+      }
+    }
+
+    const weekDays = [
+      'Domenica',
+      'Lunedì',
+      'Martedì',
+      'Mercoledì',
+      'Giovedì',
+      'Venerdì',
+      'Sabato',
+    ]
+
+    return{
+      formattedOpHours,
+      weekDays,
+    }
+
   },
   head() {
     return {
