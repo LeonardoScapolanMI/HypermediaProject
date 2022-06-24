@@ -49,7 +49,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
               class="button-style"
               @click="loadMore()"
             >
-              CARICA ALTRI
+              CARICA ALTRO
             </button>
             <loading-icon
               v-if="state === ListState.MoreLoading"

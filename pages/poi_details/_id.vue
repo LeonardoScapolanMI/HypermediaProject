@@ -1,13 +1,13 @@
 <template>
     <div class="height">
       
-        <!-- TITOLO -->
+    <!-- TITOLO -->
 
-        <div class="page-title">
-          <h1>{{name}}</h1> 
-          <hr class="subtitle">
-          <h4>PUNTO D'INTERESSE</h4> 
-        </div>
+    <div class="page-title">
+      <h1>{{name}}</h1> 
+      <hr class="subtitle">
+      <h4>PUNTO D'INTERESSE</h4> 
+    </div>
 
     <!-- SLIDESHOW -->
 

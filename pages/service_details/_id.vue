@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="height">
+    
     <!-- TITLE -->
 
     <div class="page-title">
@@ -11,14 +12,13 @@
     <!-- IMMAGINE -->
 
     <div class="title-image-container">
-      
-        <img :src="images[0].URL" id="imageserv" :alt="images[0].caption" />
-      
+      <img :src="images[0].URL" id="imageserv" :alt="images[0].caption" />
     </div>
 
     <!-- OVERVIEW -->
-    <div class="text-center">
-      <p id="text text-with-line-break">{{ description }}</p>
+
+    <div class="text-content">
+      <p class="text-with-line-break">{{ description }}</p>
     </div>
 
     <!-- LONG CARDS -->
@@ -37,7 +37,15 @@
     </div>
 
     <!-- LOAD MORE -->
-    <button @click="loadMore" v-if="nItems<services.length">Load More </button>
+
+    <button
+      v-if="nItems<services.length"
+      id="load-more"
+      class="button-style"
+      @click="loadMore"
+    >
+    CARICA ALTRO
+    </button>
 
     <!-- BACK UP BUTTON -->
 

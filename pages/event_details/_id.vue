@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="height">
 
       <!-- TITOLO -->
 
@@ -105,18 +105,18 @@ export default {
 </script>
 
 <style scoped>
- .poi-button {
-  color: var(--white);
-  background-color: var(--brown);
-  border: 1px solid var(--green);
-  padding: 10px 20px 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.poi-button:hover {
-  color: var(--green);
-  text-decoration: none;
-}
+  .poi-button {
+    color: var(--white);
+    background-color: var(--brown);
+    border: 1px solid var(--green);
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .poi-button:hover {
+    color: var(--green);
+    text-decoration: none;
+  }
   .card-car{
     margin: auto;
     width: 100%;
