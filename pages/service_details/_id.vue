@@ -35,8 +35,11 @@
         />
       </div>
     </div>
-    <button @click="loadMore" v-if="nItems<services.length">
-      Load More </button>
+
+    <!-- LOAD MORE -->
+    <button @click="loadMore" v-if="nItems<services.length">Load More </button>
+
+
   </div>
 </template>
 
@@ -91,7 +94,30 @@ mounted() {
   aspect-ratio: 9/4;
 }
 .content{
-  margin:30px;
+  margin: auto;
+  width: 92% !important;
+}
+
+.no-content {
+  color: #414535 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  pointer-events: none;
+}
+
+#load-more {
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--aqua);
+  padding: 5px 50px 5px 50px;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#load-more:hover {
+  color: var(--aqua);
 }
 
 </style>

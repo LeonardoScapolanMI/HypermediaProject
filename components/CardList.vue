@@ -197,10 +197,6 @@ export default {
 }
 
 #load-more {
-  margin: 20px;
-}
-
-#load-more {
   color: var(--blue);
   background-color: var(--white);
   border: 1px solid var(--aqua);
@@ -208,6 +204,7 @@ export default {
   border-radius: 10px;
   font-size: large;
   font-weight: bold;
+  margin: 20px;
 }
 
 #load-more:hover {
