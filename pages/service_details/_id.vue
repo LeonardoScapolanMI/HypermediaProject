@@ -22,7 +22,7 @@
     </div>
 
     <!-- LONG CARDS -->
-
+  <div class="container">
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
         <long-card
@@ -35,6 +35,7 @@
         />
       </div>
     </div>
+  </div>
 
     <!-- LOAD MORE -->
 
