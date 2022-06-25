@@ -245,14 +245,14 @@ export default {
 .welcome {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
-  height: 500px;
+  height: 550px;
   margin-bottom: 70px;
 }
 
 .title {
   color: var(--brown);
   font-weight: bold;
-  padding-top: 400px;
+  padding-top: 420px;
   text-align: center;
 }
 

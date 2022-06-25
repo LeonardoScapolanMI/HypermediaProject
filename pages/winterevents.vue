@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Eventi invernali"/>
+
     <!-- TITLE -->
 
     <div class="page-title">

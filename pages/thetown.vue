@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="La città"/>
+
     <!-- TITLE -->
 
     <div class="page-title">

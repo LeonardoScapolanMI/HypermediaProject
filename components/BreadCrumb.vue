@@ -16,9 +16,12 @@
       typeof="ListItem"
     >
       <NLink property="item" typeof="WebPage" :to="crumb.path">
-        <span property="name">{{
-          $route.fullPath === crumb.path && title !== null ? title : crumb.title
-        }}</span>
+        <span 
+          v-if="$route.fullPath === crumb.path && title !== null ? title : crumb.title"
+          property="name"
+        >
+        {{ title }}
+        </span>
       </NLink>
       <meta property="position" :content="index + 2" />
     </li>

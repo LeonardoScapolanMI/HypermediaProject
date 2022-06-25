@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb :title="name"/>
+
     <!-- TITOLO -->
 
     <div class="page-title">

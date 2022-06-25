@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Tutti i gruppi di evento"/>
+
     <!-- IMMAGINI -->
 
           <div class="container">

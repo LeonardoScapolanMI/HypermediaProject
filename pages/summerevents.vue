@@ -1,5 +1,9 @@
 <template>
   <div class="height">
+
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Eventi estivi"/>
     
     <!-- TITLE -->
 
@@ -20,6 +24,7 @@
     </div>
 
     <!-- CARDS -->
+
     <card-list
       :endpoint="'/api/event/summer'"
       :details-page-folder="'event_details'"

@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Tutti gli eventi"/>
+
     <!-- TITLE -->
 
     <div class="page-title">
