@@ -50,9 +50,10 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="evURL" 
-            alt="evCaption"
-            to="evPath">
+            class="long-image"
+            :src="evURL" 
+            :alt="evCaption"
+            :to="evPath">
           </nuxt-link>
         </div>
       </div>
@@ -85,9 +86,10 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="poiURL" 
-            alt="poiCaption"
-            to="poiPath">
+            class="long-image"
+            :src="poiURL" 
+            :alt="poiCaption"
+            :to="poiPath">
           </nuxt-link>
         </div>
       </div>
@@ -102,9 +104,10 @@
         <div class="long-image-container"> 
           <nuxt-link 
             tag="img" 
-            src="itURL" 
-            alt="itCaption"
-            to="itPath">
+            class="long-image"
+            :src="itURL" 
+            :alt="itCaption"
+            :to="itPath">
           </nuxt-link>
         </div>
       </div>
@@ -137,9 +140,10 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="serURL" 
-            alt="serCaption"
-            to="serPath">
+            class="long-image"
+            :src="serURL" 
+            :alt="serCaption"
+            :to="serPath">
           </nuxt-link>
          </div>
         </div>

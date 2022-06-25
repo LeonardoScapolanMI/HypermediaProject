@@ -1,15 +1,6 @@
 <template>
   <div class="height">
 
-    <!-- BREADCRUMB -->
-        
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="page">Tutti i punti di interesse</li>
-      </ol>
-    </div>
-
     <!-- TITLE -->
 
     <div class="page-title">
