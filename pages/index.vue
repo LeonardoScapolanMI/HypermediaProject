@@ -42,7 +42,7 @@
 
   <!-- LONG CARDS -->
 
-  <hr class="separator" id="ev"/>
+  <hr id="ev" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -69,7 +69,7 @@
     </div>
   </div>
 
-  <hr class="separator" id="poi"/>
+  <hr id="poi" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -96,7 +96,7 @@
     </div>
   </div>
   
-  <hr class="separator" id="it"/>
+  <hr id="it" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -123,7 +123,7 @@
     </div>
   </div>
 
-  <hr class="separator" id="ser"/>
+  <hr id="ser" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -153,7 +153,7 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <nuxt-link to="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </nuxt-link>
     </div>

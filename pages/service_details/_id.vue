@@ -16,7 +16,7 @@
     <!-- IMMAGINE -->
 
     <div class="title-image-container">
-      <img :src="images[0].URL" id="imageserv" :alt="images[0].caption" />
+      <img id="imageserv" :src="images[0].URL" :alt="images[0].caption" />
     </div>
 
     <!-- OVERVIEW -->

@@ -3,7 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="La città"/>
+    <BreadCrumb title="La città di Firenze"/>
 
     <!-- TITLE -->
 
@@ -49,7 +49,7 @@
      <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <nuxt-link to="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </nuxt-link>
     </div>
