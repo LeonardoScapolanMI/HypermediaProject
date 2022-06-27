@@ -406,6 +406,8 @@ async function initializeDatabase() {
 
   if (process.env.RESET_DB) ret.SyncDatabase = syncDatabase
 
+  ret.randomOrder = () => database.random()
+
   return ret
 }
 
