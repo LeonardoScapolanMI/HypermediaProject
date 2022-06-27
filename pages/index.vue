@@ -42,15 +42,19 @@
 
   <!-- LONG CARDS -->
 
-  <hr class="separator" id="ev"/>
+  <hr id="ev" class="separator"/>
 
   <div class="home-container">
     <div class="row">
       <div class="col-md-7">
         <div class="long-image-container">
-          <a href="/allevents">
-            <img class="long-image" :src="evURL" :alt="evCaption" />
-          </a>
+          <nuxt-link 
+            tag="img" 
+            class="long-image"
+            :src="evURL" 
+            :alt="evCaption"
+            :to="evPath">
+          </nuxt-link>
         </div>
       </div>
       <div class="col-md-5">
@@ -58,14 +62,14 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <div class="button-container">
-            <a href="/allevents" class="home-button">Tutti gli eventi</a>
+            <nuxt-link :to="itPath" class="home-button">Tutti gli eventi</nuxt-link>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" id="poi"/>
+  <hr id="poi" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -74,29 +78,37 @@
           <h3 class="text-content-title">{{ poiTitle }}</h3>
           <p class="text-with-line-break">{{ poiText }}</p>
           <div class="button-container">
-            <a href="/allpois" class="home-button">Tutti i punti di interesse</a>
+            <nuxt-link :to="itPath" class="home-button">Tutti i punti di interesse</nuxt-link>
           </div>
         </div>
       </div>
       <div class="col-md-7">
         <div class="long-image-container">
-          <a href="/allpois">
-            <img class="long-image" :src="poiURL" :alt="poiCaption" />
-          </a>
+          <nuxt-link 
+            tag="img" 
+            class="long-image"
+            :src="poiURL" 
+            :alt="poiCaption"
+            :to="poiPath">
+          </nuxt-link>
         </div>
       </div>
     </div>
   </div>
   
-  <hr class="separator" id="it"/>
+  <hr id="it" class="separator"/>
 
   <div class="home-container">
     <div class="row">
       <div class="col-md-7">
         <div class="long-image-container"> 
-          <a href="/allitineraries">
-            <img class="long-image" :src="itURL" :alt="itCaption" />
-          </a>
+          <nuxt-link 
+            tag="img" 
+            class="long-image"
+            :src="itURL" 
+            :alt="itCaption"
+            :to="itPath">
+          </nuxt-link>
         </div>
       </div>
       <div class="col-md-5">
@@ -104,14 +116,14 @@
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
           <div class="button-container">
-            <a href="/allitineraries" class="home-button">Tutti gli itinerari</a>
+            <nuxt-link :to="itPath" class="home-button">Tutti gli itinerari</nuxt-link>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="separator" id="ser"/>
+  <hr id="ser" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -120,15 +132,19 @@
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
           <div class="button-container">
-            <a href="/allservicetypes" class="home-button">Tutti i tipi di servizio</a>
+            <nuxt-link :to="serPath" class="home-button">Tutti i tipi di servizio</nuxt-link>
           </div>
         </div>
       </div>
       <div class="col-md-7">
         <div class="long-image-container">
-          <a href="/allservicetypes">
-            <img class="long-image" :src="serURL" :alt="serCaption" />
-          </a>
+          <nuxt-link 
+            tag="img" 
+            class="long-image"
+            :src="serURL" 
+            :alt="serCaption"
+            :to="serPath">
+          </nuxt-link>
          </div>
         </div>
       </div>
@@ -137,9 +153,9 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
-      </a>
+      </nuxt-link>
     </div>
     
   </div>
@@ -200,21 +216,25 @@ export default {
       evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
       evText: 'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare.\n'
               + 'Consulta la guida e scopri quale evento fa al caso tuo.',
+      evPath: '/allevents',
       poiURL: '/images/home/cards/poi.jpg',
       poiCaption: 'Cattedrale di Santa Maria del Fiore',
       poiTitle: 'Dai luoghi più famosi a quelli più segreti.',
       poiText: 'Lasciati ispirare e travolgere dai punti di interesse che caratterizzano la città. Durante la tua permanenza goditi le meraviglie di Firenze da quelle più rinomate a quelle più innovative.\n'
                 + 'Consulta la guida e segli cosa vedere prima.',
+      poiPath: '/allpois',
       itURL: '/images/home/cards/it.jpg',
       itCaption: 'Panorama della città',
       itTitle: 'Un tour della città ricco di sorpese.',
       itText: 'Grazie ai migliori itinerari della città avrai la possibilità di vedere tutti i luoghi di tuo interesse e di partecipare a tutti gli eventi che ti coinvolgono maggiormente senza perdere tempo.\n'
               + 'Consulta la guida e scopri quale sarà il tuo itinerario.',
+      itPath: '/allitineraries',
       serURL: '/images/home/cards/ser.jpg',
       serCaption: 'Servizio di ristoro',
       serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText: 'Approfitta della grande offerta si servizi di ogni tipo disponibili in città tra cui ospedali, cliniche e farmacie, ma anche bar, ristoranti e locali notturni. \n'
-                + 'Consulta la guida per trovare il servizio di cui necessiti.'
+                + 'Consulta la guida per trovare il servizio di cui necessiti.',
+      serPath: '/allservicetypes',
     }
   },
 }
@@ -225,14 +245,14 @@ export default {
 .welcome {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
-  height: 500px;
+  height: 550px;
   margin-bottom: 70px;
 }
 
 .title {
   color: var(--brown);
   font-weight: bold;
-  padding-top: 400px;
+  padding-top: 420px;
   text-align: center;
 }
 

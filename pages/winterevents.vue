@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Eventi invernali"/>
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -26,14 +30,6 @@
       :no-items-placeholder="'Al momento non ci sono eventi invernali'"
       :error-text="'Impossibile caricare gli eventi'"
     />
-
-     <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
     
   </div>
 </template>

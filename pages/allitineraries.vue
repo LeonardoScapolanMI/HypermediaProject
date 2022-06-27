@@ -1,5 +1,9 @@
 <template>
   <div class="height">
+
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Tutti gli itinerari"/>
     
     <!-- TITLE -->
 
@@ -27,14 +31,6 @@
       :no-items-placeholder="'Al momento non ci sono itinerari'" 
       :error-text="'Impossibile caricare gli itinerari'"
     />
-
-    <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
     
   </div>
 </template>

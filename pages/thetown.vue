@@ -1,6 +1,10 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="La città di Firenze"/>
+
     <!-- TITLE -->
 
     <div class="page-title">
@@ -45,9 +49,9 @@
      <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
-      </a>
+      </nuxt-link>
     </div>
 
   </div>

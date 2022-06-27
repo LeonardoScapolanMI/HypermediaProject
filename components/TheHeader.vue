@@ -1,22 +1,27 @@
 <template>
 
 <nav class="navbar navbar-expand-lg sticky-top">
-    <a id="logo" href="/">
-      <img id="icon" src="/images/firenze.png" alt="HOME"/>
-    </a>
+  <div id="logo">
+    <nuxt-link 
+      tag="img" 
+      id="icon"
+      src="/images/firenze.png"
+      alt="HOME"
+      to="/">
+    </nuxt-link>
+  </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li><a href="/alleventgroupings">EVENTI</a></li>
-            <li><a href="/allpois">PUNTI DI INTERESSE</a></li>
-            <li><a href="/allitineraries">ITINERARI</a></li>
-            <li><a href="/allservicetypes">SERVIZI</a></li>
-            <li><a href="/thetown">LA CITT&Agrave;</a></li>
-          </ul>
+        <ul class="navbar-nav mr-auto">
+          <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
+            <nuxt-link :to="navItem.path">{{ navItem.name }}</nuxt-link>
+          </li>
+        </ul>
+
     </div>
 </nav>
 </template>
@@ -24,6 +29,32 @@
 <script>
 export default {
   name: 'TheHeader',
+  data() {
+    return {
+      headerList: [
+        {
+          name: 'EVENTI',
+          path: '/alleventgroupings',
+        },
+        {
+          name: 'PUNTI DI INTERESSE',
+          path: '/allpois',
+        },
+        {
+          name: 'ITINERARI',
+          path: '/allitineraries',
+        },
+        {
+          name: 'SERVIZI',
+          path: '/allservicetypes',
+        },
+        {
+          name: 'LA CITTÀ',
+          path: '/thetown',
+        },
+      ],
+    }
+},
   head() {
     return {
         link: [

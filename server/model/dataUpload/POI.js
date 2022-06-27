@@ -486,7 +486,7 @@ const events = [
       {
         basicData: {
           URL: '/images/event/Negramaro Unplugged European Tour 2022/2.jpg',
-          caption: 'Foto del cantante',
+          caption: 'Foto del gruppo',
         },
       },
     ],
@@ -544,7 +544,13 @@ const events = [
       {
         basicData: {
           URL: '/images/event/I Giardini di Firenze/1.jpg',
-          caption: 'Parte della mostra',
+          caption: 'Luogo dell\'evento',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/I Giardini di Firenze/2.jpg',
+          caption: 'Luogo dell\'evento',
         },
       },
     ],
@@ -578,12 +584,6 @@ const events = [
           caption: 'Parte della mostra',
         },
       },
-      {
-        basicData: {
-          URL: '/images/event/Mostra su Koen Vanmechelen/3.jpg',
-          caption: 'Parte della mostra',
-        },
-      },
     ],
   },
   {
@@ -606,6 +606,18 @@ const events = [
         basicData: {
           URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/0.jpg',
           caption: 'L’effigie in bronzo di Daniele da Volterra',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/1.jpg',
+          caption: 'Sala espositiva',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/2.jpg',
+          caption: 'Collezione di busti',
         },
       },
     ],
@@ -661,7 +673,13 @@ const events = [
       {
         basicData: {
           URL: '/images/event/Mercato dell\'antiquariato/1.jpg',
-          caption: 'Un grammofono e altri articoli',
+          caption: 'Una bancarella',
+        },
+      },
+      {
+        basicData: {
+          URL: '/images/event/Mercato dell\'antiquariato/2.jpg',
+          caption: 'Alcune delle bancarelle',
         },
       },
     ],
@@ -685,7 +703,7 @@ const events = [
       {
         basicData: {
           URL: '/images/event/All Star Game Firenze/0.jpg',
-          caption: 'Logo dell\'evento',
+          caption: 'Evento dall\'alto',
         },
       },
       {
@@ -696,8 +714,8 @@ const events = [
       },
       {
         basicData: {
-          URL: '/images/event/All Star Game Firenze/2.jpeg',
-          caption: 'Evento dall\'alto',
+          URL: '/images/event/All Star Game Firenze/2.jpg',
+          caption: 'Partita di pallavolo',
         },
       },
     ],

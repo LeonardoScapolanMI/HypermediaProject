@@ -1,5 +1,9 @@
 <template>
   <div class="height">
+
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb title="Tutti i tipi di servizio"/>
     
     <!-- TITLE -->
 
@@ -10,7 +14,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <p class="text-with-line-break ">{{ description }}</p>
+      <p class="text-with-line-break">{{ description }}</p>
     </div>
 
     <!-- CARDS -->
@@ -21,14 +25,6 @@
       :no-items-placeholder="'Al momento non ci sono tipi di servizio'"
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
-
-  <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
 
     </div>
 </template>

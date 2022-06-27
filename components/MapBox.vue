@@ -53,14 +53,17 @@ export default {
 <style scoped>
 
   .mapbox{
-    width: 100%;
-    margin: auto;
+   
+    margin:auto;
   }
 
     #map {
     display: flex;
     justify-content: center;
-	  margin: auto;
+    height: 100vmin;
+	  width: 100vmin;
+	  margin:auto;
+    margin-bottom: 30px;
     border: 0px;
     width: 100%;
     height: 300px;

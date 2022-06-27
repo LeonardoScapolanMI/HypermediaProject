@@ -1,19 +1,26 @@
 <template>
   <div class="height">
 
+    <!-- BREADCRUMB -->
+
+    <BreadCrumb :title="name"/>
+
     <!-- TITOLO -->
 
-        <div class="page-title">
-          <h1>{{name}}</h1> 
-          <hr class="subtitle">
-          <h4>ITINERARIO</h4> 
-        </div>
+    <div class="page-title">
+      <h1>{{name}}</h1> 
+      <hr class="subtitle">
+      <h4>ITINERARIO</h4> 
+    </div>
 
-    
-      <div class="title-image-container">
-        <img :src="image.URL" :alt="image.caption" class="title-image"/>
-      </div>
+    <!-- IMAGE -->
+
+    <div class="title-image-container">
+      <img :src="image.URL" :alt="image.caption" class="title-image"/>
+    </div>
   
+    <!-- MAPBOX -->
+
     <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -21,7 +28,7 @@
         <p class="text-with-line-break ">{{ overview }}</p>
       </div>
       <div class="col-md-6">
-          <MapBox v-if="mapURL" :indirizzo="mapURL"/>
+        <MapBox v-if="mapURL" :indirizzo="mapURL"/>
       </div>
     </div>
     </div>
@@ -31,16 +38,10 @@
       <div v-if="poiList.length > 0" class="page-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
-        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
+        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
-
-      <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+      
   </div>
 </template>
 

@@ -1,13 +1,17 @@
 <template>
     <div class="height">
-      
-        <!-- TITOLO -->
 
-        <div class="page-title">
-          <h1>{{name}}</h1> 
-          <hr class="subtitle">
-          <h4>PUNTO D'INTERESSE</h4> 
-        </div>
+      <!-- BREADCRUMB -->
+
+    <BreadCrumb :title="name"/>
+      
+    <!-- TITOLO -->
+
+    <div class="page-title">
+      <h1>{{ name }}</h1> 
+      <hr class="subtitle">
+      <h4>PUNTO DI INTERESSE</h4> 
+    </div>
 
     <!-- SLIDESHOW -->
 
@@ -20,11 +24,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p class="text-with-line-break">{{description}}</p>
+            <p class="text-with-line-break">{{ description }}</p>
           </div>
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-                <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
+            <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
         </div> <!-- row -->
        </div>
@@ -34,28 +38,23 @@
       <div v-if="itList.length > 0" class="page-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
-        <CardCarousel :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/' + id)"/>
+        <nuxt-link to="/allitineraries" class="all-button">Tutti gli itinerari</nuxt-link>
+        <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="page-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
-        <CardCarousel :content="evList" @onSeeDetails="(id) => $router.push('/event_details/' + id)"/>
+        <nuxt-link to="/allevents" class="all-button">Tutti gli eventi</nuxt-link>
+        <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-     <div v-if="poiList.length > 0" class="page-title">
+      <!-- <div v-if="poiList.length > 0" class="page-title">
         <h3>Altri punti di interesse</h3>
         <hr class="separator" />
-        <CardCarousel :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/' + id)"/>
-      </div>
-      
-      <!-- BACK UP BUTTON -->
-
-    <div class="dropup">
-      <a href="#" id="up-button" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
+        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
+      </div> -->
 
     </div>
 </template>
@@ -78,16 +77,16 @@ export default {
 
     const itList = []
     const evList = []
-    const poiList = []
+    /* const poiList = []
     // Get some pois
-    for (const poi of data.PointsOfInterest) {
+    for (const poi of data.data.PointOfInterest) {
       poiList.push({
-      id: poi._id,
-      image: poi.Images[0],
-      name: poi.name,
-      description: poi.description,
+        id: poi._id,
+        image: poi.Images[0],
+        name: poi.name,
+       description: poi.description,
       })
-    } 
+    } */
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -114,7 +113,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      poiList,
+      // poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
@@ -125,12 +124,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  .card-car{
-    margin: auto;
-    width: 100%;
-    margin-bottom: 1.5em;
-  }
-
-</style>
