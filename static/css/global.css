@@ -73,7 +73,7 @@ hr {
 
 .separator {
   max-width: 92%;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .subtitle {
@@ -111,7 +111,7 @@ hr {
 }
 
 .all-button:hover {
-  color: var(--green);
+  color: var(--beige);
   text-decoration: none;
 }
 

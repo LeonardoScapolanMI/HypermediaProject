@@ -1,5 +1,3 @@
-<head rel="icon" type="img/jpg" href="/images/icon.jpg"></head> 
-
 <template>
   <div>
 
@@ -50,12 +48,9 @@
     <div class="row">
       <div class="col-md-7">
         <div class="long-image-container">
-          <nuxt-link 
-            tag="img" 
-            class="long-image"
-            :src="evURL" 
-            :alt="evCaption"
-            :to="evPath">
+          <a :href="evPath">
+            <img class="long-image" :src="evURL" :alt="evCaption" />
+          </a>
           </nuxt-link>
         </div>
       </div>
@@ -86,13 +81,9 @@
       </div>
       <div class="col-md-7">
         <div class="long-image-container">
-          <nuxt-link 
-            tag="img" 
-            class="long-image"
-            :src="poiURL" 
-            :alt="poiCaption"
-            :to="poiPath">
-          </nuxt-link>
+          <a :href="poiPath">
+            <img class="long-image" :src="poiURL" :alt="poiCaption" />
+          </a>
         </div>
       </div>
     </div>
@@ -104,13 +95,9 @@
     <div class="row">
       <div class="col-md-7">
         <div class="long-image-container"> 
-          <nuxt-link 
-            tag="img" 
-            class="long-image"
-            :src="itURL" 
-            :alt="itCaption"
-            :to="itPath">
-          </nuxt-link>
+          <a :href="itPath">
+            <img class="long-image" :src="itURL" :alt="itCaption" />
+          </a>
         </div>
       </div>
       <div class="col-md-5">
@@ -140,13 +127,9 @@
       </div>
       <div class="col-md-7">
         <div class="long-image-container">
-          <nuxt-link 
-            tag="img" 
-            class="long-image"
-            :src="serURL" 
-            :alt="serCaption"
-            to='/allservicetypes'>
-          </nuxt-link>
+          <a :href="serPath">
+            <img class="long-image" :src="serURL" :alt="serCaption" />
+          </a>
          </div>
         </div>
       </div>
@@ -236,6 +219,7 @@ export default {
       serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText: 'Approfitta della grande offerta si servizi di ogni tipo disponibili in città tra cui ospedali, cliniche e farmacie, ma anche bar, ristoranti e locali notturni. \n'
                 + 'Consulta la guida per trovare il servizio di cui necessiti.',
+      serPath: '/allservicetypes',
     }
   },
 }

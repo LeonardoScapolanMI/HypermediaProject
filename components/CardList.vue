@@ -205,7 +205,7 @@ export default {
 .content {
   margin: auto;
   max-width: min(1500px, 86%);
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   margin-top: 100px;
 }
 
