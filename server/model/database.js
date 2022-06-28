@@ -108,6 +108,12 @@ async function initializeDatabase() {
     }
   )
 
+  function formatDate(d){
+    return d.getDate() + '/' + 
+    (d.getMonth() < 9 ? '0' : '') + 
+    (d.getMonth() + 1) + '/' + d.getFullYear();
+  }
+
   class Event extends Model {
     static async FindAllEventsBetweenMonths(begin = 1, end = 12, startingIndex = undefined, itemCount = undefined){
       let b = begin
@@ -156,6 +162,14 @@ async function initializeDatabase() {
       }
     
       return await Event.count(queryOptions)
+    }
+
+    getFormatedStartDate(){
+      return formatDate(this.startDate)
+    }
+
+    getFormatedEndDate(){
+      return formatDate(this.endDate)
     }
   }
 

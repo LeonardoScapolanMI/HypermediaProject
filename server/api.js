@@ -158,24 +158,6 @@ app.get('/serviceType', async (req, res) => {
   return res.json(ret)
 })
 
-// Get all Services
-/* app.get('/service', async (req, res) => {
-  const data = await dbData
-  const result = await data.Service.findAll()
-  const filtered = []
-  for (const element of result) {
-    filtered.push({
-      id : element._id,
-      name: element.name,
-      phone: element.phone,
-      email: element.email,
-      adress: element.address,
-    })
-  }
-  //console.log(filtered)
-  return res.json(filtered)
-}) */
-
 // Get  Service from id
 app.get('/serviceType:id', async (req, res) => {
   const _id = +req.params.id
@@ -212,6 +194,10 @@ app.get('/serviceType:id', async (req, res) => {
   
 })
 
+function formatDate(d){
+  return d
+}
+
 // Get all Events basic informations
 app.get('/event', async (req, res) => {
   const data = await dbData
@@ -237,13 +223,18 @@ app.get('/event', async (req, res) => {
     isFinished = eventCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
   }
 
-
   const ret = {data:[], isFinished}
   for (const element of result) {
+    let description = element.getFormatedStartDate()
+    if(element.startDate !== element.endDate){
+      description += '-' + element.getFormatedStartDate()
+    }
+    description += ': ' + element.overview
+
     ret.data.push({
       id : element._id,
       name: element.name,
-      description: element.overview,
+      description,
       images: element.Images,
     })
   }
