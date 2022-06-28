@@ -76,6 +76,7 @@ body {
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .carousel-button:hover {

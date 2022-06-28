@@ -38,8 +38,8 @@
 
       <!-- CARD CAROUSELS --> 
     
-    <div class="background-it">
-      <div v-if="itList.length > 0" class="carousel-title">
+    <div v-if="itList.length > 0" class="background-it">
+      <div class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="subline" />
         <a href="/allitineraries" class="carousel-button">Tutti gli itinerari</a>
@@ -47,8 +47,8 @@
       </div>
     </div>
     
-    <div class="background-ev">
-      <div v-if="evList.length > 0" class="carousel-title">
+    <div v-if="evList.length > 0" class="background-ev">
+      <div class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="subline" />
         <a href="/allevents" class="carousel-button">Tutti gli eventi</a>
