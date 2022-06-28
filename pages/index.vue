@@ -19,7 +19,7 @@
 
     <!-- SLIDESHOW -->
 
-    <SlideShow :images="imagesV" class="title-image-container"/>
+    <SlideShow :images="imagesV"/>
 
     <!-- LINK STRUTTURALI -->
 

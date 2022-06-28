@@ -14,13 +14,11 @@ body {
 
 .text-with-line-break {
   white-space: pre-wrap;
-  cursor: default;
   margin-top: 20px;
 }
 
 .text-content-title {
   margin-bottom: 20px;
-  cursor: default;
 }
 
 .text-content {
@@ -29,6 +27,7 @@ body {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  cursor: default;
 }
 
 .title-image {
@@ -57,10 +56,11 @@ body {
 
 .carousel-title {
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
+  cursor: default;
 }
 
 hr {
