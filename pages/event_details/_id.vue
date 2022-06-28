@@ -124,22 +124,6 @@ export default {
 
 .background {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
-  background-size: cover;
-  height: 700px;
-  margin-bottom: 30px;
-}
-
-.carousel-button {
-  color: var(--brown);
-  background-color: var(--beige);
-  padding: 10px 50px 10px 50px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.carousel-button:hover {
-  text-decoration: none;
-  color: var(--green);
 }
 
 </style>

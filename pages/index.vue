@@ -299,7 +299,7 @@ export default {
 }
 
 .home-button {
-  color: var(--beige);
+  color: var(--green);
   background-color: var(--brown);
   border: 1.5px solid var(--green);
   padding: 10px 50px 10px 50px;
@@ -308,8 +308,7 @@ export default {
 }
 
 .home-button:hover {
-  text-decoration: none;
-  color: var(--green);
+  border: 2px solid var(--green);
 }
 
 </style>
