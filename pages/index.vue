@@ -59,7 +59,7 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <div class="button-container">
-            <a :href="evPath" class="home-button">Tutti gli eventi</a>
+            <a :href="evPath" class="all-button">Tutti gli eventi</a>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
           <h3 class="text-content-title">{{ poiTitle }}</h3>
           <p class="text-with-line-break">{{ poiText }}</p>
           <div class="button-container">
-            <a :href="poiPath" class="home-button">Tutti i punti di interesse</a>
+            <a :href="poiPath" class="all-button">Tutti i punti di interesse</a>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
           <div class="button-container">
-            <a :href="itPath" class="home-button">Tutti gli itinerari</a>
+            <a :href="itPath" class="all-button">Tutti gli itinerari</a>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
           <div class="button-container">
-            <a :href="serPath" class="home-button">Tutti i tipi di servizio</a>
+            <a :href="serPath" class="all-button">Tutti i tipi di servizio</a>
           </div>
         </div>
       </div>
@@ -297,20 +297,6 @@ export default {
 .button-container {
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.home-button {
-  color: var(--white);
-  background-color: var(--brown);
-  border: 1px solid var(--green);
-  padding: 10px 20px 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.home-button:hover {
-  color: var(--green);
-  text-decoration: none;
 }
 
 </style>

@@ -41,12 +41,12 @@
         </div> <!-- row -->
       </div>
 
-      <!-- CARD CAROUSEL --> 
+      <!-- CARD CAROUSELS --> 
 
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
-        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
+        <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
 

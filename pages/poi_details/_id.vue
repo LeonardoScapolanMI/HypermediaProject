@@ -41,14 +41,14 @@
       <div v-if="itList.length > 0" class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
-        <nuxt-link to="/allitineraries" class="all-button">Tutti gli itinerari</nuxt-link>
+        <a href="/allitineraries" class="all-button">Tutti gli itinerari</a>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
       <div v-if="evList.length > 0" class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
-        <nuxt-link to="/allevents" class="all-button">Tutti gli eventi</nuxt-link>
+        <a href="/allevents" class="all-button">Tutti gli eventi</a>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
