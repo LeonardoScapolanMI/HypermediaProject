@@ -20,9 +20,10 @@
           v-if="$route.fullPath === crumb.path && title !== null ? title : crumb.title"
           property="name"
         >
+        {{ title }}
         </span>
       </NLink>
-      <meta property="position" :content="index + 2" />
+      <meta property="position" :content="index + 1" />
     </li>
   </ol>
 </template>
@@ -86,7 +87,7 @@ li a.nuxt-link-exact-active.nuxt-link-active {
 }
 
 a {
-  color: var(--vanish);
+  color: var(--blue);
 }
 
 a:hover {
