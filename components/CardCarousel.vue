@@ -164,7 +164,7 @@ export default {
 
 #arrow {
   margin: auto;
-  padding: 30px 15px;
+  padding: 20px 10px;
   background-color: var(--brown);
   width: 40px;
 }
