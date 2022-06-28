@@ -25,10 +25,10 @@
         <div class="row">
           <div class="col-md-6" >
             <p class="text-with-line-break">{{ overview }}</p>
-            <p v-if="sDate!=eDate"> L'evento avrà inizio il: {{sDate | moment}} </p>     
-            <p v-if="sDate!=eDate"> e fine il: {{eDate | moment}} </p>
-            <p v-if="sDate===eDate"> L'evento si terrà il:  {{sDate | moment}} </p> 
-            <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
+            <p v-if="sDate!=eDate"> L'evento avrà inizio il {{sDate}} </p>     
+            <p v-if="sDate!=eDate"> e fine il {{eDate}} </p>
+            <p v-if="sDate===eDate"> L'evento si terrà il  {{sDate}} </p> 
+            <p v-if="cost!='gratuito'"> al costo di {{cost}}. </p>
             <p v-else> a libera entrata. </p>        
           </div> 
           <div class="col-md-6">
@@ -50,7 +50,6 @@
 </template>
 
 <script>
-import moment from 'moment'
 import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
@@ -59,13 +58,6 @@ export default {
   
   name: 'Event',
   components: { SlideShow, MapBox, CardCarousel},
-  filters: {
-    // eslint-disable-next-line object-shorthand
-    moment : function(date) {
-      return moment(date).format("D/M/Y")
-    }
-    
-   },
 
    async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -82,14 +74,21 @@ export default {
         description: poi.description,
       })
     }
+
+    function formatDate(d){
+      const dateString = d.split("T")[0]
+      const dateNumbers = dateString.split("-")
+
+      return dateNumbers[2] + '/' + dateNumbers[1] + '/' + dateNumbers[0]
+    }
     
     return {
       name: data.name,
       imagesV: data.Images,
       overview: data.overview,
       mapurl: data.mapURL,
-      sDate: data.startDate,
-      eDate: data.endDate,
+      sDate: formatDate(data.startDate),
+      eDate: formatDate(data.endDate),
       cost: data.cost,
       poiList,
       
