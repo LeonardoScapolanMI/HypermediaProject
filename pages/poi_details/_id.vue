@@ -21,9 +21,7 @@
 
     <!-- SLIDESHOW -->
 
-    <div class="title-image-container">
-      <SlideShow :images="imagesV" />
-    </div>
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
       <!-- MAPBOX -->
 
@@ -34,7 +32,6 @@
           </div>
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
-            <!-- <MapBox v-else :indirizzo="poiList[0].mapURL"/> -->
           </div>  
         </div> <!-- row -->
        </div>

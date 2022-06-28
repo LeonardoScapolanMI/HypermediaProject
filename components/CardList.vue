@@ -203,7 +203,7 @@ export default {
 
 .content {
   margin: auto;
-  width: 92% !important;
+  max-width: min(1500px, 86%);
 }
 
 .card-container {

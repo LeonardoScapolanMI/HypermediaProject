@@ -113,9 +113,11 @@ mounted() {
   width:100%;
   aspect-ratio: 9/4;
 }
+
 .content{
   margin: auto;
-  width: 92% !important;
+  max-width: min(1500px, 86%);
+  margin-top: 50px;
 }
 
 .no-content {
