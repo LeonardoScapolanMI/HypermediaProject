@@ -2,7 +2,9 @@
 
 <nav class="navbar navbar-expand-lg sticky-top">
   <div id="logo">
-    <a id="icon" src="/images/firenze.png" alt="HOME" href="/"></a>
+    <a href="/">
+      <img id="icon" src="/images/firenze.png" alt="HOME" />
+    </a>
   </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
