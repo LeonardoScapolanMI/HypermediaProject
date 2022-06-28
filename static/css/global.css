@@ -17,7 +17,7 @@ body {
 }
 
 .text-with-line-break {
-  white-space: pre-wrap;
+  white-space: pre-line;
   margin-top: 20px;
 }
 
