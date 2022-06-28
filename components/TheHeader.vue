@@ -1,15 +1,9 @@
 <template>
 
 <nav class="navbar navbar-expand-lg sticky-top">
-  <div id="logo">
-    <nuxt-link 
-      tag="img" 
-      id="icon"
-      src="/images/firenze.png"
-      alt="HOME"
-      to="/">
-    </nuxt-link>
-  </div><!-- Link of the logo image-->
+    <a id="logo" href="/">
+      <img id="icon" src="/images/firenze.png" alt="HOME" />
+    </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +12,7 @@
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-            <nuxt-link :to="navItem.path">{{ navItem.name }}</nuxt-link>
+            <a :href="navItem.path">{{ navItem.name }}</a>
           </li>
         </ul>
           <!-- Print the items of the headerList -->

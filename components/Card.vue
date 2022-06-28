@@ -83,6 +83,7 @@ export default {
   border-radius: 25px;
   border: 2px solid var(--blue);
   box-shadow: 5px 5px 10px 3px var(--green);
+  margin-bottom: 20px;
 }
 
 #image {
@@ -96,13 +97,14 @@ export default {
 }
 
 #image:hover { 
-  opacity: 0.9;
+  border: 1px solid var(--green);
   cursor: pointer;
 }
 
 #title {
   text-align: center;
   width: 90%;
+  cursor: default;
 }
 
 #description {
@@ -110,15 +112,15 @@ export default {
   width: 90%;
   word-wrap: break-word;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: pre-wrap;
   text-overflow: ellipsis;
+  cursor: default;
 }
 
 #see-details {
   margin-top: 3%;
   margin-bottom: 3%;
 }
-
 .button-style{
   color: var(--green);
   background-color: var(--blue);
@@ -129,7 +131,6 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .button-style:hover {
   color: white;
   transition: 0.25s;

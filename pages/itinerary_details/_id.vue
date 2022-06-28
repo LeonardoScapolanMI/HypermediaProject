@@ -3,7 +3,13 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb :title="name"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/allitineraries" id="old">Tutti gli itinerari</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
+      </ol>
+    </div>
 
     <!-- TITOLO -->
 
@@ -35,12 +41,20 @@
 
     <!-- PRINTING ALL POIS CORRELATED -->
 
-      <div v-if="poiList.length > 0" class="page-title">
+      <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
         <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
+
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
       
   </div>
 </template>

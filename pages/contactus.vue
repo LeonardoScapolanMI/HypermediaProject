@@ -1,9 +1,14 @@
 <template>
-  <div class="height">
+  <div>
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Contattaci"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Contattaci</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 
@@ -13,9 +18,9 @@
 
     <!-- FORM -->
 
-    <div class="form">
     <div class="container marketing">
-      <div>
+      <div class="form">
+        <div>
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
             <hr />
@@ -127,6 +132,7 @@ export default {
 .form {
   margin-top: 30px;
   margin-bottom: 30px;
+  max-width: min(900px, 86%);
 }
 
 h3 {

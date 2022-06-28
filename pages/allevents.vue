@@ -3,7 +3,13 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Tutti gli eventi"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti gli eventi</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 
@@ -14,7 +20,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <p id="text text-with-line-break ">{{ description }}</p>
+      <p class="text-with-line-break ">{{ description }}</p>
     </div>
 
     <!-- CARDS -->
@@ -24,6 +30,14 @@
       :no-items-placeholder="'Al momento non ci sono eventi'"
       :error-text="'Impossibile caricare gli eventi'"
     />
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
     
   </div>
 </template>

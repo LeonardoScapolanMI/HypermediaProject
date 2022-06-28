@@ -1,3 +1,7 @@
+:root {
+  --breakpoint-xxl: 1800px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,23 +12,17 @@ body {
   background-color: var(--smoke);
 }
 
-.height { 
-  min-height: 465px;
-}
-
 .container {
-  max-width: min(1000px, 92%);
+  max-width: min(1500px, 86%);
 }
 
 .text-with-line-break {
   white-space: pre-wrap;
-  cursor: default;
   margin-top: 20px;
 }
 
 .text-content-title {
   margin-bottom: 20px;
-  cursor: default;
 }
 
 .text-content {
@@ -33,6 +31,7 @@ body {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  cursor: default;
 }
 
 .title-image {
@@ -40,13 +39,14 @@ body {
   aspect-ratio: 20/9;
   object-fit: cover;
   object-position: 50% 50%;
+  border: 2px solid var(--green);
 }
 
 .title-image-container {
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  max-width: min(1200px, 86%);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: min(1500px, 86%);
 }
 
 .page-title {
@@ -55,6 +55,16 @@ body {
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
+  cursor: default;
+}
+
+.carousel-title {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-left: min(100px, 5%);
+  margin-right: min(100px, 5%);
+  text-align: center;
+  cursor: default;
 }
 
 hr {
@@ -110,4 +120,23 @@ hr {
   width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.breadcrumb {
+  background-color: var(--beige);
+  margin: 20px;
+}
+
+#old {
+  color: var(--aqua);
+}
+
+#old:hover {
+  color: var(--green);
+  text-decoration: none;
+}
+
+#new {
+  color: var(--green);
+  cursor: default;
 }

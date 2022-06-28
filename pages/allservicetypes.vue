@@ -3,7 +3,12 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Tutti i tipi di servizio"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti i tipi di servizio</li>
+      </ol>
+    </div>
     
     <!-- TITLE -->
 
@@ -25,6 +30,14 @@
       :no-items-placeholder="'Al momento non ci sono tipi di servizio'"
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
 
     </div>
 </template>

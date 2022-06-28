@@ -9,7 +9,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
 -->
 
 <template>
-  <div>
+  <div id="wrapper">
     <loading-icon
       v-if="state === ListState.InitialLoading"
       class="loading-icon"
@@ -28,8 +28,8 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
             <div
               v-for="(item, itemIndex) of itemList"
               :key="`poi-index-${itemIndex}`"
-              class="col col-md-6 col-lg-4 card-container"
-            ><!-- Iterate on the list of items retrieved from the db-->
+              :class="'col' + colSize +' card-container'"
+            >
               <card
                 :image-url="item.images[0].URL"
                 :image-caption="item.images[0].caption"
@@ -89,6 +89,7 @@ export default {
     ListState,
     itemList: [],
     state: ListState.InitialLoading,
+    colSize: '',
   }),
   async fetch() {
     try {
@@ -145,6 +146,10 @@ export default {
       ],
     }
   },
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
   methods: {
     async loadMore() {// method for loading more items
       try {
@@ -169,6 +174,21 @@ export default {
         this.state = ListState.Error
       }
     },
+    onResize() {
+
+      const componentWidth = document.getElementById('wrapper').clientWidth
+      const computedStyle = window.getComputedStyle(document.documentElement)
+
+      if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {
+        this.colSize = ''
+      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
+        this.colSize = '-6'
+      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-xxl'))) {
+        this.colSize = '-4'
+      } else {
+        this.colSize = '-3'
+      }
+    },
   },
 }
 </script>
@@ -184,12 +204,10 @@ export default {
 
 .content {
   margin: auto;
-  width: 92% !important;
 }
 
 .card-container {
   margin: auto;
-  margin-bottom: 20px;
 }
 
 #load-more {
