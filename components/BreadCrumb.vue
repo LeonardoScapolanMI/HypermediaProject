@@ -20,7 +20,6 @@
           v-if="$route.fullPath === crumb.path && title !== null ? title : crumb.title"
           property="name"
         >
-        {{ title }}
         </span>
       </NLink>
       <meta property="position" :content="index + 2" />
@@ -82,13 +81,13 @@ li:last-child:after {
   content: '';
 }
 li a.nuxt-link-exact-active.nuxt-link-active {
-  color: #414535;
+  color: var(--green);
   text-decoration: none;
   cursor: default;
 }
 
 a {
-  color: var(--white);
+  color: var(--vanish);
 }
 
 a:hover {

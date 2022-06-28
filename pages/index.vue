@@ -26,16 +26,16 @@
     <div class="structural-links ">
       <div class="row">
         <div class="col-sm-auto">
-          <a href="#ev" class="home-link">EVENTI</a> 
+          <nuxt-link to="#ev" class="home-link">EVENTI</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#poi" class="home-link">PUNTI DI INTERESSE</a> 
+          <nuxt-link to="#poi" class="home-link">PUNTI DI INTERESSE</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#it" class="home-link">ITINERARI</a> 
+          <nuxt-link to="#it" class="home-link">ITINERARI</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#ser" class="home-link">SERVIZI</a> 
+          <nuxt-link to="#ser" class="home-link">SERVIZI</nuxt-link> 
         </div>
       </div>
     </div>
