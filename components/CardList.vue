@@ -89,7 +89,7 @@ export default {
     ListState,
     itemList: [],
     state: ListState.InitialLoading,
-    colSize: '',
+    colSize: '-12',
   }),
   async fetch() {
     try {
@@ -180,7 +180,7 @@ export default {
       const computedStyle = window.getComputedStyle(document.documentElement)
 
       if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {
-        this.colSize = ''
+        this.colSize = '-12'
       } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
         this.colSize = '-6'
       } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-xxl'))) {
@@ -204,8 +204,8 @@ export default {
 
 .content {
   margin: auto;
-  max-width: min(1500px, 86%);
-  margin-bottom: 100px;
+  max-width: 86%;
+  margin-bottom: 50px;
   margin-top: 100px;
 }
 
