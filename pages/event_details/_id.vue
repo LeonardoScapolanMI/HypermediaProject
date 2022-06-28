@@ -45,7 +45,7 @@
 
       <!-- CARD CAROUSEL --> 
 
-      <div v-if="poiList.length > 0" class="page-title">
+      <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="separator" />
         <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
