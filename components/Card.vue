@@ -108,7 +108,7 @@ export default {
 }
 
 #description {
-  flex: 1;
+  flex: 2;
   width: 90%;
   word-wrap: break-word;
   overflow: hidden;
