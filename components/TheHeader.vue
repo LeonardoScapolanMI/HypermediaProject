@@ -15,7 +15,7 @@
             <a :href="navItem.path">{{ navItem.name }}</a>
           </li>
         </ul>
-
+          <!-- Print the items of the headerList -->
     </div>
 </nav>
 </template>

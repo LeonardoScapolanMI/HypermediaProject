@@ -11,9 +11,9 @@
         <p id="phone">{{phone}}</p>
 
         <p id="address">{{address}}</p>
-
+        <!-- Print genral information-->
         <div v-if="horizontal">
-          <table class="table table-bordered">
+          <table class="table table-bordered"><!-- Prepare the table-->
             <tbody>
               <tr>
                 <td v-for="day in  weekDays" :key="'day-' + day.index">
@@ -23,7 +23,7 @@
               <tr v-for="j in maxOpHours" :key="'row-' + j">
                 <td v-for="(opH, opHIndex) in formattedOpHours" :key="'col-' + opHIndex">{{opH[j-1]}}</td>
               </tr>
-            </tbody>
+            </tbody><!-- Print the table, iterating for each day, print the hours of opening -->
           </table>
         </div>
         <div v-else>
@@ -64,7 +64,7 @@ export default {
       formattedOpHours[i] = [closedString]
     }
 
-    for(const oh of this.opHours){
+    for(const oh of this.opHours){// formatting of the opening hours
       const i = oh.day
       const data = oh.openingHour + '-' + oh.closingHour
       if(formattedOpHours[i][0] === closedString){
@@ -130,7 +130,7 @@ export default {
   },
 mounted() {
     this.onResize()
-    window.addEventListener('resize', this.onResize)
+    window.addEventListener('resize', this.onResize) // listener for the resize of the window - responsive design
   },
   methods: {
     onResize() {

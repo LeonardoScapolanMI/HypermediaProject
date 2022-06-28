@@ -8,7 +8,7 @@
       alt="icona indietro"
       @click="prev"
     />
-
+      <!-- Display the button to go back in the carousel-->
     <div id="cards" class="container">
       <div class="row justify-content-center">
         <div
@@ -23,7 +23,7 @@
             :description="cards.description"
             @onSeeDetails="$emit('onSeeDetails', cards.id)"
           />
-        </div>
+        </div><!-- Print the cards-->
       </div>
     </div>
 
@@ -34,7 +34,7 @@
       alt="icona avanti"
       src="/icons/angle-right-solid.svg"
       @click="next"
-    />
+    /><!-- Display the button to go forward in the carousel-->
     
   </div>
 </template>
@@ -125,9 +125,9 @@ export default {
           )
       }
     },
-    onResize() {
+    onResize() {// responsive deisgn method
 
-      const componentWidth = document.getElementById('wrapper').clientWidth
+      const componentWidth = document.getElementById('wrapper').clientWidth // gets width of the 
       const computedStyle = window.getComputedStyle(document.documentElement)
 
       if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {

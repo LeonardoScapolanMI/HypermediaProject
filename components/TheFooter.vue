@@ -6,7 +6,7 @@
             <nuxt-link :to="navItem.path" class="nav-link">
               {{ navItem.name }}
             </nuxt-link>
-          </li>
+          </li><!-- Print the items of the footerList, in this case only contactus-->
         </ul>
       </div>
     </nav>
