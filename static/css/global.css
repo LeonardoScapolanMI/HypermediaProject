@@ -52,6 +52,7 @@ body {
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
+  cursor: default;
 }
 
 .carousel-title {
