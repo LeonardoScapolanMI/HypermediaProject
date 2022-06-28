@@ -3,9 +3,7 @@
       <div>
         <ul class="footer">
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
-            <nuxt-link :to="navItem.path" class="nav-link">
-              {{ navItem.name }}
-            </nuxt-link>
+            <a :href="navItem.path" class="nav-link">{{ navItem.name }}</a>
           </li><!-- Print the items of the footerList, in this case only contactus-->
         </ul>
       </div>

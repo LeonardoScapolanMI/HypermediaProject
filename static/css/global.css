@@ -74,6 +74,7 @@ body {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
   background-size: cover;
   height: 700px;
+  margin-bottom: 20px;
 }
 
 .subline {
