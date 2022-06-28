@@ -69,12 +69,6 @@ body {
   padding-top: 50px;
 }
 
-.background {
-  background-size: cover;
-  height: 700px;
-  margin-bottom: 30px;
-}
-
 .carousel-button {
   color: var(--green);
   background-color: var(--beige);
@@ -86,12 +80,14 @@ body {
 
 .carousel-button:hover {
    border: 2px solid var(--green);
+   color: var(--green);
+   text-decoration: none;
 }
 
 .subline {
-  background-color: var(--beige);
-  max-width: 30%;
-  margin-bottom: 10px;
+  background-color: var(--brown);
+  max-width: 40%;
+  margin-bottom: 30px;
 }
 
 .separator {

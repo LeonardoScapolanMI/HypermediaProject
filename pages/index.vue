@@ -309,6 +309,8 @@ export default {
 
 .home-button:hover {
   border: 2px solid var(--green);
+  color: var(--green);
+  text-decoration: none;
 }
 
 </style>

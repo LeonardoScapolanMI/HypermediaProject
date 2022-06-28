@@ -43,7 +43,7 @@
 
       <!-- CARD CAROUSELS --> 
 
-    <div class="background">
+    <div class="background-poi">
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
@@ -122,8 +122,11 @@ export default {
 
 <style>
 
-.background {
+.background-poi {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
+  background-size: cover;
+  height: 700px;
+  margin-bottom: 30px;
 }
 
 </style>

@@ -40,13 +40,15 @@
     </div>
 
     <!-- CARD CAROUSELS -->
-
+    
+    <div class="background-poi">
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
         <a href="/allpois" class="carousel-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
+    </div>
 
       <!-- BACK UP BUTTON -->
 
@@ -103,8 +105,11 @@ export default {
 
 <style>
 
-.background {
+.background-poi {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
+  background-size: cover;
+  height: 700px;
+  margin-bottom: 30px;
 }
 
 </style>
