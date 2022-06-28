@@ -24,8 +24,8 @@ Leonardo Scapolan
 ## Project Documentation - Organization of the application
 Here we describe how the application has been generally organized for development and production.
 ### Pages
-- index
-- alleventgroupings
+- index: homepage of the website
+- alleventgroupings:
   - allevents
   - summerevents
   - winterevents
@@ -39,15 +39,15 @@ Here we describe how the application has been generally organized for developmen
 - contact us
 
 ### Components
-- Card
-- CardCarousel
-- CardList
-- LoadingIcon
-- LongCard
-- MapBox
-- SlideShow
-- TheFooter
-- TheHeader
+- Card: implements the basic functionality of displaying the preview of an item of the website, with a set of basis information to grab user's attention.
+- CardCarousel: it's a carousel of card items, allowing us to display related topics of a single page in a compact and easy way.
+- CardList: list of cards, used to display a series a items to which the user can choose from. Perfect for topic pages.
+- LoadingIcon: fundamental for giving the user the information about the status of the application.
+- LongCard: used for displaying preview information on a wider format.
+- MapBox: used for displaying the location of an event a point of interest or a set of point of interest in an itinerary.
+- SlideShow: used for displaying many images in a compact way.
+- TheFooter:Fundamental part of the template, holds the link to the contact us page.
+- TheHeader:Fundamental part of the template, holds all the navigation links to the main topics of the application.
 ### Functionalities
 
-## Best Practices 
+### Best Practices 
