@@ -133,6 +133,7 @@ export default {
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: min(900px, 86%);
+  margin: auto;
 }
 
 h3 {
