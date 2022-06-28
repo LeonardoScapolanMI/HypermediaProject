@@ -24,21 +24,31 @@ Leonardo Scapolan
 ## Project Documentation - Organization of the application
 Here we describe how the application has been generally organized for development and production.
 ### Pages
-|index
-  |_ alleventgroupings
-    |_ allevents
-    |_ summerevents
-    |_ winterevents
-  |_ allpois
-    |_ poi_details
-  |_ allitineraries
-    |_ itinerary_details
-  |_ allservicetypes
-    |_ service_details
-  |_ thetown
-  |_ contact us
-### Components
+- index
+- alleventgroupings
+  - allevents
+  - summerevents
+  - winterevents
+- allpois
+  - poi_details
+- allitineraries
+  - itinerary_details
+- allservicetypes
+  - service_details
+- thetown
+- contact us
 
+### Components
+- BreadCrumb
+- Card
+- CardCarousel
+- CardList
+- LoadingIcon
+- LongCard
+- MapBox
+- SlideShow
+- TheFooter
+- TheHeader
 ### Functionalities
 
 ## Best Practices 
