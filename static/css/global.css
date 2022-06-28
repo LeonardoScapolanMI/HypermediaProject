@@ -102,17 +102,17 @@ hr {
 }
 
 .all-button {
-  color: var(--brown);
-  background-color: var(--beige);
-  border: 1px solid var(--brown);
+  color: var(--beige);
+  background-color: var(--brown);
+  border: 1.5px solid var(--green);
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
   font-weight: bold;
 }
 
 .all-button:hover {
-  color: var(--green);
   text-decoration: none;
+  color: var(--green);
 }
 
 .card-car {
@@ -128,7 +128,7 @@ hr {
 }
 
 #old {
-  color: var(--aqua);
+  color: var(--brown);
 }
 
 #old:hover {

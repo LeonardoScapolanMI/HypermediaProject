@@ -51,7 +51,6 @@
           <a :href="evPath">
             <img class="long-image" :src="evURL" :alt="evCaption" />
           </a>
-          </nuxt-link>
         </div>
       </div>
       <div class="col-md-5">

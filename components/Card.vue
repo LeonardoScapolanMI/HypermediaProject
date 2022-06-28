@@ -94,7 +94,7 @@ export default {
   aspect-ratio: 16/9;
   display: block;
   overflow: hidden;
-  border: 1px solid var(--green);
+  border: 1.5px solid var(--green);
 }
 
 #image:hover { 
