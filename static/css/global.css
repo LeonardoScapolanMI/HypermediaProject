@@ -1,3 +1,7 @@
+:root {
+  --breakpoint-xxl: 1800px;
+}
+
 html {
   scroll-behavior: smooth;
 }
