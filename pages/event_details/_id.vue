@@ -46,7 +46,7 @@
     <div class="background">
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
-        <hr class="separator" />
+        <hr class="subline" />
         <a href="/allpois" class="all-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
@@ -119,16 +119,3 @@ export default {
    
 }
 </script>
-
-<style scoped>
-
-p {
-  display: inline-block;
-}
-.background {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/cards/poi.jpg") center ;
-  background-size: cover;
-  height: 700px;
-}
-
-</style>

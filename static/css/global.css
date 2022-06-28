@@ -67,20 +67,29 @@ body {
   color: var(--white);
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: auto;
+  padding-top: 50px;
 }
 
-hr {
-  background-color: var(--blue);
+.background {
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
+  background-size: cover;
+  height: 700px;
+}
+
+.subline {
+  background-color: var(--white);
+  max-width: 50%;
 }
 
 .separator {
   max-width: 92%;
   margin-bottom: 30px;
+  background-color: var(--blue);
 }
 
 .subtitle {
   width: 50%;
+  background-color: var(--blue);
 }
 
 .structural-links {
