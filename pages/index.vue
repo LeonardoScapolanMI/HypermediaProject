@@ -1,5 +1,7 @@
+<link rel="icon" type="img/png" href="/images/icon.jpg"></link>
+
 <template>
-  <div class="height">
+  <div>
 
     <!-- INTRO -->
     
