@@ -125,11 +125,10 @@ export default {
 p {
   display: inline-block;
 }
-
 .background {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/cards/poi.jpg") center ;
   background-size: cover;
-  height: 700px;
+  height: 600px;
 }
 
 </style>

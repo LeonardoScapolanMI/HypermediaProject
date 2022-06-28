@@ -59,8 +59,7 @@ body {
 }
 
 .carousel-title {
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin: auto;
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
