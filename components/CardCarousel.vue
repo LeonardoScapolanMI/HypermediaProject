@@ -164,10 +164,10 @@ export default {
 
 #arrow {
   margin: auto;
-  padding: 25px 10px;
+  padding: 20px 20px;
   width: 40px;
   background-color: var(--brown);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 #arrow:hover {
