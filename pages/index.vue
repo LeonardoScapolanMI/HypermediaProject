@@ -254,6 +254,7 @@ export default {
   font-weight: bold;
   padding-top: 420px;
   text-align: center;
+  cursor: default;
 }
 
 .title h1, .title h4, .title hr {

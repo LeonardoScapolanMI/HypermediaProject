@@ -22,7 +22,7 @@
     <!-- SLIDESHOW -->
 
     <div class="title-image-container">
-      <SlideShow :images="imagesV" class="title-image" />
+      <SlideShow :images="imagesV" />
     </div>
 
       <!-- MAPBOX -->

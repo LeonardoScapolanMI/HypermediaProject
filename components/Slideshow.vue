@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.carousel{
+.carousel {
   width: 100%;
   height: 100%;
 }
@@ -91,6 +91,11 @@ export default {
   aspect-ratio: 20/9;
   object-fit: cover;
   object-position: 50% 50%;
+  border: 2px solid var(--green);
+}
+
+.carousel-indicators {
+  cursor: pointer;
 }
 
 </style>
