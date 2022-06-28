@@ -39,16 +39,16 @@
         </div> <!-- row -->
        </div>
 
-      <!-- Carousels of Cards --> 
+      <!-- CARD CAROUSELS --> 
       
-      <div v-if="itList.length > 0" class="page-title">
+      <div v-if="itList.length > 0" class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="separator" />
         <nuxt-link to="/allitineraries" class="all-button">Tutti gli itinerari</nuxt-link>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
       
-      <div v-if="evList.length > 0" class="page-title">
+      <div v-if="evList.length > 0" class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="separator" />
         <nuxt-link to="/allevents" class="all-button">Tutti gli eventi</nuxt-link>
