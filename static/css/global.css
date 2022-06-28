@@ -45,7 +45,7 @@ body {
 .title-image-container {
   margin: auto;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   max-width: min(1500px, 86%);
 }
 
