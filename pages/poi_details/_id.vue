@@ -18,9 +18,8 @@
     <div class="title-image-container">
       <img 
         v-if="imagesV.lengt === 1"
-        id="imageserv" 
-        :src="images[0].URL" 
-        :alt="images[0].caption" />
+        :images="imagesV" 
+        class="title-image" />
       <SlideShow 
         v-else
         :images="imagesV" 
