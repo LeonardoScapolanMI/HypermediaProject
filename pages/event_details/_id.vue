@@ -30,9 +30,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6" >
-            <p class="text-with-line-break">{{overview}}</p>
-            <p> L'evento inizierà il:{{sDate}} </p>     
-            <p v-if="sDate!=eDate"> e fine il : {{eDate}} </p>
+            <p class="text-with-line-break">{{ overview }}</p>
+            <p v-if="sDate!=eDate"> L'evento avrà inizio il: {{sDate | moment}} </p>     
+            <p v-if="sDate!=eDate"> e fine il: {{eDate | moment}} </p>
+            <p v-if="sDate===eDate"> L'evento si terrà il:  {{sDate | moment}} </p> 
             <p v-if="cost!='gratuito'"> al costo di: {{cost}}. </p>
             <p v-else> a libera entrata. </p>        
           </div> 
@@ -55,7 +56,7 @@
 </template>
 
 <script>
-
+import moment from 'moment'
 import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
@@ -65,6 +66,10 @@ export default {
   name: 'Event',
   components: { SlideShow, MapBox, CardCarousel},
   filters: {
+    // eslint-disable-next-line object-shorthand
+    moment : function(date) {
+      return moment(date).format("D/M/Y")
+    }
     
    },
 
@@ -99,6 +104,7 @@ export default {
   fetchOnServer: false, // too see if it's a problem for crawlers
   
   methods: {
+
     backToList() {
       this.$router.push('/list')
     },
@@ -106,3 +112,9 @@ export default {
    
 }
 </script>
+
+<style scoped>
+p {
+  display: inline-block;
+}
+</style>
