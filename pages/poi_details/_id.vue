@@ -127,14 +127,14 @@ export default {
 <style>
 
 .background-it {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/itinerary/background.jpg") center ;
   background-size: cover;
   height: 700px;
   margin-bottom: 30px;
 }
 
 .background-ev {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/event/background.jpg") center ;
   background-size: cover;
   height: 700px;
   margin-bottom: 30px;

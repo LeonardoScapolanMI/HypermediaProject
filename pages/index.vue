@@ -311,6 +311,7 @@ export default {
   border: 2px solid var(--green);
   color: var(--green);
   text-decoration: none;
+  transition: 0.25s;
 }
 
 </style>

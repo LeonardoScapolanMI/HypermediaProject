@@ -79,9 +79,10 @@ body {
 }
 
 .carousel-button:hover {
-   border: 2px solid var(--green);
-   color: var(--green);
-   text-decoration: none;
+  border: 2px solid var(--green);
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.25s;
 }
 
 .subline {

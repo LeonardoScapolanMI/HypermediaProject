@@ -77,7 +77,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
+  width: 100%;
   aspect-ratio: 4/5;
   max-height: 70vh;
   border-radius: 25px;
@@ -136,7 +136,7 @@ export default {
   padding-right: 10px;
 }
 .button-style:hover {
-  color: white;
+  color: var(--white);
   transition: 0.25s;
   cursor: pointer;
 }
