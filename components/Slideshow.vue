@@ -31,9 +31,9 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-
-    <script><!-- Make the first elment of the slideshow active-->
-      document.getElementById(0).className = 'carousel-item active'
+<!-- Make the first elment of the slideshow active -->
+    <script>
+      document.getElementById(0).className = "carousel-item active";
     </script>
   </div>
 </template>
@@ -44,6 +44,7 @@ export default {
   props: {
     images: { type: Array, required: true },
   },
+  mounted(){document.getElementById(0).className = "carousel-item active";},
   head() {
     return {
       link: [
