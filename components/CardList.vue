@@ -208,7 +208,8 @@ export default {
 
 .card-container {
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #load-more {
