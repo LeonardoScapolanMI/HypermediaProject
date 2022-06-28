@@ -96,7 +96,7 @@ export default {
 }
 
 #image:hover { 
-  border: 1px solid var(--green);
+  border: 2px solid var(--green);
   cursor: pointer;
 }
 

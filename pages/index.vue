@@ -1,4 +1,4 @@
-<link rel="icon" type="img/png" href="../Immagini/icon.png"></link>
+<head rel="icon" type="img/jpg" href="/images/icon.jpg"></head> 
 
 <template>
   <div>
@@ -64,7 +64,7 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <div class="button-container">
-            <nuxt-link :to="itPath" class="home-button">Tutti gli eventi</nuxt-link>
+            <a :href="evPath" class="home-button">Tutti gli eventi</a>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
           <h3 class="text-content-title">{{ poiTitle }}</h3>
           <p class="text-with-line-break">{{ poiText }}</p>
           <div class="button-container">
-            <nuxt-link :to="itPath" class="home-button">Tutti i punti di interesse</nuxt-link>
+            <a :href="poiPath" class="home-button">Tutti i punti di interesse</a>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
           <div class="button-container">
-            <nuxt-link :to="itPath" class="home-button">Tutti gli itinerari</nuxt-link>
+            <a :href="itPath" class="home-button">Tutti gli itinerari</a>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
           <div class="button-container">
-            <nuxt-link :to="serPath" class="home-button">Tutti i tipi di servizio</nuxt-link>
+            <a :href="serPath" class="home-button">Tutti i tipi di servizio</a>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@
             class="long-image"
             :src="serURL" 
             :alt="serCaption"
-            :to="serPath">
+            to='/allservicetypes'>
           </nuxt-link>
          </div>
         </div>
@@ -236,7 +236,6 @@ export default {
       serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText: 'Approfitta della grande offerta si servizi di ogni tipo disponibili in città tra cui ospedali, cliniche e farmacie, ma anche bar, ristoranti e locali notturni. \n'
                 + 'Consulta la guida per trovare il servizio di cui necessiti.',
-      serPath: '/allservicetypes',
     }
   },
 }
