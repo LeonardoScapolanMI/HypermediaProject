@@ -82,6 +82,7 @@ export default {
   border-radius: 25px;
   border: 2px solid var(--blue);
   box-shadow: 5px 5px 10px 3px var(--green);
+  padding-bottom: 20px;
 }
 
 #image {
@@ -124,7 +125,7 @@ export default {
   border: 2px solid var(--green);
   border-radius: 5px;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }

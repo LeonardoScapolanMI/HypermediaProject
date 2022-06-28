@@ -8,12 +8,8 @@ body {
   background-color: var(--smoke);
 }
 
-.height { 
-  min-height: 465px;
-}
-
 .container {
-  max-width: min(1500px, 92%);
+  max-width: min(1500px, 90%);
 }
 
 .text-with-line-break {
@@ -40,13 +36,14 @@ body {
   aspect-ratio: 20/9;
   object-fit: cover;
   object-position: 50% 50%;
+  border: 2px solid var(--green);
 }
 
 .title-image-container {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: min(1200px, 86%);
+  max-width: min(1500px, 86%);
 }
 
 .page-title {
@@ -129,7 +126,12 @@ hr {
   color: var(--aqua);
 }
 
-#old:hover, #new {
+#old:hover {
   color: var(--green);
   text-decoration: none;
+}
+
+#new {
+  color: var(--green);
+  cursor: default;
 }
