@@ -1,4 +1,4 @@
-<link rel="icon" type="img/png" href="../Immagini/icon.png"></link>
+<link rel="icon" type="img/png" href="/images/icon.jpg"></link>
 
 <template>
   <div>
