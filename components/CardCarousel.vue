@@ -167,10 +167,10 @@ export default {
   padding: 25px 10px;
   width: 40px;
   background-color: var(--brown);
+  border-radius: 20px;
 }
 
 #arrow:hover {
-  background-color: var(--beige);
   cursor: pointer;
 }
 
