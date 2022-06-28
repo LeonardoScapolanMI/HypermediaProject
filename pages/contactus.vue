@@ -132,7 +132,7 @@ export default {
 .form {
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: min(900px, 86%);
+  max-width: min(850px, 96%);
   margin: auto;
 }
 
