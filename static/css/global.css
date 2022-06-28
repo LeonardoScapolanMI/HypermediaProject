@@ -111,3 +111,17 @@ hr {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.breadcrumb {
+  background-color: var(--beige);
+  margin: 20px;
+}
+
+#old {
+  color: var(--blue);
+}
+
+#old:hover, #new {
+  color: var(--green);
+  text-decoration: none;
+}

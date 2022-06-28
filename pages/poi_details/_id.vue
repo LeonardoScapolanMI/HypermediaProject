@@ -1,9 +1,15 @@
 <template>
     <div class="height">
 
-      <!-- BREADCRUMB -->
+    <!-- BREADCRUMB -->
 
-    <BreadCrumb :title="name"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/allpois" id="old">Tutti i punti di interesse</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
+      </ol>
+    </div>
       
     <!-- TITOLO -->
 
@@ -16,14 +22,7 @@
     <!-- SLIDESHOW -->
 
     <div class="title-image-container">
-      <img 
-        v-if="imagesV.lengt === 1"
-        :images="imagesV" 
-        class="title-image" />
-      <SlideShow 
-        v-else
-        :images="imagesV" 
-        class="title-image" />
+      <SlideShow :images="imagesV" class="title-image" />
     </div>
 
       <!-- MAPBOX -->
@@ -56,13 +55,6 @@
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
-      <!-- <div v-if="poiList.length > 0" class="page-title">
-        <h3>Altri punti di interesse</h3>
-        <hr class="separator" />
-        <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
-        <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
-      </div> -->
-
     </div>
 </template>
 
@@ -80,20 +72,10 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
-    // const { poiExtra } = await $axios.get('http://api/poi')
 
     const itList = []
     const evList = []
-    /* const poiList = []
-    // Get some pois
-    for (const poi of data.data.PointOfInterest) {
-      poiList.push({
-        id: poi._id,
-        image: poi.Images[0],
-        name: poi.name,
-       description: poi.description,
-      })
-    } */
+
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -103,6 +85,7 @@ export default {
         description: it.overview,
       })
     }
+
     // Get all events involved
     for (const ev of data.Events) {
       evList.push({
@@ -112,7 +95,7 @@ export default {
         description: ev.overview,
       })
     }
-    // console.log(poiExtra)
+
     return {
       name: data.name,
       description: data.description,
@@ -120,7 +103,6 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
-      // poiList,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

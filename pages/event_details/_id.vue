@@ -3,7 +3,13 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb :title="name"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/allevents" id="old">Tutti gli eventi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
+      </ol>
+    </div>
 
       <!-- TITOLO -->
 

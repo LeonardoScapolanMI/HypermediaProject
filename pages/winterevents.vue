@@ -3,7 +3,15 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Eventi invernali"/>
+    <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Eventi invernali</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 

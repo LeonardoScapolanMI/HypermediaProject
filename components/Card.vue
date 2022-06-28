@@ -124,7 +124,7 @@ export default {
   border: 2px solid var(--green);
   border-radius: 5px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
 }
