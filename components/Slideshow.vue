@@ -24,10 +24,10 @@
       </div>
 
       <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+      <a v-if="images.length > 1" class="carousel-control-prev" href="#slideshow" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
-      <a class="carousel-control-next" href="#slideshow" data-slide="next">
+      <a v-if="images.length > 1" class="carousel-control-next" href="#slideshow" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.carousel{
+.carousel {
   width: 100%;
   height: 100%;
 }
@@ -91,6 +91,11 @@ export default {
   aspect-ratio: 20/9;
   object-fit: cover;
   object-position: 50% 50%;
+  border: 2px solid var(--green);
+}
+
+.carousel-indicators {
+  cursor: pointer;
 }
 
 </style>

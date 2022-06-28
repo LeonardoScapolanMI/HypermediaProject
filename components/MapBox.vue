@@ -52,10 +52,9 @@ export default {
 
 <style scoped>
 
-  .mapbox{
-   
-    margin:auto;
-  }
+    .mapbox {
+      margin:auto;
+    }
 
     #map {
     display: flex;
@@ -67,6 +66,7 @@ export default {
     border: 0px;
     width: 100%;
     height: 300px;
+    box-shadow: 5px 5px 10px 5px var(--green);
     }
 
 </style>

@@ -3,7 +3,12 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Tutti i punti di interesse"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti i punti di interesse</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 

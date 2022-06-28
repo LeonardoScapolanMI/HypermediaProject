@@ -3,7 +3,12 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Tutti gli itinerari"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti gli itinerari</li>
+      </ol>
+    </div>
     
     <!-- TITLE -->
 

@@ -3,7 +3,13 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb :title="name"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/allservicetypes" id="old">Tutti i tipi di servizio</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 
@@ -16,7 +22,7 @@
     <!-- IMMAGINE -->
 
     <div class="title-image-container">
-      <img id="imageserv" :src="images[0].URL" :alt="images[0].caption" />
+      <img id="imageserv" class="title-image" :src="images[0].URL" :alt="images[0].caption" />
     </div>
 
     <!-- OVERVIEW -->
@@ -24,6 +30,8 @@
     <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
+
+    <hr class="separator"/>
 
     <!-- LONG CARDS -->
   

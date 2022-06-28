@@ -3,7 +3,14 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Contattaci"/>
+    <!-- BREADCRUMB -->
+
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Contattaci</li>
+      </ol>
+    </div>
 
     <!-- TITLE -->
 

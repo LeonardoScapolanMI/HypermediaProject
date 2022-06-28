@@ -3,7 +3,13 @@
 
     <!-- BREADCRUMB -->
 
-    <BreadCrumb title="Eventi estivi"/>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
+        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="new">Eventi estivi</li>
+      </ol>
+    </div>
     
     <!-- TITLE -->
 

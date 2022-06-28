@@ -26,16 +26,16 @@
     <div class="structural-links ">
       <div class="row">
         <div class="col-sm-auto">
-          <nuxt-link to="#ev" class="home-link">EVENTI</nuxt-link> 
+          <a href="#ev" class="home-link">EVENTI</a> 
         </div>
         <div class="col-sm-auto">
-          <nuxt-link to="#poi" class="home-link">PUNTI DI INTERESSE</nuxt-link> 
+          <a href="#poi" class="home-link">PUNTI DI INTERESSE</a> 
         </div>
         <div class="col-sm-auto">
-          <nuxt-link to="#it" class="home-link">ITINERARI</nuxt-link> 
+          <a href="#it" class="home-link">ITINERARI</a> 
         </div>
         <div class="col-sm-auto">
-          <nuxt-link to="#ser" class="home-link">SERVIZI</nuxt-link> 
+          <a href="#ser" class="home-link">SERVIZI</a> 
         </div>
       </div>
     </div>
@@ -153,9 +153,9 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
+      <a id="up-button" href="#" class="dropdown-toggle">
         <span class="sr-only"></span>
-      </nuxt-link>
+      </a>
     </div>
     
   </div>
@@ -254,6 +254,7 @@ export default {
   font-weight: bold;
   padding-top: 420px;
   text-align: center;
+  cursor: default;
 }
 
 .title h1, .title h4, .title hr {
