@@ -16,7 +16,15 @@
     <!-- SLIDESHOW -->
 
     <div class="title-image-container">
-      <SlideShow :images="imagesV" class="title-image" />
+      <img 
+        v-if="imagesV.lengt === 1"
+        id="imageserv" 
+        :src="images[0].URL" 
+        :alt="images[0].caption" />
+      <SlideShow 
+        v-else
+        :images="imagesV" 
+        class="title-image" />
     </div>
 
       <!-- MAPBOX -->

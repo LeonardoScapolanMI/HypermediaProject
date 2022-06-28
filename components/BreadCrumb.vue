@@ -23,7 +23,7 @@
         {{ title }}
         </span>
       </NLink>
-      <meta property="position" :content="index + 1" />
+      <meta property="position" :content="index + 2" />
     </li>
   </ol>
 </template>

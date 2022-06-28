@@ -123,8 +123,8 @@ export default {
   background-color: var(--blue);
   border: 2px solid var(--green);
   border-radius: 5px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }

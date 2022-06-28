@@ -8,7 +8,7 @@
     <!-- TITOLO -->
 
     <div class="page-title">
-      <h1>{{name}}</h1> 
+      <h1>{{ name }}</h1> 
       <hr class="subtitle">
       <h4>ITINERARIO</h4> 
     </div>
