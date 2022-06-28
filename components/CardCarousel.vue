@@ -50,12 +50,6 @@ export default {
 
   data() {
     return {
-      /*
-      start: 0,
-      end: 3,
-      start1: '',
-      end1: '',
-      */
       current: 0,
       nToShow: 0,
       colSize: '',
@@ -106,36 +100,7 @@ export default {
     window.addEventListener('resize', this.onResize)
   },
   methods: {
-    prev() {
-      /* if (this.start === 0) {
-        const x = this.start
-        const y = this.end
-        this.start = this.content.length - 1
-        this.end = this.content.length
-        this.start1 = x
-        this.end1 = y - 1
-      } else if (
-        this.start === this.content.length - 1 &&
-        this.end === this.content.length
-      ) {
-        this.start = this.content.length - 2
-
-        this.end1 = this.end1 - 1
-      } else if (
-        this.start === this.content.length - 2 &&
-        this.end === this.content.length
-      ) {
-        this.start = this.start - 1
-
-        this.start1 = null
-        this.end1 = null
-      } else {
-        this.start = this.start - 1
-        this.end = this.end - 1
-        this.end1 = null
-        this.start1 = null
-      } */
-      
+    prev() {    
       if(this.current>0) {
       this.current = (this.current - 1) % this.content.length
       } else {
@@ -144,44 +109,9 @@ export default {
       
     },
     next() {
-      /*
-      if (
-        this.end === this.content.length &&
-        this.start === this.content.length - 3
-      ) {
-        this.start = this.start + 1
-        this.start1 = 0
-        this.end1 = 1
-      } else if (
-        this.start === this.content.length - 2 &&
-        this.start1 === 0 &&
-        this.end1 === 1
-      ) {
-        this.start = this.content.length - 1
-        this.end = this.content.length
-
-        this.end1 = this.end1 + 1
-      } else if (
-        this.start === this.content.length - 1 &&
-        this.end === this.content.length
-      ) {
-        this.start = 0
-        this.end = 3
-        this.start1 = null
-        this.end1 = null
-      } else {
-        this.start = this.start + 1
-        this.end = this.end + 1
-      }
-      */
       this.current = (this.current + 1) % this.content.length
     },
     getItemsToShow() {
-      /*
-      return this.content
-        .slice(this.start, this.end)
-        .concat(this.content.slice(this.start1, this.end1))
-      */
       if (this.current + this.nToShow < this.content.length || this.content.length < 3) {
         return this.content.slice(this.current, this.current + this.nToShow)
       } else {
@@ -206,9 +136,12 @@ export default {
       } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
         this.nToShow = 2
         this.colSize = '-6'
-      } else {
+      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-xxl'))) {
         this.nToShow = 3
         this.colSize = '-4'
+      } else {
+        this.nToShow = 4
+        this.colSize = '-3'
       }
     },
   },
