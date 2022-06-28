@@ -52,6 +52,14 @@
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
     </div>
 </template>
 
