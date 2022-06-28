@@ -96,13 +96,14 @@ export default {
 }
 
 #image:hover { 
-  opacity: 0.9;
+  border: 1px solid var(--green);
   cursor: pointer;
 }
 
 #title {
   text-align: center;
   width: 90%;
+  cursor: default;
 }
 
 #description {
@@ -112,13 +113,13 @@ export default {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: default;
 }
 
 #see-details {
   margin-top: 3%;
   margin-bottom: 3%;
 }
-
 .button-style{
   color: var(--green);
   background-color: var(--blue);
@@ -129,7 +130,6 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .button-style:hover {
   color: white;
   transition: 0.25s;
