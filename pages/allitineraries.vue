@@ -25,7 +25,7 @@
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <p id="text text-with-line-break">{{ description }}</p>
+      <p class="text-with-line-break">{{ description }}</p>
     </div>
 
     <!-- CARDS -->
@@ -36,6 +36,14 @@
       :no-items-placeholder="'Al momento non ci sono itinerari'" 
       :error-text="'Impossibile caricare gli itinerari'"
     />
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
     
   </div>
 </template>

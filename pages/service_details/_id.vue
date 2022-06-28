@@ -60,6 +60,14 @@
       </button>
     </div>
 
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
+
   </div>
 </template>
 

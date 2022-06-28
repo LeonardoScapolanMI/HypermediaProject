@@ -49,6 +49,14 @@
         <nuxt-link to="/allpois" class="all-button">Tutti i punti di interesse</nuxt-link>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
+
+      <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
       
   </div>
 </template>

@@ -13,26 +13,33 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello')
 })
 
+/*
+OSSERVATION: for all the getters of all the elements of a category(s.a. poi,event,itinerary), the structure is similar, for requesting
+a part of the result, in order to have the button 'CARICA ALTRO'
+Onl the first is commented for the sake of avoiding repetition
+*/
+
 // Get all POIs
 app.get('/poi', async (req, res) => {
+  
   const data = await dbData
 
   const queryOptions = {
-    include: { model: data.Image },
+    include: { model: data.Image },//Including images in the result
   }
 
-  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex
-  if(req.query.itemCount) queryOptions.limit = req.query.itemCount
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex //info from the request body 
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount //info from the request body 
 
-  const result = await data.PointOfInterest.findAll(queryOptions)
-  const poiCount = await data.PointOfInterest.count()
+  const result = await data.PointOfInterest.findAll(queryOptions)//Execute the query with the options assigned before
+  const poiCount = await data.PointOfInterest.count()//We count how many element we want to receibe
 
-  let isFinished = false
+  let isFinished = false //the query can still return other data if called
   if(!req.query.itemCount) {
-    isFinished=true
+    isFinished=true // if the parameter is not present, then the list is finished
   }
   else if(!req.query.startingIndex){
-    isFinished = poiCount <= Number(req.query.itemCount)
+    isFinished = poiCount <= Number(req.query.itemCount) //if it's the firs time calling the method
   }
   else{
     isFinished = poiCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
@@ -57,7 +64,7 @@ app.get('/poi', async (req, res) => {
 app.get('/poi:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const element = await data.PointOfInterest.findOne({
+  const element = await data.PointOfInterest.findOne({//we include the parameters 
     where:{ _id },
     include:[{ model: data.Image },{model: data.Itinerary, include:{model: data.Image, as: "representativeImage"}},{model: data.Event, include:{model: data.Image}}],
     

@@ -30,6 +30,14 @@
       :no-items-placeholder="'Al momento non ci sono eventi'"
       :error-text="'Impossibile caricare gli eventi'"
     />
+
+    <!-- BACK UP BUTTON -->
+
+    <div class="dropup">
+      <a id="up-button" href="#" class="dropdown-toggle">
+        <span class="sr-only"></span>
+      </a>
+    </div>
     
   </div>
 </template>

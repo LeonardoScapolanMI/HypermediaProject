@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Left and right controls -->
+      <!-- Left and right controls --> 
       <a v-if="images.length > 1" class="carousel-control-prev" href="#slideshow" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
@@ -31,9 +31,9 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-
+<!-- Make the first elment of the slideshow active -->
     <script>
-      document.getElementById(0).className = 'carousel-item active'
+      document.getElementById(0).className = "carousel-item active";
     </script>
   </div>
 </template>
@@ -44,6 +44,7 @@ export default {
   props: {
     images: { type: Array, required: true },
   },
+  mounted(){document.getElementById(0).className = "carousel-item active";},
   head() {
     return {
       link: [
