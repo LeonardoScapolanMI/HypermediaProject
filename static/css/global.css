@@ -29,8 +29,8 @@ body {
   display: block;
   max-width: 90%;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   cursor: default;
 }
 
@@ -73,7 +73,7 @@ hr {
 
 .separator {
   max-width: 92%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .subtitle {
@@ -102,16 +102,16 @@ hr {
 }
 
 .all-button {
-  color: var(--white);
-  background-color: var(--brown);
-  border: 1px solid var(--green);
+  color: var(--brown);
+  background-color: var(--beige);
+  border: 1px solid var(--brown);
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
   font-weight: bold;
 }
 
 .all-button:hover {
-  color: var(--beige);
+  color: var(--green);
   text-decoration: none;
 }
 
