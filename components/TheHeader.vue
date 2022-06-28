@@ -9,7 +9,7 @@
       alt="HOME"
       to="/">
     </nuxt-link>
-  </div>
+  </div><!-- Link of the logo image-->
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
             <nuxt-link :to="navItem.path">{{ navItem.name }}</nuxt-link>
           </li>
         </ul>
-
+          <!-- Print the items of the headerList -->
     </div>
 </nav>
 </template>

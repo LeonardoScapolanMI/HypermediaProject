@@ -32,7 +32,7 @@
       </a>
     </div>
 
-    <script>
+    <script><!-- Make the first elment of the slideshow active-->
       document.getElementById(0).className = 'carousel-item active'
     </script>
   </div>

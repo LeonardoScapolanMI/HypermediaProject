@@ -22,13 +22,14 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
         <div v-else-if="itemList.length <= 0" class="text-center">
           {{ noItemsPlaceholder }}
         </div>
+        <!-- the former divs are displayed only in case of error-->
         <template v-else>
           <div class="row justify-content-between">
             <div
               v-for="(item, itemIndex) of itemList"
               :key="`poi-index-${itemIndex}`"
               class="col col-md-6 col-lg-4 card-container"
-            >
+            ><!-- Iterate on the list of items retrieved from the db-->
               <card
                 :image-url="item.images[0].URL"
                 :image-caption="item.images[0].caption"
@@ -37,7 +38,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
                 @onSeeDetails="
                   $router.push('/' + detailsPageFolder + '/' + item.id)
                 "
-              />
+              /><!-- Print the cards-->
             </div>
             <div class="col" /> <!-- to ensure that elements on the last line are aligned left if they are less than 3 (or 2 depending on the responsive layout) -->
           </div>
@@ -79,10 +80,10 @@ export default {
   props: {
     endpoint: { type: String, required: true },
     detailsPageFolder: { type: String, required: true },
-    nBaseLoadedItems: { type: Number, default: 12 },
-    nItemsLoadedMore: { type: Number, default: 6 },
-    noItemsPlaceholder: { type: String, default: 'Non ci sono oggetti' },
-    errorText: { type: String, default: 'Impossibile carcicare gli oggetti' },
+    nBaseLoadedItems: { type: Number, default: 12 }, // Base number of items loaded at the first request
+    nItemsLoadedMore: { type: Number, default: 6 }, // Number of items loaded with the 'carica altri '
+    noItemsPlaceholder: { type: String, default: 'Non ci sono oggetti' },// String placeholder if there are no elements returned 
+    errorText: { type: String, default: 'Impossibile carcicare gli oggetti' },// String placeholder for errors
   },
   data: () => ({
     ListState,
@@ -95,15 +96,15 @@ export default {
 
       const reqBody = {
         params: {
-          itemCount: this.nBaseLoadedItems,
+          itemCount: this.nBaseLoadedItems,// load base item of 12 
         },
       }
 
-      const { data } = await this.$axios.get(this.endpoint, reqBody)
+      const { data } = await this.$axios.get(this.endpoint, reqBody)// execute the request to the given endpoint 
 
       this.itemList = data.data
 
-      this.state = data.isFinished
+      this.state = data.isFinished // Check on the status of the loaded item, is it finished?
         ? ListState.LoadedFinished
         : ListState.LoadedNotFinished
     } catch (e) {
@@ -145,13 +146,13 @@ export default {
     }
   },
   methods: {
-    async loadMore() {
+    async loadMore() {// method for loading more items
       try {
         this.state = ListState.MoreLoading
 
-        const itemShown = this.itemList.length
+        const itemShown = this.itemList.length 
 
-        const reqBody = {
+        const reqBody = {// setting the params to give to the api method 
           params: {
             startingIndex: itemShown,
             itemCount: this.nItemsLoadedMore,
@@ -161,7 +162,7 @@ export default {
         const { data } = await this.$axios.get(this.endpoint, reqBody)
         for (const d of data.data) this.itemList.push(d)
 
-        this.state = data.isFinished
+        this.state = data.isFinished // Check on the status of the loaded item, is it finished?
           ? ListState.LoadedFinished
           : ListState.LoadedNotFinished
       } catch (e) {

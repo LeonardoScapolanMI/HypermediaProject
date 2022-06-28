@@ -3,7 +3,7 @@
       
         <iframe id="map" :src= "indirizzo"></iframe>
     
-  </div> <!-- row -->
+  </div> <!-- row , containing the mapbox iframe-->
 </template>
 
 <script> 

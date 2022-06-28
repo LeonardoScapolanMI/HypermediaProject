@@ -7,11 +7,11 @@
         :alt="imageCaption" 
         @click="$emit('onSeeDetails')"
         />
-
+      <!-- Print the Image-->
       <h2 id="title">{{ title }}</h2>
-
+      <!-- Print the title-->
       <p id="description">{{ description }}</p>
-
+      <!-- Print the description-->
       <button
         id="see-details"
         class="button-style"
@@ -19,6 +19,7 @@
       >
         Maggiori Informazioni
       </button>
+      <!-- button for more information-->
 
   </div>
 </template>
