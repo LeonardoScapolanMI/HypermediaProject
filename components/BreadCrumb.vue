@@ -28,7 +28,6 @@
 </template>
 
 <script>
-const titleCase = require('ap-style-title-case')
 export default {
   props: {
     title: {
@@ -49,7 +48,7 @@ export default {
         const match = this.$router.match(path)
         if (match.name !== null) {
           crumbs.push({
-            title: titleCase(param.replace(/-/g, ' ')),
+            title: param.replace(/-/g, ' ').toUpperCase(),
             ...match,
           })
         }
