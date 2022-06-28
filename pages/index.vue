@@ -227,7 +227,7 @@ export default {
 <style>
 
 .welcome {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
+  background: linear-gradient(var(--shadow), var(--shadow)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
   height: 550px;
   margin-bottom: 70px;

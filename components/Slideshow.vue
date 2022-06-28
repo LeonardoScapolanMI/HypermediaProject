@@ -31,7 +31,8 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-<!-- Make the first elment of the slideshow active -->
+
+  <!-- Make the first elment of the slideshow active -->
     <script>
       document.getElementById(0).className = "carousel-item active";
     </script>

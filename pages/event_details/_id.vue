@@ -128,7 +128,9 @@ p {
 .background {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/cards/poi.jpg") center ;
   background-size: cover;
-  height: 600px;
+  height: 700px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 </style>

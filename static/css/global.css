@@ -65,6 +65,7 @@ body {
   text-align: center;
   cursor: default;
   color: var(--white);
+  margin-top: 50px;
 }
 
 hr {
