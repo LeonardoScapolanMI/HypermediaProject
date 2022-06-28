@@ -3,12 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="page">La città</li>
-      </ol>
-    </div>
+    <BreadCrumb title="La città di Firenze"/>
 
     <!-- TITLE -->
 
@@ -54,7 +49,7 @@
      <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <nuxt-link to="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </nuxt-link>
     </div>

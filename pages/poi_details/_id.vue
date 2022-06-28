@@ -3,13 +3,7 @@
 
       <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#" id="old">Home</a></li>
-        <li class="breadcrumb-item"><a href="/allpois" id="old">Tutti i punti di interesse</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="page">{{ name }}</li>
-      </ol>
-    </div>
+    <BreadCrumb :title="name"/>
       
     <!-- TITOLO -->
 
@@ -22,7 +16,14 @@
     <!-- SLIDESHOW -->
 
     <div class="title-image-container">
-      <SlideShow :images="imagesV" class="title-image" />
+      <img 
+        v-if="imagesV.lengt === 1"
+        :images="imagesV" 
+        class="title-image" />
+      <SlideShow 
+        v-else
+        :images="imagesV" 
+        class="title-image" />
     </div>
 
       <!-- MAPBOX -->

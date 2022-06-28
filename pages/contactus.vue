@@ -2,13 +2,8 @@
   <div class="height">
 
     <!-- BREADCRUMB -->
-        
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="page">Contattaci</li>
-      </ol>
-    </div>
+
+    <BreadCrumb title="Contattaci"/>
 
     <!-- TITLE -->
 
@@ -29,11 +24,11 @@
                 <div class="col-md-6 mb-3">
                   <label for="firstName">Nome</label>
                   <input
-                    name = "firstName"
+                    id="firstName"
                     v-model="name"
+                    name = "firstName"
                     type="text"
                     class="form-control"
-                    id="firstName"
                     placeholder
                     value
                     required
@@ -43,11 +38,11 @@
                 <div class="col-md-6 mb-3">
                   <label for="lastName">Cognome</label>
                   <input
-                    name = "lastName"
+                    id="lastName"
                     v-model="surname"
+                    name = "lastName"
                     type="text"
                     class="form-control"
-                    id="lastName"
                     placeholder
                     value
                     required
@@ -62,11 +57,11 @@
                   <span class="text-muted">(Facoltativo)</span>
                 </label>
                 <input
-                  name = "email"
+                  id="email"
                   v-model="email"
+                  name = "email"
                   type="email"
                   class="form-control"
-                  id="email"
                   placeholder="utente@gmail.com"
                 />
                 <div
@@ -77,10 +72,10 @@
               <div class="mb-3">
                 <label for="message">Richiesta di informazioni</label>
                 <textarea
-                  name = "message"
-                  v-model="text"
-                  class="form-control"
                   id="request"
+                  v-model="text"
+                  name = "message"
+                  class="form-control"
                   rows="10"
                   placeholder
                   required
@@ -88,7 +83,7 @@
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div> 
 
-              <button class="btn" type="submit" id="submit">Invia</button>
+              <button id="submit" class="btn" type="submit">Invia</button>
             
             </form>
           </div>

@@ -16,9 +16,12 @@
       typeof="ListItem"
     >
       <NLink property="item" typeof="WebPage" :to="crumb.path">
-        <span property="name">{{
-          $route.fullPath === crumb.path && title !== null ? title : crumb.title
-        }}</span>
+        <span 
+          v-if="$route.fullPath === crumb.path && title !== null ? title : crumb.title"
+          property="name"
+        >
+        {{ title }}
+        </span>
       </NLink>
       <meta property="position" :content="index + 2" />
     </li>
@@ -26,7 +29,6 @@
 </template>
 
 <script>
-const titleCase = require('ap-style-title-case')
 export default {
   props: {
     title: {
@@ -47,7 +49,7 @@ export default {
         const match = this.$router.match(path)
         if (match.name !== null) {
           crumbs.push({
-            title: titleCase(param.replace(/-/g, ' ')),
+            title: param.replace(/-/g, ' ').toUpperCase(),
             ...match,
           })
         }
@@ -59,35 +61,43 @@ export default {
 </script>
 
 <style scoped>
+
 ol {
   list-style: none;
 }
+
 li {
   display: inline;
 }
+
 li:after {
-  content: ' » ';
+  content: '»';
   display: inline;
-  font-size: 0.9em;
-  color: #aaa;
-  padding: 0 0.0725em 0 0.15em;
+  color: var(--green);
+  padding: 5px;
 }
+
 li:last-child:after {
   content: '';
 }
-li a {
-  color: black;
-}
 li a.nuxt-link-exact-active.nuxt-link-active {
-  color: grey;
+  color: var(--green);
+  text-decoration: none;
+  cursor: default;
 }
- .breadcrumb {
-      background-color: #F2E3BC;
-      color: #414535;
-    }
 
-    #old:hover, #page {
-      color: #414535;
-      text-decoration: none;
-    }
+a {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--green);
+  text-decoration: none;
+}
+
+ .breadcrumb {
+    background-color: var(--beige);
+    margin: 20px;
+  }
+
 </style>

@@ -26,23 +26,23 @@
     <div class="structural-links ">
       <div class="row">
         <div class="col-sm-auto">
-          <a href="#ev" class="home-link">EVENTI</a> 
+          <nuxt-link to="#ev" class="home-link">EVENTI</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#poi" class="home-link">PUNTI DI INTERESSE</a> 
+          <nuxt-link to="#poi" class="home-link">PUNTI DI INTERESSE</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#it" class="home-link">ITINERARI</a> 
+          <nuxt-link to="#it" class="home-link">ITINERARI</nuxt-link> 
         </div>
         <div class="col-sm-auto">
-          <a href="#ser" class="home-link">SERVIZI</a> 
+          <nuxt-link to="#ser" class="home-link">SERVIZI</nuxt-link> 
         </div>
       </div>
     </div>
 
   <!-- LONG CARDS -->
 
-  <hr class="separator" id="ev"/>
+  <hr id="ev" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -50,9 +50,10 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="evURL" 
-            alt="evCaption"
-            to="evPath">
+            class="long-image"
+            :src="evURL" 
+            :alt="evCaption"
+            :to="evPath">
           </nuxt-link>
         </div>
       </div>
@@ -68,7 +69,7 @@
     </div>
   </div>
 
-  <hr class="separator" id="poi"/>
+  <hr id="poi" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -85,16 +86,17 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="poiURL" 
-            alt="poiCaption"
-            to="poiPath">
+            class="long-image"
+            :src="poiURL" 
+            :alt="poiCaption"
+            :to="poiPath">
           </nuxt-link>
         </div>
       </div>
     </div>
   </div>
   
-  <hr class="separator" id="it"/>
+  <hr id="it" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -102,9 +104,10 @@
         <div class="long-image-container"> 
           <nuxt-link 
             tag="img" 
-            src="itURL" 
-            alt="itCaption"
-            to="itPath">
+            class="long-image"
+            :src="itURL" 
+            :alt="itCaption"
+            :to="itPath">
           </nuxt-link>
         </div>
       </div>
@@ -120,7 +123,7 @@
     </div>
   </div>
 
-  <hr class="separator" id="ser"/>
+  <hr id="ser" class="separator"/>
 
   <div class="home-container">
     <div class="row">
@@ -137,9 +140,10 @@
         <div class="long-image-container">
           <nuxt-link 
             tag="img" 
-            src="serURL" 
-            alt="serCaption"
-            to="serPath">
+            class="long-image"
+            :src="serURL" 
+            :alt="serCaption"
+            :to="serPath">
           </nuxt-link>
          </div>
         </div>
@@ -149,7 +153,7 @@
     <!-- BACK UP BUTTON -->
 
     <div class="dropup">
-      <nuxt-link to="#" id="up-button" class="dropdown-toggle">
+      <nuxt-link id="up-button" to="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </nuxt-link>
     </div>
@@ -241,14 +245,14 @@ export default {
 .welcome {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
-  height: 500px;
+  height: 550px;
   margin-bottom: 70px;
 }
 
 .title {
   color: var(--brown);
   font-weight: bold;
-  padding-top: 400px;
+  padding-top: 420px;
   text-align: center;
 }
 
