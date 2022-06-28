@@ -111,7 +111,7 @@ export default {
   width: 90%;
   word-wrap: break-word;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: pre-wrap;
   text-overflow: ellipsis;
   cursor: default;
 }
