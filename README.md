@@ -2,13 +2,13 @@
 
 ## Team Hyper4
 Francesco Calabrese
- - Person Code: 
- - Mail:
+ - Person Code: 10849050
+ - Mail: francesco1.calabrese@polimi.it
  - Contribution:
  
 Federica Carrano
  - Person Code: 
- - Mail:
+ - Mail: federica.carrano@mail.polimi.it
  - Contribution:
  
 Francesco Corso
@@ -17,26 +17,26 @@ Francesco Corso
  - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel; Pages: allpois,allitineraries,poi_details, itinerary_details, event_details;
  
 Leonardo Scapolan
- - Person Code: 
- - Mail:
+ - Person Code: 10801854
+ - Mail: leonardo.scapolan@mail.polimi.it
  - Contribution:
  
 ## Project Documentation - Organization of the application
 Here we describe how the application has been generally organized for development and production.
 ### Pages
 - index: homepage of the website
-- alleventgroupings:
-  - allevents
-  - summerevents
-  - winterevents
-- allpois
-  - poi_details
-- allitineraries
-  - itinerary_details
-- allservicetypes
-  - service_details
-- thetown
-- contact us
+- alleventgroupings: gives the user the possibility to access the events offered in the website. Organized by season, or displaying them all.
+  - allevents: displays all the events
+  - summerevents: displays all the summer events
+  - winterevents: : displays all the winter events
+- allpois: displays all the point of interest
+  - poi_details: displays information about a single topic 
+- allitineraries: displays all the itineraries
+  - itinerary_details: displays information about a single itinerary
+- allservicetypes: displays all the service types
+  - service_details: displays a series of services belonging to the chosen tyoe.
+- thetown: displays information about the history of Florence, with also information on how to get there.
+- contact us: hosts a contact form.
 
 ### Components
 - Card: implements the basic functionality of displaying the preview of an item of the website, with a set of basis information to grab user's attention.
@@ -49,5 +49,10 @@ Here we describe how the application has been generally organized for developmen
 - TheFooter:Fundamental part of the template, holds the link to the contact us page.
 - TheHeader:Fundamental part of the template, holds all the navigation links to the main topics of the application.
 ### Functionalities
-
+- Routing
+- Store
+- Layouts
+- Rendering
+- Static
+- Server
 ### Best Practices 
