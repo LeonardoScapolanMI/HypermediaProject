@@ -1,7 +1,5 @@
 <template>
-  <div class="height">
-
-    <!-- BREADCRUMB -->
+  <div>
 
     <!-- BREADCRUMB -->
 

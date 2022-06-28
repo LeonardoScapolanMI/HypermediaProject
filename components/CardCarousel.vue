@@ -165,8 +165,13 @@ export default {
 #arrow {
   margin: auto;
   padding: 25px 10px;
-  background-color: var(--beige);
   width: 40px;
+  background-color: var(--beige);
+}
+
+#arrow:hover {
+  background-color: var(--brown);
+  cursor: pointer;
 }
 
 </style>

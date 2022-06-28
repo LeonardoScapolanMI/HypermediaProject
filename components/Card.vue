@@ -83,7 +83,6 @@ export default {
   border-radius: 25px;
   border: 2px solid var(--blue);
   box-shadow: 5px 5px 10px 3px var(--green);
-  margin-bottom: 20px;
 }
 
 #image {
@@ -108,8 +107,8 @@ export default {
 }
 
 #description {
-  flex: 2;
-  width: 90%;
+  flex: 1;
+  width: 92%;
   word-wrap: break-word;
   overflow: hidden;
   white-space: pre-line;
