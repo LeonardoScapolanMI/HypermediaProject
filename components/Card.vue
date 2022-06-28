@@ -112,12 +112,13 @@ export default {
 
 #description {
   flex: 1;
-  width: 92%;
+  width: 90%;
   word-wrap: break-word;
   overflow: hidden;
   white-space: pre-line;
   text-overflow: ellipsis;
   cursor: default;
+  text-align: center;
 }
 
 #see-details {
