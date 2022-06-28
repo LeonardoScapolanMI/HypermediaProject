@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Left and right controls -->
+      <!-- Left and right controls --> 
       <a v-if="images.length > 1" class="carousel-control-prev" href="#slideshow" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
