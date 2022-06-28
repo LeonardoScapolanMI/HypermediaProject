@@ -10,7 +10,7 @@
     </button>
     
       <div id="collapsibleNavbar" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
           <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
             <a :href="navItem.path">{{ navItem.name }}</a>
           </li>

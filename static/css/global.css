@@ -70,13 +70,6 @@ body {
   padding-top: 50px;
 }
 
-.background {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/background.jpg") center ;
-  background-size: cover;
-  height: 700px;
-  margin-bottom: 20px;
-}
-
 .subline {
   background-color: var(--white);
   max-width: 50%;
@@ -112,20 +105,6 @@ body {
 
 #up-button:hover {
   color: var(--white);
-}
-
-.all-button {
-  color: var(--beige);
-  background-color: var(--brown);
-  border: 1.5px solid var(--green);
-  padding: 10px 50px 10px 50px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.all-button:hover {
-  text-decoration: none;
-  color: var(--green);
 }
 
 .card-car {

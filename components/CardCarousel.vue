@@ -21,6 +21,7 @@
             :image-caption="cards.image.caption"
             :title="cards.name"
             :description="cards.description"
+            class="white-shadow"
             @onSeeDetails="$emit('onSeeDetails', cards.id)"
           />
         </div><!-- Print the cards-->
@@ -150,6 +151,10 @@ export default {
 
 <style scoped>
 
+.white-shadow {
+  box-shadow: 5px 5px 10px 3px var(--white);
+}
+
 #wrapper {
   display: flex;
 }
@@ -164,7 +169,7 @@ export default {
 
 #arrow {
   margin: auto;
-  padding: 20px 20px;
+  padding: 25px 25px;
   width: 40px;
   background-color: var(--brown);
   border-radius: 30px;
@@ -172,6 +177,7 @@ export default {
 
 #arrow:hover {
   cursor: pointer;
+  padding: 30px 30px;
 }
 
 </style>

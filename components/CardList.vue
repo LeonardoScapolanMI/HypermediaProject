@@ -35,7 +35,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
                 :image-caption="item.images[0].caption"
                 :title="item.name"
                 :description="item.description"
-                class="shadow"
+                class="green-shadow"
                 @onSeeDetails="
                   $router.push('/' + detailsPageFolder + '/' + item.id)
                 "
@@ -196,7 +196,7 @@ export default {
 
 <style>
 
-.shadow {
+.green-shadow {
   box-shadow: 5px 5px 10px 3px var(--green);
 }
 

@@ -77,7 +77,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
   aspect-ratio: 4/5;
   max-height: 70vh;
   border-radius: 25px;
