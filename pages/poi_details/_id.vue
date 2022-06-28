@@ -21,9 +21,7 @@
 
     <!-- SLIDESHOW -->
 
-    <div class="title-image-container">
-      <SlideShow :images="imagesV" />
-    </div>
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
       <!-- MAPBOX -->
 

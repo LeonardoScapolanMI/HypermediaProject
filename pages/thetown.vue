@@ -18,7 +18,7 @@
 
     <!-- SLIDESHOW -->  
 
-    <SlideShow :images="imagesV"/>
+    <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- LINK STRUTTURALI -->
 
