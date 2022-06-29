@@ -74,12 +74,6 @@ export default {
     baseURL: '/',
   },
 
-  publicRuntimeConfig: {
-    axios: {
-      baseURL: process.env.HOST
-    }
-  },
-
   serverMiddleware: [
     {
       path: '/api',
