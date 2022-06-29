@@ -85,7 +85,8 @@ export default {
   margin-bottom: 50px;
   margin-bottom: 50px;
   background-color: var(--white);
-  color: var(--green)
+  color: var(--green);
+  max-width: 80%;
 }
 
 #image {
