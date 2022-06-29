@@ -7,7 +7,7 @@ const pois = [
       description:
         "Una delle più famose e importanti pinacoteche al mondo, con un'incomparabile collezione di arte rinascimentale, fiorentina e non solo, comprendente tra l'altro la maggiore collezione di dipinti del Botticelli, ed è divisa in varie sale allestite per scuole e stili in ordine più o meno cronologico. Nata dalle raccolte artistiche accumulate nei secoli dai Medici, ha anche una notevole collezione di sculture antiche ed espone tra le innumerevoli, capolavori di Giotto, Cimabue, Leonardo da Vinci, Michelangelo, Raffaello, Tiziano, Caravaggio, Dürer e moltissimi altri.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhbC6vwBUKhMRleQ_6SbKSRU&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4qvjvwm000214pd4yqyohn2.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.767901/11.255405',
     },
     imagesURL: [
       {
@@ -54,7 +54,7 @@ const pois = [
       description:
         "Questo palazzo storico ha rappresentato il cuore politico di Firenze per circa due secoli, prima di diventare residenza del Duca Cosimo I de' Medici; la sua storia si riflette nella straordinaria decorazione degli ambienti interni e nelle collezioni artistiche. Composto da più nuclei (medievale, rinascimentale e tardo-rinascimentale), spicca soprattutto negli interni progettati da Giorgio Vasari per Cosimo I e sua moglie Eleonora di Toledo, in cui lavorò, tra gli altri, anche Agnolo Bronzino (Cappella di Eleonora). Nel percorso espositivo sono ospitati vari capolavori, come le sculture di Donatello, Andrea del Verrocchio e Michelangelo. Singolare è la possibilità di visitare, in gruppi guidati a scadenze regolari, i passaggi segreti e gli ambienti più difficilmente accessibili come lo Studiolo di Francesco I.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-ZN45QBUKhMRh1fGVOcr4uQ&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xu63003e16o3cddjpsk8.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.769337/11.255865',
     },
     imagesURL: [
       {
@@ -89,7 +89,7 @@ const pois = [
       description:
         "La Galleria dell' Accademia è famosa nel mondo per la collezione di statue di Michelangelo Buonarroti, tra le quali il celeberrimo David. Nata come sussidio alla formazione degli studenti della vicina Accademia di Belle Arti e arricchitasi dei capolavori provenienti dalle soppressioni di chiese e conventi dell'area fiorentina, mostra oggi un percorso espositivo eterogeneo, che spazia dai primitivi toscani (pittori su fondo oro dal XIII secolo) ai capolavori del Rinascimento e del Manierismo, dalla gipsoteca di Lorenzo Bartolini alla collezione lorenese di icone russe, fino alle collezioni dell'adiacente Museo degli strumenti musicali.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ7mRvIxVKhMRx6JB-q73TG0&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xx6g001i14oeocqnnoga.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77684/11.25872',
     },
     imagesURL: [
       {
@@ -124,7 +124,7 @@ const pois = [
       description:
         "Palazzo Pitti è il più ampio complesso monumentale della città e comprende otto musei, visitabili con due biglietti cumulativi.è un imponente palazzo rinascimentale di Firenze. Si trova nella zona di Oltrarno, a breve distanza da Ponte Vecchio.[2] Il nucleo originale dell'edificio risale al 1458, come residenza urbana del banchiere Luca Pitti.[3] Il palazzo fu quindi acquistato dalla famiglia Medici nel 1549 e divenne la residenza principale dei granduchi di Toscana, prima Medici e dal 1737 Asburgo-Lorena. A seguito dell'unità d'Italia, svolse il ruolo di palazzo reale per Casa Savoia nel quinquennio in cui Firenze fu capitale del Regno d'Italia (1865-70). Nel 1919 Vittorio Emanuele III lo donò allo Stato: da allora è un museo statale.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ8ZnbQVRRKhMRKlDx5uTM0Fw&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2y6n6000214qp2nxcc5e1.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.76528/11.2506',
     },
     imagesURL: [
       {
@@ -159,7 +159,7 @@ const pois = [
       description:
         "Giardino di Boboli, connesso anche al Forte di Belvedere, accoglie ogni anno oltre 800 000 visitatori ed è uno dei più importanti esempi di giardino all'italiana al mondo. È un vero e proprio museo all'aperto, per l'impostazione architettonico-paesaggistica e per la collezione di sculture, che vanno dalle antichità romane al XIX secolo. Notevole è l'importanza che nel giardino assumono le statue e gli edifici, come la settecentesca Kaffeehaus (raro esempio di gusto rococò), che permette di godere del panorama sulla città, o la Limonaia.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJl05zkFZRKhMRstkDO_cCDAQ&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2ycpr000714l8k0e6ccp6.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#14.18/43.76277/11.24827',
     },
     imagesURL: [
       {
@@ -194,7 +194,7 @@ const pois = [
       description:
         "Piazza della Signoria è la piazza centrale di Firenze, sede del potere civile con Palazzo Vecchio e cuore della vita sociale della città. È l'unica piazza al mondo a ospitare una straordinaria serie di capolavori di scultura carichi di messaggi politici, che dovevano ispirare i governatori della città. Nella grande piazza troviamo numerose opere d'arte, come le statue nella Loggia dei Lanzi, la statua equestre a Cosimo I de' Medici, le statue poste davanti a Palazzo Vecchio come una copia del David di Michelangelo, il Nettuno, il Marzocco di Donatello, Ercole e Caco e molte altre. Si trova a fianco del piazzale della Galleria degli Uffizi.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNa5CIAFUKhMRbZDj-HFpvJ8&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2y57x002i14mu2rwxurnd.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.769341/11.255696',
     },
     imagesURL: [
       {
@@ -211,7 +211,7 @@ const pois = [
       description:
         "Piazza del Duomo è uno dei complessi monumentali più famosi d'Italia, con la Cattedrale di Santa Maria del Fiore e la Cupola del Brunelleschi, il Campanile di Giotto e il Battistero di San Giovanni, oltre che agli splendidi palazzi e musei che vi si affacciano, come il Palazzo Arcivescovile, il Museo dell'Opera del Duomo, la Loggia del Bigallo, il palazzo dei Canonici e molti altri. La parte ovest dove è situato il Battistero prende il nome di piazza San Giovanni.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:EilQaWF6emEgZGVsIER1b21vLCA1MDEyMiBGaXJlbnplIEZJLCBJdGFseSIuKiwKFAoSCe0zG8IDVCoTERqOLPI2WRgmEhQKEgmt1tKAplYqExEDKsfvF3nVkw&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xsk4000114qpqs4iphli.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77262/11.25502',
     },
     imagesURL: [
       {
@@ -228,7 +228,7 @@ const pois = [
       description:
         "Piazza Santa Croce, dominata dall'omonima basilica, essendo molto grande e di forma regolare, nel Rinascimento come in epoca moderna divenne il luogo ideale per giostre cavalleresche, feste, spettacoli e gare popolari, come il calcio in costume, che ancora oggi vi si tiene ogni giugno. È sede di varie manifestazioni, eventi e spettacoli oltre che vivaci mercatini nel periodo natalizio. Vi si affacciano il Palazzo dell'Antella e il Palazzo Cocchi-Serristori, oltre ai numerosi negozi di lavorazione artigianale di prodotti in pelle. Davanti alla basilica è posta la grande statua dedicata al concittadino Dante Alighieri.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz2QTrwdUKhMR8gcec4CSLp4&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xvpc003f16o3ye3tnvt8.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.76881/11.26109',
     },
     imagesURL: [
       {
@@ -245,7 +245,7 @@ const pois = [
       description:
         "Piazza Santa Maria Novella, dominata dalla splendida facciata dell'omonima chiesa, è una delle piazze principali di Firenze. È antistante a piazza della Stazione, a cui si accede da via degli Avelli.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpwh4pC9XKhMRSlmG2uqc4aE&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2ybgz000314qpvx4mv6va.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77332/11.24976',
     },
     imagesURL: [
       {
@@ -262,7 +262,7 @@ const pois = [
       description:
         'Piazzale Michelangelo rappresenta il più famoso punto di osservazione del panorama cittadino di Firenze, riprodotto in innumerevoli cartoline e meta obbligata dei turisti in visita alla città. Ospita diverse manifestazioni, concerti ed eventi come, per esempio, MTV TRL',
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQzhmQ_dTKhMRGVENguFo97Q&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xmqy003614tbtqkejmlm.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.76216/11.26483',
     },
     imagesURL: [
       {
@@ -279,7 +279,7 @@ const pois = [
       description:
         "Piazza della Santissima Annunziata è una delle piazze più belle e stilisticamente armoniose non solo della città, ma di tutta Italia, forse primo esempio europeo di pianificazione urbanistica. Su di essa si affaccia l'omonima basilica, lo Spedale degli Innocenti del Brunelleschi, la Loggia dei Servi di Maria, Palazzo Budini Gattai e il Museo archeologico nazionale.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJkzPy1ARUKhMRxHRkLPzKxto&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2y88k001515owr2zyu4eo.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77687/11.26124',
     },
     imagesURL: [
       {
@@ -296,7 +296,7 @@ const pois = [
       description:
         "Cattedrale di Santa Maria del Fiore è il Duomo di Firenze; è la quinta chiesa d'Europa per grandezza, dopo la Basilica di San Pietro, la Cattedrale di San Paolo a Londra, la Cattedrale di Siviglia e il Duomo di Milano; è lunga infatti 153 metri mentre il basamento della famosa cupola, che è visibile da tutta la piana di Firenze fino a Prato, è largo 90 metri.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9S_ivwNUKhMR9fGqh4RDkVU&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2ya1n001615owkr5o5o4y.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77355/11.25619',
     },
     imagesURL: [
       {
@@ -331,7 +331,7 @@ const pois = [
       description:
         "Il Battistero di San Giovanni, amato, tra gli altri, da Dante e da Michelangelo Buonarroti, è splendidamente decorato sia all'esterno sia all'interno; abbellito dalle migliori maestranze cittadine, è famoso soprattutto per i mosaici della cupola e per la porta del Paradiso di Lorenzo Ghiberti; le misteriose origini storiche del monumento e i tanti avvenimenti ai quali ha fatto da teatro ne accrescono la storia enigmatica.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJQXzvwNUKhMRfYXRv0EzSgc&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xizt000414s98uv1a9zz.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77314/11.25473',
     },
     imagesURL: [
       {
@@ -348,7 +348,7 @@ const pois = [
       description:
         'Santa Croce è una delle più grandi chiese officiate dai Francescani. Una delle massime realizzazioni del gotico in Italia, con capolavori come la Cappella dei Pazzi di Brunelleschi, è nota come "Il tempio dell\'Itale glorie" per le numerose sepolture di sommi artisti, letterati e scienziati che racchiude, come Donatello, Michelangelo, Galileo Galilei, Niccolò Machiavelli, Guglielmo Marconi, Enrico Fermi, Luigi Cherubini, Lorenzo Ghiberti, Gioachino Rossini, Leon Battista Alberti, Ugo Foscolo e molti altri.',
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMcPMIwdUKhMRVRITnGR5go8&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2xpy3000614l88ycp6udb.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.76829/11.26171',
     },
     imagesURL: [
       {
@@ -377,7 +377,7 @@ const pois = [
       description:
         "Santa Maria Novella è una delle più importanti chiese di Firenze e sorge sull'omonima piazza, chiesa domenicana, conserva inestimabili opere d'arte, come gli affreschi di Masaccio, Paolo Uccello, Filippino Lippi e Domenico Ghirlandaio; la parte superiore della facciata e il portale sono capolavori di armonia e raziocinio di Leon Battista Alberti.",
       mapURL:
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJYZMhdalWKhMRsm6GSXl05YU&key=AIzaSyB4TxpPmfH1dNbCerrsOiH0YVbP9jiUaAw',
+        'https://api.mapbox.com/styles/v1/leoscapo98/cl4r2yh4y003614nsmxxkcp0o.html?title=false&access_token=pk.eyJ1IjoibGVvc2NhcG85OCIsImEiOiJjbDRxdmljZnEwc3NiM21sbjhuNjh5MXF0In0.aUgG5AEb7k2gEy4RuBg5Fw&zoomwheel=false#16/43.77426/11.24859',
     },
     imagesURL: [
       {
