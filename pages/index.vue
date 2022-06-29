@@ -62,8 +62,9 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <hr id="poi" class="separator" />
+  <hr id="poi" class="separator" />
 
   <div class="home-container">
     <div class="row">
@@ -138,6 +139,7 @@
         <span class="sr-only"></span>
       </a>
     </div>
+  </div>
   </div>
 </template>
 
