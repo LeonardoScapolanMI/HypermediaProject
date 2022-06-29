@@ -67,6 +67,7 @@
 
 <script>
 import LongCard from '~/components/LongCard.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'TypeOfServices',

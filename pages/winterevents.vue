@@ -50,6 +50,7 @@
 
 <script>
 import CardList from '~/components/CardList.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 function nextWinterYears(){
   const now = new Date()

@@ -44,6 +44,7 @@
 
 <script>
 import CardList from '~/components/CardList.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'AllEvents',

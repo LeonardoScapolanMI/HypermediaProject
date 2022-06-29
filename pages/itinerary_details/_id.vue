@@ -58,6 +58,7 @@
 <script>
 import CardCarousel from '~/components/CardCarousel.vue'
 import MapBox from '~/components/MapBox.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'Itinerary',

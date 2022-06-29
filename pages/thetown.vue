@@ -3,12 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">La città di Firenze</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- TITLE -->
 
@@ -65,11 +60,18 @@
 
 <script>
 import SlideShow from '~/components/Slideshow.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
+
 export default {
   name: 'TheTown',
   components: { SlideShow },
   data() {
+     const bc =[]
+    bc.push (
+      { title:'Tutti i Punti di Interesse', path:'' }
+      )
     return {
+      bc,
       imagesV: [
         {
           URL: '/images/town/0.jpg',

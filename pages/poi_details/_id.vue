@@ -66,6 +66,7 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
+
 export default {
   name: 'POI',
   components:{

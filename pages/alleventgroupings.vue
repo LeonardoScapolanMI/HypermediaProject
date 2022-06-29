@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import BreadCrumb from '~/components/BreadCrumb.vue'
+
 export default {
   name: 'AllEventGroupings',
   components: { BreadCrumb },

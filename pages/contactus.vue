@@ -3,12 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Contattaci</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- TITLE -->
 
@@ -100,12 +95,19 @@
 </template>
 
 <script>
+import BreadCrumb from '~/components/BreadCrumb.vue'
+
 const axios= require('axios').default;
 export default {
 
   name: 'ContactUs',
   data() {
+    const bc =[]
+    bc.push(
+      { title:'Contattaci', path:'' }
+      )
     return {
+      bc,
       name: '',
       surname: '',
       email: '',
