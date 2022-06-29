@@ -15,10 +15,14 @@
       property="itemListElement"
       typeof="ListItem"
     >
-      <a property="item" typeof="WebPage" :href="crumb.path">
-        {{ crumb.title }}
-        
-      </a>
+      <NLink property="item" typeof="WebPage" :to="crumb.path">
+        <span 
+          v-if="$route.fullPath === crumb.path && title !== null ? title : crumb.title"
+          property="name"
+        >
+        {{ title }}
+        </span>
+      </NLink>
       <meta property="position" :content="index + 2" />
     </li>
   </ol>
@@ -27,13 +31,32 @@
 <script>
 export default {
   props: {
-    crumbs: {
-      type: Array,
-      required: true,
-      
+    title: {
+      type: String,
+      default: null,
     },
   },
-  
+  computed: {
+    crumbs() {
+      const fullPath = this.$route.fullPath
+      const params = fullPath.startsWith('/')
+        ? fullPath.substring(1).split('/')
+        : fullPath.split('/')
+      const crumbs = []
+      let path = ''
+      params.forEach((param, index) => {
+        path = `${path}/${param}`
+        const match = this.$router.match(path)
+        if (match.name !== null) {
+          crumbs.push({
+            title: param.replace(/-/g, ' ').toUpperCase(),
+            ...match,
+          })
+        }
+      })
+      return crumbs
+    },
+  },
 }
 </script>
 
@@ -48,13 +71,15 @@ li {
 }
 
 li:after {
-  content: ' / ';
+  content: '»';
   display: inline;
   color: var(--green);
   padding: 5px;
 }
 
-
+li:last-child:after {
+  content: '';
+}
 li a.nuxt-link-exact-active.nuxt-link-active {
   color: var(--green);
   text-decoration: none;
@@ -74,15 +99,5 @@ a:hover {
     background-color: var(--beige);
     margin: 20px;
   }
-  li:last-child:after {
-  content: '';
-  color:var(--green);
-  }
-  li:last-child a {
-  content: '';
-  color:var(--green);
-  }
-
-
 
 </style>
