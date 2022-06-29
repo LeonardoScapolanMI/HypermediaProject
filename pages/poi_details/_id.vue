@@ -1,7 +1,7 @@
 <template>
     <div>
 
-    <!-- BREADCRUMB -->
+    <!-- BREADCRUMB 
 
     <div>
       <ol class="breadcrumb">
@@ -9,7 +9,9 @@
         <li class="breadcrumb-item"><a href="/allpois" id="old">Tutti i punti di interesse</a></li>
         <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
       </ol>
-    </div>
+    </div>-->
+
+     <BreadCrumb :crumbs='bc'/>
       
     <!-- TITOLO -->
 
@@ -71,12 +73,14 @@
 import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 export default {
   name: 'POI',
   components:{
     SlideShow,
     MapBox,
     CardCarousel,
+    BreadCrumb,
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -84,7 +88,9 @@ export default {
 
     const itList = []
     const evList = []
-
+     const bc =[]
+    bc.push({title:'Tutti i Punti di Interesse', path:'/allpois'})
+    bc.push({title:data.name, path:'#'})
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -112,6 +118,7 @@ export default {
       mapurl: data.mapURL,
       itList,
       evList,
+      bc,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

@@ -124,7 +124,7 @@ export default {
 
 .background-poi {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/pointOfInterest/background.jpg") center ;
-  background-size: cover;
+  background-size: contain;
   height: 700px;
   margin-bottom: 30px;
 }
