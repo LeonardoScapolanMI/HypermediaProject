@@ -61,6 +61,7 @@ a {
 
 a:hover {
   color: var(--aqua);
+  text-decoration: none;
 }
 
  .breadcrumb {
