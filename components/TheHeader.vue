@@ -12,14 +12,14 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div id="collapsibleNavbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-          <a :href="navItem.path">{{ navItem.name }}</a>
-        </li>
-      </ul>
-      <!-- Print the items of the headerList -->
+    
+      <div id="collapsibleNavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
+            <a :href="navItem.path">{{ navItem.name }}</a>
+          </li>
+        </ul>
+          <!-- Print the items of the headerList -->
     </div>
   </nav>
 </template>

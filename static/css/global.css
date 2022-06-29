@@ -22,6 +22,8 @@ body {
 }
 
 .text-content-title {
+  text-align: center;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -29,8 +31,8 @@ body {
   display: block;
   max-width: 90%;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   cursor: default;
 }
 
@@ -59,25 +61,48 @@ body {
 }
 
 .carousel-title {
-  margin-top: 200px;
-  margin-bottom: 100px;
   margin-left: min(100px, 5%);
   margin-right: min(100px, 5%);
   text-align: center;
   cursor: default;
+  color: var(--white);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
 }
 
-hr {
-  background-color: var(--blue);
+.carousel-button {
+  color: var(--green);
+  background-color: var(--beige);
+  border: 1.5px solid var(--green);
+  padding: 10px 50px 10px 50px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel-button:hover {
+  border: 2px solid var(--green);
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.subline {
+  background-color: var(--brown);
+  max-width: 40%;
+  margin-bottom: 30px;
 }
 
 .separator {
   max-width: 92%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  background-color: var(--blue);
 }
 
 .subtitle {
   width: 50%;
+  background-color: var(--blue);
 }
 
 .structural-links {
@@ -101,20 +126,6 @@ hr {
   color: var(--white);
 }
 
-.all-button {
-  color: var(--white);
-  background-color: var(--brown);
-  border: 1px solid var(--green);
-  padding: 10px 50px 10px 50px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.all-button:hover {
-  color: var(--green);
-  text-decoration: none;
-}
-
 .card-car {
   margin: auto;
   width: 100%;
@@ -128,7 +139,7 @@ hr {
 }
 
 #old {
-  color: var(--aqua);
+  color: var(--brown);
 }
 
 #old:hover {

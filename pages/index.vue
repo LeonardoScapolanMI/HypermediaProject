@@ -39,33 +39,25 @@
       </div>
     </div>
 
-    <!-- LONG CARDS -->
+  <!-- LONG CARDS -->
 
-    <hr id="ev" class="separator" />
+  <hr id="ev" class="separator"/>
 
-    <div class="home-container">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="long-image-container">
-            <nuxt-link
-              tag="img"
-              class="long-image"
-              :src="evURL"
-              :alt="evCaption"
-              :to="evPath"
-            >
-            </nuxt-link>
-          </div>
+  <div class="home-container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="long-image-container">
+          <a :href="evPath">
+            <img class="long-image" :src="evURL" :alt="evCaption" />
+          </a>
         </div>
-        <div class="col-md-5">
-          <div class="home-button-container">
-            <h3 class="text-content-title">{{ evtitle }}</h3>
-            <p class="text-with-line-break">{{ evText }}</p>
-            <div class="button-container">
-              <nuxt-link :to="itPath" class="home-button"
-                >Tutti gli eventi</nuxt-link
-              >
-            </div>
+      </div>
+      <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ evtitle }}</h3>
+          <p class="text-with-line-break">{{ evText }}</p>
+          <div class="button-container">
+            <a :href="evPath" class="home-button">Tutti gli eventi</a>
           </div>
         </div>
       </div>
@@ -73,59 +65,44 @@
 
     <hr id="poi" class="separator" />
 
-    <div class="home-container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="home-button-container">
-            <h3 class="text-content-title">{{ poiTitle }}</h3>
-            <p class="text-with-line-break">{{ poiText }}</p>
-            <div class="button-container">
-              <nuxt-link :to="itPath" class="home-button"
-                >Tutti i punti di interesse</nuxt-link
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="long-image-container">
-            <nuxt-link
-              tag="img"
-              class="long-image"
-              :src="poiURL"
-              :alt="poiCaption"
-              :to="poiPath"
-            >
-            </nuxt-link>
+  <div class="home-container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ poiTitle }}</h3>
+          <p class="text-with-line-break">{{ poiText }}</p>
+          <div class="button-container">
+            <a :href="poiPath" class="home-button">Tutti i punti di interesse</a>
           </div>
         </div>
       </div>
-    </div>
-
-    <hr id="it" class="separator" />
-
-    <div class="home-container">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="long-image-container">
-            <nuxt-link
-              tag="img"
-              class="long-image"
-              :src="itURL"
-              :alt="itCaption"
-              :to="itPath"
-            >
-            </nuxt-link>
-          </div>
+      <div class="col-md-7">
+        <div class="long-image-container">
+          <a :href="poiPath">
+            <img class="long-image" :src="poiURL" :alt="poiCaption" />
+          </a>
         </div>
-        <div class="col-md-5">
-          <div class="home-button-container">
-            <h3 class="text-content-title">{{ itTitle }}</h3>
-            <p class="text-with-line-break">{{ itText }}</p>
-            <div class="button-container">
-              <nuxt-link :to="itPath" class="home-button"
-                >Tutti gli itinerari</nuxt-link
-              >
-            </div>
+      </div>
+    </div>
+  </div>
+  
+  <hr id="it" class="separator"/>
+
+  <div class="home-container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="long-image-container"> 
+          <a :href="itPath">
+            <img class="long-image" :src="itURL" :alt="itCaption" />
+          </a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ itTitle }}</h3>
+          <p class="text-with-line-break">{{ itText }}</p>
+          <div class="button-container">
+            <a :href="itPath" class="home-button">Tutti gli itinerari</a>
           </div>
         </div>
       </div>
@@ -133,30 +110,23 @@
 
     <hr id="ser" class="separator" />
 
-    <div class="home-container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="home-button-container">
-            <h3 class="text-content-title">{{ serTitle }}</h3>
-            <p class="text-with-line-break">{{ serText }}</p>
-            <div class="button-container">
-              <nuxt-link :to="serPath" class="home-button"
-                >Tutti i tipi di servizio</nuxt-link
-              >
-            </div>
+  <div class="home-container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="home-button-container">
+          <h3 class="text-content-title">{{ serTitle }}</h3>
+          <p class="text-with-line-break">{{ serText }}</p>
+          <div class="button-container">
+            <a :href="serPath" class="home-button">Tutti i tipi di servizio</a>
           </div>
         </div>
-        <div class="col-md-7">
-          <div class="long-image-container">
-            <nuxt-link
-              tag="img"
-              class="long-image"
-              :src="serURL"
-              :alt="serCaption"
-              :to="serPath"
-            >
-            </nuxt-link>
-          </div>
+      </div>
+      <div class="col-md-7">
+        <div class="long-image-container">
+          <a :href="serPath">
+            <img class="long-image" :src="serURL" :alt="serCaption" />
+          </a>
+         </div>
         </div>
       </div>
     </div>
@@ -257,8 +227,7 @@ export default {
 
 <style>
 .welcome {
-  background: linear-gradient(var(--dark), var(--dark)),
-    url('/images/home/welcome.jpg') center;
+  background: linear-gradient(var(--shadow), var(--shadow)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
   height: 550px;
   margin-bottom: 70px;
@@ -332,16 +301,18 @@ export default {
 }
 
 .home-button {
-  color: var(--white);
+  color: var(--green);
   background-color: var(--brown);
-  border: 1px solid var(--green);
-  padding: 10px 20px 10px 20px;
+  border: 1.5px solid var(--green);
+  padding: 10px 50px 10px 50px;
   border-radius: 5px;
   font-weight: bold;
 }
 
 .home-button:hover {
+  border: 2px solid var(--green);
   color: var(--green);
   text-decoration: none;
+  transition: 0.25s;
 }
 </style>

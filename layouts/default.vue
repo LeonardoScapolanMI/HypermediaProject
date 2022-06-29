@@ -7,6 +7,7 @@
 </template>
 
 <style>
+
 .flex-wrapper {
   display: flex;
   min-height: 100vh;
@@ -17,4 +18,5 @@
 .footer {
   margin-top: auto;
 }
+
 </style>

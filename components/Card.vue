@@ -82,7 +82,10 @@ export default {
   max-height: 70vh;
   border-radius: 25px;
   border: 2px solid var(--blue);
-  box-shadow: 5px 5px 10px 3px var(--green);
+  margin-bottom: 50px;
+  margin-bottom: 50px;
+  background-color: var(--white);
+  color: var(--green)
 }
 
 #image {
@@ -93,10 +96,11 @@ export default {
   aspect-ratio: 16/9;
   display: block;
   overflow: hidden;
+  border: 1.5px solid var(--green);
 }
 
 #image:hover { 
-  border: 1px solid var(--green);
+  border: 2px solid var(--green);
   cursor: pointer;
 }
 
@@ -108,12 +112,13 @@ export default {
 
 #description {
   flex: 1;
-  width: 92%;
+  width: 90%;
   word-wrap: break-word;
   overflow: hidden;
   white-space: pre-line;
   text-overflow: ellipsis;
   cursor: default;
+  text-align: center;
 }
 
 #see-details {
@@ -131,7 +136,7 @@ export default {
   padding-right: 10px;
 }
 .button-style:hover {
-  color: white;
+  color: var(--white);
   transition: 0.25s;
   cursor: pointer;
 }
