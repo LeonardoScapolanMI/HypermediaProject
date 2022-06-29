@@ -75,7 +75,9 @@ export default {
   },
 
   publicRuntimeConfig: {
-    baseURL: process.env.HOST
+    axios: {
+      baseURL: process.env.HOST
+    }
   },
 
   serverMiddleware: [
