@@ -74,6 +74,10 @@ export default {
     baseURL: '/',
   },
 
+  publicRuntimeConfig: {
+    baseURL: process.env.HOST
+  },
+
   serverMiddleware: [
     {
       path: '/api',
