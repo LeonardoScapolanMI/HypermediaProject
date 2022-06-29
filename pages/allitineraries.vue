@@ -3,12 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti gli itinerari</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
     
     <!-- TITLE -->
 
@@ -53,9 +48,14 @@ import CardList from '~/components/CardList.vue'
 
 export default {
   name: 'AllItineraries',
-  components: { CardList },
+  components: { CardList, BreadCrumb },
   data() {
+    const bc =[]
+    bc.push(
+      { title:'Tutti gli Itinerari', path:'' }
+      )
     return {
+      bc,
       description: 'Scopri tutti gli itinerari che puoi svolgere a Firenze e trova tutti i monumenti più antichi e le vedute più suggestive. Seguendo i nostri itinerari potrai godere appieno di tutte le bellezze della nostra città, immergendoti totalmente nel suo spirito e nella sua incredibile storia, sia presente che passata.'
     }
   },

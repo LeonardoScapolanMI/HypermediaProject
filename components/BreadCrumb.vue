@@ -30,10 +30,8 @@ export default {
     crumbs: {
       type: Array,
       required: true,
-      
     },
   },
-  
 }
 </script>
 
@@ -48,13 +46,11 @@ li {
 }
 
 li:after {
-  content: ' / ';
+  content: '»';
   display: inline;
   color: var(--green);
   padding: 5px;
 }
-
-
 li a.nuxt-link-exact-active.nuxt-link-active {
   color: var(--green);
   text-decoration: none;
@@ -62,7 +58,7 @@ li a.nuxt-link-exact-active.nuxt-link-active {
 }
 
 a {
-  color: var(--blue);
+  color: var(--brown);
 }
 
 a:hover {
@@ -74,15 +70,15 @@ a:hover {
     background-color: var(--beige);
     margin: 20px;
   }
+
   li:last-child:after {
   content: '';
   color:var(--green);
   }
+
   li:last-child a {
   content: '';
   color:var(--green);
   }
-
-
 
 </style>
