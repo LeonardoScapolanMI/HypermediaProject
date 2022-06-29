@@ -49,7 +49,28 @@ Here we describe how the application has been generally organized for developmen
 - TheFooter:Fundamental part of the template, holds the link to the contact us page.
 - TheHeader:Fundamental part of the template, holds all the navigation links to the main topics of the application.
 ### Functionalities
-- Routing
+- Routing: we resorted into using the basic routing (and automatic) functionalites offered by Nuxt. 
+```
+pages/
+--| event_details/
+-----| _id.vue
+--| itinerary_details/
+-----| _id.vue
+--| poi_details/
+-----| _id.vue
+--| service_details/
+-----| _id.vue
+--| index.vue
+--| alleventsgrouping.vue
+--| allevents.vue
+--| winterevents.vue
+--| summerevents.vue
+--| allitineraries.vue
+--| allpois.vue
+--| allservicetypes.vue
+--| contactus.vue
+--| thetown.vue
+```
 - Store
 - Layouts
 - Rendering
