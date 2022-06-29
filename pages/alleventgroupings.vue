@@ -3,14 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <!-- BREADCRUMB -->
-
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti i gruppi di eventi</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- IMMAGINI -->
 
@@ -33,8 +26,14 @@
 <script>
 export default {
   name: 'AllEventGroupings',
+  components: { BreadCrumb },
   data() {
+    const bc =[]
+    bc.push(
+      { title:'Tutti i Gruppi di Eventi', path:'' }
+      )
     return {
+      bc,
     }
   },
 }

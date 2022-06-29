@@ -132,22 +132,3 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
-.breadcrumb {
-  background-color: var(--beige);
-  margin: 20px;
-}
-
-#old {
-  color: var(--brown);
-}
-
-#old:hover {
-  color: var(--green);
-  text-decoration: none;
-}
-
-#new {
-  color: var(--green);
-  cursor: default;
-}

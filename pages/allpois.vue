@@ -1,16 +1,10 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB 
+    <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti i punti di interesse</li>
-      </ol>
-    </div>
-    -->
     <BreadCrumb :crumbs='bc'/>
+
     <!-- TITLE -->
     
     <div class="page-title">
@@ -41,13 +35,14 @@
 import CardList from '~/components/CardList.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
 
-
 export default {
   name: 'AllPois',
-  components: { CardList, BreadCrumb},
+  components: { CardList, BreadCrumb },
   data() {
     const bc =[]
-    bc.push({title:'Tutti i Punti di Interesse', path:''})
+    bc.push (
+      { title:'Tutti i Punti di Interesse', path:'' }
+      )
     return {
       bc,
     }
