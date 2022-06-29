@@ -3,13 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/allservicetypes" id="old">Tutti i tipi di servizio</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- TITLE -->
 
@@ -82,6 +76,10 @@ export default {
     const { id } = route.params
 
     const { data } = await $axios.get('/api/serviceType' + id)
+
+    const bc =[]
+    bc.push({title:'Tutti i Tipi di Servizio', path:'/allservicetypes'})
+    bc.push({title:data.name, path:'#'})
 
     return {
       name: data.name,

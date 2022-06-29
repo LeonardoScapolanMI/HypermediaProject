@@ -86,6 +86,7 @@ export default {
   margin-bottom: 50px;
   background-color: var(--white);
   color: var(--green);
+  max-width: min(600px, 70%);
 }
 
 #image {
