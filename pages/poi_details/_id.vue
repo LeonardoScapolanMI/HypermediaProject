@@ -81,6 +81,7 @@ export default {
 
     const itList = []
     const evList = []
+    
     const bc =[]
     bc.push({title:'Tutti i Punti di Interesse', path:'/allpois'})
     bc.push({title:data.name, path:'#'})
