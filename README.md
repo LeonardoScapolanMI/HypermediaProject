@@ -72,7 +72,7 @@ pages/
 --| thetown.vue
 ```
 - **Store**: we opted to not use any store functionality
-- **Layouts**: we decided to build only one layout for all the application, since the structure of the 'fixed points' inside the pages was basically the same. 
+- **Layouts**: we decided to build only one layout for all the application, since the structure of the landmarks inside the pages was basically the same. 
 ```
 layouts/
 --| default.vue --> Includes: TheHeader component, Nuxt, TheFooter component.
