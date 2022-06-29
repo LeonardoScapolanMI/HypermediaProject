@@ -58,7 +58,7 @@ li a.nuxt-link-exact-active.nuxt-link-active {
 }
 
 a {
-  color: var(--brown);
+  color: var(--blue);
 }
 
 a:hover {
