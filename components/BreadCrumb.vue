@@ -16,8 +16,7 @@
       typeof="ListItem"
     >
       <a property="item" typeof="WebPage" :href="crumb.path">
-        {{ crumb.title }}
-        
+        {{ crumb.title }}  
       </a>
       <meta property="position" :content="index + 2" />
     </li>
@@ -52,18 +51,16 @@ li:after {
   padding: 5px;
 }
 li a.nuxt-link-exact-active.nuxt-link-active {
-  color: var(--green);
   text-decoration: none;
   cursor: default;
 }
 
 a {
-  color: var(--blue);
+  color: var(--green);
 }
 
 a:hover {
-  color: var(--green);
-  text-decoration: none;
+  color: var(--aqua);
 }
 
  .breadcrumb {
