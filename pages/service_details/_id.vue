@@ -97,10 +97,7 @@ export default {
     }
   },
 mounted() {
-  console.log( this.services[0])
-  console.log( this.services[1])
-  console.log( this.services[2])
-  console.log( this.services[3])
+ 
 },
   methods: {
     loadMore(){
