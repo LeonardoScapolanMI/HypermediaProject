@@ -588,7 +588,7 @@ const events = [
   },
   {
     basicData: {
-      name: 'Mostra su Michelangelo: l’effigie in bronzo di Daniele da Volterra',
+      name: 'Mostra su Michelangelo',
       overview:
         'Michelangelo: l’effigie in bronzo di Daniele da Volterra, a cura di Cecilie Hollberg, è una mostra studio unica e inconsueta che parte da un discorso fatto di quesiti ancora aperti per arrivare a soluzioni nuove con metodi innovativi. È la prima volta che vengono riuniti questi nove busti simili, alcuni apparentemente quasi uguali, che riportano i tratti di Michelangelo Buonarroti (1475 - 1564). Proprio quell’effigie che tutti noi siamo abituati a collegare con l’incomparabile artista rinascimentale.\n' +
         'Daniele Ricciarelli, detto da Volterra (1509 - 1566), è stato un allievo di Michelangelo, ne fu amico stretto e di conseguenza lo conosceva benissimo. Sappiamo, per di più, che era presente alla morte del maestro nella casa romana Macel de’ Corvi, oggi non più esistente, il 18 febbraio 1564.\n' +
