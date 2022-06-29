@@ -91,6 +91,7 @@ export default {
       image: data.representativeImage,
       mapURL: data.mapURL,
       poiList,
+      bc,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

@@ -87,7 +87,7 @@ export default {
       description: data.description,
       images: data.images,
       services: data.services,
-      
+      bc,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

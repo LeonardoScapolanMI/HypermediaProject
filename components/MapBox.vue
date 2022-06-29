@@ -10,8 +10,11 @@
 
 export default {
   name: 'MapBox',
-    props: { indirizzo: { type: String, required:true,
-            },
+    props: { 
+      indirizzo: { 
+        type: String, 
+        required:true,
+      },
     },
      head() {
     return {
