@@ -78,7 +78,7 @@ layouts/
 --| default.vue --> Includes: TheHeader component, Nuxt, TheFooter component.
 --| error.vue --> new visualization of the default error page, adapted to the custom look of the website.
 ```
-- Rendering: we opted for a ServerSide rendering.
+- Rendering: we opted for a Server Side Rendering (SSR), which gave us some advantages, especially on the SEO and optimization side. 
 - Static: contains the elemnts of out project that are likely not chaing soon in the future.
 ```
 static/
