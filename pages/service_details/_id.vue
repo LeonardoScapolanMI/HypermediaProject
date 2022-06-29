@@ -71,7 +71,7 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'TypeOfServices',
-  components: { LongCard },
+  components: { LongCard, BreadCrumb },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params

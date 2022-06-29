@@ -66,7 +66,7 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 export default {
   
   name: 'Event',
-  components: { SlideShow, MapBox, CardCarousel},
+  components: { SlideShow, MapBox, CardCarousel, BreadCrumb},
 
    async asyncData({ route, $axios }) {
     const { id } = route.params

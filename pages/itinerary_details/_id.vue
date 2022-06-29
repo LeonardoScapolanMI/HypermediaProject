@@ -62,7 +62,7 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'Itinerary',
-  components: { CardCarousel,MapBox },
+  components: { CardCarousel, MapBox, BreadCrumb },
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(

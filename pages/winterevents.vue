@@ -3,13 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Eventi invernali</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- TITLE -->
 
@@ -61,9 +55,13 @@ function nextWinterYears(){
 
 export default {
   name: 'AllEvents',
-  components: { CardList },
+  components: { CardList, BreadCrumb },
   data() {
+    const bc =[]
+    bc.push({title:'Tutti i Gruppi di Eventi', path:'/alleventgroupings'})
+    bc.push({title:'Eventi Invernali', path:''})
     return {
+      bc,
       description: 'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze per vivere al meglio la città anche nei mesi più freddi.\n' +
         'Ecco un elenco delle eventi offerti dal terrritorio durante l\'inverno ' + nextWinterYears() +'.'
     }
