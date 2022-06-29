@@ -3,12 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Tutti i tipi di servizio</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
     
     <!-- TITLE -->
 
@@ -44,12 +39,18 @@
 
 <script>
 import CardList from '~/components/CardList.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'AllServices',
-  components: { CardList },
+  components: { CardList, BreadCrumb },
   data() {
+    const bc =[]
+    bc.push(
+      { title:'Tutti i Tipi di Servizio', path:'' }
+      )
     return {
+      bc,
       description: 'Sei venuto a Firenze per una bellissima vacanza ma non sai dove trovare una banca o una farmacia? Ecco a te una lista di tutti i servizi indispensabili che puoi trovare facilmente a Firenze. Clicca sul tipo di servizio di cui hai bisogno e ti offriremo una vasta lista di esercenti del servizio indicato.'
     }
   },

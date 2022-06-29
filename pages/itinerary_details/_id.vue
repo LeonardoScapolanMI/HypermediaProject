@@ -3,13 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/allitineraries" id="old">Tutti gli itinerari</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
     <!-- TITOLO -->
 
@@ -64,15 +58,21 @@
 <script>
 import CardCarousel from '~/components/CardCarousel.vue'
 import MapBox from '~/components/MapBox.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'Itinerary',
-  components: { CardCarousel,MapBox },
+  components: { CardCarousel, MapBox, BreadCrumb },
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
       'api/itinerary' + id
     )
+
+    const bc =[]
+    bc.push({title:'Tutti gli Itinerari', path:'/allitineraries'})
+    bc.push({title:data.name, path:'#'})
+
     // Fetching the pois of the itinerary and preparing them
     const poiList = []
     for (const poi of data.PointOfInterests) {
@@ -107,7 +107,7 @@ export default {
 
 .background-poi {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/pointOfInterest/background.jpg") center ;
-  background-size: cover;
+  background-size: 50% 50%;
   height: 700px;
   margin-bottom: 30px;
 }

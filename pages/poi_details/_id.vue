@@ -1,15 +1,7 @@
 <template>
     <div>
 
-    <!-- BREADCRUMB 
-
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/allpois" id="old">Tutti i punti di interesse</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
-      </ol>
-    </div>-->
+    <!-- BREADCRUMB -->
 
      <BreadCrumb :crumbs='bc'/>
       
@@ -74,6 +66,7 @@ import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
+
 export default {
   name: 'POI',
   components:{
@@ -88,9 +81,11 @@ export default {
 
     const itList = []
     const evList = []
-     const bc =[]
+    
+    const bc =[]
     bc.push({title:'Tutti i Punti di Interesse', path:'/allpois'})
     bc.push({title:data.name, path:'#'})
+
     // Get all involving itineraries
     for (const it of data.Itineraries) {
       itList.push({
@@ -135,14 +130,14 @@ export default {
 
 .background-it {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/itinerary/background.jpg") center ;
-  background-size: cover;
+  background-size: 50% 50%;
   height: 700px;
   margin-bottom: 30px;
 }
 
 .background-ev {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/event/background.jpg") center ;
-  background-size: cover;
+  background-size: 50% 50%;
   height: 700px;
   margin-bottom: 30px;
 }

@@ -3,13 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/alleventgroupings" id="old">Tutti i gruppi di eventi</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">Eventi estivi</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
     
     <!-- TITLE -->
 
@@ -51,6 +45,7 @@
 
 <script>
 import CardList from '~/components/CardList.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 function nextSummerYear(){
   const now = new Date()
@@ -61,9 +56,13 @@ function nextSummerYear(){
 
 export default {
   name: 'AllEvents',
-  components: { CardList },
+  components: { CardList, BreadCrumb },
   data() {
+    const bc =[]
+    bc.push({title:'Tutti i Gruppi di Eventi', path:'/alleventgroupings'})
+    bc.push({title:'Eventi Estivi', path:''})
     return {
+      bc,
       description: 'Questa sezione offre una guida per tutti gli eventi estivi previsti a Firenze per vivere al meglio la città anche nei mesi più caldi.\n' +
         'Ecco un elenco delle eventi offerti dal terrritorio durante l\'estate ' + nextSummerYear() + '.'
     }

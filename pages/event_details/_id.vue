@@ -3,13 +3,7 @@
 
     <!-- BREADCRUMB -->
 
-    <div>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/" id="old">HOME</a></li>
-        <li class="breadcrumb-item"><a href="/allevents" id="old">Tutti gli eventi</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="new">{{ name }}</li>
-      </ol>
-    </div>
+    <BreadCrumb :crumbs='bc'/>
 
       <!-- TITOLO -->
 
@@ -67,17 +61,22 @@
 import SlideShow from '~/components/Slideshow.vue'
 import MapBox from '~/components/MapBox.vue'
 import CardCarousel from '~/components/CardCarousel.vue'
+import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   
   name: 'Event',
-  components: { SlideShow, MapBox, CardCarousel},
+  components: { SlideShow, MapBox, CardCarousel, BreadCrumb},
 
    async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
       'api/event' + id
     )
+
+    const bc =[]
+    bc.push({title:'Tutti gli Eventi', path:'/allevents'})
+    bc.push({title:data.name, path:'#'})
 
     const poiList = []
     for (const poi of data.PointOfInterests) {
@@ -123,7 +122,7 @@ export default {
 <style>
 
 .background-poi {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/pointOfInterest/background.jpg") center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/pointOfInterest/background.jpg") center;
   background-size: 50% 50%;
   height: 700px;
   margin-bottom: 30px;
