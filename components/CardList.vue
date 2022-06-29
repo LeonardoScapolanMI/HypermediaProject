@@ -129,6 +129,9 @@ export default {
     try {
       this.state = ListState.InitialLoading
 
+      this.onResize()
+      window.addEventListener('resize', this.onResize)
+
       const reqBody = {
         params: {
           itemCount: this.nBaseLoadedItems,// load base item of 12 
@@ -145,9 +148,6 @@ export default {
     } catch (e) {
       this.state = ListState.Error
     }
-
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
   },
   methods: {
     async loadMore() {// method for loading more items
