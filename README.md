@@ -71,9 +71,20 @@ pages/
 --| contactus.vue
 --| thetown.vue
 ```
-- Store
-- Layouts
-- Rendering
-- Static
+- Store: we opted to not use any store functionality
+- Layouts: we decided to build only one layout for all the application, since the structure of the 'fixed points' inside the pages was basically the same. 
+```
+layouts/
+--| default.vue --> Includes: TheHeader component, Nuxt, TheFooter component.
+--| error.vue --> new visualization of the default error page, adapted to the custom look of the website.
+```
+- Rendering: we opted for a ServerSide rendering.
+- Static: contains the elemnts of out project that are likely not chaing soon in the future.
+```
+static/
+--| css/ --> Contains some global css for the application
+--| icons/ --> Contains incons used in the application
+--| images/ --> Contains all the images used in the application
+```
 - Server
 ### Best Practices 
