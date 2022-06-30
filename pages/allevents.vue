@@ -50,7 +50,7 @@ export default {
     bc.push({title:'Tutti gli Eventi', path:''})
     return {
       bc,
-      description: 'Vieni a scoprire tutti gli eventi che si svolgono a Firenze, sarà un’avventura senza eguali. Passerai delle incredibili giornate nella nostra grande città, tra sport, musica e arte. Dal mercatino di Natale ai concerti musicali estivi, Firenze ti offre qualsiasi tipo di esperienza tutto l’anno.'
+      description: 'Vieni a scoprire tutti gli eventi che si svolgono a Firenze, sarà un\'avventura senza eguali. Passerai delle incredibili giornate nella nostra grande città, tra sport, musica e arte. Dal mercatino di Natale ai concerti musicali estivi, Firenze ti offre qualsiasi tipo di esperienza tutto l’anno.'
     }
   },
  
