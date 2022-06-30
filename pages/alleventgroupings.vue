@@ -38,6 +38,11 @@ export default {
       bc,
     }
   },
+  head() {
+    return{
+      title: 'Tutti gli eventi'
+    }
+  },
 }
 </script>
 

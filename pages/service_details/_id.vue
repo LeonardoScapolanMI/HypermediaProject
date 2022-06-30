@@ -96,6 +96,11 @@ export default {
       nItems:3,
     }
   },
+  head() {
+    return{
+      title: this.name
+    }
+  },
   methods: {
     loadMore(){
     this.nItems=Math.min(this.nItems+2,this.services.length);
