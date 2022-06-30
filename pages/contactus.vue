@@ -19,7 +19,8 @@
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
             <hr />
-            <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
+            <form class="needs-validation" novalidate>
+            <!-- <form class="needs-validation" action="/api/usermessage" method="POST" novalidate>  -->
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="firstName">Nome</label>
@@ -101,6 +102,7 @@ const axios= require('axios').default;
 export default {
 
   name: 'ContactUs',
+  components: { BreadCrumb },
   data() {
     const bc =[]
     bc.push(
