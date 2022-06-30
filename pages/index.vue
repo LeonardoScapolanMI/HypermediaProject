@@ -220,7 +220,7 @@ export default {
         },
       ],
       introduction:
-        'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l\'hai mai vista prima.',
+        'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l’hai mai vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
       evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
