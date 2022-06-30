@@ -1,23 +1,23 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
     
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>TUTTI I TIPI DI SERVIZIO</h1>
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
 
-    <!-- CARDS -->
+    <!-- Insert card list by calling the component -->
 
     <card-list
       :endpoint="'/api/serviceType'"
@@ -26,7 +26,7 @@
       :error-text="'Impossibile caricare i tipi di servizio'"
     />
 
-    <!-- BACK UP BUTTON -->
+   <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">

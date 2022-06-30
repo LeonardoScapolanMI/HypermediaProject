@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>CONTATTACI</h1>  
     </div>
 
-    <!-- FORM -->
+    <!-- Insert information request form -->
 
     <div class="container marketing">
       <div class="form">
@@ -116,6 +116,7 @@ export default {
       text: '',
     }
   },
+  components: { BreadCrumb},
   methods: {
 
        submit()

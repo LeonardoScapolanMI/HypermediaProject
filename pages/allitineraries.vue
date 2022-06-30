@@ -1,29 +1,29 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
     
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>TUTTI GLI ITINERARI</h1>
     </div>
 
-    <!-- IMAGE -->
+    <!-- Insert an image -->
 
     <div class="title-image-container">
       <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
 
-    <!-- CARDS -->
+    <!-- Insert card list by calling the component -->
 
     <card-list
       :endpoint="'/api/itinerary'"
@@ -32,7 +32,7 @@
       :error-text="'Impossibile caricare gli itinerari'"
     />
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">

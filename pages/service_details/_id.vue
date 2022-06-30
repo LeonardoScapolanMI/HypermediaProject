@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title and the subtitle --> 
 
     <div class="page-title">
       <h1>{{ name }}</h1>
@@ -13,13 +13,13 @@
       <h4>TIPO DI SERVIZIO</h4>
     </div>
 
-    <!-- IMMAGINE -->
+    <!-- Insert an image -->
 
     <div class="title-image-container">
-      <img id="imageserv" class="title-image" :src="images[0].URL" :alt="images[0].caption" />
+      <img class="title-image" :src="images[0].URL" :alt="images[0].caption" />
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
@@ -27,7 +27,7 @@
 
     <hr class="separator"/>
 
-    <!-- LONG CARDS -->
+    <!-- Insert long cards by calling the component and printing the items of the services -->
   
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <!-- LOAD MORE -->
+    <!-- Insert the load more button using the method loadMore() -->
     
     <div class="text-center">
       <button
@@ -54,7 +54,7 @@
       </button>
     </div>
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
@@ -96,12 +96,6 @@ export default {
       nItems:3,
     }
   },
-mounted() {
-  console.log( this.services[0])
-  console.log( this.services[1])
-  console.log( this.services[2])
-  console.log( this.services[3])
-},
   methods: {
     loadMore(){
     this.nItems=Math.min(this.nItems+2,this.services.length);
@@ -115,11 +109,6 @@ mounted() {
 </script>
 
 <style>
-
-#imageserv {
-  width:100%;
-  aspect-ratio: 9/4;
-}
 
 .content{
   margin: auto;

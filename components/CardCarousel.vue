@@ -21,7 +21,6 @@
             :image-caption="cards.image.caption"
             :title="cards.name"
             :description="cards.description"
-            class="light-shadow"
             @onSeeDetails="$emit('onSeeDetails', cards.id)"
           />
         </div><!-- Print the cards-->
@@ -150,10 +149,6 @@ export default {
 </script>
 
 <style scoped>
-
-.light-shadow {
-  box-shadow: 5px 5px 10px 3px var(--beige);
-}
 
 #wrapper {
   display: flex;

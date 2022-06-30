@@ -35,7 +35,6 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
                 :image-caption="item.images[0].caption"
                 :title="item.name"
                 :description="item.description"
-                class="green-shadow"
                 @onSeeDetails="
                   $router.push('/' + detailsPageFolder + '/' + item.id)
                 "
@@ -194,10 +193,6 @@ export default {
 
 <style>
 
-.green-shadow {
-  box-shadow: 5px 5px 10px 3px var(--green);
-}
-
 .no-content {
   color: #414535 !important;
   background-color: transparent !important;
@@ -217,9 +212,9 @@ export default {
 }
 
 #load-more {
-  color: var(--blue);
-  background-color: var(--white);
-  border: 1px solid var(--aqua);
+  color: var(--green);
+  background-color: var(--blue);
+  border: 2px solid var(--green);
   padding: 5px 50px 5px 50px;
   border-radius: 10px;
   font-size: large;
@@ -228,7 +223,9 @@ export default {
 }
 
 #load-more:hover {
-  color: var(--aqua);
+  color: var(--white);
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 .loading-icon {

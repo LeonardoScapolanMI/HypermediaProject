@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>EVENTI INVERNALI</h1>
@@ -17,13 +17,14 @@
       <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="title-image"/>
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content" >
       <p class="text-with-line-break ">{{ description }}</p>
     </div>
 
-    <!-- CARDS -->
+    <!-- Insert card list by calling the component -->
+
     <card-list
       :endpoint="'/api/event/winter'"
       :details-page-folder="'event_details'"
@@ -31,7 +32,7 @@
       :error-text="'Impossibile caricare gli eventi'"
     />
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">

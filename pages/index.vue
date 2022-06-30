@@ -1,45 +1,37 @@
 <template>
   <div>
-    <!-- INTRO -->
+
+    <!-- Insert an introduction with an image in the background -->
 
     <div class="welcome">
       <div class="title">
         <h1>FIRENZE</h1>
         <hr class="line" />
-        <h4>come mai prima</h4>
+        <h2>come mai prima</h2>
       </div>
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content">
-      <h5 class="text-center">{{ introduction }}</h5>
+      <h3 class="text-center">{{ introduction }}</h3>
     </div>
 
-    <!-- SLIDESHOW -->
+    <!-- Insert a slideshow by calling the component -->
 
     <SlideShow :images="imagesV" class="title-image-container" />
 
-    <!-- LINK STRUTTURALI -->
+    <!-- Insert of structural links by printing the items of the linkList -->
 
     <div class="structural-links">
       <div class="row">
-        <div class="col-sm-auto">
-          <a href="#ev" class="home-link">EVENTI</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#poi" class="home-link">PUNTI DI INTERESSE</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#it" class="home-link">ITINERARI</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#ser" class="home-link">SERVIZI</a>
+        <div v-for="linkItem of linkList" :key="linkItem.name" class="col-sm-auto">
+            <a :href="linkItem.path" class="home-link">{{ linkItem.name }}</a>
         </div>
       </div>
     </div>
 
-  <!-- LONG CARDS -->
+  <!-- Insert four sections consisting of an image and an overview -->
 
   <hr id="ev" class="separator"/>
 
@@ -132,7 +124,7 @@
       </div>
     </div>
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
@@ -140,6 +132,7 @@
       </a>
     </div>
   </div>
+
   </div>
 </template>
 
@@ -150,6 +143,24 @@ export default {
   components: { SlideShow },
   data() {
     return {
+      linkList: [
+        {
+          name: 'EVENTI',
+          path: '#ev',
+        },
+        {
+          name: 'PUNTI DI INTERESSE',
+          path: '#poi',
+        },
+        {
+          name: 'ITINERARI',
+          path: '#it',
+        },
+        {
+          name: 'SERVIZI',
+          path: '#ser',
+        },
+      ],
       imagesV: [
         {
           URL: '/images/home/slideshow/0.jpg',
@@ -236,7 +247,7 @@ export default {
 }
 
 .title {
-  color: var(--brown);
+  color: var(--green);
   font-weight: bold;
   padding-top: 420px;
   text-align: center;
@@ -244,7 +255,7 @@ export default {
 }
 
 .title h1,
-.title h4,
+.title h2,
 .title hr {
   background-color: var(--beige);
   margin: 0px;
@@ -304,7 +315,7 @@ export default {
 
 .home-button {
   color: var(--green);
-  background-color: var(--brown);
+  background-color: var(--beige);
   border: 1.5px solid var(--green);
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
