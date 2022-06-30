@@ -65,12 +65,12 @@ nav {
   font-weight: bold;
 }
 
-nav > ul {
+nav ul {
   margin: 0;
   padding: 0;
 }
 
-nav > li {
+nav li {
   list-style-type: none;
 }
 
@@ -87,14 +87,14 @@ nav > li {
   width: 90px;
 }
 
-nav > a {
+nav a {
   display: block;
   padding: 22px 10px;
   color: var(--white);
   text-decoration: none;
 }
 
-nav > a:hover, nav > a:focus {
+nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
   color: var(--green);
