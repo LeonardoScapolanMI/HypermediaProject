@@ -1,6 +1,7 @@
 <template>
   <div>
-    <!-- INTRO -->
+
+    <!-- Insert an introduction with an image in the background -->
 
     <div class="welcome">
       <div class="title">
@@ -10,36 +11,27 @@
       </div>
     </div>
 
-    <!-- OVERVIEW -->
+    <!-- Insert a general overview -->
 
     <div class="text-content">
       <h3 class="text-center">{{ introduction }}</h3>
     </div>
 
-    <!-- SLIDESHOW -->
+    <!-- Insert a slideshow by calling the component -->
 
     <SlideShow :images="imagesV" class="title-image-container" />
 
-    <!-- LINK STRUTTURALI -->
+    <!-- Insert of structural links by printing the items of the linkList -->
 
     <div class="structural-links">
       <div class="row">
-        <div class="col-sm-auto">
-          <a href="#ev" class="home-link">EVENTI</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#poi" class="home-link">PUNTI DI INTERESSE</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#it" class="home-link">ITINERARI</a>
-        </div>
-        <div class="col-sm-auto">
-          <a href="#ser" class="home-link">SERVIZI</a>
+        <div v-for="linkItem of linkList" :key="linkItem.name" class="col-sm-auto">
+            <a :href="linkItem.path" class="home-link">{{ linkItem.name }}</a>
         </div>
       </div>
     </div>
 
-  <!-- LONG CARDS -->
+  <!-- Insert four sections consisting of an image and an overview -->
 
   <hr id="ev" class="separator"/>
 
@@ -131,15 +123,16 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>
-  </div>
+
   </div>
 </template>
 
@@ -150,6 +143,24 @@ export default {
   components: { SlideShow },
   data() {
     return {
+      linkList: [
+        {
+          name: 'EVENTI',
+          path: '#ev',
+        },
+        {
+          name: 'PUNTI DI INTERESSE',
+          path: '#poi',
+        },
+        {
+          name: 'ITINERARI',
+          path: '#it',
+        },
+        {
+          name: 'SERVIZI',
+          path: '#ser',
+        },
+      ],
       imagesV: [
         {
           URL: '/images/home/slideshow/0.jpg',

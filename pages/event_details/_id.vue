@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-      <!-- TITOLO -->
+    <!-- Insert the title and the subtitle --> 
 
         <div class="page-title">
           <h1>{{ name }}</h1> 
@@ -13,17 +13,16 @@
           <h4>EVENTO</h4> 
         </div>
 
-      <!-- SLIDESHOW -->
+      <!-- Insert slideshow by calling the component -->
 
       <SlideShow :images="imagesV" class="title-image-container"/>
 
-      <!-- MAPBOX -->
+      <!-- Insert mapbox by calling the component and printing a description -->
       
       <div class="container">
         <div class="row">
           <div class="col-md-6" >
             <p class="text-with-line-break">{{ overview }}</p>
-            
             <p v-if="sDate!=eDate" class="text-with-line-break"> L'evento avrà inizio il {{sDate}} </p>     
             <p v-if="sDate!=eDate" class="text-with-line-break"> e fine il {{eDate}} </p>
             <p v-if="sDate===eDate" class="text-with-line-break"> L'evento si terrà il  {{sDate}} </p> 
@@ -33,21 +32,19 @@
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
           </div>
-        </div> <!-- row -->
+        </div>
       </div>
 
-      <!-- CARD CAROUSELS --> 
-
-    <div class="background-poi">
+      <!-- Insert card carousel by calling the component -->
+    
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
         <a href="/allpois" class="carousel-button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
-    </div>
-
-      <!-- BACK UP BUTTON -->
+  
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">

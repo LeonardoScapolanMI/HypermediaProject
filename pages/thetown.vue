@@ -1,21 +1,21 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
-    <!-- SLIDESHOW -->  
+    <!-- Insert slideshow by calling the component -->  
 
     <SlideShow :images="imagesV" class="title-image-container"/>
 
-    <!-- LINK STRUTTURALI -->
+    <!-- Insert of structural links using the method setContentToDisplay(newContent) -->
 
     <div class="structural-links">
       <div class="row">
@@ -36,7 +36,7 @@
     
     <hr class="separator" />
 
-    <!-- OVERVIEW -->
+    <!-- Insert a description using the method getContentToDisplay() -->
 
     <div class="text-content">
       <h3 class="text-content-title">
@@ -47,7 +47,7 @@
       </p>
     </div>
 
-     <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
@@ -64,11 +64,11 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 
 export default {
   name: 'TheTown',
-  components: { SlideShow },
+  components: { SlideShow, BreadCrumb },
   data() {
-     const bc =[]
+    const bc =[]
     bc.push (
-      { title:'Tutti i Punti di Interesse', path:'' }
+      { title:'La città di Firenze', path:'' }
       )
     return {
       bc,

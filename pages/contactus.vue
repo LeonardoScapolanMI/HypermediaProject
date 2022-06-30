@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title --> 
 
     <div class="page-title">
       <h1>CONTATTACI</h1>  
     </div>
 
-    <!-- FORM -->
+    <!-- Insert information request form -->
 
     <div class="container marketing">
       <div class="form">
@@ -19,7 +19,8 @@
           <div class="col-md-12 order-md-1">
             <h3 class="mb-3">Richiesta Informazioni</h3>
             <hr />
-            <form class="needs-validation" action="/api/usermessage" method="POST" novalidate >
+            <form class="needs-validation" novalidate>
+            <!-- <form class="needs-validation" action="/api/usermessage" method="POST" novalidate>  -->
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="firstName">Nome</label>
@@ -99,8 +100,8 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 
 const axios= require('axios').default;
 export default {
-
   name: 'ContactUs',
+  components: { BreadCrumb },
   data() {
     const bc =[]
     bc.push(
@@ -114,7 +115,6 @@ export default {
       text: '',
     }
   },
-  components: { BreadCrumb},
   methods: {
 
        submit()

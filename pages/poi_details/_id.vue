@@ -1,11 +1,11 @@
 <template>
     <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
-     <BreadCrumb :crumbs='bc'/>
+    <BreadCrumb :crumbs='bc'/>
       
-    <!-- TITOLO -->
+    <!-- Insert the title and the subtitle --> 
 
     <div class="page-title">
       <h1>{{ name }}</h1> 
@@ -13,11 +13,11 @@
       <h4>PUNTO DI INTERESSE</h4> 
     </div>
 
-    <!-- SLIDESHOW -->
+    <!-- Insert slideshow by calling the component -->
 
     <SlideShow :images="imagesV" class="title-image-container"/>
 
-      <!-- MAPBOX -->
+    <!-- Insert mapbox by calling the component and printing a description -->
 
       <div class="container">
         <div class="row">
@@ -27,30 +27,26 @@
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
           </div>  
-        </div> <!-- row -->
+        </div>
        </div>
 
-      <!-- CARD CAROUSELS --> 
+      <!-- Insert card carousel by calling the component -->
     
-    <div v-if="itList.length > 0" class="background-it">
-      <div class="carousel-title">
+      <div v-if="itList.length > 0" class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="subline" />
         <a href="/allitineraries" class="carousel-button">Tutti gli itinerari</a>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
-    </div>
-    
-    <div v-if="evList.length > 0" class="background-ev">
-      <div class="carousel-title">
+  
+      <div  v-if="evList.length > 0" class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="subline" />
         <a href="/allevents" class="carousel-button">Tutti gli eventi</a>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
-    </div>
 
-      <!-- BACK UP BUTTON -->
+      <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
