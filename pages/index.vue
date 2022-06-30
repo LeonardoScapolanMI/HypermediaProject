@@ -273,7 +273,6 @@ export default {
 
 .long-image-container {
   margin: 20px 5px 20px 5px;
-  
 }
 
 .long-image {
@@ -288,7 +287,6 @@ export default {
   cursor: pointer;
 }
 
-
 .structural-links {
   max-width: 90% !important;
   margin: auto;
@@ -299,6 +297,7 @@ export default {
 .home-link {
   color: var(--green);
   font-weight: bold;
+  padding: 3px;
 }
 
 .home-link:hover {
