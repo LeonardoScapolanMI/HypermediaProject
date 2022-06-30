@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top">
-    <a id="logo" href="/">
+    <nuxt-link id="logo" to="/">
       <img id="icon" src="/images/firenze.jpg" alt="HOME" />
-    </a>
+    </nuxt-link>
 
     <button
       class="navbar-toggler"
@@ -17,7 +17,7 @@
     <div id="collapsibleNavbar" class="navbar-collapse collapse">
       <ul class="navbar-nav">
         <li v-for="navItem of headerList" :key="navItem.name" class="nav-item">
-          <a :href="navItem.path">{{ navItem.name }}</a>
+          <nuxt-link :to="navItem.path">{{ navItem.name }}</nuxt-link>
         </li>
       </ul>
       <!-- Print the items of the headerList -->
@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style scoped>
+
 nav {
   background-color: var(--aqua);
   font-family: Georgia;
@@ -93,11 +94,9 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
-  transition: 0.2s;
   color: var(--green);
   text-decoration: none;
 }

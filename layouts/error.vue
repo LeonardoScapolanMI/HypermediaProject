@@ -1,6 +1,5 @@
 <template>
   <div class="__nuxt-error-page">
-    <div class="error">
       <div class="title">La pagina cercata non esiste</div>
       <hr>
       <p v-if="statusCode === 404" class="description">
@@ -8,7 +7,6 @@
         <NuxtLink v-else class="error-link" to="/">Torna alla HOME</NuxtLink>
       </p>
     </div>
-  </div>
 </template>
 
 <script>
@@ -47,7 +45,7 @@ export default {
 <style>
 
 .__nuxt-error-page {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") no-repeat center ;
   background-size: cover;
 }
 
