@@ -123,6 +123,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Insert the back up button -->
 
@@ -131,7 +132,6 @@
         <span class="sr-only"></span>
       </a>
     </div>
-  </div>
 
   </div>
 </template>
