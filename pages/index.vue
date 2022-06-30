@@ -301,13 +301,6 @@ export default {
   cursor: pointer;
 }
 
-.structural-links {
-  max-width: 90% !important;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 50px;
-}
-
 .home-link {
   color: var(--green);
   font-weight: bold;

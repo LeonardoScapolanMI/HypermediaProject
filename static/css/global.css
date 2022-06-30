@@ -124,3 +124,10 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.structural-links {
+  max-width: 90% !important;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
