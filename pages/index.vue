@@ -6,7 +6,7 @@
     <div class="welcome">
       <div class="title">
         <h1>FIRENZE</h1>
-        <hr class="line" />
+        <hr/>
         <h2>come mai prima</h2>
       </div>
     </div>
@@ -100,6 +100,7 @@
         </div>
       </div>
     </div>
+    </div>
 
     <hr id="ser" class="separator" />
 
@@ -123,8 +124,7 @@
         </div>
       </div>
     </div>
-  </div>
-
+  
     <!-- Insert the back up button -->
 
     <div class="dropup">
@@ -133,7 +133,7 @@
       </a>
     </div>
 
-  </div>
+ </div>
 </template>
 
 <script>
@@ -255,15 +255,13 @@ export default {
   cursor: default;
 }
 
-.title h1,
-.title h2,
-.title hr {
+.title h1, .title h2 {
   background-color: var(--beige);
   margin: 0px;
 }
 
-.line {
-  width: 0px;
+.title hr {
+  margin: 0px;
 }
 
 .home-container {
@@ -275,6 +273,7 @@ export default {
 
 .long-image-container {
   margin: 20px 5px 20px 5px;
+  
 }
 
 .long-image {
@@ -296,10 +295,6 @@ export default {
 
 .home-link:hover {
   color: var(--blue);
-}
-
-#ev {
-  margin-bottom: 90px;
 }
 
 .home-button-container {
@@ -329,4 +324,5 @@ export default {
   text-decoration: none;
   transition: 0.25s;
 }
+
 </style>
