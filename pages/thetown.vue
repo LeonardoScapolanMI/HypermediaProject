@@ -258,7 +258,7 @@ export default {
 }
 
 .selected-structural-link {
-  color: var(--blue);
+  color: var(--aqua);
   text-decoration: underline;
 }
 

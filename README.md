@@ -7,14 +7,14 @@ Francesco Calabrese
  - Contribution:
  
 Federica Carrano
- - Person Code: 
+ - Person Code: 10851879
  - Mail: federica.carrano@mail.polimi.it
- - Contribution:
+ - Contribution: Frontend: site style;
  
 Francesco Corso
  - Person Code: 10867595
  - Mail: francesco.corso@mail.polimi.it
- - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel; Pages: allpois,allitineraries,poi_details, itinerary_details, event_details;
+ - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details;
  
 Leonardo Scapolan
  - Person Code: 10801854
