@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITOLO -->
+    <!-- Insert the title and the subtitle --> 
 
     <div class="page-title">
       <h1>{{ name }}</h1> 
@@ -13,18 +13,17 @@
       <h4>ITINERARIO</h4> 
     </div>
 
-    <!-- IMAGE -->
+    <!-- Insert an image -->
 
     <div class="title-image-container">
       <img :src="image.URL" :alt="image.caption" class="title-image"/>
     </div>
   
-    <!-- MAPBOX -->
+    <!-- Insert mapbox by calling the component and printing an overview -->
 
     <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <!-- PRINTING the overview of the itinerary -->
         <p class="text-with-line-break ">{{ overview }}</p>
       </div>
       <div class="col-md-6">
@@ -33,8 +32,7 @@
     </div>
     </div>
 
-    <!-- CARD CAROUSELS -->
-    
+    <!-- Insert card carousel by calling the component -->
    
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
@@ -43,8 +41,7 @@
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
     
-
-      <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">

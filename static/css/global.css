@@ -65,7 +65,7 @@ body {
   margin-right: min(100px, 5%);
   text-align: center;
   cursor: default;
-  color: var(--white);
+  color: var(--green);
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 50px;
@@ -89,7 +89,7 @@ body {
 }
 
 .subline {
-  background-color: var(--brown);
+  background-color: var(--aqua);
   max-width: 40%;
   margin-bottom: 30px;
 }

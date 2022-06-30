@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- IMMAGINI -->
+    <!-- Insert three link images -->
 
           <div class="container">
             <div class="row">

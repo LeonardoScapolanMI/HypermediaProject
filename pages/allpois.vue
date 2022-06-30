@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <!-- BREADCRUMB -->
+    <!-- Insert breadcrumb with calling the component -->
 
     <BreadCrumb :crumbs='bc'/>
 
-    <!-- TITLE -->
+    <!-- Insert the title --> 
     
     <div class="page-title">
       <h1>TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
-    <!-- CARDS -->
+    <!-- Insert card list by calling the component -->
 
     <card-list
       :endpoint="'/api/poi'"
@@ -20,7 +20,7 @@
       :error-text="'Impossibile caricare i punti di interesse'"
     />
 
-    <!-- BACK UP BUTTON -->
+    <!-- Insert the back up button -->
 
     <div class="dropup">
       <a id="up-button" href="#" class="dropdown-toggle">
