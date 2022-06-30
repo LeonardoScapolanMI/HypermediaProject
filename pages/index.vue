@@ -239,6 +239,7 @@ export default {
 </script>
 
 <style>
+
 .welcome {
   background: linear-gradient(var(--shadow), var(--shadow)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
