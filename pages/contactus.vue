@@ -100,7 +100,6 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 
 const axios= require('axios').default;
 export default {
-
   name: 'ContactUs',
   components: { BreadCrumb },
   data() {
@@ -116,7 +115,6 @@ export default {
       text: '',
     }
   },
-  components: { BreadCrumb},
   methods: {
 
        submit()
