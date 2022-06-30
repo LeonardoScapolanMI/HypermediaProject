@@ -67,5 +67,20 @@ export default {
         'Ecco un elenco delle eventi offerti dal terrritorio durante l\'estate ' + nextSummerYear() + '.'
     }
   },
+  
+  head() {
+    return {
+      title: 'Tutti gli eventi estivi',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutti gli eventi estivi che si svolgeranno a Firenze.',
+        },
+      ],
+    }
+  },
+  
 }
 </script>

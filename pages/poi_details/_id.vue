@@ -101,6 +101,10 @@ export default {
         description: ev.overview,
       })
     }
+    function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
 
     return {
       name: data.name,
@@ -110,8 +114,21 @@ export default {
       itList,
       evList,
       bc,
+      descriptionmeta: formatDescription(data.description),
     }
   },
+  head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.descriptionmeta,
+        },
+      ],
+    }
+  },
+ 
   fetchOnServer: false, // too see if it's a problem for crawlers
   methods: {
     backToList() {

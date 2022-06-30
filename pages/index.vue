@@ -235,6 +235,20 @@ export default {
       serPath: '/allservicetypes',
     }
   },
+  
+  head() {
+    return {
+      title: 'Homepage',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'Il sito è stato adibito ad offrire ai visitatori di Firenze preziose informazioni per migliorare la loro esperienza nella città.',
+        },
+      ],
+    }
+  },
 }
 </script>
 

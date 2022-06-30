@@ -115,6 +115,20 @@ export default {
       text: '',
     }
   },
+ 
+  head() {
+    return {
+      title: 'Contattaci',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina è possibile contattare i moderatori del sito per qualsiasi tipo di richiesta o informazione.',
+        },
+      ],
+    }
+  },
   methods: {
 
        submit()

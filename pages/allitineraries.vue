@@ -60,5 +60,19 @@ export default {
       description: 'Scopri tutti gli itinerari che puoi svolgere a Firenze e trova tutti i monumenti più antichi e le vedute più suggestive. Seguendo i nostri itinerari potrai godere appieno di tutte le bellezze della nostra città, immergendoti totalmente nel suo spirito e nella sua incredibile storia, sia presente che passata.'
     }
   },
+  
+  head() {
+    return {
+      title: 'Tutti gli itinerari',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutte itinerari percorribili prensenti a Firenze',
+        },
+      ],
+    }
+  },
 }
 </script>

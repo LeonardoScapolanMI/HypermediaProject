@@ -38,6 +38,19 @@ export default {
       bc,
     }
   },
+ 
+  head() {
+    return {
+      title: 'Tutti gli eventi per gruppo',
+      meta: [
+        {hid:'description',
+        name:'description',
+          content:
+            'In questa pagina è possibile accedere alla sezione di tutti gli eventi invernali, tutti gli eventi estivi o a tutti gli eventi in generale.',
+        },
+      ],
+    }
+  },
 }
 </script>
 

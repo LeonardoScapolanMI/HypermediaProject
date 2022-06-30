@@ -91,6 +91,17 @@ export default {
       bc,
     }
   },
+   head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.overview,
+        },
+      ],
+    }
+  },
   fetchOnServer: false, // too see if it's a problem for crawlers
   methods: {
     backToList() {

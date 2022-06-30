@@ -97,6 +97,11 @@ export default {
 
       return dateNumbers[2] + '/' + dateNumbers[1] + '/' + dateNumbers[0]
     }
+
+    function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
     
     return {
       name: data.name,
@@ -106,8 +111,20 @@ export default {
       sDate: formatDate(data.startDate),
       eDate: formatDate(data.endDate),
       cost: data.cost,
+      description: formatDescription(data.overview),
       poiList,
       bc,
+    }
+  },
+   head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.description,
+        },
+      ],
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
