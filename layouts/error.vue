@@ -49,12 +49,11 @@ export default {
 .__nuxt-error-page {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
-  height: 465px;
 }
 
 .__nuxt-error-page .title {
   font-size: 30px;
-  margin-top: 200px;
+  margin-top: 300px;
   padding: 0px;
   color: var(--green);
   background-color: var(--beige);
