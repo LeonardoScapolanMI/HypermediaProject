@@ -12,7 +12,9 @@
 </template>
 
 <script>
+
 export default {
+  layout: 'empty',
   name: 'NuxtError',
   props: {
     error: {
@@ -38,7 +40,7 @@ export default {
         }
       ]
     }
-  }
+  },
 }
 </script>
 

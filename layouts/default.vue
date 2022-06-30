@@ -2,7 +2,7 @@
   <div class="flex-wrapper">
     <TheHeader />
     <Nuxt class="page-content"/>
-    <TheFooter class="footer" />
+    <TheFooter class="footer"/>
   </div>
 </template>
 
