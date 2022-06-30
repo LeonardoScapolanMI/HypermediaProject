@@ -55,15 +55,18 @@ li a.nuxt-link-exact-active.nuxt-link-active {
   color: var(--green);
   text-decoration: none;
   cursor: default;
+  
 }
 
 a {
-  color: var(--blue);
+  color: var(--green);
+
 }
 
 a:hover {
   color: var(--green);
   text-decoration: none;
+ 
 }
 
  .breadcrumb {

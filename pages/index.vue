@@ -6,14 +6,14 @@
       <div class="title">
         <h1>FIRENZE</h1>
         <hr class="line" />
-        <h4>come mai prima</h4>
+        <h2>come mai prima</h2>
       </div>
     </div>
 
     <!-- OVERVIEW -->
 
     <div class="text-content">
-      <h5 class="text-center">{{ introduction }}</h5>
+      <h3 class="text-center">{{ introduction }}</h3>
     </div>
 
     <!-- SLIDESHOW -->
@@ -236,7 +236,7 @@ export default {
 }
 
 .title {
-  color: var(--brown);
+  color: var(--green);
   font-weight: bold;
   padding-top: 420px;
   text-align: center;
@@ -244,7 +244,7 @@ export default {
 }
 
 .title h1,
-.title h4,
+.title h2,
 .title hr {
   background-color: var(--beige);
   margin: 0px;
@@ -304,7 +304,7 @@ export default {
 
 .home-button {
   color: var(--green);
-  background-color: var(--brown);
+  background-color: var(--beige);
   border: 1.5px solid var(--green);
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
