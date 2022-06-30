@@ -23,11 +23,12 @@
         <div class="row">
           <div class="col-md-6" >
             <p class="text-with-line-break">{{ overview }}</p>
-            <p v-if="sDate!=eDate"> L'evento avrà inizio il {{sDate}} </p>     
-            <p v-if="sDate!=eDate"> e fine il {{eDate}} </p>
-            <p v-if="sDate===eDate"> L'evento si terrà il  {{sDate}} </p> 
-            <p v-if="cost!='gratuito'"> al costo di {{cost}}. </p>
-            <p v-else> a libera entrata. </p>        
+            
+            <p v-if="sDate!=eDate" class="text-with-line-break"> L'evento avrà inizio il {{sDate}} </p>     
+            <p v-if="sDate!=eDate" class="text-with-line-break"> e fine il {{eDate}} </p>
+            <p v-if="sDate===eDate" class="text-with-line-break"> L'evento si terrà il  {{sDate}} </p> 
+            <p v-if="cost!='gratuito'" class="text-with-line-break"> al costo di {{cost}}. </p>
+            <p v-else class="text-with-line-break"> a libera entrata. </p> 
           </div> 
           <div class="col-md-6">
             <MapBox v-if="mapurl" :indirizzo="mapurl"/>
@@ -133,4 +134,7 @@ export default {
   margin-bottom: 30px;
 }
 
+p {
+  display: inline;
+}
 </style>

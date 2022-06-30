@@ -53,6 +53,7 @@ li:after {
 li a.nuxt-link-exact-active.nuxt-link-active {
   text-decoration: none;
   cursor: default;
+  
 }
 
 a {
@@ -62,6 +63,7 @@ a {
 a:hover {
   color: var(--aqua);
   text-decoration: none;
+ 
 }
 
  .breadcrumb {

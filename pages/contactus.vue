@@ -114,6 +114,7 @@ export default {
       text: '',
     }
   },
+  components: { BreadCrumb},
   methods: {
 
        submit()

@@ -217,9 +217,9 @@ export default {
 }
 
 #load-more {
-  color: var(--blue);
-  background-color: var(--white);
-  border: 1px solid var(--aqua);
+  color: var(--green);
+  background-color: var(--blue);
+  border: 2px solid var(--green);
   padding: 5px 50px 5px 50px;
   border-radius: 10px;
   font-size: large;
@@ -228,7 +228,9 @@ export default {
 }
 
 #load-more:hover {
-  color: var(--aqua);
+  color: var(--white);
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 .loading-icon {
