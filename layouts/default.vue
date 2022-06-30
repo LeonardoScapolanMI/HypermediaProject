@@ -1,7 +1,7 @@
 <template>
   <div class="flex-wrapper">
     <TheHeader />
-    <Nuxt />
+    <Nuxt class="page-content"/>
     <TheFooter class="footer" />
   </div>
 </template>
@@ -15,8 +15,12 @@
   justify-content: flex-start;
 }
 
-.footer {
-  margin-top: auto;
+.page-content {
+  flex : 1;
 }
+
+/* .footer {
+  margin-top: auto;
+} */
 
 </style>
