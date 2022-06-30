@@ -219,7 +219,6 @@ export default {
       toDisplay: undefined,
     }
   },
- 
   head() {
     return {
       title: 'La città di Firenze',

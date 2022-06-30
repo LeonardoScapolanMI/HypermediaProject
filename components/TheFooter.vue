@@ -3,7 +3,7 @@
       <div>
         <ul class="footer">
           <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`">
-            <a :href="navItem.path" class="nav-link">{{ navItem.name }}</a>
+            <nuxt-link :to="navItem.path" class="nav-link">{{ navItem.name }}</nuxt-link>
           </li><!-- Print the items of the footerList, in this case only contactus-->
         </ul>
       </div>
@@ -54,7 +54,6 @@ nav a {
 nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
-  transition: 0.2s;
   color: var(--green);
   text-decoration: none;
 }

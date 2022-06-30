@@ -37,7 +37,11 @@
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
-        <a href="/allpois" class="button">Tutti i punti di interesse</a>
+        <button 
+          class="button"
+          onclick="location.href='/allpois'"
+          >Tutti i punti di interesse
+        </button>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
     
