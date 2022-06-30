@@ -9,6 +9,7 @@
       type="button"
       data-toggle="collapse"
       data-target=".navbar-collapse"
+      title="estendi/comprimi barra di navigazione"
     >
       <span class="navbar-toggler-icon"></span>
     </button>

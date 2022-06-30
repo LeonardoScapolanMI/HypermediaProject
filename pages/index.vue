@@ -7,7 +7,7 @@
       <div class="title">
         <h1>FIRENZE</h1>
         <hr/>
-        <h4>come mai prima</h4>
+        <h2>come mai prima</h2>
       </div>
     </div>
 
@@ -128,7 +128,7 @@
     <!-- Insert the back up button -->
 
     <div class="dropup">
-      <a id="up-button" href="#" class="dropdown-toggle">
+      <a id="up-button" title="Torna all'inizio" href="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>
     </div>
@@ -269,12 +269,12 @@ export default {
   cursor: default;
 }
 
-.title h1, .title h4 {
+.title > h1, .title > h2 {
   background-color: var(--beige);
   margin: 0px;
 }
 
-.title hr {
+.title > hr {
   margin: 0px;
 }
 
