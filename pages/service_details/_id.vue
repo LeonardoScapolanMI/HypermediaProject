@@ -87,7 +87,7 @@ export default {
       description: data.description,
       images: data.images,
       services: data.services,
-      
+      bc,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
@@ -97,10 +97,7 @@ export default {
     }
   },
 mounted() {
-  console.log( this.services[0])
-  console.log( this.services[1])
-  console.log( this.services[2])
-  console.log( this.services[3])
+ 
 },
   methods: {
     loadMore(){

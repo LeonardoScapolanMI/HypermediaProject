@@ -67,7 +67,12 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 export default {
   
   name: 'Event',
-  components: { SlideShow, MapBox, CardCarousel, BreadCrumb},
+  components: { 
+    SlideShow, 
+    MapBox, 
+    CardCarousel, 
+    BreadCrumb
+    },
 
    async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -105,7 +110,7 @@ export default {
       eDate: formatDate(data.endDate),
       cost: data.cost,
       poiList,
-      
+      bc,
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers

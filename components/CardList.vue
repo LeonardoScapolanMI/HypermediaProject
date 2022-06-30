@@ -92,28 +92,6 @@ export default {
     state: ListState.InitialLoading,
     colSize: '-12',
   }),
-  async fetch() {
-    try {
-      this.state = ListState.InitialLoading
-
-      const reqBody = {
-        params: {
-          itemCount: this.nBaseLoadedItems,// load base item of 12 
-        },
-      }
-
-      const { data } = await this.$axios.get(this.endpoint, reqBody)// execute the request to the given endpoint 
-
-      this.itemList = data.data
-
-      this.state = data.isFinished // Check on the status of the loaded item, is it finished?
-        ? ListState.LoadedFinished
-        : ListState.LoadedNotFinished
-    } catch (e) {
-      this.state = ListState.Error
-    }
-  },
-  fetchOnServer: false, // too see if it's a problem for crawlers
   head() {
     return {
       link: [
@@ -147,9 +125,29 @@ export default {
       ],
     }
   },
-  mounted() {
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
+  async mounted() {
+    try {
+      this.state = ListState.InitialLoading
+
+      this.onResize()
+      window.addEventListener('resize', this.onResize)
+
+      const reqBody = {
+        params: {
+          itemCount: this.nBaseLoadedItems,// load base item of 12 
+        },
+      }
+
+      const { data } = await this.$axios.get(this.endpoint, reqBody)// execute the request to the given endpoint 
+
+      this.itemList = data.data
+
+      this.state = data.isFinished // Check on the status of the loaded item, is it finished?
+        ? ListState.LoadedFinished
+        : ListState.LoadedNotFinished
+    } catch (e) {
+      this.state = ListState.Error
+    }
   },
   methods: {
     async loadMore() {// method for loading more items
