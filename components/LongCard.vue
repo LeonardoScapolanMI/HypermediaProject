@@ -113,11 +113,10 @@ mounted() {
 
 <style scoped>
 
-#wrapper{
+#wrapper {
 width: 100% !important;
 max-width: 100% !important;
 }
-
 .long-card-container {
   margin: auto;
   margin-top: 30px;
@@ -148,8 +147,8 @@ max-width: 100% !important;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .col-md-7 {
   margin-bottom: 70px;
 }
+
 </style>

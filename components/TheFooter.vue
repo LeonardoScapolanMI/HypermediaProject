@@ -28,12 +28,6 @@ export default {
 
 <style>
 
-nav {
-    background-color: var(--aqua);
-    font-family: Georgia;
-    font-weight: bold;
-  }
-
 .footer {
   list-style-type: none;
   margin: 0;
@@ -41,17 +35,23 @@ nav {
   padding-right: 10px;
 }
 
-nav li {
+nav {
+    background-color: var(--aqua);
+    font-family: Georgia;
+    font-weight: bold;
+  }
+
+nav > li {
   padding: 5px;
   display: inline-block;
 }
 
-nav a {
+nav > a {
   color: var(--white);
   text-decoration: none;
 }
 
-nav a:hover, nav a:focus {
+nav > a:hover, nav > a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
   color: var(--green);

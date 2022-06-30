@@ -64,7 +64,7 @@ export default {
   border-radius: 10px;
 } 
 
-.carousel-caption h4 {
+.carousel-caption > h4 {
   color: var(--green);
   margin: 5px;
   text-align: center;
