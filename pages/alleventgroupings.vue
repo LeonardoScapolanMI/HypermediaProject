@@ -59,7 +59,7 @@ export default {
 .carousel-caption {
   background-color: var(--beige);
   padding: 0;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   opacity: 0.8;
   border-radius: 10px;
 } 
@@ -69,6 +69,7 @@ export default {
   margin: 5px;
   text-align: center;
   font-weight: bold;
+  font-size: 2vw;
 } 
 
 .image-link {
