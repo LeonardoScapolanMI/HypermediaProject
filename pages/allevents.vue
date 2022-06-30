@@ -53,5 +53,19 @@ export default {
       description: 'Vieni a scoprire tutti gli eventi che si svolgono a Firenze, sarà un’avventura senza eguali. Passerai delle incredibili giornate nella nostra grande città, tra sport, musica e arte. Dal mercatino di Natale ai concerti musicali estivi, Firenze ti offre qualsiasi tipo di esperienza tutto l’anno.'
     }
   },
+ 
+  head() {
+    return {
+      title: 'Tutti gli eventi',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutte gli eventi che si svolgeranno a Firenze.',
+        },
+      ],
+    }
+  },
 }
 </script>

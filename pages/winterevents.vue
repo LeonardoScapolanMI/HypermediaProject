@@ -1,11 +1,10 @@
 <template>
   <div>
-
     <!-- Insert breadcrumb with calling the component -->
 
-    <BreadCrumb :crumbs='bc'/>
+    <BreadCrumb :crumbs="bc" />
 
-    <!-- Insert the title --> 
+    <!-- Insert the title -->
 
     <div class="page-title">
       <h1>EVENTI INVERNALI</h1>
@@ -14,13 +13,17 @@
     <!-- IMAGE -->
 
     <div class="title-image-container">
-      <img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernale" class="title-image"/>
+      <img
+        src="/images/event/winter.jpg"
+        alt="anteprima di tutti gli eventi invernale"
+        class="title-image"
+      />
     </div>
 
     <!-- Insert a general overview -->
 
-    <div class="text-content" >
-      <p class="text-with-line-break ">{{ description }}</p>
+    <div class="text-content">
+      <p class="text-with-line-break">{{ description }}</p>
     </div>
 
     <!-- Insert card list by calling the component -->
@@ -39,7 +42,6 @@
         <span class="sr-only"></span>
       </a>
     </div>
-    
   </div>
 </template>
 
@@ -47,24 +49,41 @@
 import CardList from '~/components/CardList.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
 
-function nextWinterYears(){
+function nextWinterYears() {
   const now = new Date()
   let firstYear = now.getFullYear()
-  if(now.getMonth() <= 3) firstYear--
-  return firstYear + '/' + (firstYear+1);
+  if (now.getMonth() <= 3) firstYear--
+  return firstYear + '/' + (firstYear + 1)
 }
 
 export default {
   name: 'AllEvents',
   components: { CardList, BreadCrumb },
+
   data() {
-    const bc =[]
-    bc.push({title:'Tutti i Gruppi di Eventi', path:'/alleventgroupings'})
-    bc.push({title:'Eventi Invernali', path:''})
+    const bc = []
+    bc.push({ title: 'Tutti i Gruppi di Eventi', path: '/alleventgroupings' })
+    bc.push({ title: 'Eventi Invernali', path: '' })
     return {
       bc,
-      description: 'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze per vivere al meglio la città anche nei mesi più freddi.\n' +
-        'Ecco un elenco delle eventi offerti dal terrritorio durante l\'inverno ' + nextWinterYears() +'.'
+      description:
+        'Questa sezione offre una guida per tutti gli eventi invernali previsti a Firenze per vivere al meglio la città anche nei mesi più freddi.\n' +
+        "Ecco un elenco delle eventi offerti dal terrritorio durante l'inverno " +
+        nextWinterYears() +
+        '.',
+    }
+  },
+  head() {
+    return {
+      title: 'Tutti gli eventi invernali',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutti gli eventi invernali che si svolgeranno a Firenze',
+        },
+      ],
     }
   },
 }

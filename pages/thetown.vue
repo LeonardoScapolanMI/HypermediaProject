@@ -219,6 +219,20 @@ export default {
       toDisplay: undefined,
     }
   },
+ 
+  head() {
+    return {
+      title: 'La città di Firenze',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina è descritta la città di Firenze a tutto tondo, dalla sua storia antica alle sue bellezze contemporanee.',
+        },
+      ],
+    }
+  },
   methods: {
     getContentToDisplay() {
       return this.toDisplay ? this.toDisplay : this.historyContent

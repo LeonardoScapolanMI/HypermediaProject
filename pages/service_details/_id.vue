@@ -96,6 +96,17 @@ export default {
       nItems:3,
     }
   },
+  head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.description,
+        },
+      ],
+    }
+  },
   methods: {
     loadMore(){
     this.nItems=Math.min(this.nItems+2,this.services.length);

@@ -47,5 +47,19 @@ export default {
       bc,
     }
   },
+  
+  head() {
+    return {
+      title: 'Tutti i punti di interesse',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutte tutti i punti di interesse presenti a Firenze.',
+        },
+      ],
+    }
+  },
 }
 </script>
