@@ -92,8 +92,6 @@ export default {
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);  /*senza questo funziona uguale, ma da un warning perchè la mask-image non è definita*/
 }
 
-
-
 #see-details {
   margin-top: 3%;
   margin-bottom: 3%;
@@ -103,10 +101,7 @@ export default {
   background-color: var(--blue);
   border: 2px solid var(--green);
   border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 }
 .button-style:hover {
   color: var(--white);

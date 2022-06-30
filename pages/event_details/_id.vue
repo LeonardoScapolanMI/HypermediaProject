@@ -40,7 +40,7 @@
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
-        <a href="/allpois" class="carousel-button">Tutti i punti di interesse</a>
+        <a href="/allpois" class="button">Tutti i punti di interesse</a>
         <CardCarousel class="card-car" :content="poiList" @onSeeDetails="(id) => $router.push('/poi_details/'+id)"/>
       </div>
   
@@ -97,6 +97,11 @@ export default {
 
       return dateNumbers[2] + '/' + dateNumbers[1] + '/' + dateNumbers[0]
     }
+
+    function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
     
     return {
       name: data.name,
@@ -106,8 +111,20 @@ export default {
       sDate: formatDate(data.startDate),
       eDate: formatDate(data.endDate),
       cost: data.cost,
+      description: formatDescription(data.overview),
       poiList,
       bc,
+    }
+  },
+   head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.description,
+        },
+      ],
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
@@ -121,17 +138,3 @@ export default {
    
 }
 </script>
-
-<style>
-
-.background-poi {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/pointOfInterest/background.jpg") center;
-  background-size: 50% 50%;
-  height: 700px;
-  margin-bottom: 30px;
-}
-
-p {
-  display: inline;
-}
-</style>

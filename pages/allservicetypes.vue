@@ -54,5 +54,19 @@ export default {
       description: 'Sei venuto a Firenze per una bellissima vacanza ma non sai dove trovare una banca o una farmacia? Ecco a te una lista di tutti i servizi indispensabili che puoi trovare facilmente a Firenze. Clicca sul tipo di servizio di cui hai bisogno e ti offriremo una vasta lista di esercenti del servizio indicato.'
     }
   },
+ 
+  head() {
+    return {
+      title: 'Tutti i tipi di servizi',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'In questa pagina sono elencati tutte le categorie di servizi per i visitatori prensenti a Firenze',
+        },
+      ],
+    }
+  },
 }
 </script>

@@ -35,14 +35,14 @@
       <div v-if="itList.length > 0" class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="subline" />
-        <a href="/allitineraries" class="carousel-button">Tutti gli itinerari</a>
+        <a href="/allitineraries" class="button">Tutti gli itinerari</a>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
   
       <div  v-if="evList.length > 0" class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="subline" />
-        <a href="/allevents" class="carousel-button">Tutti gli eventi</a>
+        <a href="/allevents" class="button">Tutti gli eventi</a>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 
@@ -101,6 +101,10 @@ export default {
         description: ev.overview,
       })
     }
+    function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
 
     return {
       name: data.name,
@@ -110,8 +114,21 @@ export default {
       itList,
       evList,
       bc,
+      descriptionmeta: formatDescription(data.description),
     }
   },
+  head() {
+    return {
+      title: this.name,
+      meta: [
+        {hid:'description',
+        name:'description',
+          content: this.descriptionmeta,
+        },
+      ],
+    }
+  },
+ 
   fetchOnServer: false, // too see if it's a problem for crawlers
   methods: {
     backToList() {
@@ -121,21 +138,3 @@ export default {
 }
 
 </script>
-
-<style>
-
-.background-it {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/itinerary/background.jpg") center ;
-  background-size: 50% 50%;
-  height: 700px;
-  margin-bottom: 30px;
-}
-
-.background-ev {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/event/background.jpg") center ;
-  background-size: 50% 50%;
-  height: 700px;
-  margin-bottom: 30px;
-}
-
-</style>

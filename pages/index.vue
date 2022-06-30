@@ -6,15 +6,15 @@
     <div class="welcome">
       <div class="title">
         <h1>FIRENZE</h1>
-        <hr class="line" />
-        <h2>come mai prima</h2>
+        <hr/>
+        <h4>come mai prima</h4>
       </div>
     </div>
 
     <!-- Insert a general overview -->
 
     <div class="text-content">
-      <h3 class="text-center">{{ introduction }}</h3>
+      <h5 class="text-center">{{ introduction }}</h5>
     </div>
 
     <!-- Insert a slideshow by calling the component -->
@@ -49,7 +49,7 @@
           <h3 class="text-content-title">{{ evtitle }}</h3>
           <p class="text-with-line-break">{{ evText }}</p>
           <div class="button-container">
-            <a :href="evPath" class="home-button">Tutti gli eventi</a>
+            <a :href="evPath" class="button">Tutti gli eventi</a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <h3 class="text-content-title">{{ poiTitle }}</h3>
           <p class="text-with-line-break">{{ poiText }}</p>
           <div class="button-container">
-            <a :href="poiPath" class="home-button">Tutti i punti di interesse</a>
+            <a :href="poiPath" class="button">Tutti i punti di interesse</a>
           </div>
         </div>
       </div>
@@ -95,10 +95,11 @@
           <h3 class="text-content-title">{{ itTitle }}</h3>
           <p class="text-with-line-break">{{ itText }}</p>
           <div class="button-container">
-            <a :href="itPath" class="home-button">Tutti gli itinerari</a>
+            <a :href="itPath" class="button">Tutti gli itinerari</a>
           </div>
         </div>
       </div>
+    </div>
     </div>
 
     <hr id="ser" class="separator" />
@@ -110,7 +111,7 @@
           <h3 class="text-content-title">{{ serTitle }}</h3>
           <p class="text-with-line-break">{{ serText }}</p>
           <div class="button-container">
-            <a :href="serPath" class="home-button">Tutti i tipi di servizio</a>
+            <a :href="serPath" class="button">Tutti i tipi di servizio</a>
           </div>
         </div>
       </div>
@@ -123,8 +124,7 @@
         </div>
       </div>
     </div>
-  </div>
-
+  
     <!-- Insert the back up button -->
 
     <div class="dropup">
@@ -133,7 +133,7 @@
       </a>
     </div>
 
-  </div>
+ </div>
 </template>
 
 <script>
@@ -204,7 +204,7 @@ export default {
         },
       ],
       introduction:
-        'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l hai mai vista prima.',
+        'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l\'hai mai vista prima.',
       evURL: '/images/home/cards/ev.jpg',
       evCaption: 'Cavalcata dei magi',
       evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
@@ -235,6 +235,20 @@ export default {
       serPath: '/allservicetypes',
     }
   },
+  
+  head() {
+    return {
+      title: 'Homepage',
+      meta: [
+        {
+          hid:'description',
+        name:'description',
+          content:
+            'Il sito è stato adibito ad offrire ai visitatori di Firenze preziose informazioni per migliorare la loro esperienza nella città.',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -255,15 +269,13 @@ export default {
   cursor: default;
 }
 
-.title h1,
-.title h2,
-.title hr {
+.title h1, .title h4 {
   background-color: var(--beige);
   margin: 0px;
 }
 
-.line {
-  width: 0px;
+.title hr {
+  margin: 0px;
 }
 
 .home-container {
@@ -275,6 +287,7 @@ export default {
 
 .long-image-container {
   margin: 20px 5px 20px 5px;
+  
 }
 
 .long-image {
@@ -289,17 +302,23 @@ export default {
   cursor: pointer;
 }
 
+
+.structural-links {
+  max-width: 90% !important;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
 .home-link {
   color: var(--green);
   font-weight: bold;
 }
 
 .home-link:hover {
-  color: var(--blue);
-}
-
-#ev {
-  margin-bottom: 90px;
+  background-color: var(--beige);
+  color: var(--green);
+  text-decoration: none;
 }
 
 .home-button-container {
@@ -314,19 +333,4 @@ export default {
   margin-bottom: 50px;
 }
 
-.home-button {
-  color: var(--green);
-  background-color: var(--beige);
-  border: 1.5px solid var(--green);
-  padding: 10px 50px 10px 50px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.home-button:hover {
-  border: 2px solid var(--green);
-  color: var(--green);
-  text-decoration: none;
-  transition: 0.25s;
-}
 </style>
