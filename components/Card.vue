@@ -105,7 +105,6 @@ export default {
 }
 .button-style:hover {
   color: var(--white);
-  transition: 0.25s;
   cursor: pointer;
 }
 

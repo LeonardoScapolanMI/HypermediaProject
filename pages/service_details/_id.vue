@@ -148,7 +148,6 @@ export default {
 
 #load-more:hover {
   color: var(--white);
-  transition: 0.25s;
   cursor: pointer;
 }
 
