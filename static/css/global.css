@@ -109,19 +109,6 @@ body {
   background-color: var(--blue);
 }
 
-#up-button {
-  padding: 5px 10px 5px 7px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  background-color: var(--blue);
-  float: right;
-  color: var(--aqua);
-  border-radius: 10px;
-}
-
-#up-button:hover {
-  color: var(--white);
-}
 
 .card-car {
   margin: auto;
@@ -135,4 +122,13 @@ body {
   margin: auto;
   margin-bottom: 10px;
   margin-top: 50px;
+}
+
+.orientation-info{
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }

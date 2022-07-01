@@ -13,8 +13,8 @@
 
     <!-- Insert a general overview -->
 
-    <div class="text-content">
-      <h5 class="text-center">{{ introduction }}</h5>
+    <div class="text-content flavour-text text-center">
+      {{ introduction }}
     </div>
 
     <!-- Insert a slideshow by calling the component -->
@@ -143,20 +143,17 @@
   
     <!-- Insert the back up button -->
 
-    <div class="dropup">
-      <a id="up-button" title="Torna all'inizio" href="#" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+    <drop-up/>
 
  </div>
 </template>
 
 <script>
 import SlideShow from '~/components/Slideshow.vue'
+import DropUp from '~/components/DropUp.vue'
 export default {
   name: 'IndexPage',
-  components: { SlideShow },
+  components: { SlideShow, DropUp },
   data() {
     return {
       linkList: [
@@ -287,6 +284,12 @@ export default {
 
 .title > hr {
   margin: 0px;
+}
+
+.flavour-text{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .home-container {

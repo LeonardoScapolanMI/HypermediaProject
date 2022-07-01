@@ -10,7 +10,7 @@
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
-      <h4>ITINERARIO</h4> 
+      <span class="orientation-info">ITINERARIO</span> 
     </div>
 
     <!-- Insert an image -->
@@ -47,11 +47,7 @@
     
     <!-- Insert the back up button -->
 
-    <div class="dropup">
-      <a id="up-button" href="#" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+    <drop-up/>
       
   </div>
 </template>
@@ -60,10 +56,11 @@
 import CardCarousel from '~/components/CardCarousel.vue'
 import MapBox from '~/components/MapBox.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
+import DropUp from '~/components/DropUp.vue'
 
 export default {
   name: 'Itinerary',
-  components: { CardCarousel, MapBox, BreadCrumb },
+  components: { CardCarousel, MapBox, BreadCrumb, DropUp },
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(

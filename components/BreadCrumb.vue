@@ -9,8 +9,8 @@
       v-for="(crumb, index) in crumbs"
       :key="index"
     >
-      <a v-if="crumb.path === ''" class="new">{{ crumb.title }}</a>
-      <a v-else-if="crumb.path === '#'" class="new">{{ crumb.title }}</a>
+      <span v-if="crumb.path === ''" class="new">{{ crumb.title }}</span>
+      <span v-else-if="crumb.path === '#'" class="new">{{ crumb.title }}</span>
       <a v-else class="old" :href="crumb.path">{{ crumb.title }}</a>
     </li>
   </ol>
@@ -19,6 +19,7 @@
 <script>
 
 export default {
+  name: 'BreadCrumb',
   props: {
     crumbs: {
       type: Array,
