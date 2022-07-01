@@ -1,14 +1,15 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top">
-    <a id="logo" href="/">
+    <a id="logo" href="/" tabindex="0">
       <img id="icon" src="/images/firenze.jpg" alt="HOME" />
     </a>
 
-    <button
+    <button tabindex="0"
       class="navbar-toggler"
       type="button"
       data-toggle="collapse"
       data-target="#collapsibleNavbar"
+      
     >
       <span class="navbar-toggler-icon"></span>
     </button>

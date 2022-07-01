@@ -3,7 +3,7 @@
     typeof="BreadcrumbList"
     class="breadcrumb"
   >
-    <li property="itemListElement" typeof="ListItem">
+    <li property="itemListElement" typeof="ListItem" tabindex="0">
       <NLink property="item" typeof="WebPage" to="/">
         <span property="name">HOME</span>
       </NLink>

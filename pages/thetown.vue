@@ -3,31 +3,33 @@
 
     <!-- Insert breadcrumb with calling the component -->
 
-    <BreadCrumb :crumbs='bc'/>
+    <BreadCrumb :crumbs='bc' />
 
     <!-- Insert the title --> 
 
-    <div class="page-title">
+    <div class="page-title" >
       <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- Insert slideshow by calling the component -->  
 
-    <SlideShow :images="imagesV" class="title-image-container"/>
+    <SlideShow :images="imagesV" class="title-image-container" />
 
     <!-- Insert of structural links using the method setContentToDisplay(newContent) -->
 
-    <div class="structural-links">
+    <div class="structural-links" >
       <div class="row">
-        <div
+        <div tabindex="0"
           class="col-sm-auto structural-link selected-structural-link"
           @click="setContentToDisplay(historyContent)"
+          
         >
           STORIA
         </div>
-        <div
+        <div tabindex="0"
           class="col-sm-auto structural-link"
           @click="setContentToDisplay(howToReachContent)"
+          
         >
           COME RAGGIUNGERE
         </div>
@@ -49,7 +51,7 @@
 
     <!-- Insert the back up button -->
 
-    <div class="dropup">
+    <div class="dropup" >
       <a id="up-button" href="#" class="dropdown-toggle">
         <span class="sr-only"></span>
       </a>

@@ -44,7 +44,7 @@ detailsPageFolder - the folder inside which there's the teplate for the page tha
           </div>
 
           <div class="text-center">
-            <button
+            <button tabindex="0"
               v-if="state === ListState.LoadedNotFinished"
               id="load-more"
               @click="loadMore()"
@@ -222,7 +222,7 @@ export default {
   margin: 20px;
 }
 
-#load-more:hover {
+#load-more:hover, #load-more:focus {
   color: var(--white);
   transition: 0.25s;
   cursor: pointer;
