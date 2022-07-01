@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 
-#wrapper{
+#wrapper {
   margin: auto;
   display: flex;
   flex-direction: column;

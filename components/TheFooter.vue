@@ -28,18 +28,18 @@ export default {
 
 <style>
 
-nav {
-    background-color: var(--aqua);
-    font-family: Georgia;
-    font-weight: bold;
-  }
-
 .footer {
   list-style-type: none;
   margin: 0;
   float: right;
   padding-right: 10px;
 }
+
+nav {
+    background-color: var(--aqua);
+    font-family: Georgia;
+    font-weight: bold;
+  }
 
 nav li {
   padding: 5px;

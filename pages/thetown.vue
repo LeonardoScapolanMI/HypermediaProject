@@ -221,7 +221,7 @@ export default {
   },
   head() {
     return {
-      title: 'La città di Firenze',
+      title: 'La Città di Firenze',
       meta: [
         {
           hid:'description',

@@ -117,7 +117,6 @@ export default {
 #cards {
   flex: 1 !important;
 }
-
 .container {
   max-width: none;
 }

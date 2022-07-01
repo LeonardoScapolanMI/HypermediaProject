@@ -136,7 +136,7 @@ export default {
   margin: auto;
 }
 
-h3 {
+.form > h3 {
   font-weight: bold;
   text-align: center;
 }

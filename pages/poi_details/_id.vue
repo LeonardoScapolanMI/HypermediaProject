@@ -49,7 +49,7 @@
         <button 
           class="button"
           onclick="location.href='/allevents'"
-          >Tutti fli eventi
+          >Tutti gli eventi
         </button>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
