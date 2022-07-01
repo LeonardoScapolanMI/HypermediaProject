@@ -69,7 +69,7 @@ export default {
   margin: 5px;
   text-align: center;
   font-weight: bold;
-  font-size: min(2vw, 35px);
+  font-size: clamp(0.8rem, 2vw, 3rem);
 } 
 
 .image-link {
