@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <img
+    <img 
       v-if="content.length > 3"
       id="arrow"
       class="carousel-control-next-icon"
@@ -35,7 +35,7 @@
       src="/icons/angle-right-solid.svg"
       @click="next"
     /><!-- Display the button to go forward in the carousel-->
-    
+
   </div>
 </template>
 
@@ -129,7 +129,7 @@ export default {
   border-radius: 30px;
 }
 
-#arrow:hover {
+#arrow:hover, #arrow:focus {
   cursor: pointer;
   background-color: var(--green);
 }

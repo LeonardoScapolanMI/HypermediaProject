@@ -81,13 +81,18 @@ export default {
     const bc =[]
     bc.push({title:'Tutti i Tipi di Servizio', path:'/allservicetypes'})
     bc.push({title:data.name, path:'#'})
-
+    function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
     return {
       name: data.name,
       description: data.description,
       images: data.images,
       services: data.services,
       bc,
+      descriptionmeta: formatDescription(data.description),
+      
     }
   },
   fetchOnServer: false, // too see if it's a problem for crawlers
@@ -102,7 +107,7 @@ export default {
       meta: [
         {hid:'description',
         name:'description',
-          content: this.description,
+          content: this.descriptionmeta,
         },
       ],
     }

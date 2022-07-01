@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top">
-    <nuxt-link id="logo" to="/">
+    <nuxt-link id="logo" to="/" tabindex="0">
       <img id="icon" src="/images/firenze.jpg" alt="HOME" />
     </nuxt-link>
 
-    <button
+    <button tabindex="0"
       class="navbar-toggler"
       type="button"
       data-toggle="collapse"

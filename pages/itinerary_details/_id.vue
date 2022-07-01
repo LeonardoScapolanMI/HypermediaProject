@@ -84,7 +84,10 @@ export default {
         description: poi.description,
       })
     }
-
+ function formatDescription(d) {
+      const description = d.split(".")[0]
+      return description.concat('.')
+    }
     // console.log(data)
     return {
       name: data.name,
@@ -93,7 +96,9 @@ export default {
       mapURL: data.mapURL,
       poiList,
       bc,
+      description: formatDescription(data.overview),
     }
+    
   },
    head() {
     return {
@@ -101,7 +106,7 @@ export default {
       meta: [
         {hid:'description',
         name:'description',
-          content: this.overview,
+          content: this.description,
         },
       ],
     }

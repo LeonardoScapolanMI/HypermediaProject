@@ -68,7 +68,7 @@ export default {
   border: 1.5px solid var(--green);
 }
 
-#image:hover { 
+#image:hover, #image:focus { 
   border: 2px solid var(--green);
   cursor: pointer;
 }
@@ -103,7 +103,7 @@ export default {
   border-radius: 5px;
   padding: 10px;
 }
-.button-style:hover {
+.button-style:hover, .button-style:focus {
   color: var(--white);
   cursor: pointer;
 }
