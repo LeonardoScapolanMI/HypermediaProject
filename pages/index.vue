@@ -13,8 +13,8 @@
 
     <!-- Insert a general overview -->
 
-    <div class="text-content">
-      <h5 class="text-center">{{ introduction }}</h5>
+    <div class="text-content flavour-text text-center">
+      {{ introduction }}
     </div>
 
     <!-- Insert a slideshow by calling the component -->
@@ -287,6 +287,12 @@ export default {
 
 .title > hr {
   margin: 0px;
+}
+
+.flavour-text{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .home-container {
