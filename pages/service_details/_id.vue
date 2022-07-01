@@ -10,7 +10,7 @@
     <div class="page-title">
       <h1>{{ name }}</h1>
       <hr class="subtitle" />
-      <h4>TIPO DI SERVIZIO</h4>
+      <span class="orientation-info">TIPO DI SERVIZIO</span>
     </div>
 
     <!-- Insert an image -->

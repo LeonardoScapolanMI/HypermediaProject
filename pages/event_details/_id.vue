@@ -10,7 +10,7 @@
         <div class="page-title">
           <h1>{{ name }}</h1> 
           <hr class="subtitle">
-          <h4>EVENTO</h4> 
+          <span class="orientation-info">EVENTO</span> 
         </div>
 
       <!-- Insert slideshow by calling the component -->

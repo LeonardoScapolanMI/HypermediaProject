@@ -10,7 +10,7 @@
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
-      <h4>ITINERARIO</h4> 
+      <span class="orientation-info">ITINERARIO</span> 
     </div>
 
     <!-- Insert an image -->
