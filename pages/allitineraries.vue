@@ -34,11 +34,7 @@
 
     <!-- Insert the back up button -->
 
-    <div class="dropup">
-      <a id="up-button" href="#" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+    <drop-up/>
     
   </div>
 </template>
@@ -46,10 +42,11 @@
 <script>
 import CardList from '~/components/CardList.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
+import DropUp from '~/components/DropUp.vue'
 
 export default {
   name: 'AllItineraries',
-  components: { CardList, BreadCrumb },
+  components: { CardList, BreadCrumb, DropUp },
   data() {
     const bc =[]
     bc.push(

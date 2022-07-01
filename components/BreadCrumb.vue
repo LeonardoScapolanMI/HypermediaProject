@@ -19,6 +19,7 @@
 <script>
 
 export default {
+  name: 'BreadCrumb',
   props: {
     crumbs: {
       type: Array,

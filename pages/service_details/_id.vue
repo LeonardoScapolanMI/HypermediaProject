@@ -56,11 +56,7 @@
 
     <!-- Insert the back up button -->
 
-    <div class="dropup">
-      <a id="up-button" href="#" class="dropdown-toggle">
-        <span class="sr-only"></span>
-      </a>
-    </div>
+    <drop-up/>
 
   </div>
 </template>
@@ -68,10 +64,11 @@
 <script>
 import LongCard from '~/components/LongCard.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
+import DropUp from '~/components/DropUp.vue'
 
 export default {
   name: 'TypeOfServices',
-  components: { LongCard, BreadCrumb },
+  components: { LongCard, BreadCrumb, DropUp },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
