@@ -17,7 +17,7 @@ export default {
   height: 80px;
 }
 
-.lds-ring div {
+.lds-ring > div {
   box-sizing: border-box;
   display: block;
   position: absolute;

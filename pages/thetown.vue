@@ -221,10 +221,9 @@ export default {
       toDisplay: undefined,
     }
   },
- 
   head() {
     return {
-      title: 'La città di Firenze',
+      title: 'La Città di Firenze',
       meta: [
         {
           hid:'description',
@@ -257,11 +256,17 @@ export default {
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  color: var(--green);
+}
+
+.structural-link:hover {
+  text-decoration: underline;
 }
 
 .selected-structural-link {
-  color: var(--aqua);
   text-decoration: underline;
+  color: var(--white);
+  background-color: var(--aqua);
 }
 
 </style>

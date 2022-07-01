@@ -86,11 +86,11 @@ li a.nuxt-link-exact-active.nuxt-link-active {
   cursor: default;
 }
 
-a {
+.breadcrumb > a {
   color: var(--blue);
 }
 
-a:hover {
+.breadcrumb > a:hover {
   color: var(--green);
   text-decoration: none;
 }

@@ -1,29 +1,23 @@
 <template>
   <ol
-    typeof="BreadcrumbList"
     class="breadcrumb"
   >
-    <li property="itemListElement" typeof="ListItem">
-      <NLink property="item" typeof="WebPage" to="/">
-        <span property="name">HOME</span>
-      </NLink>
-      <meta property="position" content="1" />
+    <li>
+      <a class="old" href="/"><span>HOME</span></a>
     </li>
     <li
       v-for="(crumb, index) in crumbs"
       :key="index"
-      property="itemListElement"
-      typeof="ListItem"
     >
-      <a property="item" typeof="WebPage" :href="crumb.path">
-        {{ crumb.title }}  
-      </a>
-      <meta property="position" :content="index + 2" />
+      <a v-if="crumb.path === ''" class="new">{{ crumb.title }}</a>
+      <a v-else-if="crumb.path === '#'" class="new">{{ crumb.title }}</a>
+      <a v-else class="old" :href="crumb.path">{{ crumb.title }}</a>
     </li>
   </ol>
 </template>
 
 <script>
+
 export default {
   props: {
     crumbs: {
@@ -35,50 +29,35 @@ export default {
 </script>
 
 <style scoped>
-
-ol {
-  list-style: none;
-}
-
-li {
-  display: inline;
-}
-
-li:after {
-  content: '»';
-  display: inline;
-  color: var(--green);
-  padding: 5px;
-}
-li a.nuxt-link-exact-active.nuxt-link-active {
-  text-decoration: none;
-  cursor: default;
-  
-}
-
-a {
-  color: var(--green);
-}
-
-a:hover {
-  color: var(--aqua);
-  text-decoration: none;
- 
-}
-
  .breadcrumb {
     background-color: var(--beige);
     margin: 20px;
   }
 
-  li:last-child:after {
-  content: '';
-  color:var(--green);
-  }
+li:after {
+  content:'»';
+  color: var(--green);
+  padding: 5px;
+}
+.new {
+  text-decoration: none;
+  cursor: default;
+  font-weight: bold;
+}
 
-  li:last-child a {
-  content: '';
-  color:var(--green);
+.old {
+  color: var(--green);
+  padding: 2px;
+}
+
+.old:hover {
+  background-color: var(--green);
+  color: var(--white);
+  text-decoration: none;
+}
+
+  li:last-child:after {
+    content: '';
   }
 
 </style>

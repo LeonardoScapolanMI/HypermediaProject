@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'HypermediaProject',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'it',
     },
     meta: [
       { charset: 'utf-8' },

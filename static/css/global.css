@@ -27,6 +27,10 @@ body {
   margin-bottom: 20px;
 }
 
+.text-with-line-break:hover, .text-content-title:hover {
+  cursor: default;
+}
+
 .text-content {
   display: block;
   max-width: 90%;
@@ -85,6 +89,7 @@ body {
   color: var(--white);
   text-decoration: none;
   background-color: var(--brown);
+  cursor: pointer;
 }
 
 .subline {
@@ -123,4 +128,11 @@ body {
   width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.structural-links {
+  max-width: 90% !important;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
 }

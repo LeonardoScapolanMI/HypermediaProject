@@ -35,14 +35,22 @@
       <div v-if="itList.length > 0" class="carousel-title">
         <h3>Itinerari correlati</h3>
         <hr class="subline" />
-        <a href="/allitineraries" class="button">Tutti gli itinerari</a>
+        <button 
+          class="button"
+          onclick="location.href='/allitineraries'"
+          >Tutti gli itinerari
+        </button>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
   
       <div  v-if="evList.length > 0" class="carousel-title">
         <h3>Eventi correlati</h3>
         <hr class="subline" />
-        <a href="/allevents" class="button">Tutti gli eventi</a>
+        <button 
+          class="button"
+          onclick="location.href='/allevents'"
+          >Tutti gli eventi
+        </button>
         <CardCarousel class="card-car" :content="evList" @onSeeDetails="(id) => $router.push('/event_details/'+id)"/>
       </div>
 

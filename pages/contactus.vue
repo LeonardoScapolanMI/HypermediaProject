@@ -98,7 +98,6 @@
 <script>
 import BreadCrumb from '~/components/BreadCrumb.vue'
 
-const axios= require('axios').default;
 export default {
   name: 'ContactUs',
   components: { BreadCrumb },
@@ -109,10 +108,6 @@ export default {
       )
     return {
       bc,
-      name: '',
-      surname: '',
-      email: '',
-      text: '',
     }
   },
  
@@ -129,19 +124,7 @@ export default {
       ],
     }
   },
-  methods: {
-
-       submit()
-          { axios.post('/usermessage', {
-            firstName :this.name,
-            lastName : this.surname,
-            email: this.email,
-            message: this.text,
-          })
-
-      }
-
-  } }
+  }
 </script>
 
 <style>
@@ -153,7 +136,7 @@ export default {
   margin: auto;
 }
 
-h3 {
+.form > h3 {
   font-weight: bold;
   text-align: center;
 }
