@@ -1,12 +1,12 @@
 <template>
   <div class="__nuxt-error-page">
-      <div class="title">La pagina cercata non esiste</div>
-      <hr>
-      <p v-if="statusCode === 404" class="description">
-        <a v-if="typeof $route === 'undefined'" class="error-link" href="/"></a>
-        <NuxtLink v-else class="error-link" to="/">Torna alla HOME</NuxtLink>
-      </p>
-    </div>
+    <div class="title">La pagina cercata non esiste</div>
+    <hr>
+    <p v-if="statusCode === 404" class="description">
+      <a v-if="typeof $route === 'undefined'" class="error-link" href="/"></a>
+      <NuxtLink v-else class="error-link" to="/">Torna alla HOME</NuxtLink>
+    </p>
+  </div>
 </template>
 
 <script>
@@ -45,8 +45,11 @@ export default {
 <style>
 
 .__nuxt-error-page {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") no-repeat center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") center ;
   background-size: cover;
+  height: 600px;
+  width: 100%;
+  margin: auto;
 }
 
 .__nuxt-error-page .title {
