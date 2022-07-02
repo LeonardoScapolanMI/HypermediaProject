@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style scoped>
+
  #up-button {
   padding: 5px 10px 5px 7px;
   margin-right: 20px;

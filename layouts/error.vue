@@ -12,6 +12,7 @@
 <script>
 
 export default {
+  // without header and footer
   layout: 'empty',
   name: 'NuxtError',
   props: {
