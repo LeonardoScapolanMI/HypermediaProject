@@ -2,11 +2,9 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert three link images -->
-
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12"><a href="/allevents"><img id="all-img" src="/images/event/all.jpg" alt="anteprima di tutti gli eventi" class="image-link"/>
@@ -31,22 +29,19 @@ export default {
   components: { BreadCrumb },
   data() {
     const bc =[]
-    bc.push(
-      { title:'Tutti i Gruppi di Eventi', path:'' }
-      )
+    bc.push({ title:'Tutti i Gruppi di Eventi', path:'' })
     return {
       bc,
     }
   },
- 
   head() {
     return {
       title: 'Tutti gli eventi per gruppo',
       meta: [
-        {hid:'description',
-        name:'description',
-          content:
-            'In questa pagina è possibile accedere alla sezione di tutti gli eventi invernali, tutti gli eventi estivi o a tutti gli eventi in generale.',
+        {
+          hid:'description',
+          name:'description',
+          content:'In questa pagina è possibile accedere alla sezione di tutti gli eventi invernali, tutti gli eventi estivi o a tutti gli eventi in generale.',
         },
       ],
     }
