@@ -307,7 +307,7 @@ app.get('/event:id', async (req, res) => {
   if(!result.mapURL){
     result.mapURL = result.PointOfInterests[0].mapURL
   }
-  console.log(result)
+  // console.log(result)
   return res.json(result)
 })
 
@@ -315,7 +315,7 @@ app.get('/event:id', async (req, res) => {
 app.post("/usermessage", async (req,res)=>{
   try{
   const data =  await dbData
-  console.log(req.body)
+  // console.log(req.body)
   const mam = {
     firstName : req.body.firstName,
     lastName : req.body.lastName,
