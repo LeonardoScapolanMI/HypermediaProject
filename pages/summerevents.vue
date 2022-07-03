@@ -14,7 +14,7 @@
     <!-- IMAGE -->
 
     <div class="title-image-container">
-      <img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
+      <img src="/images/event/summer.webp" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
     </div>
 
     <!-- Insert a general overview -->

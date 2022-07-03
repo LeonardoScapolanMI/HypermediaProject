@@ -73,23 +73,23 @@ export default {
       bc,
       imagesV: [
         {
-          URL: '/images/town/0.jpg',
+          URL: '/images/town/0.webp',
           caption: 'La Primavera di Botticelli',
         },
         {
-          URL: '/images/town/1.jpg',
+          URL: '/images/town/1.webp',
           caption: 'Ponte Vecchio',
         },
         {
-          URL: '/images/town/2.jpg',
+          URL: '/images/town/2.webp',
           caption: 'Piazza della Signoria',
         },
         {
-          URL: '/images/town/3.jpg',
+          URL: '/images/town/3.webp',
           caption: 'Basilica di Santa Croce',
         },
         {
-          URL: '/images/town/4.jpg',
+          URL: '/images/town/4.webp',
           caption: 'Cattedrale di Santa Maria del Fiore',
         },
       ],

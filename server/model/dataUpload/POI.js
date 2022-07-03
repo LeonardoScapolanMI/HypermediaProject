@@ -12,37 +12,37 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/0.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/0.webp',
           caption: 'Chiostro della galleria',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/1.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/1.webp',
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/2.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/2.webp',
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/3.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/3.webp',
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/4.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/4.webp',
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Galleria degli Uffizi/5.jpg',
+          URL: '/images/pointOfInterest/Galleria degli Uffizi/5.webp',
           caption: 'Esterno della galleria',
         },
       },
@@ -59,25 +59,25 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Vecchio/0.jpg',
+          URL: '/images/pointOfInterest/Palazzo Vecchio/0.webp',
           caption: 'Estreno del palazzo visto dalla piazza',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Vecchio/1.jpg',
+          URL: '/images/pointOfInterest/Palazzo Vecchio/1.webp',
           caption: 'Esterno del palazzo visto dall\'alto',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Vecchio/2.jpg',
+          URL: '/images/pointOfInterest/Palazzo Vecchio/2.webp',
           caption: 'Interno del palazzo',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Vecchio/3.jpg',
+          URL: '/images/pointOfInterest/Palazzo Vecchio/3.webp',
           caption: 'Chiostro del palazzo',
         },
       },
@@ -94,25 +94,25 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: "/images/pointOfInterest/Galleria dell' Accademia/0.jpg",
+          URL: "/images/pointOfInterest/Galleria dell' Accademia/0.webp",
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: "/images/pointOfInterest/Galleria dell' Accademia/1.jpg",
+          URL: "/images/pointOfInterest/Galleria dell' Accademia/1.webp",
           caption: 'David di Michelangelo',
         },
       },
       {
         basicData: {
-          URL: "/images/pointOfInterest/Galleria dell' Accademia/2.jpg",
+          URL: "/images/pointOfInterest/Galleria dell' Accademia/2.webp",
           caption: 'Una delle sale espositive',
         },
       },
       {
         basicData: {
-          URL: "/images/pointOfInterest/Galleria dell' Accademia/3.jpg",
+          URL: "/images/pointOfInterest/Galleria dell' Accademia/3.webp",
           caption: 'Una delle sale espositive',
         },
       },
@@ -129,25 +129,25 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Pitti/0.jpg',
+          URL: '/images/pointOfInterest/Palazzo Pitti/0.webp',
           caption: 'Fontana all\'esterno del palazzo',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Pitti/1.jpg',
+          URL: '/images/pointOfInterest/Palazzo Pitti/1.webp',
           caption: 'Interno del palazzo',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Pitti/2.jpg',
+          URL: '/images/pointOfInterest/Palazzo Pitti/2.webp',
           caption: 'Chiostro del palazzo',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Palazzo Pitti/3.jpg',
+          URL: '/images/pointOfInterest/Palazzo Pitti/3.webp',
           caption: 'Facciata esterna del palazzo',
         },
       },
@@ -164,25 +164,25 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Giardino di Boboli/0.jpg',
+          URL: '/images/pointOfInterest/Giardino di Boboli/0.webp',
           caption: 'Laghetto all\'interno del parco',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Giardino di Boboli/1.JPG',
+          URL: '/images/pointOfInterest/Giardino di Boboli/1.webp',
           caption: 'Parte del parco',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Giardino di Boboli/2.jpg',
+          URL: '/images/pointOfInterest/Giardino di Boboli/2.webp',
           caption: 'Parte del parco',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Giardino di Boboli/3.jpeg',
+          URL: '/images/pointOfInterest/Giardino di Boboli/3.webp',
           caption: 'Parte del parco',
         },
       },
@@ -199,7 +199,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazza della Signoria/0.jpg',
+          URL: '/images/pointOfInterest/Piazza della Signoria/0.webp',
           caption: 'Vista della piazza',
         },
       },
@@ -216,7 +216,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazza del Duomo/0.jpg',
+          URL: '/images/pointOfInterest/Piazza del Duomo/0.webp',
           caption: 'Vista della piazza',
         },
       },
@@ -233,7 +233,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazza Santa Croce/0.jpg',
+          URL: '/images/pointOfInterest/Piazza Santa Croce/0.webp',
           caption: 'Vista della piazza',
         },
       },
@@ -250,7 +250,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazza Santa Maria Novella/0.jpg',
+          URL: '/images/pointOfInterest/Piazza Santa Maria Novella/0.webp',
           caption: 'Vista della piazza',
         },
       },
@@ -267,7 +267,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazzale Michelangelo/0.jpg',
+          URL: '/images/pointOfInterest/Piazzale Michelangelo/0.webp',
           caption: 'Vista panoramica dalla piazza',
         },
       },
@@ -284,7 +284,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Piazza della Santissima Annunziata/0.jpg',
+          URL: '/images/pointOfInterest/Piazza della Santissima Annunziata/0.webp',
           caption: 'Vista della piazza',
         },
       },
@@ -301,25 +301,25 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/0.jpg',
+          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/0.webp',
           caption: 'Vista laterale della cattedrale',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/1.jpg',
+          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/1.webp',
           caption: 'Vista frontale della cattedrale',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/2.jpeg',
+          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/2.webp',
           caption: 'Affresco della cupola',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/3.jpg',
+          URL: '/images/pointOfInterest/Cattedrale di Santa Maria del Fiore/3.webp',
           caption: 'Vista laterale della cattedrale',
         },
       },
@@ -336,7 +336,7 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Battistero di San Giovanni/0.jpg',
+          URL: '/images/pointOfInterest/Battistero di San Giovanni/0.webp',
           caption: 'Vista frontale del battistero',
         },
       },
@@ -353,19 +353,19 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Croce/0.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Croce/0.webp',
           caption: 'Vista frontale della basilica',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Croce/1.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Croce/1.webp',
           caption: 'Interno della basilica',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Croce/2.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Croce/2.webp',
           caption: 'Vista frontale della basilica all\'imbrunire',
         },
       },
@@ -382,19 +382,19 @@ const pois = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/0.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/0.webp',
           caption: 'Facciata della basilica',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/1.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/1.webp',
           caption: 'Interno della basilica',
         },
       },
       {
         basicData: {
-          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/2.jpg',
+          URL: '/images/pointOfInterest/Basilica di Santa Maria Novella/2.webp',
           caption: 'Scorcio della basilica',
         },
       },
@@ -447,13 +447,13 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Heroes - Il futuro inizia adesso/0.jpg',
+          URL: '/images/event/Heroes - Il futuro inizia adesso/0.webp',
           caption: 'Logo dell\'evento',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Heroes - Il futuro inizia adesso/0.jpg',
+          URL: '/images/event/Heroes - Il futuro inizia adesso/0.webp',
           caption: 'Foto della scorsa edizione',
         },
       },
@@ -473,19 +473,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Negramaro Unplugged European Tour 2022/0.jpg',
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/0.webp',
           caption: 'Foto del gruppo',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Negramaro Unplugged European Tour 2022/1.jpg',
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/1.webp',
           caption: 'Foto del gruppo mentre si esibisce',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Negramaro Unplugged European Tour 2022/2.jpg',
+          URL: '/images/event/Negramaro Unplugged European Tour 2022/2.webp',
           caption: 'Foto del gruppo',
         },
       },
@@ -508,13 +508,13 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Concerto di Natale/0.jpg',
+          URL: '/images/event/Concerto di Natale/0.webp',
           caption: 'Foto del Gruppo Musica d’insieme Astrolabio',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Concerto di Natale/1.jpg',
+          URL: '/images/event/Concerto di Natale/1.webp',
           caption: 'Foto del Coro delle voci bianche del Maggio Musicale Fiorentino',
         },
       },
@@ -537,19 +537,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/I Giardini di Firenze/0.jpg',
+          URL: '/images/event/I Giardini di Firenze/0.webp',
           caption: 'Parte della mostra',
         },
       },
       {
         basicData: {
-          URL: '/images/event/I Giardini di Firenze/1.jpg',
+          URL: '/images/event/I Giardini di Firenze/1.webp',
           caption: 'Luogo dell\'evento',
         },
       },
       {
         basicData: {
-          URL: '/images/event/I Giardini di Firenze/2.jpg',
+          URL: '/images/event/I Giardini di Firenze/2.webp',
           caption: 'Luogo dell\'evento',
         },
       },
@@ -568,19 +568,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Mostra su Koen Vanmechelen/0.jpg',
+          URL: '/images/event/Mostra su Koen Vanmechelen/0.webp',
           caption: 'Parte della mostra',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mostra su Koen Vanmechelen/1.jpg',
+          URL: '/images/event/Mostra su Koen Vanmechelen/1.webp',
           caption: 'Parte della mostra',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mostra su Koen Vanmechelen/2.jpg',
+          URL: '/images/event/Mostra su Koen Vanmechelen/2.webp',
           caption: 'Parte della mostra',
         },
       },
@@ -604,19 +604,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/0.jpg',
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/0.webp',
           caption: 'L’effigie in bronzo di Daniele da Volterra',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/1.jpg',
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/1.webp',
           caption: 'Sala espositiva',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/2.jpg',
+          URL: '/images/event/Mostra su Michelangelo l’effigie in bronzo di Daniele da Volterra/2.webp',
           caption: 'Collezione di busti',
         },
       },
@@ -638,13 +638,13 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Mercatino di Natale/0.jpg',
+          URL: '/images/event/Mercatino di Natale/0.webp',
           caption: 'Mercatino visto dall\'alto',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mercatino di Natale/1.jpg',
+          URL: '/images/event/Mercatino di Natale/1.webp',
           caption: 'Mercatino visto dal basso',
         },
       },
@@ -666,19 +666,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Mercato dell\'antiquariato/0.jpg',
+          URL: '/images/event/Mercato dell\'antiquariato/0.webp',
           caption: 'Alcune delle bancarelle',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mercato dell\'antiquariato/1.jpg',
+          URL: '/images/event/Mercato dell\'antiquariato/1.webp',
           caption: 'Una bancarella',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Mercato dell\'antiquariato/2.jpg',
+          URL: '/images/event/Mercato dell\'antiquariato/2.webp',
           caption: 'Alcune delle bancarelle',
         },
       },
@@ -702,19 +702,19 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/All Star Game Firenze/0.jpg',
+          URL: '/images/event/All Star Game Firenze/0.webp',
           caption: 'Evento dall\'alto',
         },
       },
       {
         basicData: {
-          URL: '/images/event/All Star Game Firenze/1.jpg',
+          URL: '/images/event/All Star Game Firenze/1.webp',
           caption: 'Partita di basket',
         },
       },
       {
         basicData: {
-          URL: '/images/event/All Star Game Firenze/2.jpg',
+          URL: '/images/event/All Star Game Firenze/2.webp',
           caption: 'Partita di pallavolo',
         },
       },
@@ -735,13 +735,13 @@ const events = [
     imagesURL: [
       {
         basicData: {
-          URL: '/images/event/Musart/0.jpg',
+          URL: '/images/event/Musart/0.webp',
           caption: 'Logo dell\'evento',
         },
       },
       {
         basicData: {
-          URL: '/images/event/Musart/1.jpg',
+          URL: '/images/event/Musart/1.webp',
           caption: 'Edizione dello scorso anno vista dall\'alto',
         },
       },

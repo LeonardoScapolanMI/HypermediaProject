@@ -9,13 +9,13 @@
 
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-12"><a href="/allevents"><img id="all-img" src="/images/event/all.jpg" alt="anteprima di tutti gli eventi" class="image-link"/>
+              <div class="col-12"><a href="/allevents"><img id="all-img" src="/images/event/all.webp" alt="anteprima di tutti gli eventi" class="image-link"/>
                 <div class="carousel-caption"><h4>TUTTI GLI EVENTI</h4></div></a>
               </div>
-              <div class="col-10 col-md-6"><a href="/summerevents"><img src="/images/event/summer.jpg" alt="anteprima di tutti gli eventi estivi" class="image-link"/>
+              <div class="col-10 col-md-6"><a href="/summerevents"><img src="/images/event/summer.webp" alt="anteprima di tutti gli eventi estivi" class="image-link"/>
                 <div class="carousel-caption"><h4>EVENTI ESTIVI</h4></div></a>
               </div>
-              <div class="col-10 col-md-6"><a href="/winterevents"><img src="/images/event/winter.jpg" alt="anteprima di tutti gli eventi invernali" class="image-link"/>
+              <div class="col-10 col-md-6"><a href="/winterevents"><img src="/images/event/winter.webp" alt="anteprima di tutti gli eventi invernali" class="image-link"/>
                 <div class="carousel-caption"><h4>EVENTI INVERNALI</h4></div></a>
               </div>
             </div>

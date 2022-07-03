@@ -45,7 +45,7 @@ export default {
 <style>
 
 .__nuxt-error-page {
-  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.jpg") no-repeat center ;
+  background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.webp") no-repeat center ;
   background-size: cover;
 }
 

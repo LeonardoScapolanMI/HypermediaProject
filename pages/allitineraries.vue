@@ -14,7 +14,7 @@
     <!-- Insert an image -->
 
     <div class="title-image-container">
-      <img src="/images/itinerary/intro.jpg" alt="anteprima degli itinerari" class="title-image"/>
+      <img src="/images/itinerary/intro.webp" alt="anteprima degli itinerari" class="title-image"/>
     </div>
 
     <!-- Insert a general overview -->

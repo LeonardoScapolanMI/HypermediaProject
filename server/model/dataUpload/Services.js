@@ -63,7 +63,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Farmacie/Farmacia Camilli/0.jpg',
+            URL: '/images/serviceType/Farmacie/Farmacia Camilli/0.webp',
             caption: 'Vista frontale della farmacia',
           },
         },
@@ -121,7 +121,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Farmacie/Antica Farmacia del Cinghiale/0.jpg',
+            URL: '/images/serviceType/Farmacie/Antica Farmacia del Cinghiale/0.webp',
             caption: 'Vista frontale della farmacia',
           },
         },
@@ -186,7 +186,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Farmacie/Farmacia San Lorenzo/0.jpg',
+            URL: '/images/serviceType/Farmacie/Farmacia San Lorenzo/0.webp',
             caption: 'Vista frontale della farmacia',
           },
         },
@@ -194,7 +194,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Farmacie/0.jpg',
+        URL: '/images/serviceType/Farmacie/0.webp',
         caption: 'Interno di una generica farmacia',
       },
     },
@@ -267,7 +267,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Ristorante il Paiolo/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante il Paiolo/0.webp',
             caption: 'Vista frontale del ristorante',
           },
         },
@@ -332,7 +332,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Braceria Auditore/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Braceria Auditore/0.webp',
             caption: 'Vista frontale del ristorante',
           },
         },
@@ -425,7 +425,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Pizzeria Il Clarinetto/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Ristorante Pizzeria Il Clarinetto/0.webp',
             caption: 'Interno del ristorante',
           },
         },
@@ -490,7 +490,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Bar San Michele/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Bar San Michele/0.webp',
             caption: 'Vista frontale del bar',
           },
         },
@@ -548,7 +548,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Bar Della Corte R. & Tiengo D. (S.N.C.)/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Bar Della Corte R. & Tiengo D. (S.N.C.)/0.webp',
             caption: 'Bancone del bar',
           },
         },
@@ -599,7 +599,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Bar e Ristoranti/Bar pasticceria Robiglio/0.jpg',
+            URL: '/images/serviceType/Bar e Ristoranti/Bar pasticceria Robiglio/0.webp',
             caption: 'Vista frontale del ristorante',
           },
         },
@@ -607,7 +607,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Bar e Ristoranti/0.jpg',
+        URL: '/images/serviceType/Bar e Ristoranti/0.webp',
         caption: 'Tavolo di un generico ristorante',
       },
     },
@@ -659,7 +659,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Discoteche/Space Club/0.jpg',
+            URL: '/images/serviceType/Discoteche/Space Club/0.webp',
             caption: 'Interno del locale',
           },
         },
@@ -710,7 +710,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Discoteche/YAB  Discoteca Firenze/0.jpg',
+            URL: '/images/serviceType/Discoteche/YAB  Discoteca Firenze/0.webp',
             caption: 'Interno del locale',
           },
         },
@@ -754,7 +754,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Discoteche/Blue Velvet/0.jpg',
+            URL: '/images/serviceType/Discoteche/Blue Velvet/0.webp',
             caption: 'Interno del locale',
           },
         },
@@ -762,7 +762,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Discoteche/0.jpg',
+        URL: '/images/serviceType/Discoteche/0.webp',
         caption: 'Perosne che ballano in una generica discoteca',
       },
     },
@@ -835,7 +835,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: "/images/serviceType/Hotel/Palazzo dei Conti Residenza d'Epoca/0.jpg",
+            URL: "/images/serviceType/Hotel/Palazzo dei Conti Residenza d'Epoca/0.webp",
             caption: "Una delle camere dell'hotel",
           },
         },
@@ -901,7 +901,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Hotel/Hotel Pitti Palace al Ponte Vecchio/0.jpg',
+            URL: '/images/serviceType/Hotel/Hotel Pitti Palace al Ponte Vecchio/0.webp',
             caption: 'Vista dalla terrazza panoramica',
           },
         },
@@ -966,7 +966,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Hotel/Ambasciatori Hotel/0.jpg',
+            URL: '/images/serviceType/Hotel/Ambasciatori Hotel/0.webp',
             caption: "Hall dell'hotel",
           },
         },
@@ -1031,7 +1031,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Hotel/numa  Rodo Rooms & Apartments/0.jpg',
+            URL: '/images/serviceType/Hotel/numa  Rodo Rooms & Apartments/0.webp',
             caption: 'Una delle camere della struttura',
           },
         },
@@ -1096,7 +1096,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Hotel/YellowSquare Florence/0.jpg',
+            URL: '/images/serviceType/Hotel/YellowSquare Florence/0.webp',
             caption: 'Una delle stanze comuni della struttura',
           },
         },
@@ -1104,7 +1104,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Hotel/0.jpg',
+        URL: '/images/serviceType/Hotel/0.webp',
         caption: 'Targetta con hotel inciso sopra',
       },
     },
@@ -1177,7 +1177,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Ospedali e Cliniche/Azienda Ospedaliero Universitaria Careggi/0.jpg',
+            URL: '/images/serviceType/Ospedali e Cliniche/Azienda Ospedaliero Universitaria Careggi/0.webp',
             caption: "Vista frontale dell'ospedale",
           },
         },
@@ -1242,7 +1242,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Ospedali e Cliniche/Ospedale Santa Maria Nuova/0.jpg',
+            URL: '/images/serviceType/Ospedali e Cliniche/Ospedale Santa Maria Nuova/0.webp',
             caption: "Vista frontale dell'ospedale",
           },
         },
@@ -1293,7 +1293,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Ospedali e Cliniche/Medlight Istituto Medico/0.jpg',
+            URL: '/images/serviceType/Ospedali e Cliniche/Medlight Istituto Medico/0.webp',
             caption: 'Una delle sale operatorie',
           },
         },
@@ -1301,7 +1301,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Ospedali e Cliniche/0.jpg',
+        URL: '/images/serviceType/Ospedali e Cliniche/0.webp',
         caption: 'Generica stanza di ospedale',
       },
     },
@@ -1409,7 +1409,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Negozi/Raspini/0.jpg',
+            URL: '/images/serviceType/Negozi/Raspini/0.webp',
             caption: 'Vetrina del negozio',
           },
         },
@@ -1474,7 +1474,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Negozi/Studioteca/0.jpg',
+            URL: '/images/serviceType/Negozi/Studioteca/0.webp',
             caption: 'Interno del negozio',
           },
         },
@@ -1539,7 +1539,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Negozi/NeroGiardini Firenze/0.jpg',
+            URL: '/images/serviceType/Negozi/NeroGiardini Firenze/0.webp',
             caption: 'Interno del negozio',
           },
         },
@@ -1547,7 +1547,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Negozi/0.jpg',
+        URL: '/images/serviceType/Negozi/0.webp',
         caption: 'Una via dello shopping',
       },
     },
@@ -1641,7 +1641,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Banche/Cassa di Risparmio di Lucca Pisa Livorno/0.jpg',
+            URL: '/images/serviceType/Banche/Cassa di Risparmio di Lucca Pisa Livorno/0.webp',
             caption: "Logo dell'istituto bancario",
           },
         },
@@ -1728,7 +1728,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Banche/Banco Desio/0.jpg',
+            URL: '/images/serviceType/Banche/Banco Desio/0.webp',
             caption: "Logo dell'istituto bancario",
           },
         },
@@ -1814,7 +1814,7 @@ const serviceTypes = [
         ],
         image: {
           basicData: {
-            URL: '/images/serviceType/Banche/Banche Banca Ifigest Spa/0.jpg',
+            URL: '/images/serviceType/Banche/Banche Banca Ifigest Spa/0.webp',
             caption: "Logo dell'istituto bancario",
           },
         },
@@ -1822,7 +1822,7 @@ const serviceTypes = [
     ],
     image: {
       basicData: {
-        URL: '/images/serviceType/Banche/0.jpg',
+        URL: '/images/serviceType/Banche/0.webp',
         caption: 'Facciata di una generica banca',
       },
     },
