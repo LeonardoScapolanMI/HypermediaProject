@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <nuxt-link id="logo" to="/" tabindex="0">
    
-      <img id="icon" src="/images/firenze.png" alt="HOME" />
+      <img id="icon" src="/images/firenze1.png" alt="HOME" />
     
     </nuxt-link>
 
