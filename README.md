@@ -9,7 +9,7 @@ Francesco Calabrese
 Federica Carrano
  - Person Code: 10851879
  - Mail: federica.carrano@mail.polimi.it
- - Contribution: Frontend: site style;
+ - Contribution: Fronted: css style in whole project. Content research. Components: TheHeader, TheFooter, BreadCrumb, DropUp. Pages: homepage, alleventgroupings, allevents, winterevents, summerevents, allservicetypes, service_details.
  
 Francesco Corso
  - Person Code: 10867595
