@@ -87,14 +87,14 @@ nav li {
   width: 90px;
 }
 
-nav a {
+a {
   display: block;
   padding: 22px 10px;
   color: var(--white);
   text-decoration: none;
 }
 
-nav a:hover, nav a:focus {
+a:hover, a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
   color: var(--green);
