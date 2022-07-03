@@ -41,17 +41,17 @@ nav {
     font-weight: bold;
   }
 
-li {
+nav li {
   padding: 5px;
   display: inline-block;
 }
 
-a {
+nav a {
   color: var(--white);
   text-decoration: none;
 }
 
-a:hover, a:focus {
+nav a:hover, nav a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
   color: var(--green);

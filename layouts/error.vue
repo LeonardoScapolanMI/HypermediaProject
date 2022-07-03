@@ -53,7 +53,7 @@ export default {
   margin: auto;
 }
 
-.title {
+.__nuxt-error-page .title {
   font-size: 30px;
   margin-top: 300px;
   padding: 0px;
@@ -61,19 +61,19 @@ export default {
   background-color: var(--beige);
 }
 
-.description {
+.__nuxt-error-page .description {
   background-color: var(--beige);
   text-align: center;
   font-size: 20px;
   font-weight: bold;
 }
 
-a {
+.__nuxt-error-page a {
   color: var(--green);
   text-decoration: none;
 }
 
-hr {
+.__nuxt-error-page hr {
   background-color: var(--green);
   margin: 0px;
 }
