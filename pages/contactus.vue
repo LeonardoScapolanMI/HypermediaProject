@@ -131,11 +131,6 @@ export default {
   margin: auto;
 }
 
-.form > h3 {
-  font-weight: bold;
-  text-align: center;
-}
-
 input, textarea {
   padding: 20px;
   margin: 5px;

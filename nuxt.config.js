@@ -13,6 +13,11 @@ export default {
     ],
     link: [
       {
+        rel: 'icon', 
+        type: 'img/png',
+        href: '/images/icon.png',
+      },
+      {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css',
         integrity:
