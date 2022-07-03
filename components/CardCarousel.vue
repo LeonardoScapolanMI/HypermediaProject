@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <button @click="prev">
+    <button @click="prev" title="prevbutton">
     <img
       v-if="content.length > 3 "
       id="arrow"
@@ -27,7 +27,7 @@
         </div><!-- Print the cards-->
       </div>
     </div>
-<button @click="next">
+<button @click="next" title="nextbutton">
     <img 
       v-if="content.length > 3"
       id="arrow"

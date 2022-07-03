@@ -14,6 +14,7 @@
       <p id="description">{{ description }}</p>
       <!-- Print the description-->
       <button
+        
         class="button-style"
         @click="$emit('onSeeDetails')"
       >
@@ -91,10 +92,7 @@ export default {
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);  /*senza questo funziona uguale, ma da un warning perchè la mask-image non è definita*/
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 71025f6896595cbb58edb1bc6a273ba378fbb656
 .button-style{
   color: var(--green);
   background-color: var(--blue);

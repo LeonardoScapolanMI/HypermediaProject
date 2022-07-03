@@ -41,9 +41,9 @@
     <!-- Insert a description using the method getContentToDisplay() -->
 
     <div class="text-content">
-      <h3 class="text-content-title">
+      <h2 class="text-content-title">
         {{ getContentToDisplay().title }}
-      </h3>
+      </h2>
       <p class="text-with-line-break">
         {{ getContentToDisplay().text }}
       </p>

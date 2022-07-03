@@ -33,7 +33,7 @@
       <!-- Insert card carousel by calling the component -->
     
       <div v-if="itList.length > 0" class="carousel-title">
-        <h3>Itinerari correlati</h3>
+        <h2>Itinerari correlati</h2>
         <hr class="subline" />
         <button 
           class="button"
@@ -44,7 +44,7 @@
       </div>
   
       <div  v-if="evList.length > 0" class="carousel-title">
-        <h3>Eventi correlati</h3>
+        <h2>Eventi correlati</h2>
         <hr class="subline" />
         <button 
           class="button"
