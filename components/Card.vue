@@ -8,11 +8,13 @@
         @click="$emit('onSeeDetails')"
         />
       <!-- Print the Image-->
+
       <h2 id="title">{{ title }}</h2>
       <!-- Print the title-->
      
       <p id="description">{{ description }}</p>
       <!-- Print the description-->
+
       <button
         
         class="button-style"
@@ -91,9 +93,7 @@ export default {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);  /*senza questo funziona uguale, ma da un warning perchè la mask-image non è definita*/
 }
-
-
-.button-style{
+.button-style {
   color: var(--green);
   background-color: var(--blue);
   border: 2px solid var(--green);

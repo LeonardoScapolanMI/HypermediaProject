@@ -2,17 +2,14 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title --> 
-
     <div class="page-title">
       <h1>CONTATTACI</h1>  
     </div>
 
     <!-- Insert information request form -->
-
     <div class="container marketing">
       <div class="form">
         <div>
@@ -105,23 +102,19 @@ export default {
   components: { BreadCrumb },
   data() {
     const bc =[]
-    bc.push(
-      { title:'Contattaci', path:'' }
-      )
+    bc.push({ title:'Contattaci', path:'' })
     return {
       bc,
     }
   },
- 
   head() {
     return {
       title: 'Contattaci',
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'In questa pagina è possibile contattare i moderatori del sito per qualsiasi tipo di richiesta o informazione.',
+          name:'description',
+          content:'In questa pagina è possibile contattare i moderatori del sito per qualsiasi tipo di richiesta o informazione.',
         },
       ],
     }

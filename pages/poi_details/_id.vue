@@ -2,11 +2,9 @@
     <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
       
     <!-- Insert the title and the subtitle --> 
-
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
@@ -14,11 +12,9 @@
     </div>
 
     <!-- Insert slideshow by calling the component -->
-
     <SlideShow :images="imagesV" class="title-image-container"/>
 
     <!-- Insert mapbox by calling the component and printing a description -->
-
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -31,7 +27,6 @@
        </div>
 
       <!-- Insert card carousel by calling the component -->
-    
       <div v-if="itList.length > 0" class="carousel-title">
         <h2>Itinerari correlati</h2>
         <hr class="subline" />
@@ -42,7 +37,8 @@
         </button>
         <CardCarousel class="card-car" :content="itList" @onSeeDetails="(id) => $router.push('/itinerary_details/'+id)"/>
       </div>
-  
+
+      <!-- Insert card carousel by calling the component -->
       <div  v-if="evList.length > 0" class="carousel-title">
         <h2>Eventi correlati</h2>
         <hr class="subline" />
@@ -55,8 +51,7 @@
       </div>
 
       <!-- Insert the back up button -->
-
-    <drop-up/>
+      <drop-up/>
 
     </div>
 </template>
@@ -79,16 +74,13 @@ export default {
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/poi' + id) // NB: Cambiare indirizzo nel deploy!
-
+    const { data } = await $axios.get('api/poi' + id)
     const itList = []
     const evList = []
-    
     const bc =[]
     bc.push({title:'Tutti i Punti di Interesse', path:'/allpois'})
     bc.push({title:data.name, path:'#'})
-
-    // Get all involving itineraries
+    // Get all related itineraries
     for (const it of data.Itineraries) {
       itList.push({
         id: it._id,
@@ -97,8 +89,7 @@ export default {
         description: it.overview,
       })
     }
-
-    // Get all events involved
+    // Get all related events 
     for (const ev of data.Events) {
       evList.push({
         id: ev._id,
@@ -107,11 +98,11 @@ export default {
         description: ev.overview,
       })
     }
+    // funtion to format the content
     function formatDescription(d) {
       const description = d.split(".")[0]
       return description.concat('.')
     }
-
     return {
       name: data.name,
       description: data.description,
@@ -127,15 +118,16 @@ export default {
     return {
       title: this.name,
       meta: [
-        {hid:'description',
-        name:'description',
+        {
+          hid:'description',
+          name:'description',
           content: this.descriptionmeta,
         },
       ],
     }
   },
- 
-  fetchOnServer: false, // too see if it's a problem for crawlers
+  // to see if it's a problem for crawlers
+  fetchOnServer: false,
   methods: {
     backToList() {
       this.$router.push('/list')

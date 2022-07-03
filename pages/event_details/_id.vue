@@ -2,11 +2,9 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title and the subtitle --> 
-
         <div class="page-title">
           <h1>{{ name }}</h1> 
           <hr class="subtitle">
@@ -14,11 +12,9 @@
         </div>
 
       <!-- Insert slideshow by calling the component -->
-
       <SlideShow :images="imagesV" class="title-image-container"/>
 
       <!-- Insert mapbox by calling the component and printing a description -->
-      
       <div class="container">
         <div class="row">
           <div class="col-md-6" >
@@ -36,7 +32,6 @@
       </div>
 
       <!-- Insert card carousel by calling the component -->
-    
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
@@ -49,7 +44,6 @@
       </div>
   
     <!-- Insert the back up button -->
-
     <drop-up/>
       
   </div>
@@ -63,7 +57,6 @@ import BreadCrumb from '~/components/BreadCrumb.vue'
 import DropUp from '~/components/DropUp.vue'
 
 export default {
-  
   name: 'Event',
   components: { 
     SlideShow, 
@@ -72,18 +65,16 @@ export default {
     BreadCrumb,
     DropUp
     },
-
    async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get(
       'api/event' + id
     )
-
+    const poiList = []
     const bc =[]
     bc.push({title:'Tutti gli Eventi', path:'/allevents'})
     bc.push({title:data.name, path:'#'})
-
-    const poiList = []
+    // Get all related pois
     for (const poi of data.PointOfInterests) {
       poiList.push({
         id: poi._id,
@@ -92,19 +83,17 @@ export default {
         description: poi.description,
       })
     }
-
+    // funtion to format the event date as dd/mm/yyyy 
     function formatDate(d){
       const dateString = d.split("T")[0]
       const dateNumbers = dateString.split("-")
-
       return dateNumbers[2] + '/' + dateNumbers[1] + '/' + dateNumbers[0]
     }
-
+    // funtion to format the content
     function formatDescription(d) {
       const description = d.split(".")[0]
       return description.concat('.')
     }
-    
     return {
       name: data.name,
       imagesV: data.Images,
@@ -122,17 +111,17 @@ export default {
     return {
       title: this.name,
       meta: [
-        {hid:'description',
-        name:'description',
+        {
+          hid:'description',
+          name:'description',
           content: this.description,
         },
       ],
     }
   },
-  fetchOnServer: false, // too see if it's a problem for crawlers
-  
+  // to see if it's a problem for crawlers
+  fetchOnServer: false, 
   methods: {
-
     backToList() {
       this.$router.push('/list')
     },

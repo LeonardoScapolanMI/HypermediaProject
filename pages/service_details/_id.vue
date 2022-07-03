@@ -2,25 +2,21 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title and the subtitle --> 
-
     <div class="page-title">
       <h1>{{ name }}</h1>
       <hr class="subtitle" />
       <span class="orientation-info">TIPO DI SERVIZIO</span>
     </div>
 
-    <!-- Insert an image -->
-
+    <!-- Insert an introductory image -->
     <div class="title-image-container">
       <img class="title-image" :src="images[0].URL" :alt="images[0].caption" />
     </div>
 
     <!-- Insert a general overview -->
-
     <div class="text-content">
       <p class="text-with-line-break">{{ description }}</p>
     </div>
@@ -28,7 +24,6 @@
     <hr class="separator"/>
 
     <!-- Insert long cards by calling the component and printing the items of the services -->
-  
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
         <long-card
@@ -43,7 +38,6 @@
     </div>
 
     <!-- Insert the load more button using the method loadMore() -->
-    
     <div class="text-center">
       <button
         v-if="nItems<services.length"
@@ -55,7 +49,6 @@
     </div>
 
     <!-- Insert the back up button -->
-
     <drop-up/>
 
   </div>
@@ -72,12 +65,11 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-
     const { data } = await $axios.get('/api/serviceType' + id)
-
     const bc =[]
     bc.push({title:'Tutti i Tipi di Servizio', path:'/allservicetypes'})
     bc.push({title:data.name, path:'#'})
+    // funtion to format the content
     function formatDescription(d) {
       const description = d.split(".")[0]
       return description.concat('.')
@@ -89,10 +81,10 @@ export default {
       services: data.services,
       bc,
       descriptionmeta: formatDescription(data.description),
-      
     }
   },
-  fetchOnServer: false, // too see if it's a problem for crawlers
+  // to see if it's a problem for crawlers
+  fetchOnServer: false,
   data() {
     return {
       nItems:3,
@@ -102,14 +94,16 @@ export default {
     return {
       title: this.name,
       meta: [
-        {hid:'description',
-        name:'description',
+        {
+          hid:'description',
+          name:'description',
           content: this.descriptionmeta,
         },
       ],
     }
   },
   methods: {
+    // method to load other contents
     loadMore(){
     this.nItems=Math.min(this.nItems+2,this.services.length);
     },

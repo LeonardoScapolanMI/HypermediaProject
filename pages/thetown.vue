@@ -2,21 +2,17 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc' />
 
     <!-- Insert the title --> 
-
     <div class="page-title" >
       <h1>LA CITT&Agrave; DI FIRENZE</h1>
     </div>
 
     <!-- Insert slideshow by calling the component -->  
-
     <SlideShow :images="imagesV" class="title-image-container" />
 
-    <!-- Insert of structural links using the method setContentToDisplay(newContent) -->
-
+    <!-- Insert structural links using the method setContentToDisplay(newContent) -->
     <div class="structural-links" >
       <div class="row">
         <div tabindex="0"
@@ -39,7 +35,6 @@
     <hr class="separator" />
 
     <!-- Insert a description using the method getContentToDisplay() -->
-
     <div class="text-content">
       <h2 class="text-content-title">
         {{ getContentToDisplay().title }}
@@ -50,7 +45,6 @@
     </div>
 
     <!-- Insert the back up button -->
-
     <drop-up/>
 
   </div>
@@ -66,9 +60,7 @@ export default {
   components: { SlideShow, BreadCrumb, DropUp },
   data() {
     const bc =[]
-    bc.push (
-      { title:'La città di Firenze', path:'' }
-      )
+    bc.push ({ title:'La città di Firenze', path:'' })
     return {
       bc,
       imagesV: [
@@ -224,17 +216,18 @@ export default {
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'In questa pagina è descritta la città di Firenze a tutto tondo, dalla sua storia antica alle sue bellezze contemporanee.',
+          name:'description',
+          content:'In questa pagina è descritta la città di Firenze a tutto tondo, dalla sua storia antica alle sue bellezze contemporanee.',
         },
       ],
     }
   },
   methods: {
+    // method that shows the page content selected
     getContentToDisplay() {
       return this.toDisplay ? this.toDisplay : this.historyContent
     },
+    // method that allows you to select the page content through structural links
     setContentToDisplay(newContent) {
       this.toDisplay = newContent
       const elements = document.getElementsByClassName('structural-link')
