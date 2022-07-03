@@ -2,29 +2,24 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
     
     <!-- Insert the title --> 
-
     <div class="page-title">
       <h1>EVENTI ESTIVI</h1>
     </div>
 
-    <!-- IMAGE -->
-
+    <!-- Insert an introductory image -->
     <div class="title-image-container">
       <img src="/images/event/summer.webp" alt="anteprima di tutti gli eventi estivi" class="title-image"/>
     </div>
 
     <!-- Insert a general overview -->
-
     <div class="text-content">
       <p class="text-with-line-break ">{{ description }}</p>
     </div>
 
     <!-- Insert card list by calling the component -->
-
     <card-list
       :endpoint="'/api/event/summer'"
       :details-page-folder="'event_details'"
@@ -33,7 +28,6 @@
     />
 
     <!-- Insert the back up button -->
-
     <drop-up/>
     
   </div>
@@ -44,6 +38,7 @@ import CardList from '~/components/CardList.vue'
 import BreadCrumb from '~/components/BreadCrumb.vue'
 import DropUp from '~/components/DropUp.vue'
 
+// function that computes and returns the next year as yyyy/yyyy
 function nextSummerYear(){
   const now = new Date()
   let ret = now.getFullYear()
@@ -71,9 +66,8 @@ export default {
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'In questa pagina sono elencati tutti gli eventi estivi che si svolgeranno a Firenze.',
+          name:'description',
+          content:'In questa pagina sono elencati tutti gli eventi estivi che si svolgeranno a Firenze.',
         },
       ],
     }

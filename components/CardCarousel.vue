@@ -1,5 +1,6 @@
 <template>
   <div id="wrapper">
+    <button @click="prev" title="prevbutton">
     <img
       v-if="content.length > 3 "
       id="arrow"
@@ -7,7 +8,7 @@
       src="/icons/angle-left-solid.svg"
       alt="icona indietro"
       @click="prev"
-    />
+    /> </button>
       <!-- Display the button to go back in the carousel-->
     <div id="cards" class="container">
       <div class="row justify-content-center">
@@ -26,16 +27,16 @@
         </div><!-- Print the cards-->
       </div>
     </div>
-
+<button @click="next" title="nextbutton">
     <img 
       v-if="content.length > 3"
       id="arrow"
       class="carousel-control-next-icon"
       alt="icona avanti"
       src="/icons/angle-right-solid.svg"
-      @click="next"
+      
     /><!-- Display the button to go forward in the carousel-->
-
+</button>
   </div>
 </template>
 
@@ -132,6 +133,12 @@ export default {
 #arrow:hover, #arrow:focus {
   cursor: pointer;
   background-color: var(--green);
+}
+
+
+button, button:focus {
+  border: none;
+    background-color: transparent;
 }
 
 </style>

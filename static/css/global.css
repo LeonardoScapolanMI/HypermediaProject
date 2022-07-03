@@ -85,7 +85,7 @@ body {
   margin-bottom: 20px;
 }
 
-.button:hover {
+.button:hover, .button:focus {
   color: var(--white);
   text-decoration: none;
   background-color: var(--brown);
@@ -108,7 +108,6 @@ body {
   width: 50%;
   background-color: var(--blue);
 }
-
 
 .card-car {
   margin: auto;

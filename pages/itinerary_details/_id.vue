@@ -2,11 +2,9 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title and the subtitle --> 
-
     <div class="page-title">
       <h1>{{ name }}</h1> 
       <hr class="subtitle">
@@ -14,13 +12,11 @@
     </div>
 
     <!-- Insert an image -->
-
     <div class="title-image-container">
       <img :src="image.URL" :alt="image.caption" class="title-image"/>
     </div>
   
     <!-- Insert mapbox by calling the component and printing an overview -->
-
     <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -33,7 +29,6 @@
     </div>
 
     <!-- Insert card carousel by calling the component -->
-   
       <div v-if="poiList.length > 0" class="carousel-title">
         <h3>Punti di interesse correlati</h3>
         <hr class="subline" />
@@ -46,7 +41,6 @@
       </div>
     
     <!-- Insert the back up button -->
-
     <drop-up/>
       
   </div>
@@ -66,13 +60,11 @@ export default {
     const { data } = await $axios.get(
       'api/itinerary' + id
     )
-
+    const poiList = []
     const bc =[]
     bc.push({title:'Tutti gli Itinerari', path:'/allitineraries'})
     bc.push({title:data.name, path:'#'})
-
-    // Fetching the pois of the itinerary and preparing them
-    const poiList = []
+    // Get all related pois 
     for (const poi of data.PointOfInterests) {
       poiList.push({
         id: poi._id,
@@ -81,11 +73,11 @@ export default {
         description: poi.description,
       })
     }
- function formatDescription(d) {
+    // funtion to format the content
+    function formatDescription(d) {
       const description = d.split(".")[0]
       return description.concat('.')
     }
-    // console.log(data)
     return {
       name: data.name,
       overview: data.overview,
@@ -95,20 +87,21 @@ export default {
       bc,
       description: formatDescription(data.overview),
     }
-    
   },
    head() {
     return {
       title: this.name,
       meta: [
-        {hid:'description',
-        name:'description',
+        {
+          hid:'description',
+          name:'description',
           content: this.description,
         },
       ],
     }
   },
-  fetchOnServer: false, // too see if it's a problem for crawlers
+  // to see if it's a problem for crawlers
+  fetchOnServer: false, 
   methods: {
     backToList() {
       this.$router.push('/list')

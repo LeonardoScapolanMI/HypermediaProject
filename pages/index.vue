@@ -2,7 +2,6 @@
   <div>
 
     <!-- Insert an introduction with an image in the background -->
-
     <div class="welcome">
       <div class="title">
         <h1>FIRENZE</h1>
@@ -12,17 +11,14 @@
     </div>
 
     <!-- Insert a general overview -->
-
     <div class="text-content flavour-text text-center">
       {{ introduction }}
     </div>
 
     <!-- Insert a slideshow by calling the component -->
-
     <SlideShow :images="imagesV" class="title-image-container" />
 
     <!-- Insert of structural links by printing the items of the linkList -->
-
     <div class="structural-links">
       <div class="row">
         <div v-for="linkItem of linkList" :key="linkItem.name" class="col-sm-auto">
@@ -32,7 +28,6 @@
     </div>
 
   <!-- Insert four sections consisting of an image and an overview -->
-
   <hr id="ev" class="separator"/>
 
   <div class="home-container">
@@ -142,7 +137,6 @@
     </div>
   
     <!-- Insert the back up button -->
-
     <drop-up/>
 
  </div>
@@ -250,9 +244,8 @@ export default {
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'Il sito è stato adibito ad offrire ai visitatori di Firenze preziose informazioni per migliorare la loro esperienza nella città.',
+          name:'description',
+          content:'Il sito è stato adibito ad offrire ai visitatori di Firenze preziose informazioni per migliorare la loro esperienza nella città.',
         },
       ],
     }

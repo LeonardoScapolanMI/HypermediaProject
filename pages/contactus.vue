@@ -2,24 +2,21 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title --> 
-
     <div class="page-title">
       <h1>CONTATTACI</h1>  
     </div>
 
     <!-- Insert information request form -->
-
     <div class="container marketing">
       <div class="form">
         <div>
           <div class="col-md-12 order-md-1">
-            <h3 class="mb-3">Richiesta Informazioni</h3>
+            <h2 class="mb-3">Richiesta Informazioni</h2>
             <hr />
-            <form class="needs-validation" novalidate>
+            <form id="contactusform" class="needs-validation" novalidate >
             <!-- <form class="needs-validation" action="/api/usermessage" method="POST" novalidate>  -->
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -80,6 +77,8 @@
                   rows="10"
                   placeholder
                   required
+                  for="contactusform"
+                  type="textarea"
                 ></textarea>
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div> 
@@ -103,23 +102,19 @@ export default {
   components: { BreadCrumb },
   data() {
     const bc =[]
-    bc.push(
-      { title:'Contattaci', path:'' }
-      )
+    bc.push({ title:'Contattaci', path:'' })
     return {
       bc,
     }
   },
- 
   head() {
     return {
       title: 'Contattaci',
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'In questa pagina è possibile contattare i moderatori del sito per qualsiasi tipo di richiesta o informazione.',
+          name:'description',
+          content:'In questa pagina è possibile contattare i moderatori del sito per qualsiasi tipo di richiesta o informazione.',
         },
       ],
     }

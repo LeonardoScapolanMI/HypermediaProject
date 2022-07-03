@@ -1,7 +1,7 @@
 <template>
   <div class="mapbox">
       
-        <iframe id="map" :src= "indirizzo"></iframe>
+        <iframe  id="map" title="map" :src= "indirizzo"></iframe>
     
   </div> <!-- row , containing the mapbox iframe-->
 </template>

@@ -3,8 +3,8 @@
 ## Team Hyper4
 Francesco Calabrese
  - Person Code: 10849050
- - Mail: francesco1.calabrese@polimi.it
- - Contribution:
+ - Mail: francesco1.calabrese@mail.polimi.it
+ - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter; Pages: service_details, event_details, poi_details, itinerary_details, all_events;
  
 Federica Carrano
  - Person Code: 10851879
@@ -14,7 +14,7 @@ Federica Carrano
 Francesco Corso
  - Person Code: 10867595
  - Mail: francesco.corso@mail.polimi.it
- - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details;
+ - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details;
  
 Leonardo Scapolan
  - Person Code: 10801854

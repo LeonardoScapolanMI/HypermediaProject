@@ -2,17 +2,14 @@
   <div>
 
     <!-- Insert breadcrumb with calling the component -->
-
     <BreadCrumb :crumbs='bc'/>
 
     <!-- Insert the title --> 
-    
     <div class="page-title">
       <h1>TUTTI I PUNTI DI INTERESSE</h1>
     </div>
 
     <!-- Insert card list by calling the component -->
-
     <card-list
       :endpoint="'/api/poi'"
       :details-page-folder="'poi_details'"
@@ -21,7 +18,6 @@
     />
 
     <!-- Insert the back up button -->
-
     <drop-up/>
     
   </div>
@@ -37,23 +33,19 @@ export default {
   components: { CardList, BreadCrumb, DropUp },
   data() {
     const bc =[]
-    bc.push (
-      { title:'Tutti i Punti di Interesse', path:'' }
-      )
+    bc.push ({ title:'Tutti i Punti di Interesse', path:'' })
     return {
       bc,
     }
   },
-  
   head() {
     return {
       title: 'Tutti i punti di interesse',
       meta: [
         {
           hid:'description',
-        name:'description',
-          content:
-            'In questa pagina sono elencati tutte tutti i punti di interesse presenti a Firenze.',
+          name:'description',
+          content:'In questa pagina sono elencati tutte tutti i punti di interesse presenti a Firenze.',
         },
       ],
     }
