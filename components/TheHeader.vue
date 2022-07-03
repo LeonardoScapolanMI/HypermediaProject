@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top">
     <nuxt-link id="logo" to="/" tabindex="0">
-    <div class="img">
+   
       <img id="icon" src="/images/firenze.png" alt="HOME" />
-    </div>
+    
     </nuxt-link>
 
     <button tabindex="0"
@@ -90,14 +90,14 @@ nav li {
   height: 80px;
 }
 
-nav a {
+a {
   display: block;
   padding: 22px 10px;
   color: var(--white);
   text-decoration: none;
 }
 
-nav a:hover, nav a:focus {
+a:hover, a:focus {
   border-bottom-left-radius: 20px;
   background-color: var(--vanish);
   color: var(--green);

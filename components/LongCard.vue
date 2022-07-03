@@ -16,7 +16,7 @@
           <table class="table table-bordered"><!-- Prepare the table-->
             <tbody>
               <tr>
-                <td v-for="day in  weekDays" :key="'day-' + day.index">
+                <td v-for="day in  weekDays" :key="'day-' + day">
                   {{ day }}
                 </td>
               </tr>

@@ -12,7 +12,7 @@
     <!-- Insert an introductory image -->
     <div class="title-image-container">
       <img
-        src="/images/event/winter.jpg"
+        src="/images/event/winter.webp"
         alt="anteprima di tutti gli eventi invernale"
         class="title-image"
       />

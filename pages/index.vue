@@ -170,67 +170,67 @@ export default {
       ],
       imagesV: [
         {
-          URL: '/images/home/slideshow/0.jpg',
+          URL: '/images/home/slideshow/0.webp',
           caption: 'Panorama notturno della città',
         },
         {
-          URL: '/images/home/slideshow/1.jpg',
+          URL: '/images/home/slideshow/1.webp',
           caption: 'Statua di Aloy',
         },
         {
-          URL: '/images/home/slideshow/2.jpg',
+          URL: '/images/home/slideshow/2.webp',
           caption: 'Piazza Santa Maria Novella',
         },
         {
-          URL: '/images/home/slideshow/3.jpg',
+          URL: '/images/home/slideshow/3.webp',
           caption: 'Galleria della Accademia',
         },
         {
-          URL: '/images/home/slideshow/4.jpg',
+          URL: '/images/home/slideshow/4.webp',
           caption: 'Lupi di Liu Ruowang',
         },
         {
-          URL: '/images/home/slideshow/5.jpg',
+          URL: '/images/home/slideshow/5.webp',
           caption: 'Panorama diurno della città',
         },
         {
-          URL: '/images/home/slideshow/6.jpg',
+          URL: '/images/home/slideshow/6.webp',
           caption: 'Arco di Trionfo',
         },
         {
-          URL: '/images/home/slideshow/7.jpg',
+          URL: '/images/home/slideshow/7.webp',
           caption: 'Fontana del Nettuno',
         },
         {
-          URL: '/images/home/slideshow/8.jpg',
+          URL: '/images/home/slideshow/8.webp',
           caption: 'Ponte Vecchio',
         },
         {
-          URL: '/images/home/slideshow/9.jpg',
+          URL: '/images/home/slideshow/9.webp',
           caption: 'Galleria degli Uffizi',
         },
       ],
       introduction:
         'Non perdere la possibilità di vivere il meglio che Firenze ha da offrire e di scoprire la città come non l’hai mai vista prima.',
-      evURL: '/images/home/cards/ev.jpg',
+      evURL: '/images/home/cards/ev.webp',
       evCaption: 'Cavalcata dei magi',
       evtitle: 'Dalle vecchie tradizioni alle grandi novità.',
       evText:
         'Non lasciarti sfuggire nessuno degli eventi che si terranno nella città durante la tua permanenza. Firenze offre una vasta scelta di spettacoli e manifestazioni a cui poter partecipare.\n' +
         'Consulta la guida e scopri quale evento fa al caso tuo.',
-      poiURL: '/images/home/cards/poi.jpg',
+      poiURL: '/images/home/cards/poi.webp',
       poiCaption: 'Cattedrale di Santa Maria del Fiore',
       poiTitle: 'Dai luoghi più famosi a quelli più segreti.',
       poiText:
         'Lasciati ispirare e travolgere dai punti di interesse che caratterizzano la città. Durante la tua permanenza goditi le meraviglie di Firenze da quelle più rinomate a quelle più innovative.\n' +
         'Consulta la guida e segli cosa vedere prima.',
-      itURL: '/images/home/cards/it.jpg',
+      itURL: '/images/home/cards/it.webp',
       itCaption: 'Panorama della città',
       itTitle: 'Un tour della città ricco di sorpese.',
       itText:
         'Grazie ai migliori itinerari della città avrai la possibilità di vedere tutti i luoghi di tuo interesse e di partecipare a tutti gli eventi che ti coinvolgono maggiormente senza perdere tempo.\n' +
         'Consulta la guida e scopri quale sarà il tuo itinerario.',
-      serURL: '/images/home/cards/ser.jpg',
+      serURL: '/images/home/cards/ser.webp',
       serCaption: 'Servizio di ristoro',
       serTitle: 'La soluzione ad ogni necessità e le migliori cucine.',
       serText:
@@ -256,7 +256,7 @@ export default {
 <style>
 
 .welcome {
-  background: linear-gradient(var(--shadow), var(--shadow)), url("/images/home/welcome.jpg") center ;
+  background: linear-gradient(var(--shadow), var(--shadow)), url("/images/home/welcome.webp") center ;
   background-size: cover;
   height: 550px;
   margin-bottom: 70px;
