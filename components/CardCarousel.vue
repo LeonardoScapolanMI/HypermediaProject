@@ -1,15 +1,12 @@
 <template>
   <div id="wrapper">
-    <button @click="prev" title="prevbutton">
-    <img
-      v-if="content.length > 3 "
-      id="arrow"
-      class="carousel-control-prev-icon"
-      src="/icons/angle-left-solid.svg"
-      alt="icona indietro"
+    <button
+      v-if="content.length > 3"
+      title="elemento precedente"
+      class="arrow carousel-control-prev-icon"
       @click="prev"
-    /> </button>
-      <!-- Display the button to go back in the carousel-->
+    />
+    <!-- Display the button to go back in the carousel-->
     <div id="cards" class="container">
       <div class="row justify-content-center">
         <div
@@ -24,19 +21,17 @@
             :description="cards.description"
             @onSeeDetails="$emit('onSeeDetails', cards.id)"
           />
-        </div><!-- Print the cards-->
+        </div>
+        <!-- Print the cards-->
       </div>
     </div>
-<button @click="next" title="nextbutton">
-    <img 
+    <button
       v-if="content.length > 3"
-      id="arrow"
-      class="carousel-control-next-icon"
-      alt="icona avanti"
-      src="/icons/angle-right-solid.svg"
-      
-    /><!-- Display the button to go forward in the carousel-->
-</button>
+      title="elemento successivo"
+      class="arrow carousel-control-next-icon"
+      @click="next"
+    />
+    <!-- Display the button to go forward in the carousel-->
   </div>
 </template>
 
@@ -61,19 +56,21 @@ export default {
     window.addEventListener('resize', this.onResize)
   },
   methods: {
-    prev() {    
-      if(this.current>0) {
-      this.current = (this.current - 1) % this.content.length
+    prev() {
+      if (this.current > 0) {
+        this.current = (this.current - 1) % this.content.length
       } else {
-        this.current= this.content.length - 1
+        this.current = this.content.length - 1
       }
-      
     },
     next() {
       this.current = (this.current + 1) % this.content.length
     },
     getItemsToShow() {
-      if (this.current + this.nToShow < this.content.length || this.content.length < 3) {
+      if (
+        this.current + this.nToShow < this.content.length ||
+        this.content.length < 3
+      ) {
         return this.content.slice(this.current, this.current + this.nToShow)
       } else {
         return this.content
@@ -86,18 +83,28 @@ export default {
           )
       }
     },
-    onResize() {// responsive deisgn method
+    onResize() {
+      // responsive deisgn method
 
-      const componentWidth = document.getElementById('wrapper').clientWidth // gets width of the 
+      const componentWidth = document.getElementById('wrapper').clientWidth // gets width of the
       const computedStyle = window.getComputedStyle(document.documentElement)
 
-      if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))) {
+      if (
+        componentWidth <=
+        parseFloat(computedStyle.getPropertyValue('--breakpoint-md'))
+      ) {
         this.nToShow = 1
         this.colSize = ''
-      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))) {
+      } else if (
+        componentWidth <=
+        parseFloat(computedStyle.getPropertyValue('--breakpoint-lg'))
+      ) {
         this.nToShow = 2
         this.colSize = '-6'
-      } else if (componentWidth <= parseFloat(computedStyle.getPropertyValue('--breakpoint-xxl'))) {
+      } else if (
+        componentWidth <=
+        parseFloat(computedStyle.getPropertyValue('--breakpoint-xxl'))
+      ) {
         this.nToShow = 3
         this.colSize = '-4'
       } else {
@@ -110,7 +117,6 @@ export default {
 </script>
 
 <style scoped>
-
 #wrapper {
   display: flex;
 }
@@ -122,23 +128,24 @@ export default {
   max-width: none;
 }
 
-#arrow {
+.arrow {
   margin: auto;
-  padding: 20px 20px;
-  width: 40px;
+  width: min(5vw, 40px);
+  aspect-ratio: 1;
+  height: auto;
   background-color: var(--brown);
   border-radius: 30px;
 }
 
-#arrow:hover, #arrow:focus {
+.arrow:hover,
+.arrow:focus {
   cursor: pointer;
   background-color: var(--green);
 }
 
-
-button, button:focus {
+button,
+button:focus {
   border: none;
-    background-color: transparent;
+  background-color: transparent;
 }
-
 </style>
