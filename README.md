@@ -4,7 +4,7 @@
 Francesco Calabrese
  - Person Code: 10849050
  - Mail: francesco1.calabrese@polimi.it
- - Contribution:
+ - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter; Pages: service_details, event_details, poi_details, itinerary_details, all_events;
  
 Federica Carrano
  - Person Code: 10851879
