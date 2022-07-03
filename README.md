@@ -3,7 +3,7 @@
 ## Team Hyper4
 Francesco Calabrese
  - Person Code: 10849050
- - Mail: francesco1.calabrese@polimi.it
+ - Mail: francesco1.calabrese@mail.polimi.it
  - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter; Pages: service_details, event_details, poi_details, itinerary_details, all_events;
  
 Federica Carrano
