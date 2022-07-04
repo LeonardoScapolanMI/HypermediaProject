@@ -322,15 +322,15 @@ async function initializeDatabase() {
       },
       lastName: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       message: {
         type: DataTypes.TEXT('long'),
-        allowNull: true,
+        allowNull: false,
       },
     },
     {

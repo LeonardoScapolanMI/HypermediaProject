@@ -451,12 +451,6 @@ const events = [
           caption: 'Logo dell\'evento',
         },
       },
-      {
-        basicData: {
-          URL: '/images/event/Heroes - Il futuro inizia adesso/0.webp',
-          caption: 'Foto della scorsa edizione',
-        },
-      },
     ],
   },
   {
