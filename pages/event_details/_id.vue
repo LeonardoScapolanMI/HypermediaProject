@@ -135,4 +135,9 @@ export default {
 p {
   display: inline;
 }
+
+.col-md-6 {
+  padding:10px;
+}
+
 </style>

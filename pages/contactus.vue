@@ -83,7 +83,7 @@
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div> 
 
-              <button id="submit" class="btn" type="submit">Invia</button>
+              <button id="submit" type="submit">Invia</button>
             
             </form>
           </div>
@@ -141,12 +141,14 @@ input, textarea {
   background-color: var(--brown);
   border: 1px solid var(--green);
   float: right;
-  padding: 5px 50px 5px 50px;
+  padding: 5px 40px 5px 40px;
   margin-bottom: 50px;
   margin-right: 10px;
   border-radius: 10px;
   font-size: large;
   font-weight: bold;
+  font-size: 2vmin;
+  
 }
 
 #submit:hover {
