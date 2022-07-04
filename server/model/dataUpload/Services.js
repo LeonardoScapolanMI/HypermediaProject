@@ -340,7 +340,7 @@ const serviceTypes = [
       {
         basicData: {
           name: 'Ristorante Pizzeria "Il Clarinetto"',
-          phone: '+39055',
+          phone: '+393333077211',
           website: 'https://ristorante-pizzeria-il-clarinetto.business.site/',
           address: 'V.le Spartaco Lavagnini, 40, 50129 Firenze FI',
         },

@@ -5,12 +5,12 @@
 Francesco Calabrese
  - Person Code: 10849050
  - Mail: francesco1.calabrese@mail.polimi.it
- - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter. Pages: service_details, event_details, poi_details, itinerary_details, all_events. SEO and Accessability checks.
+ - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter. Pages: service_details, event_details, poi_details, itinerary_details, all_events. SEO and Accessability checks with various fixes in all pages.
  
 Federica Carrano
  - Person Code: 10851879
  - Mail: federica.carrano@mail.polimi.it
- - Contribution: Content research; Pages code comments; Fronted: CSS style in whole project; Components: TheHeader, TheFooter, BreadCrumb, DropUp; Pages: index, contact us, alleventgroupings, allevents, winterevents, summerevents, allservicetypes;
+ - Contribution: Content research; Code comments; Fronted: CSS style in whole project; Components: TheHeader, TheFooter, BreadCrumb, DropUp, Slideshow, Card; Pages: index, contactus, alleventgroupings, allevents, winterevents, summerevents, allservicetypes; Error page layout.
  
 Francesco Corso
  - Person Code: 10867595
@@ -20,7 +20,7 @@ Francesco Corso
 Leonardo Scapolan
  - Person Code: 10801854
  - Mail: leonardo.scapolan@mail.polimi.it
- - Contribution: Database design, implementation and population, content reasearch, some api endnpoints. Components: Card, CardCarousel, CardList, LoadingIcon. Pages: thetown, winterevents, summerevents, allpois, allitineraries, allevents, allservicetypes. SEO and Accessability checks. Several various fixes in the whole project;
+ - Contribution: Database design, implementation and population, content research, some api endnpoints. Components: Card, CardCarousel, CardList, LoadingIcon. Pages: thetown, winterevents, summerevents, allpois, allitineraries, allevents, allservicetypes. SEO and Accessability checks. Several various fixes in the whole project;
  
 ## Project Documentation - Organization of the application
 Here we describe how the application has been generally organized for development and production.
@@ -29,7 +29,7 @@ Here we describe how the application has been generally organized for developmen
 - alleventgroupings: gives the user the possibility to access the events offered in the website. Organized by season, or displaying them all.
   - allevents: displays all the events
   - summerevents: displays all the summer events
-  - winterevents: : displays all the winter events
+  - winterevents: displays all the winter events
 - allpois: displays all the point of interest
   - poi_details: displays information about a single topic 
 - allitineraries: displays all the itineraries
@@ -37,7 +37,7 @@ Here we describe how the application has been generally organized for developmen
 - allservicetypes: displays all the service types
   - service_details: displays a series of services belonging to the chosen tyoe.
 - thetown: displays information about the history of Florence, with also information on how to get there.
-- contact us: contains a contact form.
+- contact_us: contains an information request form.
 
 ### Components
 - **BreadCrumb**: component used to give the user informations about his/her position inside the website structure.
@@ -46,7 +46,7 @@ Here we describe how the application has been generally organized for developmen
 - **CardList**: list of cards, used to display a series a items to which the user can choose from. Perfect for head of group pages.
 - **DropUp**: small button placed at the bottom of long pages to offer the user an easy way back to the top of the page.
 - **LoadingIcon**: an animated loading icon fundamental for giving the user the information about the status of the application.
-- **LongCard**: used for displaying preview information of a service like addresse, phone number and opening hours.
+- **LongCard**: used for displaying preview information of a service like address, phone number and opening hours.
 - **MapBox**: used for displaying a styled map starting from its URL.
 - **SlideShow**: used for displaying many images in a compact way.
 - **TheFooter**:Fundamental part of the template, holds the link to the contact us page.
