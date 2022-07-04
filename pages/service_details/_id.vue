@@ -27,6 +27,8 @@
     <div class="content">
       <div v-for="(service, serIndex) of services.slice(0,nItems)" :key="`ser-index-${serIndex}`">
         <long-card
+        class="longcard"
+        tabindex="0"
           :image-url="service.image.URL"
           :image-caption="service.image.caption"
           :title="service.name"
