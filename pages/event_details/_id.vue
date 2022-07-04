@@ -72,6 +72,7 @@ export default {
     )
     const poiList = []
     const bc =[]
+    bc.push({title:'Tutti i Gruppi di Eventi', path:'/alleventgroupings'})
     bc.push({title:'Tutti gli Eventi', path:'/allevents'})
     bc.push({title:data.name, path:'#'})
     // Get all related pois
@@ -129,3 +130,9 @@ export default {
    
 }
 </script>
+
+<style scoped>
+p {
+  display: inline;
+}
+</style>

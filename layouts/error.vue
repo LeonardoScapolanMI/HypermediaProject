@@ -48,7 +48,7 @@ export default {
 .__nuxt-error-page {
   background: linear-gradient(var(--dark), var(--dark)), url("/images/home/welcome.webp") center ;
   background-size: cover;
-  height: 600px;
+  
   width: 100%;
   margin: auto;
 }

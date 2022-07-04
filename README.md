@@ -1,4 +1,5 @@
-# HypermediaProject
+# HypermediaProject 
+**LINK of the WEBSITE**: https://hyper4hypermediaproject.herokuapp.com
 
 ## Team Hyper4
 Francesco Calabrese
@@ -9,12 +10,12 @@ Francesco Calabrese
 Federica Carrano
  - Person Code: 10851879
  - Mail: federica.carrano@mail.polimi.it
- - Contribution: Fronted: css style in whole project. Content research. Components: TheHeader, TheFooter, BreadCrumb, DropUp. Pages: index, contact us, alleventgroupings, allevents, winterevents, summerevents, allservicetypes, service_details.
+ - Contribution: Content research; Pages code comments; Fronted: CSS style in whole project; Components: TheHeader, TheFooter, BreadCrumb, DropUp; Pages: index, contact us, alleventgroupings, allevents, winterevents, summerevents, allservicetypes;
  
 Francesco Corso
  - Person Code: 10867595
  - Mail: francesco.corso@mail.polimi.it
- - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details;
+ - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details; Content search for website; comments in the code
  
 Leonardo Scapolan
  - Person Code: 10801854
@@ -39,7 +40,7 @@ Here we describe how the application has been generally organized for developmen
 - contact us: contains a contact form.
 
 ### Components
-- **BreadCrumb**: component used to give the user informations about his position inside the website structure.
+- **BreadCrumb**: component used to give the user informations about his/her position inside the website structure.
 - **Card**: implements the basic functionality of displaying the preview of an item of the website, with a set of basis information to grab user's attention. It also doubles up as a link to pages containing the details of said item.
 - **CardCarousel**: it's a carousel of cards, often used to display related topics of a single page in a compact and easy way.
 - **CardList**: list of cards, used to display a series a items to which the user can choose from. Perfect for head of group pages.
@@ -83,7 +84,7 @@ layouts/
 --| error.vue --> new visualization of the default error page, adapted to the custom look of the website.
 ```
 - **Rendering**: we opted for a Server Side Rendering (**SSR**), which gave us some advantages, especially in the SEO and optimization departments. It will also allow us to easly add new content (like new points of interest or services) to the website without much trouble after release.
-- **Static**: contains the elemnts of out project that are fixed.
+- **Static**: contains the elements of out project that are fixed.
 ```
 static/
 --| css/ --> Contains some global css for the application
@@ -98,3 +99,8 @@ server/
 --| api.js--> Contains the methods used by the application to get data troguh the ORM. 
 ```
 ### Best Practices 
+**Components**: we utilized one of the most powerful feature of the framework in use, which is the possibility to implement reusable components in order to create modular designs and avoid rewriting redundant code.
+
+**Layouts**: another powerful feature of vue, it allowed us to create a standard design for the pages, again to make the design more scalable across the whole website and write less code.
+
+**SEO**: the website is optimized for the search engines indicization, which is fundamental for an optimal placement on the search results. Nuxt allowed us to insert a common head and meta. Also, Server Side Rendering resulted in a good choice, since it allows the server to send to the client pages already filled with content, which are preferreed by the crawlers.

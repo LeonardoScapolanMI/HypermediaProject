@@ -36,7 +36,7 @@
 
     <!-- Insert a description using the method getContentToDisplay() -->
     <div class="text-content">
-      <h2 class="text-content-title">
+      <h2 class="text-content-title" role="link">
         {{ getContentToDisplay().title }}
       </h2>
       <p class="text-with-line-break">

@@ -1,7 +1,7 @@
 <template>
   <div class="flex-wrapper">
     <TheHeader />
-    <Nuxt id="page-content"/>
+    <Nuxt class="page-content"/>
     <TheFooter/>
   </div>
 </template>
@@ -15,7 +15,7 @@
   justify-content: flex-start;
 }
 
-#page-content {
+.page-content {
   flex : 1;
 }
 
