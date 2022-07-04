@@ -14,7 +14,7 @@ Federica Carrano
 Francesco Corso
  - Person Code: 10867595
  - Mail: francesco.corso@mail.polimi.it
- - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details; Content search for website
+ - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details; Content search for website; comments in the code
  
 Leonardo Scapolan
  - Person Code: 10801854
