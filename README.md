@@ -37,7 +37,7 @@ Here we describe how the application has been generally organized for developmen
 - allservicetypes: displays all the service types
   - service_details: displays a series of services belonging to the chosen type.
 - thetown: displays information about the history of Florence, with also information on how to get there.
-- contact_us: contains an information request form.
+- contactus: contains an information request form.
 
 ### Components
 - **BreadCrumb**: component used to give the user informations about his/her position inside the website structure.
