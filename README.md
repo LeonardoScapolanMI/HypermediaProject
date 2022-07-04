@@ -5,7 +5,7 @@
 Francesco Calabrese
  - Person Code: 10849050
  - Mail: francesco1.calabrese@mail.polimi.it
- - Contribution: Fronted: css site style; Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter. Pages: service_details, event_details, poi_details, itinerary_details, all_events. SEO and Accessability checks with various fixes in all pages.
+ - Contribution: Fronted: CSS style in whole project. Content research. Components: CardCarousel, Mapbox, Card, LongCard, TheHeader, TheFooter. Pages: service_details, event_details, poi_details, itinerary_details, all_events, contactus. SEO and Accessability checks with various fixes in all pages.
  
 Federica Carrano
  - Person Code: 10851879
@@ -15,7 +15,7 @@ Federica Carrano
 Francesco Corso
  - Person Code: 10867595
  - Mail: francesco.corso@mail.polimi.it
- - Contribution: Backend: Api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details; Content search for website; comments in the code
+ - Contribution: Backend: endpoints in api.js; Components: Slideshow, Mapbox, CardCarousel, BreadCrumb; Pages: allpois, allitineraries,poi_details, itinerary_details, event_details, allevents, error page layout; Content search for website; comments in the code; content of the README file.
  
 Leonardo Scapolan
  - Person Code: 10801854
@@ -35,9 +35,9 @@ Here we describe how the application has been generally organized for developmen
 - allitineraries: displays all the itineraries
   - itinerary_details: displays information about a single itinerary
 - allservicetypes: displays all the service types
-  - service_details: displays a series of services belonging to the chosen tyoe.
+  - service_details: displays a series of services belonging to the chosen type.
 - thetown: displays information about the history of Florence, with also information on how to get there.
-- contact_us: contains an information request form.
+- contactus: contains an information request form.
 
 ### Components
 - **BreadCrumb**: component used to give the user informations about his/her position inside the website structure.
@@ -103,4 +103,4 @@ server/
 
 **Layouts**: another powerful feature of vue, it allowed us to create a standard design for the pages, again to make the design more scalable across the whole website and write less code.
 
-**SEO**: the website is optimized for the search engines indicization, which is fundamental for an optimal placement on the search results. Nuxt allowed us to insert a common head and meta. Also, Server Side Rendering resulted in a good choice, since it allows the server to send to the client pages already filled with content, which are preferreed by the crawlers.
+**SEO**: the website is optimized for the search engines indicization, which is fundamental for an optimal placement on the search results. Nuxt allowed us to insert a common head and meta. Also, Server Side Rendering resulted in a good choice, since it allows the server to send to the client pages already filled with content, which are preferred by the crawlers.
