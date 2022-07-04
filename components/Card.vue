@@ -5,6 +5,7 @@
         id="image" 
         :src="imageUrl" 
         :alt="imageCaption" 
+        role="link"
         @click="$emit('onSeeDetails')"
         />
       <!-- Print the Image-->
