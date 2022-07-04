@@ -20,7 +20,7 @@ Francesco Corso
 Leonardo Scapolan
  - Person Code: 10801854
  - Mail: leonardo.scapolan@mail.polimi.it
- - Contribution: Database design, implementation and population, content reasearch, some api endnpoints. Components: Card, CardCarousel, CardList, LoadingIcon. Pages: thetown, winterevents, summerevents, allpois, allitineraries, allevents, allservicetypes. SEO and Accessability checks. Several various fixes in the whole project;
+ - Contribution: Database design, implementation and population, content research, some api endnpoints. Components: Card, CardCarousel, CardList, LoadingIcon. Pages: thetown, winterevents, summerevents, allpois, allitineraries, allevents, allservicetypes. SEO and Accessability checks. Several various fixes in the whole project;
  
 ## Project Documentation - Organization of the application
 Here we describe how the application has been generally organized for development and production.
@@ -37,7 +37,7 @@ Here we describe how the application has been generally organized for developmen
 - allservicetypes: displays all the service types
   - service_details: displays a series of services belonging to the chosen tyoe.
 - thetown: displays information about the history of Florence, with also information on how to get there.
-- contact us: contains a contact form.
+- contact_us: contains an information request form.
 
 ### Components
 - **BreadCrumb**: component used to give the user informations about his/her position inside the website structure.
@@ -46,7 +46,7 @@ Here we describe how the application has been generally organized for developmen
 - **CardList**: list of cards, used to display a series a items to which the user can choose from. Perfect for head of group pages.
 - **DropUp**: small button placed at the bottom of long pages to offer the user an easy way back to the top of the page.
 - **LoadingIcon**: an animated loading icon fundamental for giving the user the information about the status of the application.
-- **LongCard**: used for displaying preview information of a service like addresse, phone number and opening hours.
+- **LongCard**: used for displaying preview information of a service like address, phone number and opening hours.
 - **MapBox**: used for displaying a styled map starting from its URL.
 - **SlideShow**: used for displaying many images in a compact way.
 - **TheFooter**:Fundamental part of the template, holds the link to the contact us page.
