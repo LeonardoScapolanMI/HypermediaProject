@@ -25,21 +25,21 @@ app.get('/poi', async (req, res) => {
   const data = await dbData
 
   const queryOptions = {
-    include: { model: data.Image },//Including images in the result
+    include: { model: data.Image },// Including images in the result
   }
 
-  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex //info from the request body 
-  if(req.query.itemCount) queryOptions.limit = req.query.itemCount //info from the request body 
+  if(req.query.startingIndex) queryOptions.offset = req.query.startingIndex // info from the request body 
+  if(req.query.itemCount) queryOptions.limit = req.query.itemCount // info from the request body 
 
-  const result = await data.PointOfInterest.findAll(queryOptions)//Execute the query with the options assigned before
-  const poiCount = await data.PointOfInterest.count()//We count how many element we want to receibe
+  const result = await data.PointOfInterest.findAll(queryOptions)// Execute the query with the options assigned before
+  const poiCount = await data.PointOfInterest.count()// We count how many element we want to receibe
 
-  let isFinished = false //the query can still return other data if called
+  let isFinished = false // the query can still return other data if called
   if(!req.query.itemCount) {
     isFinished=true // if the parameter is not present, then the list is finished
   }
   else if(!req.query.startingIndex){
-    isFinished = poiCount <= Number(req.query.itemCount) //if it's the firs time calling the method
+    isFinished = poiCount <= Number(req.query.itemCount) // if it's the firs time calling the method
   }
   else{
     isFinished = poiCount <= Number(req.query.itemCount) + Number(req.query.startingIndex)
@@ -56,7 +56,7 @@ app.get('/poi', async (req, res) => {
       images: element.Images,
     })
   }
-  //console.log(result)
+  // console.log(result)
   return res.json(ret)
 })
 
@@ -64,13 +64,13 @@ app.get('/poi', async (req, res) => {
 app.get('/poi:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
-  const element = await data.PointOfInterest.findOne({//we include the parameters 
+  const element = await data.PointOfInterest.findOne({// we include the parameters 
     where:{ _id },
     include:[{ model: data.Image },{model: data.Itinerary, include:{model: data.Image, as: "representativeImage"}},{model: data.Event, include:{model: data.Image}}],
     
   })
   
-  //console.log(result)
+  // console.log(result)
   return res.json(element)
 })
 
@@ -110,7 +110,7 @@ app.get('/itinerary', async (req, res) => {
       images: [element.representativeImage],
     })
   }
-  //console.log(result)
+  // console.log(result)
   return res.json(ret)
 })
 
@@ -196,14 +196,12 @@ app.get('/serviceType:id', async (req, res) => {
       OpeningHours: element.OpeningHours,
     })
   }
-  //console.log(filtered)
+  // console.log(filtered)
   return res.json(ret)
   
 })
 
-function formatDate(d){
-  return d
-}
+
 
 // Get all Events basic informations
 app.get('/event', async (req, res) => {
@@ -296,7 +294,7 @@ app.get('/event/:season', async (req, res) => {
   return res.json(ret)
 })
 
-//Get event from id
+// Get event from id
 app.get('/event:id', async (req, res) => {
   const _id = +req.params.id
   const data = await dbData
@@ -311,7 +309,7 @@ app.get('/event:id', async (req, res) => {
   return res.json(result)
 })
 
-//POST ACTION for the form
+// POST ACTION for the form
 app.post("/usermessage", async (req,res)=>{
   try{
   const data =  await dbData

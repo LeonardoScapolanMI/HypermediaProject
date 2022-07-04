@@ -11,7 +11,7 @@
 
     <!-- Insert information request form -->
     <div class="container marketing">
-      <div class="form">
+      <div class="form" >
         <div>
           <div class="col-md-12 order-md-1">
             <h2 class="mb-3">Richiesta Informazioni</h2>
@@ -23,7 +23,7 @@
                   <label for="firstName">Nome</label>
                   <input
                     id="firstName"
-                    v-model="name"
+                    
                     name = "firstName"
                     type="text"
                     class="form-control"
@@ -37,7 +37,7 @@
                   <label for="lastName">Cognome</label>
                   <input
                     id="lastName"
-                    v-model="surname"
+                   
                     name = "lastName"
                     type="text"
                     class="form-control"
@@ -56,7 +56,7 @@
                 </label>
                 <input
                   id="email"
-                  v-model="email"
+                  
                   name = "email"
                   type="email"
                   class="form-control"
@@ -70,15 +70,16 @@
               <div class="mb-3">
                 <label for="message">Richiesta di informazioni</label>
                 <textarea
-                  id="request"
-                  v-model="text"
+                  id="message"
+                 
                   name = "message"
                   class="form-control"
                   rows="10"
                   placeholder
                   required
-                  for="contactusform"
-                  type="textarea"
+                  role="textbox"
+                  form="contactusform"
+                 
                 ></textarea>
                 <div class="invalid-feedback">Per favore inserire una richiesta di informazioni valida.</div>
               </div> 
