@@ -10,7 +10,7 @@ Francesco Calabrese
 Federica Carrano
  - Person Code: 10851879
  - Mail: federica.carrano@mail.polimi.it
- - Contribution: Content research; Pages code comments; Fronted: CSS style in whole project; Components: TheHeader, TheFooter, BreadCrumb, DropUp; Pages: index, contact us, alleventgroupings, allevents, winterevents, summerevents, allservicetypes;
+ - Contribution: Content research; Code comments; Fronted: CSS style in whole project; Components: TheHeader, TheFooter, BreadCrumb, DropUp, Slideshow, Card; Pages: index, contactus, alleventgroupings, allevents, winterevents, summerevents, allservicetypes; Error page layout.
  
 Francesco Corso
  - Person Code: 10867595
@@ -29,7 +29,7 @@ Here we describe how the application has been generally organized for developmen
 - alleventgroupings: gives the user the possibility to access the events offered in the website. Organized by season, or displaying them all.
   - allevents: displays all the events
   - summerevents: displays all the summer events
-  - winterevents: : displays all the winter events
+  - winterevents: displays all the winter events
 - allpois: displays all the point of interest
   - poi_details: displays information about a single topic 
 - allitineraries: displays all the itineraries
