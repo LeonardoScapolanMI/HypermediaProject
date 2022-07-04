@@ -100,5 +100,7 @@ server/
 ```
 ### Best Practices 
 **Components**: we utilized one of the most powerful feature of the framework in use, which is the possibility to implement reusable components in order to create modular designs and avoid rewriting redundant code.
+
 **Layouts**: another powerful feature of vue, it allowed us to create a standard design for the pages, again to make the design more scalable across the whole website and write less code.
+
 **SEO**: the website is optimized for the search engines indicization, which is fundamental for an optimal placement on the search results. Nuxt allowed us to insert a common head and meta. Also, Server Side Rendering resulted in a good choice, since it allows the server to send to the client pages already filled with content, which are preferreed by the crawlers.
