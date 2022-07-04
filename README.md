@@ -35,7 +35,7 @@ Here we describe how the application has been generally organized for developmen
 - allitineraries: displays all the itineraries
   - itinerary_details: displays information about a single itinerary
 - allservicetypes: displays all the service types
-  - service_details: displays a series of services belonging to the chosen tyoe.
+  - service_details: displays a series of services belonging to the chosen type.
 - thetown: displays information about the history of Florence, with also information on how to get there.
 - contact_us: contains an information request form.
 
