@@ -1,5 +1,5 @@
 # HypermediaProject 
-[comment]: **LINK of the WEBSITE**: https://hyper4hypermediaproject.herokuapp.com
+[comment]: <**LINK of the WEBSITE**: https://hyper4hypermediaproject.herokuapp.com>
 
 ## Team Hyper4
 Francesco Calabrese
