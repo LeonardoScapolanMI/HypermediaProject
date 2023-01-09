@@ -1,6 +1,6 @@
 # HypermediaProject 
 [comment]: <**LINK of the WEBSITE**: https://hyper4hypermediaproject.herokuapp.com>
-<**Design Document**: Design Document.pdf>
+**Design Document**: [Design Document.pdf](https://github.com/LeonardoScapolanMI/HypermediaProject/blob/f872dbe0650eb8feeae9f8054a53e40d061b9477/Design%20Document.pdf)
 
 ## Team Hyper4
 Francesco Calabrese
